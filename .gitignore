@@ -36,6 +36,14 @@ docs/machine-test-candidate-mapping-*.md
 docs/decision-critical-evidence-backlog-*.md
 docs/research-hypothesis-pool-*.md
 docs/recommendation-phase-evidence-and-model-correction-*.md
+docs/central-minzu-audit-*.md
+docs/ecnu-audit-*.md
+docs/huihui-source-audit-*.md
+docs/mainline-*.md
+docs/ncu-*.md
+docs/quality-baseline*.md
+docs/sdu-*.md
+docs/upc-*.md
 
 # The working configuration and data-import scripts may contain profile-specific values.
 config/settings.toml
