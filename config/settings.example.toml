@@ -1,0 +1,34 @@
+[database]
+path = "data/chose_school.sqlite3"
+busy_timeout_ms = 5000
+
+[logging]
+path = "logs/chose_school.jsonl"
+level = "INFO"
+
+[import]
+catalog_member_pattern = "research/22408_db_A*.csv"
+importer_version = "1"
+max_archive_uncompressed_bytes = 20000000
+max_member_uncompressed_bytes = 5000000
+max_compression_ratio = 100.0
+
+[exam.strict_22408]
+politics_code = "101"
+english_code = "204"
+math_code = "302"
+professional_course_code = "408"
+
+[assessment]
+minimum_sessions = 5
+rolling_window_size = 5
+required_machine_durations = [90, 120, 180]
+
+[applicant]
+# Copy this file to config/settings.toml and fill these local-only fields.
+profile_key = "default"
+undergraduate_school = "YOUR_UNDERGRADUATE_SCHOOL"
+undergraduate_major = "YOUR_UNDERGRADUATE_MAJOR"
+target_exam_year = 2027
+target_degree_type = "专业学位"
+target_tier = "985_priority_research_then_211_hedge"

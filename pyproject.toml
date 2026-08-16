@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chose-school"
+version = "0.1.0"
+description = "可追溯、可审计的本地考研择校数据库"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+chose-school = "chose_school.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"chose_school.infrastructure" = ["migrations/*.sql"]

@@ -1,0 +1,43 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.coverage
+htmlcov/
+logs/*.jsonl
+data/exports/*.tmp
+*.sqlite3-wal
+*.sqlite3-shm
+data/backups/
+data/raw/*
+!data/raw/README.md
+data/exports/
+tmp/
+outputs/**/*-preview.png
+outputs/**/*.inspect.ndjson
+
+# Public-release boundary: local research inputs and applicant data stay out of GitHub.
+data/*.sqlite3
+data/*.db
+data/**/*.sqlite3
+data/**/*.db
+outputs/**/*.xlsx
+outputs/**/*.xls
+outputs/**/*.csv
+待调查信息/
+
+# Local/private personal research notes; public release contains only redacted methodology and official-source notes.
+docs/applicant-achievement-evidence-*.md
+docs/personal-*.md
+docs/personal-selection-*.md
+docs/candidate-audit-*.md
+docs/lower-score-*.md
+docs/machine-test-candidate-mapping-*.md
+docs/decision-critical-evidence-backlog-*.md
+docs/research-hypothesis-pool-*.md
+docs/recommendation-phase-evidence-and-model-correction-*.md
+
+# The working configuration and data-import scripts may contain profile-specific values.
+config/settings.toml
+scripts/*.py
+scripts/*.mjs
