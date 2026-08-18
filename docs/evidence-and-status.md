@@ -52,3 +52,8 @@ stateDiagram-v2
 ## 字段冲突与裁决
 
 `fact-add` 接受原子整数、小数、布尔或文本值，并强制显式填写 `population_scope` 与 `statistic_scope`。每条主张绑定来源、证据等级、群体口径和 TraceId；无专项列的限定名单事实会拒绝伪装成 `ordinary_general_exam`。`quota.plan_minus_received_recommendation` 还必须提交可机读的减法操作符、`quota.total_plan` 与 `quota.recommendation_received` 两个事实键及整数操作数，数据库会复核结果；其他事实键禁止携带推导元数据。不同值会进入 `v_fact_conflicts`；`fact-resolve` 追加选择理由。旧主张与旧裁决都不覆盖。`quota.recommendation_actual` 只表示最终推免拟录取公示名单的项目级行数，不表示最终报到入学人数。
+
+迁移 029 的普通事实触发器把“来源是官方”与“群体口径是普通统考”分开：
+`official_mixed` 不能再写入普通统考机器字段。历史上已经写入的错误裁决不删除，
+而是追加 `unresolved`；只有重新取得同一项目、同一年度、专项拆分完整的正式证据后，
+才能追加新的 `official` 主张和接受裁决。

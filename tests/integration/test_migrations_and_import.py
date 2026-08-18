@@ -30,6 +30,27 @@ class MigrationsAndRealImportTest(unittest.TestCase):
         )
         expected_definitions = {
             (
+                "admission.suggested_list_total_count",
+                "integer",
+                "人",
+                "官方建议录取名单总行数；不是最终拟录取人数",
+                "学院建议录取名单",
+            ),
+            (
+                "admission.suggested_list_blank_remark_count",
+                "integer",
+                "人",
+                "官方建议录取名单中备注为空的行数；不是普通统考最终人数",
+                "学院建议录取名单",
+            ),
+            (
+                "admission.suggested_list_special_count",
+                "integer",
+                "人",
+                "官方建议录取名单中明确专项备注的行数",
+                "学院建议录取名单",
+            ),
+            (
                 "admission.final_list_fulltime_blank_remark_count",
                 "integer",
                 "人",
@@ -292,7 +313,7 @@ class MigrationsAndRealImportTest(unittest.TestCase):
                 ]
 
             self.assertEqual(definitions, expected_definitions)
-            self.assertEqual(migration_versions, list(range(1, 29)))
+            self.assertEqual(migration_versions, list(range(1, 30)))
             self.assertEqual(
                 catalog_column_names,
                 [

@@ -26,6 +26,17 @@ _INTEGER_PATTERN = re.compile(r"^[+-]?\d+$")
 _DECIMAL_PATTERN = re.compile(r"^[+-]?(?:\d+(?:\.\d+)?|\.\d+)%?$")
 _LOWER_SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
 
+_ORDINARY_MACHINE_FACT_KEYS = frozenset(
+    {
+        "admission.general_count",
+        "score.initial.min",
+        "score.initial.q25",
+        "score.initial.median",
+        "score.initial.mean",
+        "score.initial.q75",
+    }
+)
+
 
 class FactService:
     def __init__(self, store: FactStore) -> None:
@@ -36,6 +47,14 @@ class FactService:
             raise ValidationError("INVALID_OBSERVATION_ID", "observation_id must be positive")
         if claim.fact_key not in FACT_DATA_TYPES:
             raise ValidationError("UNSUPPORTED_FACT_KEY", f"unsupported fact key: {claim.fact_key}")
+        if (
+            claim.fact_key in _ORDINARY_MACHINE_FACT_KEYS
+            and claim.evidence_grade is not EvidenceGrade.OFFICIAL
+        ):
+            raise ValidationError(
+                "ORDINARY_MACHINE_FACT_REQUIRES_OFFICIAL_EVIDENCE",
+                "普通统考机器事实只能接受已闭环的官方证据；混合或推导数据请使用受控代理事实键",
+            )
         if not claim.population_scope.strip() or not claim.statistic_scope.strip():
             raise ValidationError("EMPTY_FACT_SCOPE", "fact scope cannot be empty")
         if (

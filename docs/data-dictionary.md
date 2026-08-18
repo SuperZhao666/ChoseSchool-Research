@@ -1,5 +1,19 @@
 # 数据字典
 
+## 普通统考语义护栏（迁移 029）
+
+| 表或视图 | 语义 | 关键约束 |
+|---|---|---|
+| `v_current_accepted_fact_evidence` | 只返回当前裁决为 `accept` 且绑定主张的事实 | 机器消费入口，不包含 `unresolved` |
+| `v_current_unresolved_fact_evidence` | 当前明确未解决或没有选中主张的事实 | 研究缺口与纠错入口，不得参与普通名额/分数排序 |
+| `admission.suggested_list_total_count` | 官方建议录取名单总行数 | 不等于最终录取人数，也不等于普通统考人数 |
+| `admission.suggested_list_blank_remark_count` | 建议名单中备注为空的行数 | 只能表示限定集合，不能自动升级为普通统考 |
+| `admission.suggested_list_special_count` | 建议名单中有明确专项备注的行数 | 与空备注行并列展示，不能从总数相减推断普通名额 |
+
+`admission.general_count`、`score.initial.min/median/mean/q25/q75` 是普通统考机器字段，
+从迁移 029 起只能写入 `evidence_grade=official` 的同口径正式证据。官方来源但专项未拆、
+规则推导、复试池或建议名单代理，必须使用受控代理事实键或保持 `unresolved`。
+
 ## 候选画像适配与近三年历史覆盖（迁移 028）
 
 迁移 028 新增画像适配账本和只读历史覆盖投影；迁移本身不预置任何适配结论，也不把历史分数变成 2027 推荐。
@@ -36,6 +50,8 @@
 | `v_current_resolved_fact_evidence` | 当前事实裁决及来源无损高表 | claim/resolution、类型值、群体/统计口径、推导、统计样本元数据、来源 ID/hash/doc type/URL |
 
 `identity_canonical_json` 固定 15 个字段：`schema`、`profile_key`、`target_year`、`school`、`college`、`program_code`、`program_name`、`direction`、`campus`、`training_location`、`study_mode`、`training_type`、`admission_type`、`degree_type`、`training_arrangement`。可选身份字段缺失时显式写 `unspecified`，禁止从历史 `project_id` 暗中补值。`candidate_key = "candidate-v1:" + SHA256(UTF-8 canonical JSON)`。
+
+命令 `candidate-report` 是候选模型的只读人类可读投影。默认展示当前链尾的候选身份、`985_priority_research`/`211_hedge_research`/`non_211_comparator_research` 用户策略分组、画像适配结论、维度状态计数、证据缺口、历史可比性计数，以及偏好问卷、严格套卷窗口和成果资产的摘要；`--history` 展开修订链摘要，`--details` 另外附带仓储已校验的完整规范化 JSON。该投影不创建 `decision_snapshot`，不排序学校，不输出冲稳保角色或录取概率，并固定携带 `selection_output.scope=research_only`、`selection_output.role=research_only` 和 `selection_output.probability_status=not_estimated`。成果资产只用于解释准备基础，不参与概率换算。它只消费业务服务的当前视图，不直接查询 SQLite，因此不会绕过领域规则；查询本身不写库。
 
 `research_hypothesis` 的 `target_project_id` 与 `target_observation_id` 必须同时为 NULL；`official_observation` 的两个 ID 必须非 NULL，并绑定同目标年、同规范身份且具有官方目录证据的观测。
 

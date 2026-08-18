@@ -69,6 +69,23 @@ _STATISTICAL_FACT_DOCTOR_ERROR_QUERIES = {
     )
 }
 
+_ORDINARY_FACT_DOCTOR_ERROR_QUERIES = {
+    "ordinary_fact_nonofficial_accept": """
+        SELECT COUNT(*)
+        FROM v_current_resolved_fact_evidence
+        WHERE resolution_action = 'accept'
+          AND claim_evidence_grade <> 'official'
+          AND fact_key IN (
+              'admission.general_count',
+              'score.initial.min',
+              'score.initial.q25',
+              'score.initial.median',
+              'score.initial.mean',
+              'score.initial.q75'
+          )
+    """
+}
+
 _MOCK_EXAM_DOCTOR_ERROR_QUERIES = {
     "mock_v2_missing_audit": """
         SELECT COUNT(*)
@@ -1829,6 +1846,7 @@ class SqliteCatalogRepository:
             policy_event_checks = _policy_event_doctor_metrics(connection)
             resolved_catalog_checks = _resolved_catalog_doctor_metrics(connection)
             statistical_fact_checks = _statistical_fact_doctor_metrics(connection)
+            ordinary_fact_checks = _ordinary_fact_doctor_metrics(connection)
             source_metadata_correction_checks = (
                 _source_metadata_correction_doctor_metrics(connection)
             )
@@ -1866,6 +1884,10 @@ class SqliteCatalogRepository:
                 for name in _STATISTICAL_FACT_DOCTOR_ERROR_QUERIES
             )
             and all(
+                ordinary_fact_checks[name] == 0
+                for name in _ORDINARY_FACT_DOCTOR_ERROR_QUERIES
+            )
+            and all(
                 source_metadata_correction_checks[name] == 0
                 for name in _SOURCE_METADATA_CORRECTION_DOCTOR_ERROR_QUERIES
             )
@@ -1892,6 +1914,7 @@ class SqliteCatalogRepository:
             **policy_event_checks,
             **resolved_catalog_checks,
             **statistical_fact_checks,
+            **ordinary_fact_checks,
             **source_metadata_correction_checks,
             **achievement_checks,
             **candidate_model_checks,
@@ -2357,6 +2380,26 @@ def _statistical_fact_doctor_metrics(
     return {
         name: _scalar(connection, query)
         for name, query in _STATISTICAL_FACT_DOCTOR_ERROR_QUERIES.items()
+    }
+
+
+def _ordinary_fact_doctor_metrics(
+    connection: sqlite3.Connection,
+) -> dict[str, int]:
+    # The safe resolved-evidence view is introduced by migration 029.  Keep
+    # older migration fixtures diagnosable while making the current schema
+    # fail closed when a mixed/non-official ordinary fact is still accepted.
+    has_resolved_view = connection.execute(
+        """
+        SELECT 1 FROM sqlite_master
+        WHERE type = 'view' AND name = 'v_current_resolved_fact_evidence'
+        """
+    ).fetchone()
+    if has_resolved_view is None:
+        return {name: 0 for name in _ORDINARY_FACT_DOCTOR_ERROR_QUERIES}
+    return {
+        name: _scalar(connection, query)
+        for name, query in _ORDINARY_FACT_DOCTOR_ERROR_QUERIES.items()
     }
 
 

@@ -48,6 +48,7 @@ def create_parser() -> argparse.ArgumentParser:
     _add_fact_commands(subparsers)
     _add_verification_command(subparsers)
     _add_assessment_commands(subparsers)
+    _add_candidate_commands(subparsers)
     _add_maintenance_commands(subparsers)
     return parser
 
@@ -614,6 +615,28 @@ def _add_assessment_commands(subparsers: argparse._SubParsersAction) -> None:
     subparsers.add_parser(
         "machine-assessment",
         help="分别汇总90/120/180分钟机试基线，不生成综合机试分",
+    )
+
+
+def _add_candidate_commands(subparsers: argparse._SubParsersAction) -> None:
+    report = subparsers.add_parser(
+        "candidate-report",
+        help="只读汇总候选身份、画像适配和历史可比性；不生成角色或概率",
+    )
+    report.add_argument(
+        "--candidate-target-id",
+        type=int,
+        help="只查看一个候选目标版本；默认查看当前画像下的全部候选",
+    )
+    report.add_argument(
+        "--history",
+        action="store_true",
+        help="同时显示候选、画像适配和历史可比性修订链；默认只显示当前链尾",
+    )
+    report.add_argument(
+        "--details",
+        action="store_true",
+        help="在摘要外附带完整的规范化画像适配和可比性 JSON；默认不展开事件 ID/哈希",
     )
 
 

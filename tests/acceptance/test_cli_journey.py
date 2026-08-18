@@ -16,6 +16,48 @@ from chose_school.infrastructure.database import Database
 
 
 class CliJourneyTest(unittest.TestCase):
+    def test_candidate_report_is_read_only_and_fail_closed(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            database = Path(temporary) / "candidate-report.sqlite3"
+            initialized = self._run(
+                "--database",
+                str(database),
+                "--json",
+                "init",
+            )
+            self.assertEqual(initialized.returncode, 0, initialized.stderr)
+            before = database.read_bytes()
+
+            result = self._run(
+                "--database",
+                str(database),
+                "--json",
+                "candidate-report",
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            report = json.loads(result.stdout)
+            self.assertTrue(report["read_only"])
+            self.assertEqual(report["candidate_count"], 0)
+            self.assertEqual(report["model_contract"]["selection_status"], "research_only")
+            self.assertFalse(report["model_contract"]["roles_enabled"])
+            self.assertFalse(report["model_contract"]["probability_enabled"])
+            self.assertIn("profile_snapshot", report)
+            self.assertIn("preference_intake", report["profile_snapshot"])
+            self.assertIn("measurement_readiness", report["profile_snapshot"])
+            self.assertIn("achievement_assets", report["profile_snapshot"])
+            self.assertEqual(database.read_bytes(), before)
+
+            invalid = self._run(
+                "--database",
+                str(database),
+                "--json",
+                "candidate-report",
+                "--candidate-target-id",
+                "0",
+            )
+            self.assertEqual(invalid.returncode, 1)
+            self.assertEqual(json.loads(invalid.stderr)["error_code"], "INVALID_ENTITY_ID")
+
     def test_backup_preserves_pre_migration_schema_without_auto_upgrade(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -123,7 +165,7 @@ class CliJourneyTest(unittest.TestCase):
             )
             self.assertEqual(migrated.returncode, 0, migrated.stderr)
             self.assertEqual(
-                json.loads(migrated.stdout)["applied_migrations"], [25, 26, 27, 28]
+                json.loads(migrated.stdout)["applied_migrations"], [25, 26, 27, 28, 29]
             )
 
     def test_fact_add_accepts_and_replays_one_structured_derivation(self) -> None:

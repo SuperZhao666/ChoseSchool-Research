@@ -688,6 +688,231 @@ def _get_machine_assessment(
     return asdict(application.machine_tests.summarize())
 
 
+def _get_candidate_report(
+    arguments: argparse.Namespace,
+    application: ApplicationServices,
+    trace_id: str,
+) -> Any:
+    """Assemble a read-only, human-readable candidate research report.
+
+    The access layer only composes already validated business-service views.
+    It deliberately carries the ``research_only`` and ``not_estimated``
+    contracts through to the output instead of inventing a ranking or a
+    probability from historical rows.
+    """
+    if (
+        arguments.candidate_target_id is not None
+        and arguments.candidate_target_id <= 0
+    ):
+        raise ValidationError(
+            "INVALID_ENTITY_ID",
+            "candidate-target-id 必须是正整数",
+        )
+    targets = list(
+        application.candidate_model.list_candidate_targets(
+            include_history=arguments.history
+        )
+    )
+    if arguments.candidate_target_id is not None:
+        targets = [
+            target
+            for target in targets
+            if int(target["id"]) == arguments.candidate_target_id
+        ]
+    target_ids = {int(target["id"]) for target in targets}
+    fit_reviews = list(
+        application.candidate_model.list_profile_fit_reviews(
+            candidate_target_version_id=arguments.candidate_target_id,
+            include_history=arguments.history,
+        )
+    )
+    comparability_reviews = list(
+        application.candidate_model.list_comparability_reviews(
+            candidate_target_version_id=arguments.candidate_target_id,
+            include_history=arguments.history,
+        )
+    )
+    fit_by_target: dict[int, list[dict[str, Any]]] = {}
+    for review in fit_reviews:
+        target_id = int(review["candidate_target_version_id"])
+        if target_id in target_ids:
+            fit_by_target.setdefault(target_id, []).append(dict(review))
+    history_by_target: dict[int, list[dict[str, Any]]] = {}
+    for review in comparability_reviews:
+        target_id = int(review["candidate_target_version_id"])
+        if target_id in target_ids:
+            history_by_target.setdefault(target_id, []).append(dict(review))
+
+    candidate_rows: list[dict[str, Any]] = []
+    for target in targets:
+        target_id = int(target["id"])
+        fit = fit_by_target.get(target_id, [])
+        history = history_by_target.get(target_id, [])
+        candidate_row = {
+                "candidate_target_version_id": target_id,
+                "candidate_key": target["candidate_key"],
+                "version_number": target["version_number"],
+                "action": target["action"],
+                "target_year": target["target_year"],
+                "target_basis": target["target_basis"],
+                "target_observation_id": target["target_observation_id"],
+                "identity": target["identity"],
+                "research_reason": target["reason"],
+                "selection_output": {
+                    "scope": "research_only",
+                    "role": "research_only",
+                    "probability_status": "not_estimated",
+                    "explanation": "候选仍需目标年正式目录、普通名额、复试、公平性和个人测量门禁；本报告不输出冲稳保或录取概率。",
+                },
+                "profile_fit": _summarize_profile_fit_reviews(fit, arguments.history),
+                "historical_comparability": _summarize_comparability_reviews(
+                    history, arguments.history
+                ),
+            }
+        if arguments.details:
+            candidate_row["profile_fit_reviews"] = fit
+            candidate_row["historical_comparability_reviews"] = history
+        candidate_rows.append(candidate_row)
+
+    active_targets = [row for row in candidate_rows if row["action"] == "active"]
+    assessment = asdict(application.assessment.summarize())
+    preference_readiness = asdict(application.preferences.summarize_readiness())
+    achievements = list(application.applicant_achievements.list_achievements())
+    achievement_categories: dict[str, int] = {}
+    achievement_statuses: dict[str, int] = {}
+    for achievement in achievements:
+        category = str(achievement.get("category", "unknown"))
+        status = str(achievement.get("verification_status", "unknown"))
+        achievement_categories[category] = achievement_categories.get(category, 0) + 1
+        achievement_statuses[status] = achievement_statuses.get(status, 0) + 1
+    return {
+        "report_version": "candidate-profile-report-v1",
+        "read_only": True,
+        "trace_id": trace_id,
+        "scope": "current_profile_candidate_research_pool",
+        "history_included": arguments.history,
+        "candidate_target_filter": arguments.candidate_target_id,
+        "candidate_count": len(candidate_rows),
+        "active_candidate_count": len(active_targets),
+        "active_research_hypothesis_count": sum(
+            row["target_basis"] == "research_hypothesis" for row in active_targets
+        ),
+        "active_official_observation_count": sum(
+            row["target_basis"] == "official_observation" for row in active_targets
+        ),
+        "model_contract": {
+            "selection_status": "research_only",
+            "roles_enabled": False,
+            "probability_enabled": False,
+            "preference_fit_is_user_strategy_assignment": True,
+            "historical_comparability_is_evidence_review_not_prediction": True,
+        },
+        "profile_snapshot": {
+            "preference_intake": {
+                "contract_version": preference_readiness["contract_version"],
+                "answered_subject_count": preference_readiness[
+                    "answered_subject_count"
+                ],
+                "required_subject_count": preference_readiness[
+                    "required_subject_count"
+                ],
+                "is_complete": preference_readiness[
+                    "is_preference_intake_complete"
+                ],
+                "ranking_preferences": preference_readiness["ranking_preferences"],
+            },
+            "measurement_readiness": {
+                "strict_mock_session_count": assessment["session_count"],
+                "strict_mock_required_count": assessment["required_session_count"],
+                "score_window_ready": assessment["is_score_window_ready"],
+                "subject_risk_status": assessment["subject_risk_status"],
+            },
+            "achievement_assets": {
+                "current_count": len(achievements),
+                "by_category": achievement_categories,
+                "by_verification_status": achievement_statuses,
+                "interpretation": "成果是准备资产和能力证据，不直接换算录取概率或学校角色。",
+            },
+        },
+        "candidates": candidate_rows,
+    }
+
+
+def _summarize_profile_fit_reviews(
+    reviews: list[dict[str, Any]], include_history: bool
+) -> dict[str, Any]:
+    compact = [_compact_profile_fit_review(review) for review in reviews]
+    current = compact[-1] if compact else None
+    result: dict[str, Any] = {
+        "current": current,
+        "review_count": len(compact),
+    }
+    if include_history:
+        result["history"] = compact
+    return result
+
+
+def _compact_profile_fit_review(review: dict[str, Any]) -> dict[str, Any]:
+    dimensions = review.get("dimension_results", {}).get("dimensions", {})
+    status_counts: dict[str, int] = {}
+    for item in dimensions.values():
+        status = str(item.get("status", "unknown"))
+        status_counts[status] = status_counts.get(status, 0) + 1
+    gaps = [
+        {
+            "code": item.get("code"),
+            "status": item.get("status"),
+            "impact": item.get("impact"),
+        }
+        for item in review.get("evidence_gaps", [])
+    ]
+    result = {
+        "review_id": review.get("id"),
+        "review_sequence": review.get("review_sequence"),
+        "strategy_bucket": review.get("strategy_bucket"),
+        "strategy_assignment_basis": review.get("strategy_assignment_basis"),
+        "known_preference_fit": review.get("known_preference_fit"),
+        "output_scope": review.get("output_scope"),
+        "probability_status": review.get("probability_status"),
+        "dimension_status_counts": status_counts,
+        "evidence_gaps": gaps,
+        "summary": review.get("summary"),
+    }
+    if "is_input_snapshot_current" in review:
+        result["is_input_snapshot_current"] = review["is_input_snapshot_current"]
+    return result
+
+
+def _summarize_comparability_reviews(
+    reviews: list[dict[str, Any]], include_history: bool
+) -> dict[str, Any]:
+    conclusion_counts: dict[str, int] = {}
+    compact: list[dict[str, Any]] = []
+    for review in reviews:
+        conclusion = str(review.get("conclusion", "unknown"))
+        conclusion_counts[conclusion] = conclusion_counts.get(conclusion, 0) + 1
+        compact.append(
+            {
+                "review_id": review.get("id"),
+                "review_sequence": review.get("review_sequence"),
+                "historical_observation_id": review.get("historical_observation_id"),
+                "conclusion": review.get("conclusion"),
+                "summary": review.get("summary"),
+            }
+        )
+    result: dict[str, Any] = {
+        "review_count": len(compact),
+        "conclusion_counts": conclusion_counts,
+    }
+    if include_history:
+        result["history"] = compact
+    elif compact:
+        result["current"] = compact[-1]
+    else:
+        result["current"] = None
+    return result
+
+
 def _export_catalog(arguments: argparse.Namespace, application: ApplicationServices, trace_id: str) -> Any:
     count = application.catalog_export.export_catalog(
         Path(arguments.output),
@@ -954,6 +1179,7 @@ COMMAND_HANDLERS: dict[str, CommandHandler] = {
     "machine-add": _add_machine_test,
     "machine-sessions": _list_machine_tests,
     "machine-assessment": _get_machine_assessment,
+    "candidate-report": _get_candidate_report,
     "export": _export_catalog,
     "doctor": _run_doctor,
     "backup": _create_backup,

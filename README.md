@@ -18,12 +18,23 @@
 4. 目标年正式目录、普通名额、复试合同、公平性审查和个人测量窗口任一缺失，都保持 `research_only`。
 5. 原始来源、事实主张、裁决、复核和审计均采用追加式记录；历史结论被纠正时追加影子值，不覆盖原行。
 
+当前画像下的候选研究池可以用只读命令查看：
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python manage.py candidate-report
+python manage.py --json candidate-report --candidate-target-id 10
+python manage.py candidate-report --history --details
+```
+
+`candidate-report` 只组合候选身份、用户策略分组、画像适配缺口、历史可比性审查和个人测量/成果资产摘要，不写数据库。每条候选都明确带有 `selection_output.scope=research_only` 与 `probability_status=not_estimated`；`985_priority_research`、`211_hedge_research` 和 `non_211_comparator_research` 是用户指定的取证顺序，不是学校客观层级、冲稳保角色或录取概率。默认输出摘要；只有显式 `--details` 才展开规范化 JSON、事件 ID和证据哈希。
+
 ## 代码结构
 
 - `src/chose_school/domain/`：领域模型、枚举和证据规则，不依赖 SQLite 或命令行。
 - `src/chose_school/business/`：目录、事实、偏好、候选画像适配和择校门禁服务。
 - `src/chose_school/data_access/`：SQLite 仓储和只读投影。
-- `src/chose_school/infrastructure/migrations/`：001—028 向前迁移；已执行迁移禁止回改。
+- `src/chose_school/infrastructure/migrations/`：001—029 向前迁移；已执行迁移禁止回改。
 - `tests/`：单元、集成和 CLI 验收测试。
 - `docs/`：公开研究方法、证据边界和官方来源链接。
 - `config/settings.example.toml`：不含个人值的配置模板；真实 `config/settings.toml` 只保留在本地。
@@ -52,6 +63,10 @@ python manage.py doctor
 ```
 
 当前公开代码的目标是可复核研究基础设施，不是自动录取预测器，也不替代招生单位发布的最终目录、复试办法和拟录取名单。
+
+迁移 029 进一步把“官方建议录取名单行数”与“普通统考最终拟录取人数”分开，
+并让普通统考机器事实拒绝 `official_mixed`、规则推导或专项未拆的数据。查询机器事实时优先使用
+`v_current_accepted_fact_evidence`，不要直接消费包含 `unresolved` 行的高表。
 
 ## 许可证与来源
 
