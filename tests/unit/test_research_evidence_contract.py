@@ -5,6 +5,7 @@ TraceId: 9f847dfc-f892-4055-aa56-c47d48e382b2
 TraceId: 614fad46-51a8-4458-9113-dee74007a5d8
 TraceId: 53b2918f-73c1-4229-8deb-82aa6150c15f
 TraceId: 41b56801-de06-402a-81af-0172921d15c5
+TraceId: 1eed09ce-8e9d-4658-a547-a739fbd6d7d8
 """
 
 from pathlib import Path
@@ -12,6 +13,41 @@ import unittest
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_ouc_2023_public_database_observation_stays_ordinary_and_non_model(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        status = "secondary_visible_mirror_final_subject_observation"
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+            encoding="utf-8"
+        )
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        admission_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(f"`{status}`", data_dictionary)
+        self.assertIn("不得进入择校排序、目标分、录取概率", data_dictionary)
+        self.assertIn("普通一志愿录取名单（17/21）", subject_report)
+        self.assertIn("后 4 行均带同一“未被录取”红色标记", subject_report)
+        self.assertIn("| 目标方向普通一志愿拟录取匿名逐行观察", subject_report)
+        self.assertIn("`331 / 335 / 342 / 349.41 / 367 / 376`", subject_report)
+        self.assertIn("`50 / 55 / 59 / 58.53 / 62 / 67`", subject_report)
+        self.assertIn("17 行全部满足四科和等于总分", subject_report)
+        self.assertIn("不算正式精确格、不进入择校模型", subject_report)
+        self.assertIn("公开匿名数据库标记录取 17", admission_report)
+        self.assertIn("特殊计划、校外调剂及方向 02—04 排除", admission_report)
+        self.assertIn("海大 2023 目标 `002-085404-01`", readme)
+        self.assertNotIn("946260907", readme)
+        self.assertNotIn("946260907", subject_report)
+        self.assertNotIn("946260907", admission_report)
+
     def test_ouc_2024_visible_mirror_stays_direction_scoped_and_non_model(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_visible_mirror_final_subject_observation"
