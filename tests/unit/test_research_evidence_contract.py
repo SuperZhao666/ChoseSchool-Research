@@ -9,6 +9,7 @@ TraceId: 1eed09ce-8e9d-4658-a547-a739fbd6d7d8
 TraceId: 57871eed-618d-4719-8660-036c68436b08
 TraceId: f937b29d-bae2-41b6-b5c7-3048d2fd2834
 TraceId: 384a0fbe-85fd-4535-8d51-116f164f3707
+TraceId: 3c432a1f-9a1e-46f0-a2f5-b39f1764266d
 """
 
 import re
@@ -17,6 +18,48 @@ from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_lnu_2024_aggregate_constrained_intervals_stay_conditional(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        status = "secondary_aggregate_constrained_final_subject_set_identification"
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+            encoding="utf-8"
+        )
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        admission_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(f"`{status}`", data_dictionary)
+        self.assertIn("所有相容子集都已穷举", data_dictionary)
+        self.assertIn("禁止任选一个相容子集形成点估计", data_dictionary)
+        self.assertIn("不得进入择校排序、目标分、录取概率", data_dictionary)
+        self.assertIn("恰有 **16 个相容最终人口**", subject_report)
+        self.assertIn(
+            "`314 / 319.5—320 / 325 / 329.51—329.74 / 335.5 / 382`",
+            subject_report,
+        )
+        self.assertIn(
+            "`74—78 / 89—90 / 95 / 94.34—95.20 / 100 / 113`",
+            subject_report,
+        )
+        self.assertIn("不是官方最终点分布", subject_report)
+        self.assertIn("不进入择校排序、目标分、录取概率", subject_report)
+        self.assertIn("条件集合区间、非正式", admission_report)
+        self.assertIn("共有 16 个相容人口", admission_report)
+        self.assertIn(status, readme)
+        self.assertIn("不输出任一猜测点分布、不进入模型", readme)
+        self.assertNotIn("101404018", readme)
+        self.assertNotIn("101404018", subject_report)
+        self.assertNotIn("101404018", admission_report)
+
     def test_ouc_2026_public_database_observation_excludes_special_plans(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_visible_mirror_final_subject_observation"
