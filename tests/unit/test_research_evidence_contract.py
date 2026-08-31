@@ -8,6 +8,7 @@ TraceId: 41b56801-de06-402a-81af-0172921d15c5
 TraceId: 1eed09ce-8e9d-4658-a547-a739fbd6d7d8
 TraceId: 57871eed-618d-4719-8660-036c68436b08
 TraceId: f937b29d-bae2-41b6-b5c7-3048d2fd2834
+TraceId: 384a0fbe-85fd-4535-8d51-116f164f3707
 """
 
 import re
@@ -230,6 +231,46 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("西北农林2023/2024总分、2025缺口与2026四科交叉续补", readme)
         self.assertIn("`25/25` 交叉", readme)
         self.assertIn("处于当前 16 项之外、不并入 16 项、不是保底", readme)
+
+    def test_ecnu_2024_total_only_population_conflict_is_preserved(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        admission_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+
+        expected_population = "65 = 备注空白 63 + 退役大学生士兵 1 + 少数民族骨干 1"
+        expected_stats = "`277 / 333 / 351 / 346.27 / 362.5 / 396`"
+        pdf_sha256 = (
+            "557FF61FF2FB2B09791F5572B60870F30C2D1EAFC56DE2FE29AAAF099A18249B"
+        )
+        input_sha256 = (
+            "2F535DF879BC5A122644361D0533E0AA513ED60B396D4392A9913283FABC01FA"
+        )
+
+        for content in (readme, subject_report, admission_report):
+            self.assertIn(expected_population, content)
+            self.assertIn(expected_stats, content)
+            self.assertIn("全日制非推免 64", content)
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+        self.assertIn("`official_final_total_only`", subject_report)
+        self.assertIn("禁止从总分反推", subject_report)
+        self.assertIn("18 个正式最终四科精确格也不因此增加", subject_report)
+        self.assertIn(pdf_sha256, subject_report)
+        self.assertIn(pdf_sha256, admission_report)
+        self.assertIn(input_sha256, subject_report)
+        self.assertIn(input_sha256, admission_report)
 
 
 if __name__ == "__main__":
