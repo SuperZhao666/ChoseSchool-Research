@@ -89,7 +89,7 @@ class StructuredFactDerivationMigrationTest(unittest.TestCase):
                 connection.commit()
 
             database = Database(database_path)
-            self.assertEqual(database.migrate(), [25, 26, 27, 28, 29])
+            self.assertEqual(database.migrate(), [25, 26, 27, 28, 29, 30])
             self.assertEqual(database.migrate(), [])
 
             with closing(sqlite3.connect(database_path)) as connection:

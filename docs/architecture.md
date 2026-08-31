@@ -1,16 +1,18 @@
 # 架构设计
 
-## 候选画像适配与三年历史覆盖（迁移 028）
+<!-- 四年历史窗口文档 TraceId: 34c4c1e3-1696-4084-bbff-9bb1e6e5fdf5 -->
+
+## 候选画像适配与四年历史覆盖（迁移 028、030）
 
 迁移 028 在迁移 027 的候选版本链外再追加一层“本人已知偏好适配”审查。`CandidateModelService` 只依赖 `CandidateModelStore`：服务冻结当前画像的全部偏好事件、现状事件、十个逐维结论和条件缺口，SQLite 仓储在同一事务中追加审查行与 TraceId 审计事件。三份 canonical JSON 及 SHA-256 均由数据库约束和 `doctor` 复核；原审查禁止改删，画像变化后 active 视图只把旧快照标为过期，修订必须追加线性后继。
 
 `strategy_bucket` 的三个值只是本人指定的研究取证顺序，固定记录 `user_strategy_assignment`，不从候选 `reason` 文本、学校名称或历史分数猜测“985/211/保底”。画像审查输出固定为 `research_only + not_estimated`，只回答已知偏好是否相容、还有哪些条件缺口，不计算录取概率，不建立冲稳保角色，也不进入 `selection-readiness-v3` 的必需门禁。
 
-三年历史投影以 active 候选目标年动态生成 `target_year-3/-2/-1` 三个槽位，并且只接受迁移 027 显式绑定的 current 可比性审查；它不会按校名或专业名称自动拼接历史行。同年存在多个潜在可用审查时返回 `ambiguous`，不会擅自选择对候选最有利的一条。
+迁移 030 将历史投影扩展为 active 候选目标年前四个完整招生年度，即 `target_year-4/-3/-2/-1` 四个槽位；当前 2027 目标对应 2023—2026。投影只接受迁移 027 显式绑定的 current 可比性审查，不会按校名或专业名称自动拼接历史行。同年存在多个潜在可用审查时返回 `ambiguous`，不会擅自选择对候选最有利的一条。
 
 迁移 027 的 `comparable` 仍不足以建立成绩历史：迁移 028 要求目标和历史两侧的精确观测都在 `v_catalog` 中是同年度 `official_confirmed`，任何一侧不满足即返回 `invalid_subject_contract`，并由 `doctor.comparability_subject_contract_invalid` 报错。这样可阻止“2026 改考 408，便把 2024/2025 自命题成绩当同一压力序列”的伪连续性。
 
-成绩压力只消费迁移 026 的可复算统计投影，要求样本数、计算方法、输入哈希齐全且没有统计质量问题；统计还必须同时匹配审查冻结的 `population_scope + statistic_scope`，所需分位数事实键必须逐一列入该审查的 `fact_keys`。普通统考最终名单、限定名单代理人群和复试名单始终分开计数。只有三年可比审查、正式四码、普通名额和同一普通统考统计人群全部完整时，窗口才给出 `score_history_support=1`。由于复试内容、权重和淘汰规则尚没有跨年连续性合同，`history_stability_support` 固定为 0，边界明确为 `retest_contract_continuity_not_modeled`；窗口也固定 `admission_role_is_established=0`。
+成绩压力只消费迁移 026 的可复算统计投影，要求样本数、计算方法、输入哈希齐全且没有统计质量问题；统计还必须同时匹配审查冻结的 `population_scope + statistic_scope`，所需分位数事实键必须逐一列入该审查的 `fact_keys`。普通统考最终名单、限定名单代理人群和复试名单始终分开计数。只有四年可比审查、正式四码、普通名额和同一普通统考统计人群全部完整时，窗口才给出 `score_history_support=1`。由于复试内容、权重和淘汰规则尚没有跨年连续性合同，`history_stability_support` 固定为 0，边界明确为 `retest_contract_continuity_not_modeled`；窗口也固定 `admission_role_is_established=0`。三年、两年和单年覆盖只代表尚未补齐四年，不满足完整历史门禁。
 
 ## 候选目标与跨年可比性结构（迁移 027）
 

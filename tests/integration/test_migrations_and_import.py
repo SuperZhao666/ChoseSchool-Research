@@ -313,7 +313,7 @@ class MigrationsAndRealImportTest(unittest.TestCase):
                 ]
 
             self.assertEqual(definitions, expected_definitions)
-            self.assertEqual(migration_versions, list(range(1, 30)))
+            self.assertEqual(migration_versions, list(range(1, 31)))
             self.assertEqual(
                 catalog_column_names,
                 [

@@ -165,7 +165,8 @@ class CliJourneyTest(unittest.TestCase):
             )
             self.assertEqual(migrated.returncode, 0, migrated.stderr)
             self.assertEqual(
-                json.loads(migrated.stdout)["applied_migrations"], [25, 26, 27, 28, 29]
+                json.loads(migrated.stdout)["applied_migrations"],
+                [25, 26, 27, 28, 29, 30],
             )
 
     def test_fact_add_accepts_and_replays_one_structured_derivation(self) -> None:

@@ -1,5 +1,7 @@
 # 数据字典
 
+<!-- 四年历史窗口数据字典 TraceId: 34c4c1e3-1696-4084-bbff-9bb1e6e5fdf5 -->
+
 ## 普通统考语义护栏（迁移 029）
 
 | 表或视图 | 语义 | 关键约束 |
@@ -14,27 +16,27 @@
 从迁移 029 起只能写入 `evidence_grade=official` 的同口径正式证据。官方来源但专项未拆、
 规则推导、复试池或建议名单代理，必须使用受控代理事实键或保持 `unresolved`。
 
-## 候选画像适配与近三年历史覆盖（迁移 028）
+## 候选画像适配与近四年历史覆盖（迁移 028、030）
 
-迁移 028 新增画像适配账本和只读历史覆盖投影；迁移本身不预置任何适配结论，也不把历史分数变成 2027 推荐。
+迁移 028 新增画像适配账本和只读历史覆盖投影，迁移 030 将完整窗口从三年扩为四年；两项迁移都不预置适配结论，也不把历史分数变成 2027 推荐。
 
 | 表或视图 | 语义 | 关键约束 |
 |---|---|---|
 | `candidate_profile_fit_reviews` | 精确候选版本相对于当前人物画像的追加式审查 | 完整偏好/现状事件快照、三份 canonical JSON/SHA-256、线性修订链、TraceId、禁止改删 |
 | `v_current_candidate_profile_fit_reviews` | 每个候选版本画像审查链的链尾 | 新候选版本不继承旧审查 |
 | `v_active_candidate_profile_fit_reviews` | 当前 active 候选的画像审查 | 返回 `is_input_snapshot_current`；画像变化后旧审查仍保留但立即显示过期 |
-| `v_candidate_history_year_coverage` | 每个 active 候选在目标年前 3、2、1 年的逐年证据覆盖 | 只接受迁移 027 显式绑定的 current 可比性审查，绝不按校名/专业名自动配对 |
-| `v_candidate_history_window_coverage` | 三个逐年槽位的窗口汇总 | 分开报告审查覆盖、普通名额覆盖、可复算压力覆盖和严格边界，不产生报考角色 |
+| `v_candidate_history_year_coverage` | 每个 active 候选在目标年前 4、3、2、1 年的逐年证据覆盖 | 只接受迁移 027 显式绑定的 current 可比性审查，绝不按校名/专业名自动配对 |
+| `v_candidate_history_window_coverage` | 四个逐年槽位的窗口汇总 | 分开报告审查覆盖、普通名额覆盖、可复算压力覆盖和严格边界，不产生报考角色 |
 
 `strategy_bucket` 只允许 `985_priority_research`、`211_hedge_research`、`non_211_comparator_research`，且 `strategy_assignment_basis` 固定为 `user_strategy_assignment`。它表示本人安排官网取证的先后层，不是院校层级的客观事实，也不是“冲／稳／保”。`known_preference_fit` 只允许 `compatible/conditional/conflict/insufficient`；`output_scope` 永远为 `research_only`，`probability_status` 永远为 `not_estimated`。
 
 `input_snapshot_json` 固定 `candidate-profile-input-v1`，冻结写入当时该画像的全部 current `applicant_preference_events` 与全部 current `applicant_context_events` ID。`dimension_results_json` 固定 `candidate-profile-fit-dimensions-v1`，必须逐项覆盖 `institution/program_code/region/training_location/tuition/joint_training/retest_format/school_tier_strategy/admission_fairness/preparation_timing`；维度状态为 `pass/conditional/hard_conflict/not_evaluable/not_applicable`。`evidence_gaps_json` 每项保存唯一 `code`、`missing/partial/resolved/not_applicable` 状态、`selection_gate/research_condition/advisory` 影响和说明。三份 JSON 都规范化、哈希并由 `doctor` 重算；画像事件后来追加时不覆盖旧审查，而由 active 视图将 `is_input_snapshot_current` 置为 0，随后用新审查版本替代。
 
-历史覆盖窗口按 `target_year-3` 至 `target_year-1` 动态生成；当前 2027 画像对应 2024—2026。逐年可能是 `unreviewed/ambiguous/invalid_subject_contract/comparable/limited/insufficient/rejected`。同年存在多个潜在可用审查时固定为 `ambiguous`，投影不会自行挑选“看起来最好”的观测。
+历史覆盖窗口按 `target_year-4` 至 `target_year-1` 动态生成；当前 2027 画像对应 2023—2026。逐年可能是 `unreviewed/ambiguous/invalid_subject_contract/comparable/limited/insufficient/rejected`。同年存在多个潜在可用审查时固定为 `ambiguous`，投影不会自行挑选“看起来最好”的观测。窗口汇总新增 `four_year_reviewed` 与 `four_year_comparable`；三年、两年和单年状态只表示尚未补齐四年，不再满足完整历史门禁。
 
 迁移 027 的 `comparable` 文字本身不够：028 要求目标和历史两侧的精确观测都在 `v_catalog` 中为同年度 `official_confirmed`，否则逐年状态为 `invalid_subject_contract`，`doctor.comparability_subject_contract_invalid` 非零。成绩压力只读取迁移 026 的 `v_current_structured_score_statistics`，且必须没有 `v_statistical_fact_quality_issues`；旧主张若 `sample_size/calculation_method_key/calculation_input_sha256` 为 NULL，只能算 `legacy_unreproducible`，不得进入压力覆盖。压力组还必须与审查冻结的 `population_scope + statistic_scope` 完全相同，且对应样本人数事实以及 Q25/Q50/Q75（或复试名单的 min/Q50/mean/max）每个事实键都在该审查的 `fact_keys` 中显式声明；实际统计存在但审查未完整声明时返回 `not_fully_declared_by_review`。`ordinary_general_admission_initial`、两个最终名单代理人群和 `retest_roster_initial` 永不混合。
 
-`score_history_support` 仅在目标是正式观测、三年均有有效 `comparable`、普通名额事实与同一普通统考人群的可复算压力完整时为 1。由于复试合同跨年连续性尚无结构化合同，`history_stability_support` 固定为 0，并返回 `retest_contract_continuity_not_modeled`；`admission_role_is_established` 也固定为 0。迁移 028 不新增 `selection-readiness-v3` 必需门禁，画像适配和历史覆盖不能推动 `is_selection_ready=true`。
+`score_history_support` 仅在目标是正式观测、四年均有有效 `comparable`、普通名额事实与同一普通统考人群的可复算压力完整时为 1。由于复试合同跨年连续性尚无结构化合同，`history_stability_support` 固定为 0，并返回 `retest_contract_continuity_not_modeled`；`admission_role_is_established` 也固定为 0。迁移 030 只把历史覆盖门禁从三年扩为四年，不新增 `selection-readiness-v3` 必需门禁；历史最低分、中位数或完整四年分布仍不能单独推动 `is_selection_ready=true`，也不能自动生成“冲稳保”或录取概率。
 
 ## 候选目标与跨年可比性（迁移 027）
 
