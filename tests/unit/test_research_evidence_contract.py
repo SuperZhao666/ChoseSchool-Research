@@ -199,7 +199,7 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(cumulative_status, subject_report)
         self.assertIn(cumulative_total_status, subject_report)
         self.assertIn("校级最终公示原附件尚未恢复", subject_report)
-        self.assertIn("不计入 19 个正式最终精确格", readme)
+        self.assertIn("不计入 20 个正式最终精确格", readme)
         self.assertIn("原先“同时原普通退出 1 人”的说法没有现存正式原件支撑", admission_report)
         self.assertNotIn("后补普通 3，普通规模仍 52", admission_report)
         self.assertIn("院级累计为 `56=普通55+士兵1`", admission_report)
@@ -267,8 +267,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             "AAD8D1E3BDF5A6D1540FBFA9EB750D5AB77BBB38B0DA61E21C6E16D94F1D514F"
         )
 
-        self.assertIn("19 格能够给出官方确认", subject_report)
-        self.assertIn("45 格在官方口径下仍不可计算", subject_report)
+        self.assertIn("20 格能够给出官方确认", subject_report)
+        self.assertIn("44 格在官方口径下仍不可计算", subject_report)
         self.assertIn("| 9 | 西南交大 048—085410 | 直(15) | 直(18) |", subject_report)
         self.assertIn("2024 备注空白考试招生代理", subject_report)
         self.assertIn("`official_final_subject_rows`", subject_report)
@@ -284,7 +284,7 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(input_sha256, subject_report)
         self.assertIn(input_sha256, admission_report)
         self.assertIn("同本人 408 可比格仍为 9", readme)
-        self.assertIn("19 格能由最终名单直接分科", decision_matrix)
+        self.assertIn("20 格能由最终名单直接分科", decision_matrix)
         self.assertIn("西南交大 2024 使用 840", decision_matrix)
 
         for content in (readme, subject_report, admission_report, decision_matrix):
@@ -326,11 +326,68 @@ class ResearchEvidenceContractTests(unittest.TestCase):
 
         self.assertIn("`official_final_total_only`", subject_report)
         self.assertIn("禁止从总分反推", subject_report)
-        self.assertIn("19 个正式最终四科精确格也不因此增加", subject_report)
+        self.assertIn("20 个正式最终四科精确格也不因此增加", subject_report)
         self.assertIn(pdf_sha256, subject_report)
         self.assertIn(pdf_sha256, admission_report)
         self.assertIn(input_sha256, subject_report)
         self.assertIn(input_sha256, admission_report)
+
+    def test_xju_2023_official_retest_and_final_rows_crossmatch(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        admission_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        decision_matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+
+        retest_pdf_sha256 = (
+            "748DD824778B579A6F9296E79BA08C80D9EA0D79C62A580CF59582877FA5BBF0"
+        )
+        final_pdf_sha256 = (
+            "4DF4813FB82809ABB9BA2BAD3631F8A862676AC68A4F225804F32FCA95D0E446"
+        )
+        input_sha256 = (
+            "1B8368B1A04D6A0147AC882702B8863AB764D6ADB4EA23C63448120BA001C371"
+        )
+
+        self.assertIn("20 格能够给出官方确认", subject_report)
+        self.assertIn("44 格在官方口径下仍不可计算", subject_report)
+        self.assertIn("| 11 | 新大 308—085405 | 交(普通97；含照顾98) |", subject_report)
+        self.assertIn("| 2023 | 正式目录四码原件未恢复 | `official_final_crossmatch` | 97 |", subject_report)
+        self.assertIn("`265 / 288 / 305 / 306.84 / 322 / 368`", subject_report)
+        self.assertIn("`45 / 54 / 57 / 57.43 / 60 / 69`", subject_report)
+        self.assertIn("`36 / 61 / 67 / 66.19 / 71 / 87`", subject_report)
+        self.assertIn("`53 / 71 / 78 / 81.21 / 90 / 122`", subject_report)
+        self.assertIn("`65 / 96 / 102 / 102.01 / 110 / 123`", subject_report)
+        self.assertIn("`111/111`", subject_report)
+        self.assertIn("目标 `085405` 为 `108/108`", subject_report)
+        self.assertIn("普通拟录取 97、少民照顾 1、不录取 10", subject_report)
+        self.assertIn("科目代码仍保持未确认", subject_report)
+        self.assertIn("一志愿四科名单 108；复试结果 108", admission_report)
+        self.assertIn("两份校方表按编号 `111/111`", admission_report)
+        self.assertIn("当前官方精确格增至 20", readme)
+        self.assertIn("新大 2023", decision_matrix)
+
+        for digest in (retest_pdf_sha256, final_pdf_sha256, input_sha256):
+            self.assertIn(digest, subject_report)
+            self.assertIn(digest, admission_report)
+
+        for content in (readme, subject_report, admission_report, decision_matrix):
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
 
 
 if __name__ == "__main__":
