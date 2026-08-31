@@ -224,6 +224,27 @@ subject_adjustment_notice
 
 机器不把自然语言 `statistic_scope` 的字面相等当作统计身份。质量组以“观测 + 统计族 + `population_scope`”为身份，再以 `sample_size + calculation_input_sha256` 锁定同一输入集。人数对应关系为：`score.initial.* → admission.general_count`，`blank_remark → admission.final_list_fulltime_blank_remark_count`，`first_choice_fulltime_non_directed → admission.final_list_first_choice_fulltime_non_directed_count`，`retest_roster → retest.roster_count`。对应受控人群的当前 accepted 人数必须恰好一条且等于 `sample_size`；同输入组必须满足 `q25 ≤ median ≤ q75`。`v_statistical_fact_quality_issues` 与 `doctor` 对缺失、多义、样本数不等、输入不一致、分位数组不完整及顺序错误均按错误处理。
 
+### 最终录取者分科成绩研究层（2026-08-31）
+
+<!-- 最终录取者分科成绩证据合同 TraceId: 306de97b-8fa5-4276-af08-2d438c190205 -->
+
+[当前 16 项四年分科审计](current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md)新增了政治、外语、业务课一、业务课二的匿名聚合研究层。该层当前是人类可读证据库，**不是迁移 030 以前已有的 `fact_definitions` 机器字段，也不进入 `v_current_structured_score_statistics`、`score_history_support` 或录取概率**。这样可避免把需要“两份原件交叉”的统计硬塞进只能表达单一事实来源的旧主张合同。
+
+研究状态固定为：
+
+| 状态 | 合同 |
+|---|---|
+| `official_final_subject_rows` | 正式最终名单本身同时给出最终身份和四科 |
+| `official_final_crossmatch` | 同项目同年度的正式含四科名单与正式最终名单按稳定编号 100% 无歧义匹配，且四科和与最终初试总分一致 |
+| `official_final_total_only` | 最终人口可确认，但正式原件只有初试总分，禁止反推四科 |
+| `official_retest_subject_rows_only` | 四科只支持复试人口，缺完整最终集合或稳定匹配，禁止冒充录取人口 |
+| `missing` | 正式附件撤下、验证码/空文件、公示结束或项目方向身份不闭环；不等于 0 |
+| `not_applicable` | 当年尚无独立项目；不等于录取 0 人 |
+
+决策模型只允许把前两种状态用作分科历史上下文；还必须同时保留 `population_scope`、专项/联培/委托排除规则、学习方式、方向边界和当年四科合同。相同总分不意味着相同科目结构；`917/961/902/861/840/839` 与 `408` 均为比较断点。读取时优先看中位数与 Q25—Q75，最低值、最高值和单年小样本不得建立“安全线”。
+
+如果未来把该研究层升级为机器事实，至少要新增可绑定“含四科原件 + 最终名单原件”的多来源证据包，并对总分和四个科目分别冻结 `n/min/Q25/median/mean/Q75/max`、Type 7 方法版本和匿名输入哈希；每科样本数必须等于对应最终人口。迁移、领域注册表、CLI、质量视图、`doctor`、README 与测试须同步向前新增。在此之前，不为本轮 18 个可算年度制造看似结构化但证据链不完整的数据库行。
+
 ## 个人测评
 
 <!-- 个人测评口径修复 TraceId: 2f82ffa4-df9d-42ff-be5c-9f6961cd2603 -->
