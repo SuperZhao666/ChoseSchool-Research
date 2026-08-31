@@ -16,6 +16,8 @@
 >
 > 厦门大学 2025 非士兵／普通／核心人口分科集合识别区间续补 TraceId：`70f35b20-1ef7-4e31-bb6f-a87a9c74075e`
 >
+> 山东大学 2024 正式复试分科恢复与脱敏最终顺序集合识别 TraceId：`9f847dfc-f892-4055-aa56-c47d48e382b2`
+>
 > 中国海洋大学 2025 公开逐行镜像纠错与匿名分科观察 TraceId：`635ff73b-336e-4698-b78b-dc3c40eb4b54`
 >
 > 重庆大学 2025—2026 二手聚合分科观察与官方人口冲突审计 TraceId：`28d12d99-2c11-4c78-9d45-efc11256313c`
@@ -112,11 +114,15 @@
 | 年度 | 正式初试科目 | 普通复试线／实际边界 | 复试人数 | 最终拟录取人数 | 最终初试六统计 | 人口边界与缺口 |
 |---|---|---:|---:|---:|---|---|
 | 2023 | `101+204+302+832 计算机综合`，非 408 | 普通实际边界 356，线处同分 2 | 邀请 57 = 普通 55 + 士兵 2；结果 56 = 普通 54 + 士兵 2 | 首榜普通 42 + 士兵 2；后补普通 1、同时原普通退出 1，普通规模仍 42 | 首榜普通 42：`356 / 369.25 / 380.5 / 384.81 / 398 / 440` | 换人后的精确最终集合未恢复，统计只能标“首榜普通” |
-| 2024 | `101+204+302+832 计算机综合`，非 408 | 343，线处同分 4 | 75 = 普通 73 + 少民骨干 2 | 缺失；目录计划 42 不是最终人数 | 缺失 | 拟录取附件已撤；少民骨干单列 |
+| 2024 | `101+204+302+832 计算机综合`，非 408 | 343，线处同分 4 | 75 = 普通 73 + 少民骨干 2 | 正式缺失；旁证冲突为初榜聚合 `42+2`、后期脱敏截图 `44+2`、另一排专项聚合 45 | 正式缺失；后期截图顺序集合普通44总分为 `min[343,345] / Q25[361,362.75] / median[374.5,376.5] / mean[373.36,374.95] / Q75[386,386.25] / max408` | 首榜与递补附件均撤；8 个相容集合只作旁证，不进入模型 |
 | 2025 | `101+204+302+832 计算机综合`，非 408 | 校级 0854 基准 310；结果表普通实际边界 340 | 结果 86 = 普通 85 + 士兵 1 | 首榜普通 52 + 士兵 1；后补普通 3，普通规模仍 52 | 首榜普通 52：`345 / 359.75 / 372 / 371.23 / 381 / 399` | 退出者身份不全，不能重算补录后精确最终分布 |
 | 2026 | `101+204+302+408` | 353 | 邀请 96 = 普通 95 + 少民骨干 1；普通完整成绩 93 | 47 = 核心无备注 44 + 生医委培 2 + 空天联培 1 | 核心 44：`358 / 377.75 / 386 / 386.93 / 396.25 / 417`；全 47：`358 / 377 / 386 / 385.81 / 395.5 / 417` | 委培与联培单列；计划 45 不是最终 47，也不是核心 44 |
 
-官方来源：[2023 目录](https://www.yz.sdu.edu.cn/yjszsxx/2023/shandongdaxue2023nianshuoshiyanjiushengzhaoshengzhuanyemulu.pdf)、[2023 结果页](https://www.cs.sdu.edu.cn/info/1068/5834.htm)、[2023 补录页](https://www.cs.sdu.edu.cn/info/1068/5845.htm)、[2024 目录](https://www.yz.sdu.edu.cn/2024/shandongdaxue2024nianshuoshiyanjiushengzhaoshengzhuanyemulu.pdf)、[2024 复试名单](https://www.cs.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1470795559&wbfileid=14622208)、[2025 目录](https://www.yz.sdu.edu.cn/2025/shandongdaxue2025nianshuoshiyanjiushengzhaoshengzhuanyemulu.pdf)、[2025 结果页](https://www.cs.sdu.edu.cn/info/1068/6506.htm)、[2026 复试名单](https://www.cs.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1470795559&wbfileid=16795621)、[2026 拟录取附件](https://www.cs.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1470795559&wbfileid=17924103)。
+官方来源：[2023 目录](https://www.yz.sdu.edu.cn/yjszsxx/2023/shandongdaxue2023nianshuoshiyanjiushengzhaoshengzhuanyemulu.pdf)、[2023 结果页](https://www.cs.sdu.edu.cn/info/1068/5834.htm)、[2023 补录页](https://www.cs.sdu.edu.cn/info/1068/5845.htm)、[2024 目录](https://www.yz.sdu.edu.cn/2024/shandongdaxue2024nianshuoshiyanjiushengzhaoshengzhuanyemulu.pdf)、[2024 复试名单发布页](https://www.cs.sdu.edu.cn/info/1068/6177.htm)、[2024 复试名单附件](https://www.cs.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1470795559&wbfileid=14622208)、[2024 首榜发布页](https://www.cs.sdu.edu.cn/info/1068/6189.htm)、[2024 递补发布页](https://www.cs.sdu.edu.cn/info/1068/6195.htm)、[2025 目录](https://www.yz.sdu.edu.cn/2025/shandongdaxue2025nianshuoshiyanjiushengzhaoshengzhuanyemulu.pdf)、[2025 结果页](https://www.cs.sdu.edu.cn/info/1068/6506.htm)、[2026 复试名单](https://www.cs.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1470795559&wbfileid=16795621)、[2026 拟录取附件](https://www.cs.sdu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1470795559&wbfileid=17924103)。
+
+2024 校方复试工作簿为 BIFF8/XLS，40448 字节、SHA-256 `1E220C899D0124287351C22ED671EBEB7087FE4CB4AF7BFD27E98C4293FD23F3`；目标 75 行四科和与总分全部一致。普通 73 人复试总分六统计为 `343 / 352 / 364 / 366.70 / 379 / 408`，四科均值依次为 `65.32 / 73.03 / 110.59 / 117.77`。这些值只描述进入复试者，不是录取者。
+
+后期脱敏截图显示目标 46 行均全日制，人口为无专项 44、少民骨干 2；截图字节数 477763、SHA-256 `82476A182FF522560BADF645173327782E33693AAB35141C488B95D43416799D`，仓库不保存第三方图片或原始名单直链。按完整考生编号给校方复试表排序后，截图中学硕 7 行姓氏序列在 13 人中只有一个相容子序列，验证同一排序规则；专硕 46 行在强制两处专项标记后仍有 8 个相容子序列。因此这里只能发布 8 个集合的统计上下界，不能恢复个人身份或给单一点分布。[N诺匿名聚合页](https://noobdream.com/schoolinfo/140/)另报普通 42、专项 2，并给普通总分均值 375、范围 343—408；另一张公开汇总表报排除特殊计划、调剂和非全后的 45 人。校方 4 月 9 日确有递补公示，但首榜和递补附件均撤，无法闭环三种人数口径；不选边、不升级正式人数。
 
 ## 5. 华东师范大学 135 计算机科学与技术学院 `085404-01`（全日制）
 
