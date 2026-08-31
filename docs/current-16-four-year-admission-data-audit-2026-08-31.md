@@ -38,6 +38,8 @@
 >
 > 华东师范大学 2024 校级拟录取总分恢复与年报人口冲突审计 TraceId：`384a0fbe-85fd-4535-8d51-116f164f3707`
 >
+> 西南交通大学 2024 校级最终名单分科列纠错 TraceId：`be9213d5-b545-4c80-a072-1cccb0f8eb5a`
+>
 > 核验日期：2026-08-31（Asia/Shanghai）
 >
 > 目标考试年度：2027；历史招生年度：2023、2024、2025、2026
@@ -203,11 +205,13 @@
 | 年度 | 正式初试科目 | 官方复试线 | 复试人数 | 最终拟录取限定人数 | 最终初试六统计 | 人口边界与缺口 |
 |---|---|---:|---:|---:|---|---|
 | 2023 | 缺失；现有证据强烈指向 840，但未恢复正式目录四科原行 | 338 | 18 | 15 | `347 / 353 / 364 / 367.00 / 376.5 / 409` | 结果为备注空白考试招生行；表无一志愿/调剂字段，只作限定人口 |
-| 2024 | `101+204+302+840`，非 408 | 373 | 普通 27；另有二等功免初试 1 | 18 | `373 / 383 / 389.5 / 389.06 / 395 / 406` | 免初试人员单列；最终仍是备注空白考试招生代理人口 |
+| 2024 | `101+204+302+840`，非 408 | 373 | 普通 27；另有二等功免初试 1 | 18 | `373 / 383 / 389.5 / 389.06 / 395 / 406` | 校级最终表直接含四科；推免 9 人与考试招生 18 人分开，最终仍是备注空白考试招生代理人口 |
 | 2025 | `101+204+302+840`，非 408 | 360 | 26 | 19 | `361 / 367.5 / 387 / 385.53 / 402.5 / 414` | 结果表无一志愿/调剂字段 |
 | 2026 | `101+204+302+408` | 310 | 26 | 19 | `313 / 328.5 / 340 / 344.95 / 358.5 / 384` | 只有 2026 与本人 22408 同合同；普通 C 语言上机，不是攻防 |
 
-官方来源：[2023 校级复试线](https://yz.swjtu.edu.cn/vatuu/RetrialScoreAdminAction?btn1=%E6%89%A7%E8%A1%8C%E6%9F%A5%E8%AF%A2&setAction=publicRetrialMasterLine&year=2023)、[2023 复试名单页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=fa73780f-c3bc-46dc-9c5f-08fe668094b4)、[2023 校级拟录取 PDF](https://yz.swjtu.edu.cn/download/ueditor/jsp/upload/file/20230419/1681886940781054547.pdf)、[2024 目录](https://yz.swjtu.edu.cn/vatuu/PlanMasterMajorAction?key1=001&setAction=intro&type=zszyml&year=B8DD05E404DF0ACB)、[2024 分数线](https://yz.swjtu.edu.cn/vatuu/RetrialScoreAdminAction?setAction=publicRetrialMasterLineInfo&year=2024&yxsdm=048&zydm=085410)、[2024 结果页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=0807bf78-7b3e-4c6c-8d02-4379831e5c55)、[2025 目录](https://yz.swjtu.edu.cn/vatuu/PlanMasterMajorAction?setAction=intro&type=zszyml&year=56BE44204C286DE2&key1=3D6157B2F391E406)、[2025 结果页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=b48f1331-e284-4c26-baab-dea916cf8fe1)、[2026 目录](https://yz.swjtu.edu.cn/vatuu/PlanMasterMajorAction?setAction=intro&type=zszyml&year=2F5ED7DE6FE0E739)、[2026 结果页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=1d073938-5bac-43c7-8b4c-bc1840bf3522)。
+2024 的 18 人总分人口没有改变，但证据列级已纠错。[校级拟录取 PDF](https://yz.swjtu.edu.cn/download/ueditor/jsp/upload/file/20240416/1713235233610063327.pdf)实际直接列出政治、外语、业务课一、业务课二、初试总成绩与备注；目标全日制 `048-085410` 为 `27=备注空白考试招生18+推荐免试9`。18 个考试招生行四科和与总分 `18/18` 一致，总分六统计也与本表旧值完全相同。PDF 为 7932771 字节，SHA-256 `38A91D798729845B2E66166EF13E1CF84F37093F23852655A2A2E8ABABA2AFCD`；匿名分科输入 SHA-256 为 `AAD8D1E3BDF5A6D1540FBFA9EB750D5AB77BBB38B0DA61E21C6E16D94F1D514F`。四科六统计写入[分科续篇](current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md#西南交通大学-048-计算机与人工智能学院-085410)；当年业务课二为 840，仍不与 2026 的 408 同卷比较。
+
+其他官方来源：[2023 校级复试线](https://yz.swjtu.edu.cn/vatuu/RetrialScoreAdminAction?btn1=%E6%89%A7%E8%A1%8C%E6%9F%A5%E8%AF%A2&setAction=publicRetrialMasterLine&year=2023)、[2023 复试名单页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=fa73780f-c3bc-46dc-9c5f-08fe668094b4)、[2023 校级拟录取 PDF](https://yz.swjtu.edu.cn/download/ueditor/jsp/upload/file/20230419/1681886940781054547.pdf)、[2024 目录](https://yz.swjtu.edu.cn/vatuu/PlanMasterMajorAction?key1=001&setAction=intro&type=zszyml&year=B8DD05E404DF0ACB)、[2024 分数线](https://yz.swjtu.edu.cn/vatuu/RetrialScoreAdminAction?setAction=publicRetrialMasterLineInfo&year=2024&yxsdm=048&zydm=085410)、[2024 结果页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=0807bf78-7b3e-4c6c-8d02-4379831e5c55)、[2025 目录](https://yz.swjtu.edu.cn/vatuu/PlanMasterMajorAction?setAction=intro&type=zszyml&year=56BE44204C286DE2&key1=3D6157B2F391E406)、[2025 结果页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=b48f1331-e284-4c26-baab-dea916cf8fe1)、[2026 目录](https://yz.swjtu.edu.cn/vatuu/PlanMasterMajorAction?setAction=intro&type=zszyml&year=2F5ED7DE6FE0E739)、[2026 结果页](https://scai.swjtu.edu.cn/web/page-newsDetail.html?nid=1d073938-5bac-43c7-8b4c-bc1840bf3522)。
 
 ## 10. 辽宁大学 018 信息学部 `085405`
 

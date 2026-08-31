@@ -199,7 +199,7 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(cumulative_status, subject_report)
         self.assertIn(cumulative_total_status, subject_report)
         self.assertIn("校级最终公示原附件尚未恢复", subject_report)
-        self.assertIn("不计入 18 个正式最终精确格", readme)
+        self.assertIn("不计入 19 个正式最终精确格", readme)
         self.assertIn("原先“同时原普通退出 1 人”的说法没有现存正式原件支撑", admission_report)
         self.assertNotIn("后补普通 3，普通规模仍 52", admission_report)
         self.assertIn("院级累计为 `56=普通55+士兵1`", admission_report)
@@ -222,6 +222,13 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("`59 / 72.5 / 80 / 81.21 / 90.5 / 101`", report)
         self.assertIn("`278 / 316.25 / 335 / 337.81 / 354.5 / 402`", report)
         self.assertIn("`274 / 297 / 307 / 316.26 / 339 / 379`", report)
+        self.assertIn("一志愿复试名单共有 120 行，其中人工智能 80 行", report)
+        self.assertIn("匹配 `54/54`、初试总分冲突 0", report)
+        self.assertIn("拟录取 43 与面试低于 60 分不予录取 11", report)
+        self.assertIn(
+            "693EAB6C3242E2D7A318C0CCBC532E14EAEF52F5C099B79E084B6B935A76FFA5",
+            report,
+        )
         self.assertIn("n、中位数、Q25、Q75 和四科均保持缺失", report)
         self.assertIn("当前 16 项之外", report)
         self.assertIn("不是保底", report)
@@ -230,7 +237,60 @@ class ResearchEvidenceContractTests(unittest.TestCase):
 
         self.assertIn("西北农林2023/2024总分、2025缺口与2026四科交叉续补", readme)
         self.assertIn("`25/25` 交叉", readme)
+        self.assertIn("按编号 `54/54` 匹配、初试总分零冲突", readme)
         self.assertIn("处于当前 16 项之外、不并入 16 项、不是保底", readme)
+
+    def test_swjtu_2024_official_final_subject_rows_are_not_total_only(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        admission_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        decision_matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+
+        source_sha256 = (
+            "38A91D798729845B2E66166EF13E1CF84F37093F23852655A2A2E8ABABA2AFCD"
+        )
+        input_sha256 = (
+            "AAD8D1E3BDF5A6D1540FBFA9EB750D5AB77BBB38B0DA61E21C6E16D94F1D514F"
+        )
+
+        self.assertIn("19 格能够给出官方确认", subject_report)
+        self.assertIn("45 格在官方口径下仍不可计算", subject_report)
+        self.assertIn("| 9 | 西南交大 048—085410 | 直(15) | 直(18) |", subject_report)
+        self.assertIn("2024 备注空白考试招生代理", subject_report)
+        self.assertIn("`official_final_subject_rows`", subject_report)
+        self.assertIn("`373 / 383 / 389.5 / 389.06 / 395 / 406`", subject_report)
+        self.assertIn("`65 / 69.25 / 71.5 / 71.78 / 75.75 / 79`", subject_report)
+        self.assertIn("`67 / 70.5 / 79 / 76.78 / 82 / 84`", subject_report)
+        self.assertIn("`93 / 104.5 / 111 / 112.00 / 119.5 / 127`", subject_report)
+        self.assertIn("`115 / 120.5 / 129 / 128.50 / 134.5 / 143`", subject_report)
+        self.assertIn("`27=备注空白考试招生18+推荐免试9`", subject_report)
+        self.assertIn("`18/18` 一致", subject_report)
+        self.assertIn(source_sha256, subject_report)
+        self.assertIn(source_sha256, admission_report)
+        self.assertIn(input_sha256, subject_report)
+        self.assertIn(input_sha256, admission_report)
+        self.assertIn("同本人 408 可比格仍为 9", readme)
+        self.assertIn("19 格能由最终名单直接分科", decision_matrix)
+        self.assertIn("西南交大 2024 使用 840", decision_matrix)
+
+        for content in (readme, subject_report, admission_report, decision_matrix):
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
 
     def test_ecnu_2024_total_only_population_conflict_is_preserved(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
@@ -266,7 +326,7 @@ class ResearchEvidenceContractTests(unittest.TestCase):
 
         self.assertIn("`official_final_total_only`", subject_report)
         self.assertIn("禁止从总分反推", subject_report)
-        self.assertIn("18 个正式最终四科精确格也不因此增加", subject_report)
+        self.assertIn("19 个正式最终四科精确格也不因此增加", subject_report)
         self.assertIn(pdf_sha256, subject_report)
         self.assertIn(pdf_sha256, admission_report)
         self.assertIn(input_sha256, subject_report)
