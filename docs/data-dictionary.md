@@ -128,6 +128,8 @@ CLI 的 `projects` 与 `export` 默认读取 `v_catalog_evidence_resolved` 并�
 
 `secondary-observation-add` 使用现有表追加二级项目年度观测，不新增或修改迁移。`evidence_sources.evidence_grade` 固定为 `secondary`，`document_type` 固定为 `secondary_summary`；项目身份、完整来源元数据、逐字摘录和 `project_identity_basis` 保存在不可变 `raw_catalog_rows.raw_json`，并通过 `observation_sources` 关联。来源身份键与 `fact-add` 的内容 SHA-256、文档类型、适用年度和 URL 合同一致，因此同一篇文章后续拆出原子事实时复用原来源行，不复制第二个来源 ID。四科列只能全 NULL，或同时保存四个三位代码；前者状态为 `unverified`，后者状态最多为 `secondary_only`。该通路不写 `subject_verifications`，`official_source` 与全部数值影子列固定为 NULL。写入审计类型为 `secondary_project_observation_added`，其 TraceId 与来源封装批次一致。完全相同重放不新增任何行；同一内容来源、同一项目、同一招生年度的不同解释返回 `SECONDARY_OBSERVATION_SOURCE_CONFLICT`。
 
+研究报告中的 `secondary_full_catalog_mirror_reconstruction` 是人类可读的证据层标签，不是数据库枚举，也不会写入 `subject_verifications`。它只表示：完整目录镜像可追溯到已经失效的校方原链接，并有独立全文镜像或校方发布记录交叉支持；该标签最多允许在旁证层解释四科列，正式目录状态仍须保持缺失或待核，不得升级为 `official_confirmed`、`strict_match` 或严格同卷模型输入。
+
 ### 政策事件账本
 
 `policy_events` 保存政策公告，不保存正式招生目录结论。当前公共写入命令只支持 `event_type=subject_adjustment_notice`，并且只允许使用 `evidence_grade=official`、`document_type=official_notice` 的来源。写入状态固定为 `pending_directory`，`policy-events --status` 也只接受 `pending_directory`；其他字符串不是公共 CLI 支持的政策状态。
