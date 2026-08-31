@@ -7,10 +7,12 @@ TraceId: 53b2918f-73c1-4229-8deb-82aa6150c15f
 TraceId: 41b56801-de06-402a-81af-0172921d15c5
 TraceId: 1eed09ce-8e9d-4658-a547-a739fbd6d7d8
 TraceId: 57871eed-618d-4719-8660-036c68436b08
+TraceId: f937b29d-bae2-41b6-b5c7-3048d2fd2834
 """
 
-from pathlib import Path
+import re
 import unittest
+from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
@@ -200,6 +202,34 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("原先“同时原普通退出 1 人”的说法没有现存正式原件支撑", admission_report)
         self.assertNotIn("后补普通 3，普通规模仍 52", admission_report)
         self.assertIn("院级累计为 `56=普通55+士兵1`", admission_report)
+
+    def test_nwafu_official_history_and_2026_crossmatch_stays_external(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        report = (
+            repository_root
+            / "docs"
+            / "northwest-af-010-085410-college-incubation-project-audit-2026-08-27.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("`official_final_crossmatch`", report)
+        self.assertIn("匹配率为 `25/25`", report)
+        self.assertIn("`19/19` 一致", report)
+        self.assertIn("`276 / 310 / 323 / 330.53 / 357 / 383`", report)
+        self.assertIn("`75 / 100.5 / 107 / 111.63 / 131 / 139`", report)
+        self.assertIn("`59 / 72.5 / 80 / 81.21 / 90.5 / 101`", report)
+        self.assertIn("`278 / 316.25 / 335 / 337.81 / 354.5 / 402`", report)
+        self.assertIn("`274 / 297 / 307 / 316.26 / 339 / 379`", report)
+        self.assertIn("n、中位数、Q25、Q75 和四科均保持缺失", report)
+        self.assertIn("当前 16 项之外", report)
+        self.assertIn("不是保底", report)
+        self.assertIn("不能把 19 人全部归给方向 06", report)
+        self.assertIsNone(re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", report))
+
+        self.assertIn("西北农林2023/2024总分、2025缺口与2026四科交叉续补", readme)
+        self.assertIn("`25/25` 交叉", readme)
+        self.assertIn("处于当前 16 项之外、不并入 16 项、不是保底", readme)
 
 
 if __name__ == "__main__":
