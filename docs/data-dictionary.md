@@ -233,6 +233,7 @@ subject_adjustment_notice
 <!-- 厦门大学 2024 匿名总分组集合识别状态续补 TraceId: 24d3d889-2583-42e7-8766-075fb61b4127 -->
 <!-- 山东大学 2024 脱敏最终顺序集合识别状态续补 TraceId: 9f847dfc-f892-4055-aa56-c47d48e382b2 -->
 <!-- 山东大学 2023 首榜与院级递补累计交叉状态续补 TraceId: 614fad46-51a8-4458-9113-dee74007a5d8 -->
+<!-- 山东大学 2025 院级递补累计总分状态续补 TraceId: 53b2918f-73c1-4229-8deb-82aa6150c15f -->
 
 [当前 16 项四年分科审计](current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md)新增了政治、外语、业务课一、业务课二的匿名聚合研究层。该层当前是人类可读证据库，**不是迁移 030 以前已有的 `fact_definitions` 机器字段，也不进入 `v_current_structured_score_statistics`、`score_history_support` 或录取概率**。这样可避免把需要“两份原件交叉”的统计硬塞进只能表达单一事实来源的旧主张合同。
 
@@ -244,6 +245,7 @@ subject_adjustment_notice
 | `official_final_crossmatch` | 同项目同年度的正式含四科名单与正式最终名单按稳定编号 100% 无歧义匹配，且四科和与最终初试总分一致 |
 | `official_initial_admission_crossmatch` | 同项目同年度的校方四科表与院级首批拟录取名单按稳定编号 100% 无歧义匹配，且四科和与初试总分一致；只允许描述“院级首榜”人口，不得省略“首榜”或升级为校级最终录取人口 |
 | `official_college_cumulative_admission_crossmatch_pending_central_final` | 同项目同年度的校方四科表与院级首榜及全部已恢复递补附件按稳定编号 100% 无歧义匹配，逐行四科和无冲突；只允许描述“院级首榜＋递补累计”人口。校级最终公示原件未闭环时，禁止推断退出行、禁止称为最终录取人口 |
+| `official_college_cumulative_admission_total_only_pending_central_final` | 同项目同年度的院级首榜及全部已恢复递补附件与校方结果表按稳定编号 100% 无歧义匹配，但结果表只含初试总分、复试成绩或总成绩，不含四科，且校级最终公示原件未闭环；只允许发布院级累计人口的初试总分统计，禁止反推四科或称为最终录取人口 |
 | `secondary_mirror_final_crossmatch` | 正式最终名单与完整第三方镜像四科表按稳定编号 100% 无歧义匹配、四科和与正式总分一致，但镜像尚未与正式附件完成字节或哈希同一性核验；只允许作为人类可读旁证，不算官方精确格 |
 | `dual_secondary_mirror_final_crossmatch` | 正式发布链已定位，但当前恢复的是完整第三方四科名单镜像与完整第三方最终表镜像；必须按稳定编号 100% 无歧义匹配，最终表的人群／学习方式／专项边界可分，且四科和与最终初试总分一致；只允许作为更低一级的人类可读旁证，不算官方精确格 |
 | `secondary_mirror_final_subject_set_identification` | 第三方复试四科表与第三方最终表都完整，但稳定身份键缺失；只有在最终总分多重集能逐组包含于复试表、四科和逐行无冲突且人口备注边界可枚举时，才允许穷举所有相容的最终四科集合，并为每个统计量发布严格最小—最大区间。禁止从同分组任选一人形成点估计，禁止算作完整交叉旁证或进入模型 |
@@ -254,7 +256,7 @@ subject_adjustment_notice
 | `missing` | 正式附件撤下、验证码/空文件、公示结束或项目方向身份不闭环；不等于 0 |
 | `not_applicable` | 当年尚无独立项目；不等于录取 0 人 |
 
-决策模型只允许把 `official_final_subject_rows` 与 `official_final_crossmatch` 用作分科历史上下文；`official_initial_admission_crossmatch`、`official_college_cumulative_admission_crossmatch_pending_central_final`、`secondary_mirror_final_crossmatch`、`dual_secondary_mirror_final_crossmatch`、`secondary_mirror_final_subject_set_identification`、`secondary_blurred_final_order_subject_set_identification` 与 `secondary_visible_mirror_final_subject_observation` 只能在报告中显式标为首榜／院级累计／旁证／观察，不得进入择校排序、目标分、录取概率或“冲稳保”判断。首榜和院级累计状态虽然来自正式院级附件，但人口终态尚未由校级最终公示闭环；不得因逐行交叉成功就省略这一边界。双镜像状态低于“正式最终表 + 单份镜像”状态；集合识别状态因为没有稳定身份键，只允许报告统计量的可行上下界，不能输出单一点值；脱敏顺序集合还不得把全局序列约束改写成个人身份确认；单份可见镜像观察同样不能因为逐行算术无误就抹掉来源和人口冲突。正式状态还必须同时保留 `population_scope`、专项/联培/委托排除规则、学习方式、方向边界和当年四科合同。相同总分不意味着相同科目结构；`917/961/902/861/840/839` 与 `408` 均为比较断点。读取时优先看中位数与 Q25—Q75，最低值、最高值和单年小样本不得建立“安全线”。
+决策模型只允许把 `official_final_subject_rows` 与 `official_final_crossmatch` 用作分科历史上下文；`official_initial_admission_crossmatch`、`official_college_cumulative_admission_crossmatch_pending_central_final`、`official_college_cumulative_admission_total_only_pending_central_final`、`secondary_mirror_final_crossmatch`、`dual_secondary_mirror_final_crossmatch`、`secondary_mirror_final_subject_set_identification`、`secondary_blurred_final_order_subject_set_identification` 与 `secondary_visible_mirror_final_subject_observation` 只能在报告中显式标为首榜／院级累计／旁证／观察，不得进入择校排序、目标分、录取概率或“冲稳保”判断。首榜和院级累计状态虽然来自正式院级附件，但人口终态尚未由校级最终公示闭环；不得因逐行交叉成功就省略这一边界。总分状态又不得因为总分可复算就反推四科。双镜像状态低于“正式最终表 + 单份镜像”状态；集合识别状态因为没有稳定身份键，只允许报告统计量的可行上下界，不能输出单一点值；脱敏顺序集合还不得把全局序列约束改写成个人身份确认；单份可见镜像观察同样不能因为逐行算术无误就抹掉来源和人口冲突。正式状态还必须同时保留 `population_scope`、专项/联培/委托排除规则、学习方式、方向边界和当年四科合同。相同总分不意味着相同科目结构；`917/961/902/861/840/839` 与 `408` 均为比较断点。读取时优先看中位数与 Q25—Q75，最低值、最高值和单年小样本不得建立“安全线”。
 
 如果未来把该研究层升级为机器事实，至少要新增可绑定“含四科原件 + 最终名单原件”的多来源证据包，并对总分和四个科目分别冻结 `n/min/Q25/median/mean/Q75/max`、Type 7 方法版本和匿名输入哈希；每科样本数必须等于对应最终人口。迁移、领域注册表、CLI、质量视图、`doctor`、README 与测试须同步向前新增。在此之前，不为当前可算年度制造看似结构化但证据链不完整的数据库行。
 

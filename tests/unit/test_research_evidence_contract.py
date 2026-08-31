@@ -3,6 +3,7 @@
 TraceId: 24d3d889-2583-42e7-8766-075fb61b4127
 TraceId: 9f847dfc-f892-4055-aa56-c47d48e382b2
 TraceId: 614fad46-51a8-4458-9113-dee74007a5d8
+TraceId: 53b2918f-73c1-4229-8deb-82aa6150c15f
 """
 
 from pathlib import Path
@@ -60,6 +61,9 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         cumulative_status = (
             "official_college_cumulative_admission_crossmatch_pending_central_final"
         )
+        cumulative_total_status = (
+            "official_college_cumulative_admission_total_only_pending_central_final"
+        )
 
         readme = (repository_root / "README.md").read_text(encoding="utf-8")
         data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
@@ -78,14 +82,19 @@ class ResearchEvidenceContractTests(unittest.TestCase):
 
         self.assertIn(initial_status, data_dictionary)
         self.assertIn(cumulative_status, data_dictionary)
+        self.assertIn(cumulative_total_status, data_dictionary)
         self.assertIn("不得省略“首榜”或升级为校级最终录取人口", data_dictionary)
         self.assertIn("禁止推断退出行、禁止称为最终录取人口", data_dictionary)
+        self.assertIn("禁止反推四科或称为最终录取人口", data_dictionary)
         self.assertIn("不得进入择校排序、目标分、录取概率", data_dictionary)
         self.assertIn(initial_status, subject_report)
         self.assertIn(cumulative_status, subject_report)
+        self.assertIn(cumulative_total_status, subject_report)
         self.assertIn("校级最终公示原附件尚未恢复", subject_report)
         self.assertIn("不计入 18 个正式最终精确格", readme)
         self.assertIn("原先“同时原普通退出 1 人”的说法没有现存正式原件支撑", admission_report)
+        self.assertNotIn("后补普通 3，普通规模仍 52", admission_report)
+        self.assertIn("院级累计为 `56=普通55+士兵1`", admission_report)
 
 
 if __name__ == "__main__":
