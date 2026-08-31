@@ -8,6 +8,8 @@
 >
 > 辽宁大学 2023—2024 校方复试名单／成绩表交叉与二手冲突审计 TraceId：`6438a7cb-793c-497b-af5a-71e059caca7a`
 >
+> 厦门大学 2024 拟录取公开归档表匿名总分观察与四科匹配缺口审计 TraceId：`d177c45c-0e0a-4f90-a017-5b42b77ec989`
+>
 > 核验日期：2026-08-31（Asia/Shanghai）
 >
 > 目标考试年度：2027；历史招生年度：2023、2024、2025、2026
@@ -67,11 +69,11 @@
 | 年度 | 正式初试科目 | 普通复试线 | 复试人数 | 最终拟录取人数 | 最终初试六统计 | 人口边界与缺口 |
 |---|---|---:|---:|---:|---|---|
 | 2023 | 缺失；调剂通知只证明业务课二须 408，并允许英一/英二、数一/数二 | 缺失 | 缺失 | 缺失 | 缺失 | 只找到 1 个退役士兵调剂名额线索，总分 300；不得混入普通一志愿 |
-| 2024 | 缺失；调剂通知同样只证明 408 要求 | 343，单科 50/50/75/75 | 缺失；1:1.5 不能反推人数 | 缺失；计划 49 含退役士兵 3，不是最终人数 | 缺失 | 退役士兵单列；最终附件已失效 |
+| 2024 | 缺失；调剂通知同样只证明 408 要求 | 343，单科 50/50/75/75 | 缺失；1:1.5 不能反推人数 | 正式缺失；公开归档观察 48 = 无备注 44 + 联培 2 + 退役士兵 2 | 正式缺失；镜像全 48 总分 `318 / 356.75 / 375.5 / 374.92 / 394 / 419`；无备注代理 44 为 `343 / 360.25 / 376.5 / 377.52 / 397.25 / 419` | 计划 49 含退役士兵 3，不是最终人数；镜像姓名和编号列为空，不能升级官方人口或进入模型 |
 | 2025 | `101+204+302+408` | 缺失 | 缺失 | 缺失 | 缺失 | 方向 01/02/03 均全日制；目录允许专项，但现站未保留目标普通名单 |
 | 2026 | `101+204+302+408` | 321 | 69 = 普通 65 + 少民骨干 3 + 退役士兵 1 | 45 = 普通 43（含嘉庚联培 2）+ 少民骨干 2；退役士兵 0 | 普通 43：`344 / 364 / 374 / 376.81 / 392.5 / 411` | 排除嘉庚联培后的核心 41：`344 / 364 / 375 / 377.32 / 393 / 411` |
 
-官方来源：[2026 目录](https://zs.xmu.edu.cn/info/1056/34592.htm)、[2026 复试方案](https://informatics.xmu.edu.cn/info/1072/200291.htm)、[2026 复试名单](https://informatics.xmu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2125615903&wbfileid=ABA6E17940193ACCCF2F3B7AC926EE13)、[2026 拟录取页面](https://informatics.xmu.edu.cn/info/1072/200431.htm)、[2026 拟录取附件](https://informatics.xmu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2125615903&wbfileid=5689077CE2A75E6EC2F1585F7B962414)、[2025 目录](https://zs.xmu.edu.cn/info/1056/30981.htm)、[2024 复试方案](https://informatics.xmu.edu.cn/info/1072/16716.htm)、[2023 调剂通知](https://informatics.xmu.edu.cn/info/1072/16696.htm)。
+官方来源：[2026 目录](https://zs.xmu.edu.cn/info/1056/34592.htm)、[2026 复试方案](https://informatics.xmu.edu.cn/info/1072/200291.htm)、[2026 复试名单](https://informatics.xmu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2125615903&wbfileid=ABA6E17940193ACCCF2F3B7AC926EE13)、[2026 拟录取页面](https://informatics.xmu.edu.cn/info/1072/200431.htm)、[2026 拟录取附件](https://informatics.xmu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=2125615903&wbfileid=5689077CE2A75E6EC2F1585F7B962414)、[2025 目录](https://zs.xmu.edu.cn/info/1056/30981.htm)、[2024 复试方案](https://informatics.xmu.edu.cn/info/1072/16716.htm)、[2024 拟录取发布页](https://informatics.xmu.edu.cn/info/1072/16717.htm)、[2023 调剂通知](https://informatics.xmu.edu.cn/info/1072/16696.htm)。2024 旁证来自[公开归档索引页](https://www.juyingonline.com/news/354516.html)所列计算机科学与技术系工作簿；本地只做临时匿名核验，文件 13016 字节、SHA-256 `686C8F628109051C38BBECCC907F7B2CD0631382AB4E73875CA94161C853591F`，不把第三方附件副本写入仓库。工作簿 `085404` 48 行均为全日制；备注恰为无备注 44、联合培养 2、退役士兵 2。姓名、考生编号在原始单元格中均为空，因此只能保留为 `secondary_mirror_final_total_observation`，不能和官方四科复试名单交叉，也不能把 48 或 44 升级成正式最终人口。
 
 ## 4. 山东大学 047 计算机科学与技术学院 `085404`
 
