@@ -17,6 +17,7 @@ TraceId: 8294c615-2632-40f8-895e-6a6e97e53e3c
 TraceId: c8739003-06f9-42aa-afa7-19c695d499be
 TraceId: e4b04e95-6ee9-429c-af7e-bf968f994e3b
 TraceId: cf9326a5-7264-4933-a775-1ed920ab7b90
+TraceId: 305d7a30-52fe-4eba-aee8-5df5b12d7e84
 """
 
 import re
@@ -212,6 +213,47 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("仍可能混有卓工", report)
         self.assertIn("2024、2025 目标最终表当前缺失", report)
         self.assertIn("不是攻防上机", report)
+        self.assertIn("公平性保持 `insufficient`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(report_path.name, matrix)
+        self.assertIn(report_path.name, national)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
+    def test_changan_target_projects_keep_subject_special_final_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "changan-university-006-085405-085404-022-085400-four-year-score-subject-special-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("信息工程学院两条主线在 2023—2025 考 `846 计算机类学科基础`", report)
+        self.assertIn("2024 数据院保留 `pending_exact_catalog`", report)
+        self.assertIn("2026 才正式切换为 408", report)
+        self.assertIn("`356 / 368 / 374.06 / 410`", report)
+        self.assertIn("`361 / 370 / 372.04 / 399`", report)
+        self.assertIn("`346 / 369 / 370.10 / 402`", report)
+        self.assertIn("2023 是 `N/A`", report)
+        self.assertIn("`343 / 350.5 / 355.20 / 373`", report)
+        self.assertIn("退役士兵、1 名少民骨干", report)
+        self.assertIn("专项低分不并入普通人口", report)
+        self.assertIn("不是网络安全攻防", report)
         self.assertIn("公平性保持 `insufficient`", report)
         self.assertIn("不并入当前 16 项", report)
         self.assertIn(report_path.name, readme)
