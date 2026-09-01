@@ -19,6 +19,7 @@ TraceId: e4b04e95-6ee9-429c-af7e-bf968f994e3b
 TraceId: cf9326a5-7264-4933-a775-1ed920ab7b90
 TraceId: 305d7a30-52fe-4eba-aee8-5df5b12d7e84
 TraceId: bc355657-202a-485b-9946-0dad9431ffa7
+TraceId: 5d118da0-df5f-478c-8c5b-241928aefc20
 """
 
 import re
@@ -937,6 +938,61 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             self.assertIn(digest, admission_report)
 
         for content in (readme, subject_report, admission_report, decision_matrix):
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+    def test_shanghai_university_four_year_route_audit_stays_project_scoped(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_name = (
+            "shanghai-university-008-085405-085410-423-085410-"
+            "four-year-score-subject-route-and-fairness-audit-2026-09-02.md"
+        )
+
+        report = (repository_root / "docs" / report_name).read_text(encoding="utf-8")
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        decision_matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national_matrix = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        linyi = (
+            repository_root
+            / "docs"
+            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("2025→2026 一年上升 43 分", report)
+        self.assertIn("`359 / 367 / 378 / 377.95 / 386 / 406`", report)
+        self.assertIn("`334 / 347.5 / 362.5 / 363.60 / 376 / 423`", report)
+        self.assertIn("`116 / 130 / 136 / 135.44 / 141 / 150`", report)
+        self.assertIn("2023 `423-085400` 两方向混合普通人口", report)
+        self.assertIn("不能发布严格 408 人口的分科分布", report)
+        self.assertIn("初试最多贡献 250 分，即 **62.5%**", report)
+        self.assertIn("不是攻防", report)
+        self.assertIn("公平性只能保持 `insufficient`", report)
+        self.assertIn("`008-085405 → 423-085410 → 008-085410`", decision_matrix)
+
+        for content in (
+            readme,
+            decision_matrix,
+            national_matrix,
+            linyi,
+        ):
+            self.assertIn(report_name, content)
+
+        for content in (
+            report,
+            readme,
+            decision_matrix,
+            national_matrix,
+            linyi,
+        ):
             self.assertIsNone(
                 re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
             )
