@@ -13,6 +13,7 @@ TraceId: 3c432a1f-9a1e-46f0-a2f5-b39f1764266d
 TraceId: 18288fa6-72d8-4607-807f-c03f70e7fe10
 TraceId: 354ae7cf-cbdf-4de2-92fd-f360614bd8f5
 TraceId: 390f2ab9-0292-4917-b9de-668dc4cfc4f5
+TraceId: 8294c615-2632-40f8-895e-6a6e97e53e3c
 """
 
 import re
@@ -21,6 +22,59 @@ from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_upc_085405_keeps_retest_final_special_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "china-university-of-petroleum-east-china-007-085405-four-year-score-special-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        linyi = (
+            repository_root
+            / "docs"
+            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023—2025 正式目录均为 `101+204+302+859", report)
+        self.assertIn("2026 是本项目首届", report)
+        self.assertIn("**326、332、337、301**", report)
+        self.assertIn("**83、60、63、66**", report)
+        self.assertIn("2024 同线一志愿复试人口，`n=72`", report)
+        self.assertIn("`332 / 355 / 356.38 / 399`", report)
+        self.assertIn("2025 同线一志愿复试人口，`n=86`", report)
+        self.assertIn("`337 / 356 / 358.36 / 411`", report)
+        self.assertIn("首轮拟录取者", report)
+        self.assertIn("`331 / 366 / 365.69 / 405`", report)
+        self.assertIn("复试人口**，不是最终拟录取人口", report)
+        self.assertIn("不是攻防上机", report)
+        self.assertIn("软件学院专项录取的考生", report)
+        self.assertIn("公平性保持 `insufficient`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(
+            "中国石油大学（华东）青岛软件学院、计算机科学与技术学院 `007-085405`（临沂同源优先扩展）",
+            matrix,
+        )
+        self.assertIn(report_path.name, national)
+        self.assertIn(report_path.name, linyi)
+        self.assertIn("图片归属仍保持 unknown", linyi)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
     def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
         self,
     ) -> None:
