@@ -300,6 +300,51 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIsNone(re.search(r"\b\d{15}\b", report))
 
+    def test_swu_085400_keeps_subject_special_final_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "southwest-university-321-085400-four-year-score-subject-special-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023、2024 是 `907 计算机基础与数字电路`", report)
+        self.assertIn("2025、2026 是 `891 计算机基础与数字电路`", report)
+        self.assertIn("四年普通主线复试门槛依次可观察为 `330 / 300 / 311 / 281`", report)
+        self.assertIn("报考 289、录取 120", report)
+        self.assertIn("最低 298、平均 356、最高 423", report)
+        self.assertIn("`111 + 5 专项`，合计 116", report)
+        self.assertIn("完全不是攻防上机", report)
+        self.assertIn("公平性保持 `insufficient`", report)
+        self.assertIn("2026 学校级：`non_strict`", report)
+        self.assertIn("2027 项目线索：`pending_exact_catalog`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(report_path.name, matrix)
+        self.assertIn(report_path.name, national)
+        self.assertIn(
+            "`strict_match` 52、`non_strict` 28、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 22",
+            national,
+        )
+        self.assertIn("| 96 | 西南大学 | `non_strict` |", national)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
     def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
         self,
     ) -> None:
