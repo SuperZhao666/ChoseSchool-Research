@@ -11,6 +11,7 @@ TraceId: f937b29d-bae2-41b6-b5c7-3048d2fd2834
 TraceId: 384a0fbe-85fd-4535-8d51-116f164f3707
 TraceId: 3c432a1f-9a1e-46f0-a2f5-b39f1764266d
 TraceId: 18288fa6-72d8-4607-807f-c03f70e7fe10
+TraceId: 354ae7cf-cbdf-4de2-92fd-f360614bd8f5
 """
 
 import re
@@ -19,6 +20,41 @@ from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_imu_expansion_keeps_retest_final_and_fairness_boundaries(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "inner-mongolia-university-009-085404-085411-four-year-score-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2024、2025、2026 三个招生年度", report)
+        self.assertIn("2023 第四科是 892；2024—2026 才是 408", report)
+        self.assertIn("复试四科均值绝不能冒充最终录取者四科分布", report)
+        self.assertIn("原文 `398［254—358］`，均值无效", report)
+        self.assertIn("不会擅自猜成 298", report)
+        self.assertIn("官方线 251；二手页误写 250", report)
+        self.assertIn("`106+2专项调剂`", report)
+        self.assertIn("不能说“友好”", report)
+        self.assertIn("当前公平性结论必须保持 `insufficient`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn("不生成个人录取概率、目标分或冲稳保结论", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn("没有擅自改成 298", readme)
+        self.assertIn("公平性结论均保持 `insufficient`", readme)
+        self.assertIn("内蒙古大学计算机学院 `085404`（临沂同源扩展）", matrix)
+        self.assertIn("内蒙古大学计算机学院 `085411`（临沂同源扩展）", matrix)
+        self.assertIn("已判不可用且不猜 298", matrix)
+        self.assertNotIn("085412 网络与信息安全`（临沂同源扩展）", matrix)
+
     def test_zzu_retest_subject_averages_never_become_final_subject_distribution(
         self,
     ) -> None:
