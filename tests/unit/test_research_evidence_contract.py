@@ -261,6 +261,45 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIsNone(re.search(r"\b\d{15}\b", report))
 
+    def test_sicau_085400_keeps_subject_final_retest_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "sichuan-agricultural-university-419-085400-four-year-score-subject-campus-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023—2025 正式第四科均为 `866 数据结构`", report)
+        self.assertIn("只有 2026 才首次改为 408", report)
+        self.assertIn("`324 / 320 / 330 / 307`", report)
+        self.assertIn("`325 / 361 / 364.05 / 414`", report)
+        self.assertIn("`321 / 337 / 341.92 / 386`", report)
+        self.assertIn("不得用 38、计划 26 或推免 0 代替最终人口", report)
+        self.assertIn("不得用计划 31、推免 2、复试线 307 生成最终分布", report)
+        self.assertIn("不是攻防上机", report)
+        self.assertIn("公平性保持 `insufficient`", report)
+        self.assertIn("`conditional_research`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(report_path.name, matrix)
+        self.assertIn(report_path.name, national)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
     def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
         self,
     ) -> None:
