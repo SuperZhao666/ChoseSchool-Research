@@ -15,6 +15,7 @@ TraceId: 354ae7cf-cbdf-4de2-92fd-f360614bd8f5
 TraceId: 390f2ab9-0292-4917-b9de-668dc4cfc4f5
 TraceId: 8294c615-2632-40f8-895e-6a6e97e53e3c
 TraceId: c8739003-06f9-42aa-afa7-19c695d499be
+TraceId: e4b04e95-6ee9-429c-af7e-bf968f994e3b
 """
 
 import re
@@ -124,6 +125,57 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn(report_path.name, linyi)
         self.assertIn("不能反推该校不录取临沂大学学生", linyi)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
+    def test_scnu_ai_college_keeps_year_direction_score_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "south-china-normal-university-041-085405-085410-four-year-score-campus-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        linyi = (
+            repository_root
+            / "docs"
+            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023 年正式目录中是 `101+204+302+933", report)
+        self.assertIn("2025、2026 才连续为严格 `101+204+302+408`", report)
+        self.assertIn("`311 / 338 / 342.32 / 387`", report)
+        self.assertIn("`326 / 367 / 363.29 / 403`", report)
+        self.assertIn("2025 `085410` 01—03／非 04 人口", report)
+        self.assertIn("`310 / 330.5 / 333.39 / 385`", report)
+        self.assertIn("2025 `085410-04` 一志愿", report)
+        self.assertIn("一志愿 3＋调剂 8＝11", report)
+        self.assertIn("2026 `085410`", report)
+        self.assertIn("`327 / 356 / 359.11 / 403`", report)
+        self.assertIn("初试、程序设计上机、综合素质分别折最终约 `50% / 25% / 25%`", report)
+        self.assertIn("不是“攻防上机”", report)
+        self.assertIn("培养与住宿均安排在佛山校区南海校园", report)
+        self.assertIn("公平性保持 `insufficient`", report)
+        self.assertIn("先研究 `085405`，再研究 `085410` 普通 01—03", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(report_path.name, matrix)
+        self.assertIn(report_path.name, national)
+        self.assertIn(report_path.name, linyi)
+        self.assertIn("不能反推学校不录取临沂大学学生", linyi)
         self.assertIsNone(re.search(r"\b\d{15}\b", report))
 
     def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
