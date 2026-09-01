@@ -12,6 +12,7 @@ TraceId: 384a0fbe-85fd-4535-8d51-116f164f3707
 TraceId: 3c432a1f-9a1e-46f0-a2f5-b39f1764266d
 TraceId: 18288fa6-72d8-4607-807f-c03f70e7fe10
 TraceId: 354ae7cf-cbdf-4de2-92fd-f360614bd8f5
+TraceId: 390f2ab9-0292-4917-b9de-668dc4cfc4f5
 """
 
 import re
@@ -20,6 +21,54 @@ from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "jiangnan-university-031-085405-four-year-score-direction-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        linyi = (
+            repository_root
+            / "docs"
+            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023—2025 正式目录均为 `101+204+302+851", report)
+        self.assertIn("首届 408 人群", report)
+        self.assertIn("严格状态仍保持 `pending_exact_catalog`", report)
+        self.assertIn("2024 为 `58/58`、2025 为 `67/67`、2026 为 `51/51`", report)
+        self.assertIn("`350 / 368.5 / 371.02 / 419`", report)
+        self.assertIn("`84 / 101.5 / 101.46 / 120`", report)
+        self.assertIn("不能改写成“最终已录取”", report)
+        self.assertIn("`03 网络软件与安全`", report)
+        self.assertIn("方向 03 与本人边界冲突，必须排除", report)
+        self.assertIn("公平性结论只能是 `insufficient`", report)
+        self.assertIn("不生成冲稳保、目标分或录取概率", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn("江南大学人工智能与计算机学院 `031-085405`（高压条件扩展）", matrix)
+        self.assertIn("状态保持 `pending_exact_catalog`", matrix)
+        self.assertIn(report_path.name, national)
+        self.assertIn(report_path.name, linyi)
+        self.assertIn("不能反向证明图片个案就是该专硕", linyi)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+        self.assertNotIn("faiusr.com", report)
+
     def test_imu_expansion_keeps_retest_final_and_fairness_boundaries(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
