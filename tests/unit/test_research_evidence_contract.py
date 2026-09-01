@@ -14,6 +14,7 @@ TraceId: 18288fa6-72d8-4607-807f-c03f70e7fe10
 TraceId: 354ae7cf-cbdf-4de2-92fd-f360614bd8f5
 TraceId: 390f2ab9-0292-4917-b9de-668dc4cfc4f5
 TraceId: 8294c615-2632-40f8-895e-6a6e97e53e3c
+TraceId: c8739003-06f9-42aa-afa7-19c695d499be
 """
 
 import re
@@ -73,6 +74,56 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn(report_path.name, linyi)
         self.assertIn("图片归属仍保持 unknown", linyi)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
+    def test_whut_085405_keeps_four_year_location_score_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "wuhan-university-of-technology-010-085405-four-year-score-campus-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        linyi = (
+            repository_root
+            / "docs"
+            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023、2024、2025、2026 正式目录都写明", report)
+        self.assertIn("当年襄阳只在复试阶段计划出现", report)
+        self.assertIn("`338 / 364 / 365.93 / 412`", report)
+        self.assertIn("校本部 29 人初试总分最低／中位／平均／最高为 `343 / 368 / 369.34 / 415`", report)
+        self.assertIn("襄阳 14 人为 `315 / 352.5 / 354.79 / 404`", report)
+        self.assertIn("海南 21 人为 `307 / 357 / 355.29 / 389`", report)
+        self.assertIn("`330 / 346 / 347.41 / 371`", report)
+        self.assertIn("`351 / 不可计算 / 369.09 / 不可计算`", report)
+        self.assertIn("属于进入复试的人群，不是最终录取人群", report)
+        self.assertIn("`official_final_total_only`", report)
+        self.assertIn("不是攻防", report)
+        self.assertIn("襄阳 `1+2`", report)
+        self.assertIn("海南当前 `0.5+2.5`", report)
+        self.assertIn("公平性仍为 `insufficient`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(report_path.name, matrix)
+        self.assertIn(report_path.name, national)
+        self.assertIn(report_path.name, linyi)
+        self.assertIn("不能反推该校不录取临沂大学学生", linyi)
         self.assertIsNone(re.search(r"\b\d{15}\b", report))
 
     def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
