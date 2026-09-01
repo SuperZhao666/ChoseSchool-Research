@@ -10,6 +10,7 @@ TraceId: 57871eed-618d-4719-8660-036c68436b08
 TraceId: f937b29d-bae2-41b6-b5c7-3048d2fd2834
 TraceId: 384a0fbe-85fd-4535-8d51-116f164f3707
 TraceId: 3c432a1f-9a1e-46f0-a2f5-b39f1764266d
+TraceId: 18288fa6-72d8-4607-807f-c03f70e7fe10
 """
 
 import re
@@ -18,6 +19,37 @@ from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_zzu_retest_subject_averages_never_become_final_subject_distribution(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(
+            "只描述进入复试的人群，不描述最终拟录取人群", subject_report
+        )
+        self.assertIn("| 2023 | 77 | `336`；页面未给复试范围 |", subject_report)
+        self.assertIn("`68 / 76 / 104 / 90`", subject_report)
+        self.assertIn("`73 / 71 / 104 / 96`", subject_report)
+        self.assertIn("`69 / 70 / 109 / 106`", subject_report)
+        self.assertIn("`67 / 78 / 122 / 98`", subject_report)
+        self.assertIn("与校方最终人口不一致", subject_report)
+        self.assertIn("拟录取最高 413 高于复试最高 403", subject_report)
+        self.assertIn("还必须与同年最终名单逐人无歧义交叉", subject_report)
+        self.assertIn("不改变 `20/44` 正式格计数", subject_report)
+        self.assertIn("不进入择校排序、目标分或录取概率", subject_report)
+        self.assertIn("郑大 2023—2026 的二手四科均值只覆盖进入复试的人群", readme)
+        self.assertIn("不生成最终分科估计、不进入模型", readme)
+        self.assertIn("2023—2026 四年均不可计算最终录取者四科分布", subject_report)
+        self.assertIn("20 格能够给出官方确认", subject_report)
+        self.assertIn("44 格在官方口径下仍不可计算", subject_report)
+
     def test_lnu_2024_aggregate_constrained_intervals_stay_conditional(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_aggregate_constrained_final_subject_set_identification"
