@@ -16,6 +16,7 @@ TraceId: 390f2ab9-0292-4917-b9de-668dc4cfc4f5
 TraceId: 8294c615-2632-40f8-895e-6a6e97e53e3c
 TraceId: c8739003-06f9-42aa-afa7-19c695d499be
 TraceId: e4b04e95-6ee9-429c-af7e-bf968f994e3b
+TraceId: cf9326a5-7264-4933-a775-1ed920ab7b90
 """
 
 import re
@@ -176,6 +177,46 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn(report_path.name, linyi)
         self.assertIn("不能反推学校不录取临沂大学学生", linyi)
+        self.assertIsNone(re.search(r"\b\d{15}\b", report))
+
+    def test_hzau_085404_keeps_predecessor_special_final_and_fairness_boundaries(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        report_path = (
+            repository_root
+            / "docs"
+            / "huazhong-agricultural-university-317-085404-085400-four-year-score-special-and-fairness-audit-2026-09-01.md"
+        )
+
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        report = report_path.read_text(encoding="utf-8")
+
+        self.assertIn("2023、2024 正式目录是 `085400 电子信息`", report)
+        self.assertIn("2025、2026 才拆成 `085404 计算机技术`", report)
+        self.assertIn("`295 / 322 / 323.81 / 394`", report)
+        self.assertIn("`283 / 333.5 / 335.53 / 377`", report)
+        self.assertIn("`303 / 333 / 330.65 / 376`", report)
+        self.assertIn("`326 / 349 / 355.50 / 397`", report)
+        self.assertIn("卓工 8 人和士兵 3 人", report)
+        self.assertIn("仍可能混有卓工", report)
+        self.assertIn("2024、2025 目标最终表当前缺失", report)
+        self.assertIn("不是攻防上机", report)
+        self.assertIn("公平性保持 `insufficient`", report)
+        self.assertIn("不并入当前 16 项", report)
+        self.assertIn(report_path.name, readme)
+        self.assertIn(report_path.name, matrix)
+        self.assertIn(report_path.name, national)
         self.assertIsNone(re.search(r"\b\d{15}\b", report))
 
     def test_jiangnan_expansion_keeps_catalog_direction_and_fairness_boundaries(
