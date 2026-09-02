@@ -1,5 +1,9 @@
 # 当前 16 个候选：2023—2026 最终录取者分科成绩分布审计
 
+> 阅读导航：[返回当前结论总览](start-here-current-conclusions.md)｜[全部报告索引](research-report-index.md)
+>
+> 本次人类可读入口重构 TraceId：`7e282555-47f3-432d-a123-7ff8d5477154`
+>
 > 写入 TraceId：`306de97b-8fa5-4276-af08-2d438c190205`
 >
 > 合工大 2024 官方发布页恢复与旁证交叉续补 TraceId：`64922be8-f1a4-4f2e-a987-dcfa8c8fbae7`

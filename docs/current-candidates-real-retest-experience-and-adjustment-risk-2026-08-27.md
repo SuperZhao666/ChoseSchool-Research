@@ -1,5 +1,9 @@
 # 当前 16 个候选：真实复试、个人材料与调剂时间风险
 
+> 阅读导航：[返回当前结论总览](start-here-current-conclusions.md)｜[全部报告索引](research-report-index.md)
+>
+> 本次人类可读入口重构 TraceId：`7e282555-47f3-432d-a123-7ff8d5477154`
+>
 > - 核验时间：2026-08-30（中国标准时间）
 > - 追加写入 TraceId：`9c9633cb-ab81-47f9-91a0-b4f2b8f06a68`
 > - 亲历来源续补 TraceId：`fbb84be9-e413-441a-8ac3-36f81e0a801a`

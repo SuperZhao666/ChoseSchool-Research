@@ -1,5 +1,9 @@
 # 当前 16 个候选：2023—2026 录取数据审计
 
+> 阅读导航：[返回当前结论总览](start-here-current-conclusions.md)｜[全部报告索引](research-report-index.md)
+>
+> 本次人类可读入口重构 TraceId：`7e282555-47f3-432d-a123-7ff8d5477154`
+>
 > 写入 TraceId：`34c4c1e3-1696-4084-bbff-9bb1e6e5fdf5`
 >
 > 合工大 2023 双镜像最终人口续补 TraceId：`5dc980b1-aa27-4618-b214-6119e3632826`
