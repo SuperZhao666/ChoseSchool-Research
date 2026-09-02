@@ -32,7 +32,7 @@
 3. **分数** — [当前 16 项最终录取者分科成绩分布](current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md)：政治、英语、数学、专业课的可计算格与缺失格。
 4. **培养** — [当前 16 项成本、实践与毕业负担总表](current-16-post-admission-cost-practice-and-graduation-burden-matrix-2026-08-30.md)：考上以后真正承担什么。
 5. **复试** — [当前 16 项真实复试、个人材料与调剂风险](current-candidates-real-retest-experience-and-adjustment-risk-2026-08-27.md)：现场流程、简历暴露和调剂时间。
-6. **目录** — [当前 16 项 2027 正式目录门禁刷新](current-16-2027-exact-catalog-gate-refresh-2026-08-30.md)：8 月 30 日完整 16 项快照，加 9 月 2 日北交、郑大、上大、武汉理工、华南师大优先五校实时复核；区分招生意向、大纲／调整通知与正式四码原行。
+6. **目录** — [当前 16 项 2027 正式目录门禁刷新（含扩展池补充）](current-16-2027-exact-catalog-gate-refresh-2026-08-30.md)：8 月 30 日完整 16 项快照，加 9 月 2 日当前池北交／郑大与扩展池上大／武汉理工／华南师大实时复核；三所扩展校不计入 16 项，并区分招生意向、大纲／调整通知与正式四码原行。
 7. **分数** — [2026 历史压力快照](pressure-landscape-snapshot-2026-08-18.md)：只作历史强度观察，不是 2027 预测。
 8. **复试** — [复试结构与个人画像适配审计](retest-fit-audit-2026-08-18.md)：哪些机试能利用算法能力，哪些环节是风险。
 9. **行动** — [按个人画像收敛择校的测量协议](profile-specific-measurement-plan-2026-08-18.md)：全真模考和机试实测怎样进入决策。
