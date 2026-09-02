@@ -4,6 +4,8 @@
 >
 > TraceId：`7e282555-47f3-432d-a123-7ff8d5477154`
 >
+> 2027 目录优先五校复核 TraceId：`8068142f-0790-48d9-8b62-816b3e3be7c6`
+>
 > 本索引覆盖公开仓库中的人类可读报告。它不是新的推荐榜；作用是把“当前结论、学校专题、全国普查、历史线索、技术说明”分层，避免 60 多份文件平铺在一起。
 
 ## 最短阅读路线
@@ -30,7 +32,7 @@
 3. **分数** — [当前 16 项最终录取者分科成绩分布](current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md)：政治、英语、数学、专业课的可计算格与缺失格。
 4. **培养** — [当前 16 项成本、实践与毕业负担总表](current-16-post-admission-cost-practice-and-graduation-burden-matrix-2026-08-30.md)：考上以后真正承担什么。
 5. **复试** — [当前 16 项真实复试、个人材料与调剂风险](current-candidates-real-retest-experience-and-adjustment-risk-2026-08-27.md)：现场流程、简历暴露和调剂时间。
-6. **目录** — [当前 16 项 2027 正式目录门禁刷新](current-16-2027-exact-catalog-gate-refresh-2026-08-30.md)：同学院、同项目、同学习方式、完整四码是否发布。
+6. **目录** — [当前 16 项 2027 正式目录门禁刷新](current-16-2027-exact-catalog-gate-refresh-2026-08-30.md)：8 月 30 日完整 16 项快照，加 9 月 2 日北交、郑大、上大、武汉理工、华南师大优先五校实时复核；区分招生意向、大纲／调整通知与正式四码原行。
 7. **分数** — [2026 历史压力快照](pressure-landscape-snapshot-2026-08-18.md)：只作历史强度观察，不是 2027 预测。
 8. **复试** — [复试结构与个人画像适配审计](retest-fit-audit-2026-08-18.md)：哪些机试能利用算法能力，哪些环节是风险。
 9. **行动** — [按个人画像收敛择校的测量协议](profile-specific-measurement-plan-2026-08-18.md)：全真模考和机试实测怎样进入决策。
