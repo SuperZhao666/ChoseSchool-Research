@@ -1,5 +1,6 @@
 """Human-readable research evidence contract guards.
 
+TraceId: 499b5c6e-b2bc-416c-a150-4bf78e49bc56
 TraceId: 24d3d889-2583-42e7-8766-075fb61b4127
 TraceId: 9f847dfc-f892-4055-aa56-c47d48e382b2
 TraceId: 614fad46-51a8-4458-9113-dee74007a5d8
@@ -26,6 +27,18 @@ TraceId: 635a5050-f87e-48d7-826d-228a901f4822
 TraceId: 6edc56ed-eaf7-416a-b33b-dcd3f41d2fbf
 TraceId: e8b68757-b898-4ed7-b8eb-2a7031b04893
 TraceId: 7b006898-b827-4b91-ae64-8b6ba249c8ab
+TraceId: 75947e87-7d7d-4e86-b03c-89c5f4420488
+TraceId: ad850349-4a37-463f-b394-d6e87dbcef02
+TraceId: 71923d87-4ec8-46e4-9109-22abddb570be
+TraceId: aa7f1d0f-feff-4803-957b-7df040afefb4
+TraceId: baf83616-d5f6-40ed-b08d-e87a4aa49a9b
+TraceId: 043cb2c4-05bf-4a4b-a42d-0549e03be0cc
+TraceId: 378c27e9-2951-45ba-b200-11c72a1938c0
+TraceId: a71dcf2f-c136-4847-9959-6eb16320d839
+TraceId: 6a309b90-7927-4e4e-8d64-b630a826f375
+TraceId: d9de62d0-e46b-4dd0-a840-04afc1862904
+TraceId: aa374621-7293-419e-b79e-f7b12c71df22
+TraceId: e9125069-3c41-4cef-acdc-28ced5300b60
 """
 
 import re
@@ -43,6 +56,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         readme = (repository_root / "README.md").read_text(encoding="utf-8")
         start_here = (
             repository_root / "docs" / "start-here-current-conclusions.md"
+        ).read_text(encoding="utf-8")
+        national_matrix = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
         ).read_text(encoding="utf-8")
         admission_report = (
             repository_root
@@ -465,8 +483,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, matrix)
         self.assertIn(report_path.name, national)
         self.assertIn(
-            "`strict_match` 53、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 20",
+            "`strict_match` 54、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 19",
             national,
         )
         self.assertIn("| 96 | 西南大学 | `non_strict` |", national)
@@ -508,8 +526,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn("| 40 | 东北林业大学 | `strict_match` |", national)
         self.assertIn(
-            "`strict_match` 53、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 20",
+            "`strict_match` 54、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 19",
             national,
         )
         for content in (report, readme, matrix, national):
@@ -635,17 +653,35 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("四科和 `86/86` 等于总分", subject_report)
         self.assertIn("`official_final_crossmatch`", subject_report)
         self.assertIn("| 8 | 郑大 084—085410 | 总 | 缺 | 缺 | 交(86) |", subject_report)
-        self.assertIn("`337 / 354 / 368 / 369.28 / 381.75 / 427`", subject_report)
-        self.assertIn("`54 / 65 / 68 / 67.35 / 70 / 76`", subject_report)
-        self.assertIn("`63 / 74.25 / 79 / 78.28 / 82 / 90`", subject_report)
-        self.assertIn("`94 / 117.25 / 125 / 124.16 / 132.75 / 150`", subject_report)
-        self.assertIn("`79 / 96 / 99 / 99.49 / 106 / 121`", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 337 | 354 | 368 | 369.28 | 381.75 | 427 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 政治 | 54 | 65 | 68 | 67.35 | 70 | 76 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 英语二 | 63 | 74.25 | 79 | 78.28 | 82 | 90 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 数学二 | 94 | 117.25 | 125 | 124.16 | 132.75 | 150 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 408 | 79 | 96 | 99 | 99.49 | 106 | 121 |",
+            subject_report,
+        )
         self.assertIn("2023—2025 仍不能计算最终录取者四科分布", subject_report)
         self.assertIn(
             "2023—2025 的四科均值**只描述进入复试的人群，不描述最终拟录取人群**",
             subject_report,
         )
-        self.assertIn("| 2023 | 77 | `336`；页面未给复试范围 |", subject_report)
+        self.assertIn(
+            "| 2023 | 77 | 页面未给 | 336 | 页面未给 | 68 | 76 | 104 | 90 |",
+            subject_report,
+        )
         self.assertIn("与校方最终人口不一致", subject_report)
         self.assertIn("拟录取最高 413 高于复试最高 403", subject_report)
         self.assertIn("不进入择校排序、目标分或录取概率", subject_report)
@@ -688,11 +724,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("不得进入择校排序、目标分、录取概率", data_dictionary)
         self.assertIn("恰有 **16 个相容最终人口**", subject_report)
         self.assertIn(
-            "`314 / 319.5—320 / 325 / 329.51—329.74 / 335.5 / 382`",
+            "| 初试总分 | 314 | 319.5—320 | 325 | 329.51—329.74 | 335.5 | 382 |",
             subject_report,
         )
         self.assertIn(
-            "`74—78 / 89—90 / 95 / 94.34—95.20 / 100 / 113`",
+            "| 408 | 74—78 | 89—90 | 95 | 94.34—95.20 | 100 | 113 |",
             subject_report,
         )
         self.assertIn("不是官方最终点分布", subject_report)
@@ -733,8 +769,14 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("普通一志愿录取名单（29/39）", subject_report)
         self.assertIn("少数民族骨干 2、退役大学生士兵 1", subject_report)
         self.assertIn("下表只取普通一志愿 29 人", subject_report)
-        self.assertIn("`364 / 369 / 378 / 379.34 / 389 / 402`", subject_report)
-        self.assertIn("`108 / 123 / 132 / 132.21 / 140 / 150`", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 364 | 369 | 378 | 379.34 | 389 | 402 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 数学二 | 108 | 123 | 132 | 132.21 | 140 | 150 |",
+            subject_report,
+        )
         self.assertIn("29 个录取行的四科和全部等于初试总分", subject_report)
         self.assertIn("最低 364 也只是该第三方观察人口的历史尾部", subject_report)
         self.assertIn("公开匿名数据库标记录取 29", admission_report)
@@ -767,9 +809,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("不得进入择校排序、目标分、录取概率", data_dictionary)
         self.assertIn("普通一志愿录取名单（17/21）", subject_report)
         self.assertIn("后 4 行均带同一“未被录取”红色标记", subject_report)
-        self.assertIn("| 目标方向普通一志愿拟录取匿名逐行观察", subject_report)
-        self.assertIn("`331 / 335 / 342 / 349.41 / 367 / 376`", subject_report)
-        self.assertIn("`50 / 55 / 59 / 58.53 / 62 / 67`", subject_report)
+        self.assertIn("| P1 | 目标方向普通一志愿拟录取匿名逐行观察", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 331 | 335 | 342 | 349.41 | 367 | 376 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 政治 | 50 | 55 | 59 | 58.53 | 62 | 67 |",
+            subject_report,
+        )
         self.assertIn("17 行全部满足四科和等于总分", subject_report)
         self.assertIn("不算正式精确格、不进入择校模型", subject_report)
         self.assertIn("公开匿名数据库标记录取 17", admission_report)
@@ -803,8 +851,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("普通一志愿录取名单（25/32）", subject_report)
         self.assertIn("有成绩人口是 `44=普通30+创新14`", subject_report)
         self.assertIn("最终观察是 `39=普通25+创新14`", subject_report)
-        self.assertIn("| 目标方向非创新计划拟录取逐行观察", subject_report)
-        self.assertIn("`317 / 328 / 332 / 335.08 / 337 / 369`", subject_report)
+        self.assertIn("| P1 | 目标方向非创新计划拟录取逐行观察", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 317 | 328 | 332 | 335.08 | 337 | 369 |",
+            subject_report,
+        )
         self.assertIn("目录阶段计划 8、复试实施细则计划表镜像中的统考 23 + 创新 14", subject_report)
         self.assertIn("不算正式精确格、不能进入择校模型", subject_report)
         self.assertIn("名单口径 46、有成绩口径 44", admission_report)
@@ -858,9 +909,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("此前 38 是只数物理第 8 页", subject_report)
         self.assertIn("29 个“创新人才培养计划”备注行", subject_report)
         self.assertIn("`创新14 + 其余36`", subject_report)
-        self.assertIn("`339 / 348.75 / 354.5 / 357.56 / 362.5 / 390`", subject_report)
-        self.assertIn("`262 / 311.25 / 326 / 327.07 / 348.75 / 362`", subject_report)
-        self.assertIn("`262 / 344.25 / 352 / 349.02 / 359.75 / 390`", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 339 | 348.75 | 354.5 | 357.56 | 362.5 | 390 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P2 | 初试总分 | 262 | 311.25 | 326 | 327.07 | 348.75 | 362 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P3 | 初试总分 | 262 | 344.25 | 352 | 349.02 | 359.75 | 390 |",
+            subject_report,
+        )
         self.assertIn(
             "710FD9BB88904A8DDA4A9C48ECBC041F4508D85B7CEF5C5280142E1C46F309E3",
             subject_report,
@@ -1036,11 +1096,26 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("| 9 | 西南交大 048—085410 | 直(15) | 直(18) |", subject_report)
         self.assertIn("2024 备注空白考试招生代理", subject_report)
         self.assertIn("`official_final_subject_rows`", subject_report)
-        self.assertIn("`373 / 383 / 389.5 / 389.06 / 395 / 406`", subject_report)
-        self.assertIn("`65 / 69.25 / 71.5 / 71.78 / 75.75 / 79`", subject_report)
-        self.assertIn("`67 / 70.5 / 79 / 76.78 / 82 / 84`", subject_report)
-        self.assertIn("`93 / 104.5 / 111 / 112.00 / 119.5 / 127`", subject_report)
-        self.assertIn("`115 / 120.5 / 129 / 128.50 / 134.5 / 143`", subject_report)
+        self.assertIn(
+            "| P2 | 初试总分 | 373 | 383 | 389.5 | 389.06 | 395 | 406 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P2 | 政治 | 65 | 69.25 | 71.5 | 71.78 | 75.75 | 79 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P2 | 英语 | 67 | 70.5 | 79 | 76.78 | 82 | 84 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P2 | 数学 | 93 | 104.5 | 111 | 112.00 | 119.5 | 127 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P2 | 业务课二 | 115 | 120.5 | 129 | 128.50 | 134.5 | 143 |",
+            subject_report,
+        )
         self.assertIn("`27=备注空白考试招生18+推荐免试9`", subject_report)
         self.assertIn("`18/18` 一致", subject_report)
         self.assertIn(source_sha256, subject_report)
@@ -1087,8 +1162,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
                 re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
             )
 
-        for content in (readme, subject_report):
-            self.assertIn(expected_stats, content)
+        self.assertIn(expected_stats, readme)
+        self.assertIn(
+            "| P1 | 初试总分 | 277 | 333 | 351 | 346.27 | 362.5 | 396 |",
+            subject_report,
+        )
         self.assertIn(
             "| 2024 | 校级公示中全日制备注空白代理人口 | 63 | 277 | "
             "333 | 351 | 346.27 | 362.5 | 396 |",
@@ -1153,8 +1231,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             self.assertIn("secondary_conflicted_aggregate_lead", content)
             self.assertIn("21非全+70调剂", content)
             self.assertIn("冲突", content)
-        for content in (readme, subject_report):
-            self.assertIn("373【324—430】", content)
+        self.assertIn("373【324—430】", readme)
+        self.assertIn(
+            "| 页面拟录取栏 | 52 | 324 | 373 | 430 |",
+            subject_report,
+        )
         self.assertIn(
             "拟录取写为 52 人、初试平均分 373、最低分 324、最高分 430",
             admission_report,
@@ -1189,6 +1270,7 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             "67 = 备注空白 64 + 少数民族骨干 1 + 退役大学生士兵 2"
         )
         expected_stats = "`289 / 336 / 352.5 / 350.13 / 364.75 / 402`"
+        readability_trace_id = "aa374621-7293-419e-b79e-f7b12c71df22"
         trace_id = "ff640f6c-7242-4569-bbc2-860756e89ece"
         pdf_sha256 = (
             "D0BC7227380EAC69AF655828071B175D9D4B847F6C4CB29787A245105513C45E"
@@ -1203,8 +1285,24 @@ class ResearchEvidenceContractTests(unittest.TestCase):
                 re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
             )
 
-        for content in (readme, subject_report, start_here):
-            self.assertIn(expected_stats, content)
+        self.assertIn(expected_stats, readme)
+        self.assertNotIn(expected_stats, start_here)
+        self.assertIn(readability_trace_id, start_here)
+        self.assertIn(
+            "| 2025 | `135-085404-01` 全日制、备注空白的普通一志愿录取者 "
+            "| 64 | 289 | 336 | 352.5 | 350.13 | 364.75 | 402 |",
+            start_here,
+        )
+        self.assertIsNone(
+            re.search(
+                r"(?<![\d.])\d+(?:\.\d+)?(?:\s*/\s*\d+(?:\.\d+)?){5}(?![\d.])",
+                start_here,
+            )
+        )
+        self.assertIn(
+            "| P2 | 初试总分 | 289 | 336 | 352.5 | 350.13 | 364.75 | 402 |",
+            subject_report,
+        )
         self.assertIn(
             "| 2025 | 普通一志愿／全日制备注空白人口 | 64 | 289 | "
             "336 | 352.5 | 350.13 | 364.75 | 402 |",
@@ -1268,12 +1366,27 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("21 格能够给出官方确认", subject_report)
         self.assertIn("43 格在官方口径下仍不可计算", subject_report)
         self.assertIn("| 11 | 新大 308—085405 | 交(普通97；含照顾98) |", subject_report)
-        self.assertIn("| 2023 | 镜像重建 `101+204+302+841`；正式原件 404 | `official_final_crossmatch` | 97 |", subject_report)
-        self.assertIn("`265 / 288 / 305 / 306.84 / 322 / 368`", subject_report)
-        self.assertIn("`45 / 54 / 57 / 57.43 / 60 / 69`", subject_report)
-        self.assertIn("`36 / 61 / 67 / 66.19 / 71 / 87`", subject_report)
-        self.assertIn("`53 / 71 / 78 / 81.21 / 90 / 122`", subject_report)
-        self.assertIn("`65 / 96 / 102 / 102.01 / 110 / 123`", subject_report)
+        self.assertIn("| P1 | 2023 | 镜像重建 `101+204+302+841`；正式原件 404 | `official_final_crossmatch` | 97 |", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 265 | 288 | 305 | 306.84 | 322 | 368 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 政治 | 45 | 54 | 57 | 57.43 | 60 | 69 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 外语 | 36 | 61 | 67 | 66.19 | 71 | 87 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 业务课一 | 53 | 71 | 78 | 81.21 | 90 | 122 |",
+            subject_report,
+        )
+        self.assertIn(
+            "| P1 | 业务课二 | 65 | 96 | 102 | 102.01 | 110 | 123 |",
+            subject_report,
+        )
         self.assertIn("`111/111`", subject_report)
         self.assertIn("目标 `085405` 为 `108/108`", subject_report)
         self.assertIn("普通拟录取 97、少民照顾 1、不录取 10", subject_report)
@@ -1373,6 +1486,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             / "docs"
             / "current-16-four-year-admission-data-audit-2026-08-31.md"
         ).read_text(encoding="utf-8")
+        subject_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
         readme = (repository_root / "README.md").read_text(encoding="utf-8")
         docs_readme = (repository_root / "docs" / "README.md").read_text(
             encoding="utf-8"
@@ -1426,8 +1544,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_name, national_matrix)
         self.assertIn("| 80 | 湖南大学 | `non_strict` |", national_matrix)
         self.assertIn(
-            "`strict_match` 53、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 20",
+            "`strict_match` 54、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 19",
             national_matrix,
         )
 
@@ -1436,6 +1554,698 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertNotIn("最终初试六统计", admission_report)
         self.assertNotIn("min / Q25 / median / mean / Q75 / max", admission_report)
         self.assertNotIn("一志愿 40：`350 / 374", admission_report)
+        self.assertNotIn("331 / 374 / 383 / 385.24 / 397 / 426", admission_report)
+        self.assertIn(
+            "| 2023 | 全年口径，含 1 名士兵调剂 | 41 | 331 | 374 | 383 | "
+            "385.24 | 397 | 426 |",
+            admission_report,
+        )
+        self.assertIsNone(
+            re.search(
+                r"(?<![\d.])\d+(?:\.\d+)?(?:\s*/\s*\d+(?:\.\d+)?){5}(?![\d.])",
+                admission_report,
+            )
+        )
+        self.assertIn(
+            "六项分数逐列标注与统计人口复核 TraceId："
+            "`0ddbe3d5-27d4-4d36-8db6-1ac3e63d14c7`",
+            admission_report,
+        )
+        self.assertIn(
+            "厦门大学复试门槛字段中文化 TraceId："
+            "`58d50d3d-0f4d-422e-b612-bf4c0c568265`",
+            admission_report,
+        )
+        self.assertIn(
+            "总分 343；政治 50；英语二 50；数学二 75；408 75",
+            admission_report,
+        )
+        self.assertNotIn("单科 50/50/75/75", admission_report)
+        self.assertNotIn("`min/Q25/median/mean/Q75/max`", readme)
+        self.assertNotIn("331/374/383/385.24/397/426", readme)
+        self.assertIn(
+            "样本人数、最低分、25% 位置分数、中位数、平均分、"
+            "75% 位置分数、最高分、证据状态",
+            readme,
+        )
+        self.assertIn(
+            "分科统计逐字段表格化 TraceId："
+            "`ad850349-4a37-463f-b394-d6e87dbcef02`",
+            subject_report,
+        )
+        self.assertNotIn("min / Q25 / median / mean / Q75 / max", subject_report)
+        self.assertNotIn("Q25", subject_report)
+        self.assertNotIn("Q75", subject_report)
+        self.assertIn(
+            "| P1 | 初试总分 | 350 | 374 | 383.5 | 386.60 | 397 | 426 |",
+            subject_report,
+        )
+        self.assertIsNone(
+            re.search(
+                r"(?<![\d.])\d+(?:\.\d+)?(?:\s*/\s*\d+(?:\.\d+)?){5}(?![\d.])",
+                subject_report,
+            )
+        )
+
+    def test_2027_first_switch_408_report_labels_every_subject_field(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        trace_id = "93ced22b-88eb-4dca-a6a1-1c011927c364"
+        report_name = (
+            "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+        )
+
+        report = (repository_root / "docs" / report_name).read_text(encoding="utf-8")
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        docs_readme = (repository_root / "docs" / "README.md").read_text(
+            encoding="utf-8"
+        )
+        report_index = (
+            repository_root / "docs" / "research-report-index.md"
+        ).read_text(encoding="utf-8")
+        start_here = (
+            repository_root / "docs" / "start-here-current-conclusions.md"
+        ).read_text(encoding="utf-8")
+
+        national_matrix = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(trace_id, report)
+        for content in (readme, docs_readme, report_index, start_here):
+            self.assertIn(trace_id, content)
+            self.assertIn(report_name, content)
+
+        for content in (report, readme, docs_readme, report_index, start_here):
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+        for field in (
+            "第一科：政治",
+            "第二科：外语",
+            "第三科：数学",
+            "第四科：专业基础",
+        ):
+            self.assertIn(field, report)
+
+        self.assertIn("专业名称是否就是“软件工程”", report)
+        self.assertIn("二手线索待校方原件", report)
+        self.assertIn("禁止升级为官方确认", report)
+        self.assertIn("人数、最低分、25% 位置分数、中位数、平均分、75% 位置分数、最高分", report)
+        self.assertIn("大连理工大学软件学院两个“软件工程”项目", report)
+        self.assertIn("`083500 软件工程`", report)
+        self.assertIn("`085405 软件工程`", report)
+        self.assertIn("34c13d86-9c45-438e-aa42-cdf7b5a3c9c6", report)
+        self.assertIn("六所 985、八条具体项目线", report)
+        self.assertIn("2026 动态目录 `083500 软件工程`", report)
+        self.assertIn("49bae1da-d9b5-425f-a00a-8ced92b066d9", report)
+        self.assertIn("49bae1da-d9b5-425f-a00a-8ced92b066d9", start_here)
+        self.assertIn(
+            "| 2024 | `085405 软件工程` | 全日制 `01 智能软件` | "
+            "45 | 45 | 70 | 75 | 350 | 82 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405 软件工程` | 全日制 `01 智能软件` | "
+            "45 | 45 | 70 | 75 | 372 | 83 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | 开发区校区软件学院 | 专业学位、全日制 | "
+            "321 | 86 |",
+            report,
+        )
+        self.assertIn("这六个字段继续写“缺失”", report)
+        self.assertIn(
+            "| 2026 | 372 | 83 | 321 | 86 |",
+            start_here,
+        )
+        self.assertIn("`887 软件工程`", report)
+        self.assertIn("四条项目线当前都只是监测项，不是已改考项目", report)
+        self.assertIn("043cb2c4-05bf-4a4b-a42d-0549e03be0cc", report)
+        self.assertIn("043cb2c4-05bf-4a4b-a42d-0549e03be0cc", start_here)
+        self.assertIn(
+            "| 招生年度 | 专业代码与名称 | 人口类型 | 招生计划总数 | "
+            "已录取推免生人数 | 留给统考或后续环节的剩余计划 | "
+            "进入复试人数 | 政治单科线 | 外语单科线 | "
+            "业务课一单科线 | 业务课二单科线 | 复试总分线 | 口径说明 |",
+            report,
+        )
+        self.assertIn(
+            "| 2024 | `085405 软件工程` | 普通全日制 | 173 | 81 | 92 | "
+            "129 | 50 | 50 | 70 | 70 | 315 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405 软件工程` | 普通全日制 | 173 | 71 | 102 | "
+            "126 | 45 | 45 | 70 | 70 | 375 |",
+            report,
+        )
+        self.assertIn(
+            "| 招生年度 | 统计人口 | 样本人数 | 最低分 | 25% 位置分数 | "
+            "中位数 | 平均分 | 75% 位置分数 | 最高分 | 证据状态与人口边界 |",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `085405` 全日制最终名单，包含 2 名退役大学生士兵专项 | "
+            "92 | 350 | 367 | 377 | 377.33 | 386.25 | 415 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405` 全日制最终名单 | 102 | 376 | 393.25 | "
+            "403.5 | 405.57 | 415.75 | 449 |",
+            report,
+        )
+        self.assertIn("不能用复试名单替代拟录取名单", report)
+        self.assertIn("2027 年硕士研究生招生初试自命题科目变更公告（陆续更新）", report)
+        self.assertIn("没有软件学院", report)
+        self.assertIn("页面标题明确写着“陆续更新”", report)
+        self.assertIn("F7A031810293F0A7D08DC47F36675638B37F78D6DDD817497C94C066FB2491DF", report)
+        self.assertIn(
+            "| 2024 | 最终名单未恢复 | 缺失 | 缺失 | 缺失 | 缺失 | "
+            "缺失 | 缺失 | 缺失 |",
+            start_here,
+        )
+        self.assertIn(
+            "| 2026 | `085405` 全日制最终名单 | 102 | 376 | 393.25 | "
+            "403.5 | 405.57 | 415.75 | 449 |",
+            start_here,
+        )
+        self.assertIn("列出的 6 个单位也不含软件学院", start_here)
+        self.assertIn("71923d87-4ec8-46e4-9109-22abddb570be", report)
+        self.assertIn("2027 年招生目录尚未开放", report)
+        self.assertIn("直接访问 `083500` 和 `085405` 两条目标项目页也都显示“暂无数据”", report)
+        self.assertIn("专业名称就是“软件工程”，但 2026 已经考 408", report)
+        self.assertNotIn("专业名称虽然是 `085405 软件工程`，但 2026 已经考 408", report)
+        self.assertIn("| 学校与培养单位 | 专业代码 | 2026 学习方式／范围 |", report)
+        self.assertIn("华东师范大学软件工程学院", report)
+        self.assertIn("四川大学计算机学院（软件学院）", report)
+        self.assertIn("南开大学软件学院", report)
+        self.assertIn("东南大学软件学院", report)
+        self.assertIn("吉林大学卓越工程师学院（珠海）", report)
+        self.assertIn("吉林大学珠海研究院", report)
+        self.assertIn("天津大学软件学院", report)
+        self.assertIn("`101 思想政治理论` | `201 英语（一）` | `302 数学（二）` | `408 计算机学科专业基础`", report)
+        self.assertIn("aa7f1d0f-feff-4803-957b-7df040afefb4", report)
+        self.assertIn("499b5c6e-b2bc-416c-a150-4bf78e49bc56", report)
+        self.assertIn("acecc253-f52c-4885-9a8f-3f14839bc3e0", report)
+        self.assertIn("acecc253-f52c-4885-9a8f-3f14839bc3e0", start_here)
+        self.assertIn("263ece8c-b427-45d4-b6b1-afa97c9ca56d", report)
+        self.assertIn("8ccca1ee-01d1-406c-8c82-952cf55d3fb3", report)
+        self.assertIn("8ccca1ee-01d1-406c-8c82-952cf55d3fb3", start_here)
+        self.assertIn("dbd14d88-74e9-4958-803e-f59bea28b3b7", report)
+        self.assertIn("dbd14d88-74e9-4958-803e-f59bea28b3b7", start_here)
+        self.assertIn("d48e4252-4798-4385-82c4-b081e4f7f080", report)
+        self.assertIn("d48e4252-4798-4385-82c4-b081e4f7f080", start_here)
+        self.assertIn("2026-07-16 发布、适用于 2027 的 `085405` 改考公告", report)
+        self.assertIn("证据等级继续保持二手", report)
+        self.assertIn("2027 年研究生招生专业目录还未正式公布", report)
+        self.assertIn("没有被公共存档抓到", report)
+        self.assertIn("不能绕过证书校验后把页面当成可信原件", report)
+        self.assertIn("首页“硕士研究生招生章程及专业目录”入口仍指向 `2026/index.html`", report)
+        self.assertIn("`2027/24.html` 与 `2027/index.html` 均返回 HTTP 404", report)
+        self.assertIn("这不是对 7 月学院调整线索的否定证据", report)
+        self.assertIn("两个 2027 目录直达地址均返回 404", start_here)
+        self.assertIn("https://www.51kywang.com/51kaoyanwang/wap_doc/31119000.html", report)
+        self.assertIn("7 月 17 日更可能是转载日期", report)
+        self.assertIn("哈尔滨工业大学计算学部", report)
+        self.assertIn("中央民族大学信息工程学院", report)
+        self.assertIn("目录计划 29 人", report)
+        self.assertIn("国防科技大学计算机学院", report)
+        self.assertIn("`0835 软件工程`（校方目录保留四位代码）", report)
+        self.assertIn("浙江大学计算机科学与技术学院", report)
+        self.assertIn("普通统考目录拟招 5 人", report)
+        self.assertNotIn("111/243/751/408", report)
+        self.assertIn("强军单考另用政治 `111`、外语 `243`、数学 `751`、第四科 `408`", report)
+        self.assertIn("电子科技大学信息与软件工程学院", report)
+        self.assertIn("电子科技大学数学科学学院", report)
+        self.assertIn("电子科技大学（深圳）高等研究院", report)
+        self.assertIn("**非全日制**；目录拟招 3 人", report)
+        self.assertIn("目录拟招 144 人", report)
+        self.assertIn("浙江大学软件学院 `085400 电子信息` 的“软件工程”方向", report)
+        self.assertIn("上海交通大学计算机学院 `081200` 的软件工程方向", report)
+        self.assertIn("复旦大学计算与智能创新学院 `085400 电子信息`", report)
+        self.assertIn("方向 16 是非全日制", report)
+        self.assertIn("北京大学软件与微电子学院 `085400 电子信息`", report)
+        self.assertIn("2026 招生说明列为全日制，总名额 60 人", report)
+        self.assertIn("北京航空航天大学软件学院 | `083500 软件工程`", report)
+        self.assertIn("专业统考计划 14 人", report)
+        self.assertIn("专业统考计划 15 人", report)
+        self.assertIn("专业统考计划 88 人", report)
+        self.assertIn("东北大学软件学院 | `083500 软件工程`", report)
+        self.assertIn("统考计划 8 人", report)
+        self.assertIn("统考计划 42 人", report)
+        self.assertIn("统考计划 2 人", report)
+        self.assertIn("统考计划 34 人", report)
+        self.assertIn("统考计划 21 人", report)
+        self.assertIn(
+            "同济大学计算机科学与技术学院（软件学院） | `085405 软件工程`",
+            report,
+        )
+        self.assertIn(
+            "同济大学工程类专业学位研究生教育管理中心 | `085405 软件工程`",
+            report,
+        )
+        self.assertIn("**`888 工程能力综合`，不是 408**", report)
+        self.assertIn("学院总计划 236 人是 4 个专业代码合计", report)
+        self.assertIn("厦门大学信息学院软件工程系 | `085405 软件工程`", report)
+        self.assertIn("2026 暂定统考计划 13 人", report)
+        self.assertIn("厦门大学电影学院数字媒体技术系 | `085405 软件工程`", report)
+        self.assertIn("2026 暂定统考计划 11 人", report)
+        self.assertIn("山东大学软件学院 | `083500 软件工程`", report)
+        self.assertIn("2026 统考计划 4 人", report)
+        self.assertIn("山东大学软件学院 | `085405 软件工程`", report)
+        self.assertIn("2026 统考计划 21 人", report)
+        self.assertIn("中国海洋大学信息科学与工程学部", report)
+        self.assertIn("2026 统考计划 14 人", report)
+        self.assertIn("中国海洋大学卓越工程师学院", report)
+        self.assertIn("2026 统考计划 3 人", report)
+        self.assertIn("F0211 程序设计实践（上机）", report)
+        self.assertIn("统考计划 19 人、非全日制计划 0 人、拟接收推免 27 人", report)
+        self.assertIn("目录列专业计划 102 人", report)
+        self.assertIn("目录列专业计划 10 人", report)
+        self.assertIn("不能把 102 和 10 合成“统考 112 人”", report)
+        self.assertIn("目录计划原值 37 人", report)
+        self.assertIn("普通统考方向的基础计划原值 10 人", report)
+        self.assertIn("目录基础计划原值 180 人", report)
+        self.assertIn("baf83616-d5f6-40ed-b08d-e87a4aa49a9b", report)
+        self.assertIn("南京大学软件学院 | `083500 软件工程`", report)
+        self.assertIn("南京大学软件学院 | `085405 软件工程`", report)
+        self.assertIn("南京大学智能软件与工程学院 | `085405 软件工程`", report)
+        self.assertIn("2026 目录计划原值 205 人", report)
+        self.assertIn("2026 目录计划原值 56 人", report)
+        self.assertIn("自 2025 级起已由 842 改为 408", report)
+        self.assertIn("6855B285C9A20531396C2ABE642B7910C59F10CF2B41A41DFB5F60218CCC043E", report)
+        self.assertIn("物理第 42、53 页已经逐页渲染核对", report)
+        self.assertIn("公告只点名 `083500`", report)
+        self.assertIn("软件学院 `085405` 全日制；智能软件与工程学院 `085405` 全日制", start_here)
+        self.assertIn("目录计划原值分别为 205、56", start_here)
+        self.assertIn("d932312e-ed92-4fef-9d18-3731e772a8ef", report)
+        self.assertIn("固定 39 所 985 母表补漏", report)
+        self.assertIn("中国人民大学信息学院（专业学位）`085400 电子信息—01 软件工程领域`", start_here)
+        self.assertIn("信息学院（专业学位）`085400 电子信息—01 软件工程领域`", report)
+        self.assertIn("46A7DE7AD58CE87CF886572279020BFEF18ED355322150C7FC3F2EEDB1C7F15C", report)
+        self.assertIn("658DA97AE1FF143E697A247C5F70AC98B685EADCBC956229E192C760D5274F97", report)
+        self.assertIn("795AA5317159AE910DDE3290B93B0A55251C6FABC48DB03C543A6918E0E76E84", report)
+        self.assertIn("中南大学 `085405` 只有授权专业存在性、没有同项目四科闭环", report)
+        self.assertIn("软件工程是母代码下的培养方向，没有独立 `085405` 初试行", report)
+        self.assertIn("系统专业仅供参考", report)
+        self.assertIn("两院现有 2026 科目原件均按母代码 `085400 电子信息` 招生", start_here)
+        self.assertNotIn("南京大学、中南大学、哈尔滨工业大学", report)
+        for school in (
+            "北京大学", "中国人民大学", "清华大学", "北京航空航天大学", "北京理工大学",
+            "中国农业大学", "北京师范大学", "中央民族大学", "南开大学", "天津大学",
+            "大连理工大学", "东北大学", "吉林大学", "哈尔滨工业大学", "复旦大学",
+            "同济大学", "上海交通大学", "华东师范大学", "南京大学", "东南大学",
+            "浙江大学", "中国科学技术大学", "厦门大学", "山东大学", "中国海洋大学",
+            "武汉大学", "华中科技大学", "湖南大学", "中南大学", "国防科技大学",
+            "中山大学", "华南理工大学", "四川大学", "电子科技大学", "重庆大学",
+            "西安交通大学", "西北工业大学", "西北农林科技大学", "兰州大学",
+        ):
+            self.assertIn(school, report)
+        self.assertIn(
+            "092C5F4FBB9DFBE155E1C04D4C36BC83042A4FD0A8C5AB9113D534ADC6B02108",
+            report,
+        )
+        for vague_placeholder in (
+            "全日制范围按目录另核",
+            "培养单位和方向仍需逐线拆分",
+            "按正式目录方向另核",
+            "培养单位按正式目录另核",
+        ):
+            self.assertNotIn(vague_placeholder, report)
+        self.assertIn("已经在 2026 考 408 的精确软件工程项目怎样拆开", start_here)
+        self.assertIn("同校同名不等于同科目", start_here)
+        self.assertIn("暂定统考计划 13", start_here)
+        self.assertIn("暂定统考计划 11", start_here)
+        self.assertNotIn("精确名称的软件工程学硕，但改考发生在 2026 | 中央民族大学", report)
+        self.assertIn("aa7f1d0f-feff-4803-957b-7df040afefb4", start_here)
+        self.assertIn("精确名称·校方已官宣", report)
+        self.assertIn("清华大学全球创新学院", report)
+        self.assertIn("清华大学网络研究院 `085400` 已官宣 826 改 408", report)
+        self.assertIn(
+            "北京航空航天大学杭州国际创新研究院 `085405 软件工程`",
+            report,
+        )
+        self.assertIn("中法航空双学位专项", report)
+        self.assertIn(
+            "专业名称精确、四科匹配，但属于 2027 新项目",
+            report,
+        )
+        self.assertIn("兰州大学 `085405` 校方首改公告恢复", report)
+        self.assertIn("由 `806 计算机专业基础` 改为 `408 计算机学科专业基础`", report)
+        self.assertIn(
+            "https://yz.lzu.edu.cn/shuoshishengzhaosheng/shuoshijianzhang/"
+            "2026/0617/333466.html",
+            report,
+        )
+        self.assertIn("9a453746-78d9-4dc8-a0ba-39da6dbf0d2d", report)
+        self.assertIn("用户已经明确“兰州大学不报”", report)
+        self.assertIn("不进入候选、排序、目标分或录取概率模型", report)
+        self.assertNotIn("当前最贴合本人备考合同的校方已官宣首改项目", report)
+        self.assertIn("4273ac00-27ee-4abc-ab9e-225947ff7ab5", report)
+        self.assertIn("75947e87-7d7d-4e86-b03c-89c5f4420488", report)
+        self.assertIn("46607f86-5f05-4bb0-962d-4914d4754bf7", report)
+        self.assertIn(
+            "2023—2025 拟录取名单在 `085400` 下明确单列过“软件工程”方向",
+            report,
+        )
+        self.assertIn("2026 合并项目不再拆方向", report)
+        self.assertIn("南开大学软件学院 `085400 电子信息` 的软件工程方向", report)
+        self.assertIn("中央民族大学信息工程学院 | `083500 软件工程`", report)
+        self.assertIn("c9bb0dd7-2b3b-40f2-891d-7fbc8b45e5df", report)
+        self.assertIn("65d9ab9d-06d6-4a7e-bb52-7ad55fa9c3d1", report)
+        self.assertIn("南京大学软件学院 `083500 软件工程`", report)
+        self.assertIn("2027 年**仅招收推荐免试研究生**", report)
+        self.assertIn("智能软件与工程学院的 `085405 软件工程`", report)
+        self.assertIn("湖南大学网络空间安全学院 `085400` 已官宣 866 改 408", report)
+        self.assertIn("不能和湖南大学计算机学院项目混为一项", report)
+        self.assertIn("业务课考试科目保持不变", report)
+        self.assertIn("不能把计算机学院公共课调整误写成软件学院", report)
+        self.assertIn("中国科学技术大学环境科学与光电技术学院", report)
+        self.assertIn("校方明确写的是 2027 新增招生专业", report)
+        self.assertIn("| 6 | 北京航空航天大学 | `strict_match` |", national_matrix)
+        self.assertIn("021 软件学院", national_matrix)
+        self.assertIn("75947e87-7d7d-4e86-b03c-89c5f4420488", national_matrix)
+        self.assertIsNone(re.search(r"`\d{3}\+\d{3}\+\d{3}\+\d{3}`", report))
+        self.assertNotIn("min / Q25 / median / mean / Q75 / max", report)
+
+    def test_cqu_024_085405_four_year_scores_are_field_labeled_and_population_safe(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        trace_id = "378c27e9-2951-45ba-b200-11c72a1938c0"
+        report = (
+            repository_root
+            / "docs"
+            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+        ).read_text(encoding="utf-8")
+        start_here = (
+            repository_root / "docs" / "start-here-current-conclusions.md"
+        ).read_text(encoding="utf-8")
+
+        for content in (report, start_here):
+            self.assertIn(trace_id, content)
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+        self.assertIn(
+            "| 招生年度 | 统计人口 | 样本人数 | 最低分 | 25% 位置分数 | "
+            "中位数 | 平均分 | 75% 位置分数 | 最高分 | 证据边界 |",
+            report,
+        )
+        self.assertIn(
+            "| 2023 | `024-085405`、全日制、专项计划栏均为“无” | 59 | "
+            "321 | 341.5 | 356 | 357.95 | 374 | 439 |",
+            report,
+        )
+        self.assertIn(
+            "| 2024 | `024-085405`、全日制、专项计划栏为“无” | 43 | "
+            "342 | 367 | 381 | 381.19 | 398.5 | 424 |",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `024-085405`、全日制、专项计划栏为“无” | 93 | "
+            "309 | 346 | 362 | 361.48 | 378 | 420 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `024-085405`、全日制、专项计划栏均为“无” | 81 | "
+            "339 | 372 | 389 | 387.48 | 403 | 434 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | 大数据与软件学院 `085405` 二次划线 | 45 | 45 | "
+            "70 | 70 | 320 |",
+            report,
+        )
+        self.assertIn("2023—2025 年学院二次划线表都没有列出本项目", report)
+        self.assertIn("最终名单人数与目录计划不一致时，原样保留差异", report)
+        self.assertIn("不给政治、外语、数学和专业课的分科成绩", report)
+        self.assertIn("这是普通程序设计上机，不是网络安全攻防", report)
+        self.assertIn("未要求把电子竞赛证书自行打印成纸质证书", report)
+        self.assertIn(
+            "D9DB01E13BCF1254653BC9A82712537F06DFBF3EA7160FE617C6810F0209E815",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | 320 | 全日制、专项计划栏均为“无” | 81 | 339 | "
+            "372 | 389 | 387.48 | 403 | 434 |",
+            start_here,
+        )
+        self.assertIn("四份最终表都没有政治、英语、数学、专业课分列", start_here)
+        self.assertIsNone(
+            re.search(
+                r"(?<![\d.])\d+(?:\.\d+)?(?:\s*/\s*\d+(?:\.\d+)?){5}(?![\d.])",
+                report,
+            )
+        )
+
+    def test_bit_085405_four_year_scores_are_stage_separated_and_field_labeled(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        trace_id = "71dd931b-3118-4f98-a515-c76ebb4cef92"
+        recovered_trace_id = "d9de62d0-e46b-4dd0-a840-04afc1862904"
+        indexed_2026_trace_id = "e9125069-3c41-4cef-acdc-28ced5300b60"
+        report = (
+            repository_root
+            / "docs"
+            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+        ).read_text(encoding="utf-8")
+        start_here = (
+            repository_root / "docs" / "start-here-current-conclusions.md"
+        ).read_text(encoding="utf-8")
+
+        for content in (report, start_here):
+            self.assertIn(trace_id, content)
+            self.assertIn(recovered_trace_id, content)
+            self.assertIn(indexed_2026_trace_id, content)
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+        self.assertIn("复试名单不能替代拟录取名单", report)
+        self.assertIn(
+            "| 招生年度 | 普通复试总分线 | 普通全日制进入复试人数 | "
+            "普通全日制复试阶段名额 | 复试名单另列专项人数 |",
+            report,
+        )
+        self.assertIn("| 2023 | 330 | 115 | 68 | 2 | 8 |", report)
+        self.assertIn("| 2024 | 352 | 118 | 78 | 3 | 11 |", report)
+        self.assertIn("| 2025 | 330 | 117 | 84 | 4 | 2 |", report)
+        self.assertIn("| 2026 | 341 | 109 | 70 | 5 | 0 |", report)
+        self.assertIn(
+            "| 招生年度 | 统计人口 | 样本人数 | 最低分 | 25% 位置分数 | "
+            "中位数 | 平均分 | 75% 位置分数 | 最高分 | "
+            "能否当作最终录取分布 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405` 普通全日制复试名单 | 109 | 341 | 354 | "
+            "374 | 375.80 | 395 | 424 | 不能 |",
+            report,
+        )
+        self.assertIn(
+            "| 招生年度 | 成绩字段 | 样本人数 | 最低分 | 25% 位置分数 | "
+            "中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+            report,
+        )
+        self.assertIn(
+            "| 2024 | `085405` 普通全日制最终拟录取者 | 初试总分 | "
+            "78 | 355 | 373 | 383.5 | 386.04 | 398 | 431 |",
+            report,
+        )
+        self.assertIn(
+            "| 2024 | `085405` 普通全日制最终拟录取者 | "
+            "复试成绩（百分制） | 78 | 69.5 | 78.23 | 81.05 | 81.55 | "
+            "84.6 | 93.5 |",
+            report,
+        )
+        self.assertIn(
+            "2023 | 已定位校方第一、第二、第三批旧公示入口", report
+        )
+        self.assertIn(
+            "| 2025 | 学院现站附件已撤；已从公共网页存档恢复校方原 PDF | "
+            "**90** | **能** |",
+            report,
+        )
+        self.assertIn(
+            "2026 | 校方原 PDF 当前 404；已从该校方 URL 的完整公开搜索索引恢复全表 94 行",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `085405` 普通全日制最终拟录取者 | 初试总分 | "
+            "90 | 330 | 350.25 | 364.5 | 364.97 | 376 | 422 |",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `085405` 普通全日制最终拟录取者 | "
+            "复试成绩（百分制） | 90 | 66.425 | 77.138 | 82.525 | "
+            "82.176 | 87.475 | 94.600 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405` 普通全日制最终拟录取者；公开搜索索引恢复 | "
+            "初试总分 | 70 | 341 | 364 | 388 | 383.11 | 402.75 | 424 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405` 普通全日制最终拟录取者；公开搜索索引恢复 | "
+            "复试成绩（百分制） | 70 | 67.7 | 77.775 | 81.45 | 81.424 | "
+            "85.2 | 92.6 |",
+            report,
+        )
+        self.assertIn(
+            "| 普通全日制合计 | 70 | **70** | **0** |",
+            report,
+        )
+        self.assertIn("未恢复原文件字节", report)
+        self.assertIn(
+            "| 普通全日制合计 | 84 | **90** | **+6** |",
+            report,
+        )
+        self.assertIn("3 名退役计划、1 名骨干计划", report)
+        self.assertIn(
+            "0665147E8CC01CD0C307AAD7F090D565AD6D4142AA12C96DB11ECEBE926F39E4",
+            report,
+        )
+        self.assertIn("普通 C/C++ 程序设计上机", report)
+        self.assertIn("不是网络安全攻防上机", report)
+        self.assertIn(
+            "| 2024 | 352 | 118 | 78 | 3 | 11 | "
+            "不能；最终表另行统计 |",
+            start_here,
+        )
+        self.assertIn(
+            "| 2024 | `085405` 普通全日制最终拟录取者 | 初试总分 | "
+            "78 | 355 | 373 | 383.5 | 386.04 | 398 | 431 |",
+            start_here,
+        )
+        self.assertIn(
+            "| 2025 | `085405` 普通全日制最终拟录取者 | 初试总分 | "
+            "90 | 330 | 350.25 | 364.5 | 364.97 | 376 | 422 |",
+            start_here,
+        )
+        self.assertIn(
+            "| 2026 | `085405` 普通全日制最终拟录取者；公开搜索索引恢复 | "
+            "初试总分 | 70 | 341 | 364 | 388 | 383.11 | 402.75 | 424 |",
+            start_here,
+        )
+        self.assertIsNone(
+            re.search(
+                r"(?<![\d.])\d+(?:\.\d+)?(?:\s*/\s*\d+(?:\.\d+)?){5}(?![\d.])",
+                report,
+            )
+        )
+
+    def test_tsinghua_software_professional_history_is_code_safe_and_field_labeled(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        trace_id = "a71dcf2f-c136-4847-9959-6eb16320d839"
+        report = (
+            repository_root
+            / "docs"
+            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+        ).read_text(encoding="utf-8")
+        start_here = (
+            repository_root / "docs" / "start-here-current-conclusions.md"
+        ).read_text(encoding="utf-8")
+
+        for content in (report, start_here):
+            self.assertIn(trace_id, content)
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+        self.assertIn(
+            "2023 年还以 `085400 电子信息—01 软件工程（工程）` 招生",
+            report,
+        )
+        self.assertIn("它不是同一专业代码", report)
+        self.assertIn(
+            "| 招生年度 | 当年报名专业与方向 | 目录阶段计划 | "
+            "复试细则中的调整后计划 | 普通考生进入复试人数 | "
+            "普通考生最终拟录取人数 | 另列专项人数 | 当前证据边界 |",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `085405 软件工程—01 软件工程（专业学位）`，全日制 | "
+            "8 | **13** | 20 | **13** | 复试 1 人、最终 1 人，均为士兵计划 |",
+            report,
+        )
+        self.assertIn(
+            "| 2026 | `085405 软件工程—01 智能软件工程（专业学位）`，全日制 | "
+            "10 | **19** | 缺失 | 缺失 | 缺失 |",
+            report,
+        )
+        self.assertIn(
+            "| 招生年度 | 适用人口 | 复试总分线 | 政治单科线 | "
+            "外语单科线 | 数学一单科线 | 业务课二单科线 |",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `085405` 普通复试名单 | 20 | 325 | 332.75 | "
+            "346.5 | 348.90 | 360.5 | 390 |",
+            report,
+        )
+        self.assertIn(
+            "| 2025 | `085405` 普通最终拟录取者 | 初试总分 | 13 | "
+            "325 | 348 | 360 | 356.85 | 371 | 390 |",
+            report,
+        )
+        self.assertIn("4 小时上机考试", report)
+        self.assertIn("这里没有网络安全攻防项目", report)
+        self.assertIn("公开复试名单和最终名单当前未恢复", report)
+        self.assertIn(
+            "| 2023 | `085400 电子信息—软件工程（工程）` | "
+            "8／未公布调整数 | 335 | 14 | 11 | 372 |",
+            start_here,
+        )
+        self.assertIn(
+            "| 2026 | `085405 智能软件工程` | 10／**19** | 330 | "
+            "缺失 | 缺失 | 缺失 |",
+            start_here,
+        )
+        self.assertIsNone(
+            re.search(
+                r"(?<![\d.])\d+(?:\.\d+)?(?:\s*/\s*\d+(?:\.\d+)?){5}(?![\d.])",
+                report,
+            )
+        )
+
+    def test_2027_same_name_non_985_spillover_is_field_labeled_and_excluded(
+        self,
+    ) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        trace_id = "6a309b90-7927-4e4e-8d64-b630a826f375"
+        report = (
+            repository_root
+            / "docs"
+            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(trace_id, report)
+        self.assertIn(
+            "| 学校与项目 | 2027 变化性质 | 第一科：政治 | 第二科：外语 | "
+            "第三科：数学 | 第四科：专业基础 | 为什么不进入本人的 985 首改候选池 |",
+            report,
+        )
+        self.assertIn("北京科技大学数理学院 `085405 软件工程`", report)
+        self.assertIn("第四科由 `879 数据结构` 改为 `408`", report)
+        self.assertIn("青海师范大学 `0835 软件工程`", report)
+        self.assertIn("不能擅自细化成 `083500`", report)
+        self.assertIn("西南大学计算机与信息科学学院、软件学院", report)
+        self.assertIn("仅招非全日制定向就业生源", report)
+        self.assertIn("学校不是 985、项目是新增而非首改", report)
+        self.assertNotIn(
+            "青海师范大学 `083500 软件工程`",
+            report,
+        )
 
 
 if __name__ == "__main__":
