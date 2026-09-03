@@ -25,6 +25,7 @@ TraceId: 71ada3c0-bc77-4c87-a775-1719068abddb
 TraceId: 635a5050-f87e-48d7-826d-228a901f4822
 TraceId: 6edc56ed-eaf7-416a-b33b-dcd3f41d2fbf
 TraceId: e8b68757-b898-4ed7-b8eb-2a7031b04893
+TraceId: 7b006898-b827-4b91-ae64-8b6ba249c8ab
 """
 
 import re
@@ -72,7 +73,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
                 content,
             )
             self.assertIn("68 = 无专项67 + 退役大学生士兵计划1", content)
-            self.assertIn("317 / 324 / 340 / 341.04 / 351 / 390", content)
+
+        self.assertIn(
+            "| 2024 | 正式全日制、专项栏为“无” | 25 | 317 | 324 | "
+            "340 | 341.04 | 351 | 390 |",
+            admission_report,
+        )
 
         self.assertIn("不增加现有 21 个正式最终四科精确格", subject_report)
         self.assertIn("代码级名单没有方向字段", admission_report)
@@ -459,8 +465,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, matrix)
         self.assertIn(report_path.name, national)
         self.assertIn(
-            "`strict_match` 53、`non_strict` 28、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 21",
+            "`strict_match` 53、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 20",
             national,
         )
         self.assertIn("| 96 | 西南大学 | `non_strict` |", national)
@@ -502,8 +508,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn("| 40 | 东北林业大学 | `strict_match` |", national)
         self.assertIn(
-            "`strict_match` 53、`non_strict` 28、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 21",
+            "`strict_match` 53、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 20",
             national,
         )
         for content in (report, readme, matrix, national):
@@ -691,7 +697,11 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         )
         self.assertIn("不是官方最终点分布", subject_report)
         self.assertIn("不进入择校排序、目标分、录取概率", subject_report)
-        self.assertIn("条件集合区间、非正式", admission_report)
+        self.assertIn(
+            "| 2024 | 16 个相容最终集合 | 35 | 314 | 319.5—320 | 325 | "
+            "329.51—329.74 | 335.5 | 382 | 每列为所有相容集合的固定值或严格区间 |",
+            admission_report,
+        )
         self.assertIn("共有 16 个相容人口", admission_report)
         self.assertIn(status, readme)
         self.assertIn("不输出任一猜测点分布、不进入模型", readme)
@@ -1072,11 +1082,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
 
         for content in (readme, subject_report, admission_report):
             self.assertIn(expected_population, content)
-            self.assertIn(expected_stats, content)
             self.assertIn("全日制非推免 64", content)
             self.assertIsNone(
                 re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
             )
+
+        for content in (readme, subject_report):
+            self.assertIn(expected_stats, content)
+        self.assertIn(
+            "| 2024 | 校级公示中全日制备注空白代理人口 | 63 | 277 | "
+            "333 | 351 | 346.27 | 362.5 | 396 |",
+            admission_report,
+        )
 
         self.assertIn("`official_final_total_only`", subject_report)
         self.assertIn("禁止从总分反推", subject_report)
@@ -1134,9 +1151,14 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("正式分科状态继续为 `missing`", subject_report)
         for content in (readme, subject_report, admission_report):
             self.assertIn("secondary_conflicted_aggregate_lead", content)
-            self.assertIn("373【324—430】", content)
             self.assertIn("21非全+70调剂", content)
             self.assertIn("冲突", content)
+        for content in (readme, subject_report):
+            self.assertIn("373【324—430】", content)
+        self.assertIn(
+            "拟录取写为 52 人、初试平均分 373、最低分 324、最高分 430",
+            admission_report,
+        )
         self.assertIsNone(
             re.search(r"(?<!非)全日制报考 211、录取 70", admission_report)
         )
@@ -1177,10 +1199,17 @@ class ResearchEvidenceContractTests(unittest.TestCase):
 
         for content in (readme, subject_report, admission_report, start_here):
             self.assertIn(expected_population, content)
-            self.assertIn(expected_stats, content)
             self.assertIsNone(
                 re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
             )
+
+        for content in (readme, subject_report, start_here):
+            self.assertIn(expected_stats, content)
+        self.assertIn(
+            "| 2025 | 普通一志愿／全日制备注空白人口 | 64 | 289 | "
+            "336 | 352.5 | 350.13 | 364.75 | 402 |",
+            admission_report,
+        )
 
         for content in (subject_report, admission_report):
             self.assertIn(pdf_sha256, content)
@@ -1329,6 +1358,84 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             self.assertIsNone(
                 re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
             )
+
+    def test_hunan_audit_and_admission_report_are_human_readable(self) -> None:
+        repository_root = Path(__file__).resolve().parents[2]
+        trace_id = "7b006898-b827-4b91-ae64-8b6ba249c8ab"
+        report_name = (
+            "hunan-university-085400-four-year-score-subject-retest-training-"
+            "and-fairness-audit-2026-09-03.md"
+        )
+
+        report = (repository_root / "docs" / report_name).read_text(encoding="utf-8")
+        admission_report = (
+            repository_root
+            / "docs"
+            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+        ).read_text(encoding="utf-8")
+        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        docs_readme = (repository_root / "docs" / "README.md").read_text(
+            encoding="utf-8"
+        )
+        report_index = (
+            repository_root / "docs" / "research-report-index.md"
+        ).read_text(encoding="utf-8")
+        start_here = (
+            repository_root / "docs" / "start-here-current-conclusions.md"
+        ).read_text(encoding="utf-8")
+        decision_matrix = (
+            repository_root
+            / "docs"
+            / "current-candidate-decision-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+        national_matrix = (
+            repository_root
+            / "docs"
+            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+        ).read_text(encoding="utf-8")
+
+        for content in (
+            report,
+            admission_report,
+            readme,
+            docs_readme,
+            report_index,
+            start_here,
+            decision_matrix,
+            national_matrix,
+        ):
+            self.assertIn(trace_id, content)
+            self.assertIsNone(
+                re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content)
+            )
+
+        self.assertIn("`101+204+302+866`", report)
+        self.assertIn("第四科：`866 → 408`", report)
+        self.assertIn("2027 仍是 `pending_exact_catalog`", report)
+        self.assertIn(
+            "| 2026 | 合并后的 `085400 电子信息` | 105 | 368 | 368 | "
+            "396 | 396.10 | 437 |",
+            report,
+        )
+        self.assertIn("**不是攻防上机**", report)
+        self.assertIn("公平性证据只能保持 `insufficient`", report)
+        self.assertIn(report_name, readme)
+        self.assertIn(report_name, report_index)
+        self.assertIn(report_name, start_here)
+        self.assertIn(report_name, decision_matrix)
+        self.assertIn(report_name, national_matrix)
+        self.assertIn("| 80 | 湖南大学 | `non_strict` |", national_matrix)
+        self.assertIn(
+            "`strict_match` 53、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 20",
+            national_matrix,
+        )
+
+        self.assertGreaterEqual(admission_report.count("25% 位置分数"), 16)
+        self.assertGreaterEqual(admission_report.count("75% 位置分数"), 16)
+        self.assertNotIn("最终初试六统计", admission_report)
+        self.assertNotIn("min / Q25 / median / mean / Q75 / max", admission_report)
+        self.assertNotIn("一志愿 40：`350 / 374", admission_report)
 
 
 if __name__ == "__main__":
