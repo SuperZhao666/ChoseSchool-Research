@@ -1,3 +1,4 @@
+# 2026-09-05 南农/南师正式2026目录闭合计数同步。TraceId: 7c5b11ea-c254-4da0-a308-c3f4ebd46e00
 """Human-readable research evidence contract guards.
 
 TraceId: 499b5c6e-b2bc-416c-a150-4bf78e49bc56
@@ -41,12 +42,66 @@ TraceId: aa374621-7293-419e-b79e-f7b12c71df22
 TraceId: e9125069-3c41-4cef-acdc-28ced5300b60
 """
 
+import csv
 import re
 import unittest
 from pathlib import Path
 
 
 class ResearchEvidenceContractTests(unittest.TestCase):
+    def test_nwafu_selection_aggregate_preserves_denominators_and_unknowns(self) -> None:
+        """TraceId: 6bc35b0b-6e98-4911-ba21-e598141e85c5.
+
+        Guard a dangerous data failure: changing the denominator or treating
+        unmatched outcomes as rejections can make a low-score fraction misleading.
+        This checks public aggregate consistency, not the underlying PDF evidence.
+        """
+        root = Path(__file__).resolve().parents[2]
+        path = root / "docs/nwafu-2026-retest-selection-aggregate-2026-09-05.csv"
+        with path.open(encoding="utf-8-sig", newline="") as source:
+            rows = list(csv.DictReader(source))
+        self.assertTrue(rows)
+        self.assertFalse({"candidate_id", "candidate_name", "姓名", "考生编号"} & rows[0].keys())
+        counts = ("N_listed", "K_observed", "A_provisional", "B_reserve", "R_interview_fail", "U_unmatched")
+        bands = {"<300", "300-319", "320-339", "340-359", ">=360"}
+        groups = {(r["admission_year"], r["college_code"], r["program_code"]) for r in rows}
+        for group in groups:
+            cohort = [r for r in rows if (r["admission_year"], r["college_code"], r["program_code"]) == group]
+            states = [r for r in cohort if r["record_type"] == "cohort_status"]
+            by_band = {r["score_band"]: r for r in states}
+            self.assertEqual(len(states), len(by_band))
+            self.assertEqual(set(by_band), bands | {"ALL"})
+            total = by_band["ALL"]
+            for row in states:
+                n, k, a, b, rejected, unknown = (int(row[c]) for c in counts)
+                self.assertTrue(all(v >= 0 for v in (n, k, a, b, rejected, unknown)))
+                self.assertEqual(k, a + b + rejected)
+                self.assertEqual(n, k + unknown)
+                self.assertIn("面试不合格，不予录取", row["note"])
+                self.assertAlmostEqual(float(row["A_over_N_listed"]), a / n, places=9)
+                self.assertAlmostEqual(float(row["A_over_K_observed"]), a / k, places=9)
+            for field in counts:
+                self.assertEqual(sum(int(by_band[b][field]) for b in bands), int(total[field]))
+            compositions = [r for r in cohort if r["record_type"] == "admitted_composition"]
+            self.assertEqual({r["score_band"] for r in compositions}, {"<300", "<320"})
+            for row in compositions:
+                selected = ["<300"] if row["score_band"] == "<300" else ["<300", "300-319"]
+                self.assertEqual(int(row["numerator"]), sum(int(by_band[b]["A_provisional"]) for b in selected))
+                self.assertEqual(int(row["denominator"]), int(total["A_provisional"]))
+                self.assertEqual(row["A_over_N_listed"], "")
+            ranks = [r for r in cohort if r["record_type"] == "initial_rank_displacement"]
+            self.assertEqual({r["metric"] for r in ranks}, {"top_n_not_admitted", "beyond_n_admitted"})
+            for row in ranks:
+                self.assertEqual(row["K_observed"], total["K_observed"])
+                self.assertEqual(row["rank_threshold_n"], total["A_provisional"])
+                lower, upper = int(row["count_lower"]), int(row["count_upper"])
+                self.assertLessEqual(0, lower)
+                self.assertLessEqual(lower, upper)
+                self.assertLessEqual(upper, min(int(row["rank_threshold_n"]), int(row["K_observed"]) - int(row["rank_threshold_n"])))
+                self.assertEqual(row["N_listed"], "")
+            self.assertEqual(ranks[0]["count_lower"], ranks[1]["count_lower"])
+            self.assertEqual(ranks[0]["count_upper"], ranks[1]["count_upper"])
+
     def test_cqu_2024_live_official_zip_upgrades_both_total_only_rows(
         self,
     ) -> None:
@@ -483,8 +538,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, matrix)
         self.assertIn(report_path.name, national)
         self.assertIn(
-            "`strict_match` 54、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 19",
+            "`strict_match` 56、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 17",
             national,
         )
         self.assertIn("| 96 | 西南大学 | `non_strict` |", national)
@@ -526,8 +581,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn("| 40 | 东北林业大学 | `strict_match` |", national)
         self.assertIn(
-            "`strict_match` 54、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 19",
+            "`strict_match` 56、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 17",
             national,
         )
         for content in (report, readme, matrix, national):
@@ -652,7 +707,9 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn("最终总分 `86/86` 与名册一致", subject_report)
         self.assertIn("四科和 `86/86` 等于总分", subject_report)
         self.assertIn("`official_final_crossmatch`", subject_report)
-        self.assertIn("| 8 | 郑大 084—085410 | 总 | 缺 | 缺 | 交(86) |", subject_report)
+        # TraceId: 12b10116-09ad-4a8a-b786-73ec9056d13d. Retained official
+        # 2024/2025 finals provide totals only; no additional four-subject grid.
+        self.assertIn("| 8 | 郑大 084—085410 | 总 | 总 | 总 | 交(86) |", subject_report)
         self.assertIn(
             "| P1 | 初试总分 | 337 | 354 | 368 | 369.28 | 381.75 | 427 |",
             subject_report,
@@ -1544,8 +1601,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_name, national_matrix)
         self.assertIn("| 80 | 湖南大学 | `non_strict` |", national_matrix)
         self.assertIn(
-            "`strict_match` 54、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 19",
+            "`strict_match` 56、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 17",
             national_matrix,
         )
 
