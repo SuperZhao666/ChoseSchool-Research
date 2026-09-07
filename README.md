@@ -2,7 +2,8 @@
 
 <!-- 南大晚公告与北交实际报名补证 TraceId: e33a7cb9-8546-4021-b93e-695967da7ef0 -->
 <!-- 按年与学校权重复算 TraceId: 0f55e6c0-f2e3-49bc-90a0-67f5ff052cf5 -->
-最新[18条门槛复算](docs/408-announcement-timing-year-and-capacity-comparison-2026-09-07.md)显示：混合年份晚组降更多，但2025同年比较方向相反，2026早组均值还会随学校权重改变符号；不能据此预测2027降幅。[南大苏州与北交实证](docs/nju-late-switch-and-bjtu-applicants-2026-09-07.md)继续保留首改年与报名分母限制。一般18条／12校计数不变，吉大另列英一数二外部参照。
+<!-- 浙大新AI与山大武大范围补证 TraceId: 258c9e4d-5389-4050-8a45-7dfab6c93e67 -->
+最新补[浙大2027新AI领域](docs/zju-2027-new-ai-and-ordinary-admission-boundaries-2026-09-07.md)：四方向13人为预计推免，普通四科与净名额仍缺；[山大软件与武大共享排名](docs/shandong-software-switch-and-wuhan-shared-ranking-2026-09-07.md)确认山大2026首改的预告在5月，武大2024三专硕共同线335、剩余45、上线81，不能当软件独立报录比。前批[18条门槛复算](docs/408-announcement-timing-year-and-capacity-comparison-2026-09-07.md)与[南大苏州／北交实证](docs/nju-late-switch-and-bjtu-applicants-2026-09-07.md)保留年份、权重和人口限制；固定18条组成不改，不增加2027已确认低分项目。
 
 <!-- 9月7日继续调研与当前入口更新 TraceId: 19232653-04da-4c2d-b530-f9936387c416 -->
 <!-- 华南师大与华东理工历史对照、当前计数更新 TraceId: 7606ab6e-7f50-427b-96c2-1df9b23e836a -->
