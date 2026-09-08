@@ -1,3 +1,4 @@
+# 2026-09-08 人大正式2026目录及112行计数同步。TraceId: 4891d9e4-0825-4bbe-b1e2-e5e470740907
 # 2026-09-05 南农/南师正式2026目录闭合计数同步。TraceId: 7c5b11ea-c254-4da0-a308-c3f4ebd46e00
 """Human-readable research evidence contract guards.
 
@@ -538,8 +539,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, matrix)
         self.assertIn(report_path.name, national)
         self.assertIn(
-            "`strict_match` 56、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 17",
+            "`strict_match` 57、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 16",
             national,
         )
         self.assertIn("| 96 | 西南大学 | `non_strict` |", national)
@@ -581,8 +582,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_path.name, national)
         self.assertIn("| 40 | 东北林业大学 | `strict_match` |", national)
         self.assertIn(
-            "`strict_match` 56、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 17",
+            "`strict_match` 57、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 16",
             national,
         )
         for content in (report, readme, matrix, national):
@@ -1601,8 +1602,8 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         self.assertIn(report_name, national_matrix)
         self.assertIn("| 80 | 湖南大学 | `non_strict` |", national_matrix)
         self.assertIn(
-            "`strict_match` 56、`non_strict` 29、`no_relevant_program` 9、"
-            "`pending_exact_catalog` 17",
+            "`strict_match` 57、`non_strict` 29、`no_relevant_program` 9、"
+            "`pending_exact_catalog` 16",
             national_matrix,
         )
 
