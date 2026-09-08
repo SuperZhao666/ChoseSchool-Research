@@ -1,7 +1,7 @@
 # 择校调研报告索引：按问题找文件，不要从头读
 
 <!-- 9月8日收尾补证 TraceId: 2fb55de6-0dd6-4bf1-b148-3174c475a126 -->
-**9月8日持续调研：**[报名截止前信号报告](408-before-registration-signals-scnu-hohai-2026-09-08.md)第5节补齐同校9项目报名档位与2024普通门槛，第6节补东林／南师报名前材料时间链及数值缺口。8条同卷22408与1条823分开，没有把复试线当录取分；[机会表](2027-408-opportunities-and-evidence-update-2026-09-07.md)保留2027候选条件。最新TraceId：`f24c89a3-31f0-4b3b-a58f-5d0e4cfe83d1`。
+**9月8日持续调研：**新增[华南师大低复试线与9项目拟录取分布](scnu-2024-low-threshold-and-ordinary-admission-distributions-2026-09-08.md)，以及[东农2025—2026拟录取分科构成](neau-2025-2026-admitted-score-composition-2026-09-08.md)。前者8项同卷408、1项823单列，后者90人全部回连分科原表；均不转换成个人概率。前批[报名截止前信号](408-before-registration-signals-scnu-hohai-2026-09-08.md)与[2027机会表](2027-408-opportunities-and-evidence-update-2026-09-07.md)继续保留。最新TraceId：`0c47939a-9e8c-4f77-86a3-0f87ab29871f`。
 
 <!-- 华南师大真实报名配对补齐 TraceId: b424958a-a5a7-4635-a03b-69a623b4f366 -->
 [华南师大／华东理工专题第2节](scnu-ecust-408-switch-timing-and-capacity-2026-09-07.md)新增041 AI154→52、大数据92→41的两年官方报名原表，并列春季名额与已核分数；首次为固定18条中的2条／1校补上报名总量。另有同校不同学院对照提示、与苏大相反结果比较及2025网上确认口径变化，均保留因果和个人概率限制。
