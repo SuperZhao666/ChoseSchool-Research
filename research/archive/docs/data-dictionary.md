@@ -238,7 +238,7 @@ subject_adjustment_notice
 <!-- 山东大学 2023 首榜与院级递补累计交叉状态续补 TraceId: 614fad46-51a8-4458-9113-dee74007a5d8 -->
 <!-- 山东大学 2025 院级递补累计总分状态续补 TraceId: 53b2918f-73c1-4229-8deb-82aa6150c15f -->
 
-[当前 16 项四年分科审计](../research/archive/docs/current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md)新增了政治、外语、业务课一、业务课二的匿名聚合研究层。该层当前是人类可读证据库，**不是迁移 030 以前已有的 `fact_definitions` 机器字段，也不进入 `v_current_structured_score_statistics`、`score_history_support` 或录取概率**。这样可避免把需要“两份原件交叉”的统计硬塞进只能表达单一事实来源的旧主张合同。
+[当前 16 项四年分科审计](current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md)新增了政治、外语、业务课一、业务课二的匿名聚合研究层。该层当前是人类可读证据库，**不是迁移 030 以前已有的 `fact_definitions` 机器字段，也不进入 `v_current_structured_score_statistics`、`score_history_support` 或录取概率**。这样可避免把需要“两份原件交叉”的统计硬塞进只能表达单一事实来源的旧主张合同。
 
 研究状态固定为：
 
@@ -526,7 +526,7 @@ NULL 表示“没有足够可靠的结构化事实”，不表示 0。特别是�
 
 > 新增说明 TraceId：`1239aa5f-191c-4665-8220-04e8022b5b18`；原表核验 TraceId：`680bf1ee-b435-4da8-87a8-347a6fc064b4`
 
-文件：[2027-408-switch-project-panel-2026-09-05.csv](2027-408-switch-project-panel-2026-09-05.csv)。一行是一组项目的2025→2026公示聚合事实，共12行、25列。它不是个人成绩表，也不是2027预测、正式目录状态或全国代表性样本。分析与纳入限制见[改考实证报告](../research/archive/docs/2027-408-switch-low-score-empirical-assessment-2026-09-05.md)。
+文件：[2027-408-switch-project-panel-2026-09-05.csv](2027-408-switch-project-panel-2026-09-05.csv)。一行是一组项目的2025→2026公示聚合事实，共12行、25列。它不是个人成绩表，也不是2027预测、正式目录状态或全国代表性样本。分析与纳入限制见[改考实证报告](2027-408-switch-low-score-empirical-assessment-2026-09-05.md)。
 
 | 字段 | 类型／单位 | 含义与限制 |
 |---|---|---|
@@ -555,7 +555,7 @@ NULL 表示“没有足够可靠的结构化事实”，不表示 0。特别是�
 
 > 发布TraceId：`12b10116-09ad-4a8a-b786-73ec9056d13d`；取证及计算TraceId：`b186f22a-8db9-4369-ac37-4928462725de`
 
-文件：[408-historical-baseline-errors-2026-09-05.csv](408-historical-baseline-errors-2026-09-05.csv)。27行、33列；一行是一个历史预测任务下的一条规则，共9任务×3规则。只有15条规则可算，12条保持缺失，不是27个独立实验。它模拟限定人口拟录取中位数，不预测个人概率或2027安全分，详见[实证报告](../research/archive/docs/2027-408-switch-low-score-empirical-assessment-2026-09-05.md)。
+文件：[408-historical-baseline-errors-2026-09-05.csv](408-historical-baseline-errors-2026-09-05.csv)。27行、33列；一行是一个历史预测任务下的一条规则，共9任务×3规则。只有15条规则可算，12条保持缺失，不是27个独立实验。它模拟限定人口拟录取中位数，不预测个人概率或2027安全分，详见[实证报告](2027-408-switch-low-score-empirical-assessment-2026-09-05.md)。
 
 | 字段 | 定义与限制 |
 |---|---|
@@ -592,7 +592,7 @@ MAE先在相同层、相同有效任务中计算。学校等权先计算每所�
 
 > 发布TraceId：`6bc35b0b-6e98-4911-ba21-e598141e85c5`；原件回连与计算TraceId：`a827494e-fb33-4bb3-a7f1-3c7eb2d2f4a0`
 
-文件：[nwafu-2026-retest-selection-aggregate-2026-09-05.csv](nwafu-2026-retest-selection-aggregate-2026-09-05.csv)。20行、29列：两项目总体2行、各五分箱10行、录取者低分构成4行、排名计数范围4行。所有行来自同校同年的两份名单，不是20个独立实验。时点固定为2026-03-28学院一志愿拟录取公示，不代表后续校级终审、递补或实际入学。人类可读解释见[主报告](../research/archive/docs/2027-408-switch-low-score-empirical-assessment-2026-09-05.md)。
+文件：[nwafu-2026-retest-selection-aggregate-2026-09-05.csv](nwafu-2026-retest-selection-aggregate-2026-09-05.csv)。20行、29列：两项目总体2行、各五分箱10行、录取者低分构成4行、排名计数范围4行。所有行来自同校同年的两份名单，不是20个独立实验。时点固定为2026-03-28学院一志愿拟录取公示，不代表后续校级终审、递补或实际入学。人类可读解释见[主报告](2027-408-switch-low-score-empirical-assessment-2026-09-05.md)。
 
 | 字段 | 定义与限制 |
 |---|---|
@@ -618,5 +618,3 @@ MAE先在相同层、相同有效任务中计算。学校等权先计算每所�
 | `note` | 公示时点、未知含义、原标签及人口限制。公共表不含姓名、考生编号或逐人记录 |
 
 状态行须满足`K=A+B+R`和`N=K+U`，五箱各计数相加等于总体。低分构成的分母必须与总体A一致；排名计数的K和n分别与总体K和A一致。不同记录类型不适用的字段为空，不填0。计算机25名、AI7名未匹配者中低于320者分别18、6，缺失分布不均匀，不作随机缺失填补。该表不会扩充跨年首改效果面板或个人概率模型。
-
-<!-- 研究正文统一到根README，历史证据引用转入归档。TraceId: 8c689b86-5d60-4f2f-96bc-868f6aa1aa83 -->

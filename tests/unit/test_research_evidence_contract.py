@@ -1,6 +1,8 @@
 # 2026-09-08 人大正式2026目录及112行计数同步。TraceId: 4891d9e4-0825-4bbe-b1e2-e5e470740907
 # 2026-09-05 南农/南师正式2026目录闭合计数同步。TraceId: 7c5b11ea-c254-4da0-a308-c3f4ebd46e00
-"""Human-readable research evidence contract guards.
+"""Historical research evidence contract guards for archived documents.
+
+TraceId: 51853630-b09c-4a93-9571-ff45cfd3d865
 
 TraceId: 499b5c6e-b2bc-416c-a150-4bf78e49bc56
 TraceId: 24d3d889-2583-42e7-8766-075fb61b4127
@@ -49,7 +51,36 @@ import unittest
 from pathlib import Path
 
 
-class ResearchEvidenceContractTests(unittest.TestCase):
+def legacy_document_path(repository_root: Path, *parts: str) -> Path:
+    """Resolve historical reports without redirecting current engineering data.
+
+    The archive is required: missing historical evidence must fail rather than
+    silently falling back to the new, user-facing school-selection document.
+    """
+    relative = Path(*parts)
+    current_engineering_docs = {
+        Path("docs/architecture.md"),
+        Path("docs/data-dictionary.md"),
+        Path("docs/evidence-and-status.md"),
+        Path("docs/operations.md"),
+    }
+    if relative in current_engineering_docs or relative.parts[:2] == ("docs", "decisions"):
+        return repository_root / relative
+    if relative == Path("README.md") or (
+        relative.parts[:1] == ("docs",) and relative.suffix == ".md"
+    ):
+        return repository_root / "research" / "archive" / relative
+    return repository_root / relative
+
+
+class HistoricalResearchEvidenceContractTests(unittest.TestCase):
+    """Validate archived research evidence, not the current school-selection pool.
+
+    Existing factual assertions remain intact. Current README coverage belongs
+    to the dedicated readable-research navigation tests. Engineering contracts
+    and anonymous CSV evidence continue to use their current repository paths.
+    """
+
     def test_nwafu_selection_aggregate_preserves_denominators_and_unknowns(self) -> None:
         """TraceId: 6bc35b0b-6e98-4911-ba21-e598141e85c5.
 
@@ -109,24 +140,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         trace_id = "e8b68757-b898-4ed7-b8eb-2a7031b04893"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
         national_matrix = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         for content in (readme, start_here, admission_report, subject_report):
@@ -163,16 +188,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         trace_id = "635a5050-f87e-48d7-826d-228a901f4822"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         for content in (readme, admission_report, subject_report):
@@ -197,16 +218,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         trace_id = "6edc56ed-eaf7-416a-b33b-dcd3f41d2fbf"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         for content in (readme, admission_report, subject_report):
@@ -232,26 +249,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "china-university-of-petroleum-east-china-007-085405-four-year-score-special-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "china-university-of-petroleum-east-china-007-085405-four-year-score-special-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         linyi = (
-            repository_root
-            / "docs"
-            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+            legacy_document_path(repository_root, "docs", "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -285,26 +294,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "wuhan-university-of-technology-010-085405-four-year-score-campus-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "wuhan-university-of-technology-010-085405-four-year-score-campus-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         linyi = (
-            repository_root
-            / "docs"
-            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+            legacy_document_path(repository_root, "docs", "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -335,26 +336,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "south-china-normal-university-041-085405-085410-four-year-score-campus-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "south-china-normal-university-041-085405-085410-four-year-score-campus-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         linyi = (
-            repository_root
-            / "docs"
-            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+            legacy_document_path(repository_root, "docs", "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -386,21 +379,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "huazhong-agricultural-university-317-085404-085400-four-year-score-special-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "huazhong-agricultural-university-317-085404-085400-four-year-score-special-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -426,21 +413,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "changan-university-006-085405-085404-022-085400-four-year-score-subject-special-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "changan-university-006-085405-085404-022-085400-four-year-score-subject-special-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -467,21 +448,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "sichuan-agricultural-university-419-085400-four-year-score-subject-campus-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "sichuan-agricultural-university-419-085400-four-year-score-subject-campus-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -506,21 +481,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "southwest-university-321-085400-four-year-score-subject-special-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "southwest-university-321-085400-four-year-score-subject-special-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -549,21 +518,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_nefu_085404_085405_closes_2026_and_keeps_history_separate(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "northeast-forestry-university-012-085404-085405-four-year-score-subject-special-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "northeast-forestry-university-012-085404-085405-four-year-score-subject-special-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -594,26 +557,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "jiangnan-university-031-085405-four-year-score-direction-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "jiangnan-university-031-085405-four-year-score-direction-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         linyi = (
-            repository_root
-            / "docs"
-            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+            legacy_document_path(repository_root, "docs", "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -640,16 +595,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_imu_expansion_keeps_retest_final_and_fairness_boundaries(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
         report_path = (
-            repository_root
-            / "docs"
-            / "inner-mongolia-university-009-085404-085411-four-year-score-and-fairness-audit-2026-09-01.md"
+            legacy_document_path(repository_root, "docs", "inner-mongolia-university-009-085404-085411-four-year-score-and-fairness-audit-2026-09-01.md")
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         report = report_path.read_text(encoding="utf-8")
 
@@ -677,21 +628,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     ) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
 
         for expected in (
@@ -761,19 +706,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_aggregate_constrained_final_subject_set_identification"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(f"`{status}`", data_dictionary)
@@ -807,19 +748,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_visible_mirror_final_subject_observation"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(f"`{status}`", data_dictionary)
@@ -848,19 +785,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_visible_mirror_final_subject_observation"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(f"`{status}`", data_dictionary)
@@ -889,19 +822,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_visible_mirror_final_subject_observation"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(f"`{status}`", data_dictionary)
@@ -937,22 +866,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_visible_mirror_final_subject_observation"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
         public_docs = "\n".join((readme, admission_report, subject_report, start_here))
 
@@ -1002,14 +927,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_mirror_final_subject_set_identification"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn("集合识别", readme)
@@ -1023,14 +946,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         status = "secondary_blurred_final_order_subject_set_identification"
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(status, readme)
@@ -1052,19 +973,15 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             "official_college_cumulative_admission_total_only_pending_central_final"
         )
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(initial_status, data_dictionary)
@@ -1086,11 +1003,9 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_nwafu_official_history_and_2026_crossmatch_stays_external(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         report = (
-            repository_root
-            / "docs"
-            / "northwest-af-010-085410-college-incubation-project-audit-2026-08-27.md"
+            legacy_document_path(repository_root, "docs", "northwest-af-010-085410-college-incubation-project-audit-2026-08-27.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn("`official_final_crossmatch`", report)
@@ -1122,23 +1037,17 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_swjtu_2024_official_final_subject_rows_are_not_total_only(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
 
@@ -1192,16 +1101,12 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_ecnu_2024_total_only_population_conflict_is_preserved(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
 
         expected_population = "65 = 备注空白 63 + 退役大学生士兵 1 + 少数民族骨干 1"
@@ -1242,22 +1147,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_ecnu_2023_learning_modes_are_preserved_and_not_split_from_mixed_list(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root / "docs" / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
 
         trace_id = "aa1622ae-aa5b-406a-b0a2-80621d87cbbd"
@@ -1306,22 +1207,18 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_ecnu_2025_hidden_official_pdf_restores_total_only_population(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root / "docs" / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
 
         expected_population = (
@@ -1385,23 +1282,17 @@ class ResearchEvidenceContractTests(unittest.TestCase):
     def test_xju_2023_official_retest_and_final_rows_crossmatch(self) -> None:
         repository_root = Path(__file__).resolve().parents[2]
 
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
-        data_dictionary = (repository_root / "docs" / "data-dictionary.md").read_text(
+        data_dictionary = (legacy_document_path(repository_root, "docs", "data-dictionary.md")).read_text(
             encoding="utf-8"
         )
 
@@ -1482,22 +1373,16 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             "four-year-score-subject-route-and-fairness-audit-2026-09-02.md"
         )
 
-        report = (repository_root / "docs" / report_name).read_text(encoding="utf-8")
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
+        report = (legacy_document_path(repository_root, "docs", report_name)).read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national_matrix = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         linyi = (
-            repository_root
-            / "docs"
-            / "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md"
+            legacy_document_path(repository_root, "docs", "linyi-2026-postgraduate-destination-985-211-audit-2026-08-20.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn("2025→2026 一年上升 43 分", report)
@@ -1538,36 +1423,28 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             "and-fairness-audit-2026-09-03.md"
         )
 
-        report = (repository_root / "docs" / report_name).read_text(encoding="utf-8")
+        report = (legacy_document_path(repository_root, "docs", report_name)).read_text(encoding="utf-8")
         admission_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admission-data-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admission-data-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
         subject_report = (
-            repository_root
-            / "docs"
-            / "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md"
+            legacy_document_path(repository_root, "docs", "current-16-four-year-admitted-subject-score-distribution-audit-2026-08-31.md")
         ).read_text(encoding="utf-8")
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        docs_readme = (repository_root / "docs" / "README.md").read_text(
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        docs_readme = (legacy_document_path(repository_root, "docs", "README.md")).read_text(
             encoding="utf-8"
         )
         report_index = (
-            repository_root / "docs" / "research-report-index.md"
+            legacy_document_path(repository_root, "docs", "research-report-index.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
         decision_matrix = (
-            repository_root
-            / "docs"
-            / "current-candidate-decision-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "current-candidate-decision-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
         national_matrix = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
 
         for content in (
@@ -1672,22 +1549,20 @@ class ResearchEvidenceContractTests(unittest.TestCase):
             "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
         )
 
-        report = (repository_root / "docs" / report_name).read_text(encoding="utf-8")
-        readme = (repository_root / "README.md").read_text(encoding="utf-8")
-        docs_readme = (repository_root / "docs" / "README.md").read_text(
+        report = (legacy_document_path(repository_root, "docs", report_name)).read_text(encoding="utf-8")
+        readme = (legacy_document_path(repository_root, "README.md")).read_text(encoding="utf-8")
+        docs_readme = (legacy_document_path(repository_root, "docs", "README.md")).read_text(
             encoding="utf-8"
         )
         report_index = (
-            repository_root / "docs" / "research-report-index.md"
+            legacy_document_path(repository_root, "docs", "research-report-index.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
 
         national_matrix = (
-            repository_root
-            / "docs"
-            / "national-211-strict-22408-status-matrix-2026-08-24.md"
+            legacy_document_path(repository_root, "docs", "national-211-strict-22408-status-matrix-2026-08-24.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(trace_id, report)
@@ -1996,12 +1871,10 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         trace_id = "378c27e9-2951-45ba-b200-11c72a1938c0"
         report = (
-            repository_root
-            / "docs"
-            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+            legacy_document_path(repository_root, "docs", "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
 
         for content in (report, start_here):
@@ -2070,12 +1943,10 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         recovered_trace_id = "d9de62d0-e46b-4dd0-a840-04afc1862904"
         indexed_2026_trace_id = "e9125069-3c41-4cef-acdc-28ced5300b60"
         report = (
-            repository_root
-            / "docs"
-            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+            legacy_document_path(repository_root, "docs", "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
 
         for content in (report, start_here):
@@ -2206,12 +2077,10 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         trace_id = "a71dcf2f-c136-4847-9959-6eb16320d839"
         report = (
-            repository_root
-            / "docs"
-            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+            legacy_document_path(repository_root, "docs", "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md")
         ).read_text(encoding="utf-8")
         start_here = (
-            repository_root / "docs" / "start-here-current-conclusions.md"
+            legacy_document_path(repository_root, "docs", "start-here-current-conclusions.md")
         ).read_text(encoding="utf-8")
 
         for content in (report, start_here):
@@ -2282,9 +2151,7 @@ class ResearchEvidenceContractTests(unittest.TestCase):
         repository_root = Path(__file__).resolve().parents[2]
         trace_id = "6a309b90-7927-4e4e-8d64-b630a826f375"
         report = (
-            repository_root
-            / "docs"
-            / "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md"
+            legacy_document_path(repository_root, "docs", "2027-first-switch-408-985-software-engineering-audit-2026-09-03.md")
         ).read_text(encoding="utf-8")
 
         self.assertIn(trace_id, report)

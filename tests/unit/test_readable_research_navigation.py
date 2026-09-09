@@ -1,8 +1,7 @@
-"""Guards for the single human-readable research entrypoint.
+"""A single self-contained current pool, separate from historical evidence.
 
-TraceId: 7e282555-47f3-432d-a123-7ff8d5477154
+TraceId: 8c689b86-5d60-4f2f-96bc-868f6aa1aa83
 """
-
 from __future__ import annotations
 
 import re
@@ -14,103 +13,94 @@ from urllib.parse import unquote
 
 class ReadableResearchNavigationTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.repository_root = Path(__file__).resolve().parents[2]
-        self.readme_path = self.repository_root / "README.md"
-        self.overview_path = (
-            self.repository_root / "docs" / "start-here-current-conclusions.md"
+        self.root = Path(__file__).resolve().parents[2]
+        self.readme = (self.root / "README.md").read_text(encoding="utf-8")
+
+    def school(self, name: str) -> str:
+        sections = re.split(r"(?m)^### ", self.readme)
+        matches = [part for part in sections[1:] if part.splitlines()[0] == name]
+        self.assertEqual(len(matches), 1, f"Expected one consolidated card: {name}")
+        return matches[0]
+
+    def test_readme_is_the_pool_and_does_not_send_readers_to_topic_reports(self) -> None:
+        self.assertEqual(len(re.findall(r"(?m)^# ", self.readme)), 1)
+        for term in ("2027 择校池", "逐校比较", "怎样判断"):
+            self.assertIn(term, self.readme)
+        targets = re.findall(r"\[[^\]]*\]\(([^)]+)\)", self.readme)
+        self.assertTrue(targets)
+        for target in targets:
+            self.assertTrue(target.startswith(("https://", "http://", "#")), target)
+        for phrase in ("最新专题", "先读这份", "展开全部专题报告摘要", "全部报告索引", "```powershell"):
+            self.assertNotIn(phrase, self.readme)
+
+    def test_public_docs_no_longer_accumulate_dated_research_reports(self) -> None:
+        result = subprocess.run(
+            ["git", "-c", "core.quotepath=false", "ls-files", "docs/*.md", "docs/**/*.md"],
+            cwd=self.root, capture_output=True, text=True, encoding="utf-8", check=False,
         )
-        self.docs_readme_path = self.repository_root / "docs" / "README.md"
-        self.index_path = self.repository_root / "docs" / "research-report-index.md"
+        if result.returncode:
+            self.skipTest("Git inventory unavailable")
+        allowed = {"docs/README.md", "docs/architecture.md", "docs/data-dictionary.md",
+                   "docs/evidence-and-status.md", "docs/operations.md",
+                   "docs/decisions/ADR-001-local-sqlite-and-append-only-evidence.md"}
+        self.assertEqual(set(result.stdout.splitlines()), allowed)
+        self.assertTrue((self.root / "research/archive/README.md").is_file())
+        self.assertTrue((self.root / "research/archive/docs/research-report-index.md").is_file())
 
-    @staticmethod
-    def _local_markdown_targets(document_path: Path) -> set[Path]:
-        content = document_path.read_text(encoding="utf-8")
-        targets: set[Path] = set()
-        for match in re.finditer(r"\[[^\]]*\]\(([^)]+)\)", content):
-            raw_target = match.group(1).strip()
-            if not raw_target or raw_target.startswith(("#", "http://", "https://", "mailto:")):
-                continue
-            path_part = unquote(raw_target.split("#", 1)[0])
-            targets.add((document_path.parent / path_part).resolve())
-        return targets
+    def test_every_historically_qualified_school_remains_visible(self) -> None:
+        path = self.root / "research/archive/docs/national-211-strict-22408-status-matrix-2026-08-24.md"
+        names = re.findall(r"(?m)^\| \d+ \| ([^|]+) \| `strict_match` \|", path.read_text(encoding="utf-8"))
+        self.assertEqual(len(names), 57)
+        for name in names:
+            self.assertIn(name.strip(), self.readme)
+        self.assertIn("不代表 2027", self.readme)
 
-    def test_readme_leads_to_one_overview_and_collapses_the_evidence_wall(self) -> None:
-        readme = self.readme_path.read_text(encoding="utf-8")
-        overview = self.overview_path.read_text(encoding="utf-8")
-        index = self.index_path.read_text(encoding="utf-8")
-
-        self.assertIn("docs/start-here-current-conclusions.md", readme)
-        self.assertIn("docs/research-report-index.md", readme)
-        self.assertIn("<summary>展开全部专题报告摘要</summary>", readme)
-        self.assertIn("不要从文件列表开始读", self.docs_readme_path.read_text(encoding="utf-8"))
-        self.assertIn("整个项目唯一的普通阅读入口", overview)
-        self.assertIn("## 当前真正值得看的梯子", overview)
-        self.assertIn("## 仍保留、但当前不放在梯子正中的 8 项", overview)
-        self.assertIn("## 新扩展池：哪些可能升入主池", overview)
-        self.assertIn("## 现在仍然缺少的决定性信息", overview)
-        self.assertIn("不是你要排除的“攻防上机”", overview)
-        self.assertIn("不是招生预测", overview)
-        self.assertIn("按问题找文件，不要从头读", index)
-        self.assertIn("## 第一层：做决定时才看的总表", index)
-        self.assertIn("## 第六层：项目维护与证据规则", index)
-
-    def test_navigation_documents_have_no_broken_relative_links(self) -> None:
-        for document_path in (
-            self.readme_path,
-            self.docs_readme_path,
-            self.overview_path,
-            self.index_path,
-        ):
-            for target in self._local_markdown_targets(document_path):
-                self.assertTrue(
-                    target.exists(),
-                    f"Broken local Markdown link in {document_path}: {target}",
-                )
-
-    def test_every_public_markdown_report_is_reachable_from_the_index(self) -> None:
-        completed = subprocess.run(
-            [
-                "git",
-                "-c",
-                "core.quotepath=false",
-                "ls-files",
-                "docs/*.md",
-                "docs/**/*.md",
-            ],
-            cwd=self.repository_root,
-            check=False,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-        )
-        if completed.returncode != 0:
-            self.skipTest("Git metadata is unavailable for the public-report inventory")
-
-        tracked = {
-            (self.repository_root / line.strip()).resolve()
-            for line in completed.stdout.splitlines()
-            if line.strip()
+    def test_core_projects_are_consolidated_by_school_with_sources_and_costs(self) -> None:
+        core = {
+            "北京交通大学": ("010", "085405"), "郑州大学": ("084", "085410"),
+            "西南交通大学": ("048", "085410"), "辽宁大学": ("018", "085405"),
+            "新疆大学": ("308", "085405"), "厦门大学": ("131", "085404"),
+            "重庆大学": ("014", "030", "085404", "085400"),
+            "山东大学": ("047", "085404"), "中国海洋大学": ("002", "085404"),
+            "华东师范大学": ("135", "085404"),
+            "合肥工业大学": ("005", "085404", "085410"),
+            "苏州大学": ("018", "085405"), "南昌大学": ("006", "017", "085405"),
         }
-        expected = tracked | {
-            self.docs_readme_path.resolve(),
-            self.overview_path.resolve(),
-            self.index_path.resolve(),
-        }
-        expected.remove(self.index_path.resolve())
+        for name, identifiers in core.items():
+            section = self.school(name)
+            for identifier in identifiers:
+                self.assertIn(identifier, section)
+            self.assertIn("http", section)
+            self.assertRegex(section, r"学费|万元")
+            self.assertIn("2027", section)
 
-        linked = self._local_markdown_targets(self.index_path)
-        indexed_documents = {path for path in linked if path.suffix.lower() == ".md"}
-        self.assertSetEqual(expected, indexed_documents)
+    def test_current_population_limits_are_not_lost_during_condensation(self) -> None:
+        for value in ("172", "174", "27", "17", "72", "26", "829", "9万元"):
+            self.assertIn(value, self.school("华东师范大学"))
+        for value in ("480", "常规班", "士兵", "2027"):
+            self.assertIn(value, self.school("中国科学技术大学"))
+        self.assertRegex(self.school("南昌大学"), r"2026目标.*(?:缺|未知)")
+        hfut = self.school("合肥工业大学")
+        for value in ("阶段计划41", "阶段计划46", "正式拟录取人数和中位数"):
+            self.assertIn(value, hfut)
+        self.assertIn("376.5", self.school("苏州大学"))
+        self.assertRegex(self.school("郑州大学"), r"86人[^。]*368")
 
-    def test_public_navigation_does_not_expose_long_personal_identifiers(self) -> None:
-        pattern = re.compile(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])")
-        for document_path in (
-            self.readme_path,
-            self.docs_readme_path,
-            self.overview_path,
-            self.index_path,
-        ):
-            self.assertIsNone(pattern.search(document_path.read_text(encoding="utf-8")))
+    def test_current_and_maintenance_documents_have_valid_local_links(self) -> None:
+        for relative in ("README.md", "docs/README.md", "docs/data-dictionary.md"):
+            document = self.root / relative
+            content = document.read_text(encoding="utf-8")
+            self.assertIsNone(re.search(r"(?<![0-9A-Za-z])\d{15}(?![0-9A-Za-z])", content))
+            for raw in re.findall(r"\[[^\]]*\]\(([^)]+)\)", content):
+                if raw.startswith(("#", "http://", "https://", "mailto:")):
+                    continue
+                target = document.parent / unquote(raw.split("#", 1)[0])
+                self.assertTrue(target.exists(), f"Broken link: {relative}: {raw}")
+
+    def test_methods_keep_historical_evidence_separate_from_personal_predictions(self) -> None:
+        for boundary in ("不是录取难度排名", "复试线", "拟录取", "推免", "不是你的个人录取概率",
+                         "同校多个项目也不是独立实验", "尚未提供模考成绩", "网络安全", "兰州大学"):
+            self.assertIn(boundary, self.readme)
 
 
 if __name__ == "__main__":
