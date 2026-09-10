@@ -1,5 +1,24 @@
 # 数据字典
 
+## 网页生成清单
+
+<!-- TraceId: a5a6f785-04be-4f85-8104-c604a2d186af -->
+
+根目录 `README.md` 是唯一维护的择校正文。`python web/build.py` 生成 `dist/index.html`、同版本 `README.md`、阅读样式与搜索脚本，以及 `content-manifest.json`。安装依赖见 `web/requirements.txt`；`npm test --prefix web` 在安装 `web/package-lock.json` 锁定依赖后检查搜索与折叠交互，不启动浏览器。
+
+| 字段 | 含义与限制 |
+|---|---|
+| `trace_id` | 网页生成操作的追溯标识；不代替研究来源证据 |
+| `source` | 唯一正文来源文件 `README.md` |
+| `source_encoding` | UTF-8、LF 换行归一化；下载正文使用相同字节 |
+| `source_sha256` | 归一化正文的 SHA-256；用于检验网页与下载是否同版 |
+| `source_bytes` | 上述下载正文的字节数 |
+| `school_count` | 实际学校锚点条目数，包括待核与排除记录；不是可报校数 |
+| `table_count` | 实际渲染的完整表格数，不表示独立样本数 |
+| `foldout_count` | 网页中的折叠阅读区数量 |
+
+网页生成不修改招生状态、事实账本或数据库。源文件的所有学校、历史数据、来源和限制正文都保留；只补充导航、标题锚点、全文检索与横向滚动。
+
 <!-- 四年历史窗口数据字典 TraceId: 34c4c1e3-1696-4084-bbff-9bb1e6e5fdf5 -->
 <!-- 辽宁大学2024二手聚合约束下的最终分科集合区间 TraceId: 3c432a1f-9a1e-46f0-a2f5-b39f1764266d -->
 

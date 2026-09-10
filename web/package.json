@@ -1,0 +1,7 @@
+{
+  "name": "choseschool-reader-validation",
+  "private": true,
+  "scripts": {"test": "node --test reader.test.cjs"},
+  "devDependencies": {"linkedom": "0.18.12"},
+  "traceId": "a5a6f785-04be-4f85-8104-c604a2d186af"
+}
