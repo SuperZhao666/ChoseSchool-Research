@@ -1,6 +1,6 @@
 """Render the complete authoritative README into a static reading site.
 
-TraceId: c8929f22-a836-4ff9-87db-e9ee2a86a402
+TraceId: 4633df94-71b7-4339-ae57-1ad2dd0576cb
 This build never selects, summarizes, modifies, or drops research paragraphs.
 """
 from __future__ import annotations
@@ -15,7 +15,7 @@ from pathlib import Path
 from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
-TRACE_ID = 'c8929f22-a836-4ff9-87db-e9ee2a86a402'
+TRACE_ID = '4633df94-71b7-4339-ae57-1ad2dd0576cb'
 
 
 def make_panels(source: str) -> list[dict]:

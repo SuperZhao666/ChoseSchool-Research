@@ -13,7 +13,7 @@ from urllib.parse import unquote
 
 from markdown_it import MarkdownIt
 from web.build import make_panels, render
-from tests.unit.test_unified_research_fidelity import numeric_signature
+from tests.unit.test_unified_research_fidelity import numeric_signature, original_cells, SCORE_SUBJECT_COLUMN
 
 
 class ReaderParser(HTMLParser):
@@ -49,7 +49,8 @@ class ReaderParser(HTMLParser):
         if tag in ('td', 'th') and self.cell is not None:
             self.cells.append(''.join(self.cell)); self.cell = None
         if tag == 'tr' and self.cells is not None:
-            self.rows[self.section].add(numeric_signature(' | '.join(self.cells)))
+            header = self.table[0] if self.table else self.cells
+            self.rows[self.section].add(numeric_signature(' | '.join(original_cells(self.cells, header))))
             self.table.append(self.cells); self.cells = None
         if tag == 'table':
             self.tables.append(self.table); self.table = None
@@ -127,6 +128,50 @@ class WebReaderTests(unittest.TestCase):
         guizhou = next(p['source'] for p in make_panels(self.source) if p['key'] == 'school-003')
         for text in ('336.35', '333.68', '23／75', '326', 'official_mixed', '不是最终拟录取名单逐人直证', '官方旧PDF404'):
             self.assertIn(text, guizhou)
+
+    def test_score_rows_show_their_own_year_subjects_not_the_new_408_notice(self):
+        # TraceId: 4633df94-71b7-4339-ae57-1ad2dd0576cb
+        annotated = [table for table in self.parser.tables if SCORE_SUBJECT_COLUMN in table[0]]
+        self.assertGreaterEqual(len(annotated), 194)
+        self.assertGreaterEqual(sum(len(table) - 1 for table in annotated), 935)
+        expected = {
+            'school-001': {2023: '907', 2024: '907', 2025: '891', 2026: '891'},
+            'school-012': {2023: '901', 2024: '902', 2025: '861', 2026: '408'},
+            'school-068': {2023: '914', 2024: '914', 2025: '824', 2026: '824'},
+            'school-069': {2023: '885', 2024: '885', 2025: '885', 2026: '885'},
+        }
+        for panel in make_panels(self.source):
+            if panel['key'] not in expected: continue
+            parser = ReaderParser()
+            parser.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(panel['source']) + '</main>')
+            annual = defaultdict(list)
+            for table in parser.tables:
+                if SCORE_SUBJECT_COLUMN not in table[0]: continue
+                column = table[0].index(SCORE_SUBJECT_COLUMN)
+                self.assertEqual(column, 1, '科目应紧跟年份，不能放到远端说明区')
+                for row in table[1:]:
+                    match = re.match(r'\s*(20\d\d)', row[0])
+                    if match: annual[int(match[1])].append(row[column])
+            for year, code in expected[panel['key']].items():
+                self.assertTrue(any(re.search(r'(?<!\d)' + code + r'(?!\d)', value) for value in annual[year]),
+                                (panel['key'], year, code))
+
+    def test_subject_annotations_keep_unknown_and_mixed_exam_boundaries_visible(self):
+        panels = {p['key']: p['source'] for p in make_panels(self.source)}
+        for key, fragments in {
+            'school-010': ['915', '混'],
+            'school-008': ['2025', '待核'],
+            'school-034': ['301', '302'],
+        }.items():
+            parser = ReaderParser()
+            parser.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(panels[key]) + '</main>')
+            annotations = []
+            for table in parser.tables:
+                if SCORE_SUBJECT_COLUMN in table[0]:
+                    column = table[0].index(SCORE_SUBJECT_COLUMN)
+                    annotations.extend(row[0] + ' ' + row[column] for row in table[1:])
+            text = '\n'.join(annotations)
+            for fragment in fragments: self.assertIn(fragment, text, key)
 
     def test_original_numeric_rows_remain_tables_in_correct_sections(self):
         for group in self.manifest['quantitative_groups']:

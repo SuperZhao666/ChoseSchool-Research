@@ -20,6 +20,28 @@ def numeric_signature(line: str) -> tuple[str, ...]:
     return tuple(re.findall(r"(?<![a-zA-Z])(?:\d+\.\d+|\d+)(?![a-zA-Z])", line))
 
 
+# TraceId: 4633df94-71b7-4339-ae57-1ad2dd0576cb
+SCORE_SUBJECT_COLUMN = "当年初试科目与证据"
+
+
+def original_cells(cells: list[str], header: list[str]) -> list[str]:
+    """Exclude only the added subject column from the immutable numeric baseline."""
+    return [cell for i, cell in enumerate(cells)
+            if i >= len(header) or header[i].strip() != SCORE_SUBJECT_COLUMN]
+
+
+def table_numeric_signatures(body: str) -> set[tuple[str, ...]]:
+    lines = body.splitlines(); header = []; rows = set()
+    for i, line in enumerate(lines):
+        if not line.startswith('|'):
+            header = []; continue
+        cells = line.strip().strip('|').split('|')
+        if i + 1 < len(lines) and re.fullmatch(r'\|[ :|\-]+\|', lines[i + 1]):
+            header = cells
+        rows.add(numeric_signature(' | '.join(original_cells(cells, header))))
+    return rows
+
+
 class UnifiedResearchFidelityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -42,14 +64,20 @@ class UnifiedResearchFidelityTests(unittest.TestCase):
         for i, match in enumerate(matches):
             end = matches[i + 1].start() if i + 1 < len(matches) else len(self.readme)
             body = self.readme[match.end():end]
-            sections[match[1]] = {
-                numeric_signature(line) for line in body.splitlines() if line.startswith("|")
-            }
+            sections[match[1]] = table_numeric_signatures(body)
         for group in self.manifest["quantitative_groups"]:
             with self.subTest(topic=group["topic"], module=group["module"]):
                 self.assertIn(group["destination"], sections)
                 for row in group["numeric_rows"]:
                     self.assertIn(tuple(row), sections[group["destination"]])
+
+    def test_added_subject_column_does_not_hide_changes_to_original_scores(self) -> None:
+        header = ['年度', SCORE_SUBJECT_COLUMN, '最低分', '中位数']
+        cells = ['2026', '101／204／302／408', '298', '356']
+        self.assertEqual(original_cells(cells, header), ['2026', '298', '356'])
+        mutated = ['2026', '101／204／302／408', '299', '356']
+        self.assertNotEqual(original_cells(cells, header), original_cells(mutated, header))
+        self.assertEqual(original_cells(cells, ['年度', '原专业课', '最低分', '中位数']), cells)
 
     def test_reading_file_contains_full_history_and_corrections(self) -> None:
         for text in ("2023—2026", "25%位置", "75%位置", "导师", "实践", "成果",
