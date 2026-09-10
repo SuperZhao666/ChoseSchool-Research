@@ -1,10 +1,12 @@
 {
-  "trace_id": "82224a8c-63f2-4d39-a923-a9069e5d11ac",
+  "trace_id": "c8929f22-a836-4ff9-87db-e9ee2a86a402",
   "source": "README.md",
-  "source_sha256": "01a6c571b78504a5bad50eb7fd10cc105b14133d62e0eaa92c36b7926061be5a",
+  "source_sha256": "7eab4e64716a1ab430b7f6b051dab581affb0b66fc617e0064227232254b1af8",
   "source_encoding": "UTF-8, LF-normalized",
   "school_count": 104,
-  "table_count": 558,
-  "foldout_count": 308,
-  "source_bytes": 1872863
+  "panel_count": 112,
+  "late_switch_school_count": 4,
+  "table_count": 560,
+  "foldout_count": 303,
+  "source_bytes": 1882579
 }

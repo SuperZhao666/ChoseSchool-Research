@@ -1,7 +1,11 @@
-/* TraceId: a5a6f785-04be-4f85-8104-c604a2d186af */
+/* TraceId: c8929f22-a836-4ff9-87db-e9ee2a86a402 */
 'use strict';
 (() => {
   const content = document.getElementById('research-content');
+  const panels = Array.from(content.querySelectorAll('.reader-panel'));
+  const links = Array.from(document.querySelectorAll('[data-panel-target]'));
+  const sidebar = document.getElementById('sidebar');
+  const toggle = document.getElementById('toggle-sidebar');
   const form = document.getElementById('search-form');
   const input = document.getElementById('search-input');
   const status = document.getElementById('search-status');
@@ -9,8 +13,7 @@
   const next = document.getElementById('next-result');
   const toolbar = document.querySelector('.toolbar');
   const selector = 'p,li,tr,h1,h2,h3,h4,h5,h6,summary';
-  // Group every text node by its nearest readable block, including the text
-  // before nested lists. Filtering to leaf elements would silently omit it.
+  // Index all panels, including closed folds and parent list text.
   const blocks = new Map();
   const textWalker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT);
   let textNode;
@@ -22,7 +25,22 @@
   }
   const entries = Array.from(blocks.values()).map(entry => ({...entry, text: entry.text.toLocaleLowerCase()}));
   let matches = [], current = -1, marked = [];
+  let active = panels.find(panel => !panel.hidden) || panels[0];
 
+  function closeSidebar() {
+    sidebar.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false');
+  }
+  function showPanel(panel) {
+    if (!panel) return;
+    active = panel;
+    for (const item of panels) item.hidden = item !== panel;
+    for (const link of links) {
+      if (link.dataset.panelTarget === panel.dataset.panel) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    }
+    document.getElementById('current-page').textContent = panel.dataset.title;
+    document.title = `${panel.dataset.title} · 2027 择校池`;
+  }
   function expandParents(element) {
     for (let parent = element.parentElement; parent; parent = parent.parentElement) {
       if (parent.tagName === 'DETAILS') parent.open = true;
@@ -58,10 +76,13 @@
     if (!matches.length) { current = -1; previous.disabled = next.disabled = true; return; }
     current = (index + matches.length) % matches.length;
     const element = matches[current].element;
-    expandParents(element); element.classList.add('search-current');
+    const panel = element.closest('.reader-panel');
+    showPanel(panel); expandParents(element); element.classList.add('search-current');
     highlight(element, input.value.trim().toLocaleLowerCase());
     status.textContent = `${current + 1} / ${matches.length} 处`;
     previous.disabled = next.disabled = matches.length < 2;
+    // Keep refresh/share on the visible panel without adding a history entry per match.
+    if (panel && window.history?.replaceState) window.history.replaceState(null, '', `#${panel.id}`);
     requestAnimationFrame(() => element.scrollIntoView({block: 'center', behavior: 'auto'}));
   }
   function search() {
@@ -71,37 +92,47 @@
     status.textContent = query ? '没有找到匹配内容' : '';
     showMatch(0);
   }
-  form.addEventListener('submit', event => { event.preventDefault(); search(); });
+  function followHash() {
+    let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    if (!id) { showPanel(panels.find(panel => panel.dataset.panel.startsWith('school-'))); return; }
+    const target = document.getElementById(id);
+    if (!target || (!content.contains(target) && target !== content)) return;
+    clearMarks(); showPanel(target.closest('.reader-panel')); expandParents(target);
+    closeSidebar();
+    requestAnimationFrame(() => target.scrollIntoView({block: 'start'}));
+  }
+  form.addEventListener('submit', event => { event.preventDefault(); closeSidebar(); search(); });
   input.addEventListener('input', () => { clearMarks(); matches = []; current = -1; previous.disabled = next.disabled = true; status.textContent = ''; });
   input.addEventListener('keydown', event => { if (event.key === 'Escape') { input.value = ''; search(); } });
   previous.addEventListener('click', () => showMatch(current - 1));
   next.addEventListener('click', () => showMatch(current + 1));
+  document.getElementById('expand-all').addEventListener('click', () => {
+    active.querySelectorAll('details').forEach(detail => { detail.open = true; });
+  });
   document.getElementById('collapse-all').addEventListener('click', () => {
-    clearMarks(); content.querySelectorAll('details').forEach(detail => { detail.open = false; });
+    clearMarks(); active.querySelectorAll('details').forEach(detail => { detail.open = false; });
   });
-  document.getElementById('school-select').addEventListener('change', event => {
-    if (event.target.value) location.hash = event.target.value;
+  toggle.addEventListener('click', () => {
+    const open = sidebar.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(open));
   });
-  function followHash() {
-    let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
-    const target = document.getElementById(id);
-    if (!target) return;
-    expandParents(target);
-    requestAnimationFrame(() => target.scrollIntoView({block: 'start'}));
-  }
-  window.addEventListener('hashchange', followHash);
-  content.addEventListener('click', event => {
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSidebar(); });
+  document.addEventListener('click', event => {
     const link = event.target.closest('a[href^="#"]');
-    if (link && link.getAttribute('href') === location.hash) followHash();
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const href = link.getAttribute('href');
+    let target; try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch { return; }
+    if (!target) return;
+    event.preventDefault(); location.hash = href; followHash();
   });
-  if (location.hash) followHash();
+  window.addEventListener('hashchange', followHash);
+  showPanel(active); if (location.hash) followHash();
   if ('ResizeObserver' in window) {
     new ResizeObserver(() => document.documentElement.style.setProperty('--toolbar-height', `${toolbar.offsetHeight}px`)).observe(toolbar);
   }
   window.addEventListener('beforeprint', () => {
-    content.querySelectorAll('details').forEach(detail => { detail.dataset.printOpen = String(detail.open); detail.open = true; });
+    active.querySelectorAll('details').forEach(detail => { detail.dataset.printOpen = String(detail.open); detail.open = true; });
   });
   window.addEventListener('afterprint', () => {
-    content.querySelectorAll('details').forEach(detail => { detail.open = detail.dataset.printOpen === 'true'; delete detail.dataset.printOpen; });
+    content.querySelectorAll('details[data-print-open]').forEach(detail => { detail.open = detail.dataset.printOpen === 'true'; delete detail.dataset.printOpen; });
   });
 })();

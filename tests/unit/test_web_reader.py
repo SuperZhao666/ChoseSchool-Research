@@ -11,7 +11,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote
 
-from web.build import render
+from markdown_it import MarkdownIt
+from web.build import make_panels, render
 from tests.unit.test_unified_research_fidelity import numeric_signature
 
 
@@ -21,6 +22,7 @@ class ReaderParser(HTMLParser):
         self.ids = []; self.links = []; self.rows = defaultdict(set)
         self.section = None; self.cells = None; self.cell = None
         self.tables = []; self.table = None; self.main = False; self.text = []
+        self.main_links = []; self.panels = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -30,6 +32,9 @@ class ReaderParser(HTMLParser):
                 self.section = attrs['id']
         if tag == 'a' and 'href' in attrs:
             self.links.append(attrs['href'])
+            if self.main: self.main_links.append(attrs['href'])
+        if tag == 'section' and attrs.get('class') == 'reader-panel':
+            self.panels.append(attrs)
         if tag == 'main': self.main = True
         if tag == 'table': self.table = []
         if tag == 'tr': self.cells = []
@@ -84,12 +89,44 @@ class WebReaderTests(unittest.TestCase):
         self.assertEqual(len(source_ids), 104)
         for value in source_ids:
             self.assertIn(value, self.parser.ids)
-            self.assertIn(f'<option value="{value}">', self.page)
+            self.assertIn(f'data-panel-target="{value}"', self.page)
         self.assertEqual(self.page.count('<details>'), self.source.count('<details>'))
         self.assertEqual(self.page.count('<p class="school-tier">'), len(source_ids))
         for school, tier in [('华东师范大学', '985'), ('西南大学', '211（非985）'), ('贵州大学', '211（非985）')]:
-            self.assertIn(f'{school} · {tier}</option>', self.page)
+            self.assertIn(f'<span class="school-name">{school}</span><span class="school-meta">{tier}</span>', self.page)
         self.assertIn('双非指非985、非211', self.source)
+
+    def test_panels_preserve_every_paragraph_link_table_and_old_anchor(self):
+        panels = make_panels(self.source)
+        self.assertEqual(''.join(panel['source'] for panel in panels), self.source)
+        self.assertEqual(len(panels), 112)
+        self.assertEqual([p['data-panel'] for p in self.parser.panels if 'hidden' not in p], ['school-001'])
+        plain = ReaderParser()
+        plain.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(self.source) + '</main>')
+        normalize = lambda parts: re.sub(r'\s+', ' ', ''.join(parts)).strip()
+        self.assertEqual(normalize(self.parser.text), normalize(plain.text))
+        self.assertEqual(self.parser.main_links, plain.main_links)
+        self.assertEqual(self.parser.tables, plain.tables)
+        for panel in panels:
+            depth = 0
+            for tag in re.findall(r'</?details>', panel['source']):
+                depth += 1 if tag == '<details>' else -1
+                self.assertGreaterEqual(depth, 0, panel['key'])
+            self.assertEqual(depth, 0, panel['key'])
+
+    def test_late_switch_labels_require_explicit_current_year_project_evidence(self):
+        panels = make_panels(self.source)
+        self.assertEqual({p['key'] for p in panels if p['late']}, {'school-028', 'school-061', 'school-068', 'school-069'})
+        self.assertIn('data-status="date-unresolved"', next(p['source'] for p in panels if p['key'] == 'school-008'))
+        bad = self.source.replace('data-announced="2026-07-06"', 'data-announced="2026-06-30"')
+        with self.assertRaises(ValueError): make_panels(bad)
+        bad = self.source.replace('data-announced="2026-07-06"', 'data-announced="2025-07-06"')
+        with self.assertRaises(ValueError): make_panels(bad)
+
+    def test_guizhou_restored_aggregates_keep_rule_derived_population_limits(self):
+        guizhou = next(p['source'] for p in make_panels(self.source) if p['key'] == 'school-003')
+        for text in ('336.35', '333.68', '23／75', '326', 'official_mixed', '不是最终拟录取名单逐人直证', '官方旧PDF404'):
+            self.assertIn(text, guizhou)
 
     def test_original_numeric_rows_remain_tables_in_correct_sections(self):
         for group in self.manifest['quantitative_groups']:

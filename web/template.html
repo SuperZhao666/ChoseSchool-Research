@@ -3,38 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="2027考研择校完整研究：软件、计算机、人工智能和大数据。按学校阅读招生、成绩、复试、培养成本与证据限制。">
+  <meta name="description" content="2027考研择校完整研究。按学校查看招生、成绩、复试、培养成本，以及下半年改考408的正式公告依据。">
   <meta name="source-sha256" content="{{SOURCE_SHA}}">
-  <meta name="trace-id" content="a5a6f785-04be-4f85-8104-c604a2d186af">
-  <title>2027 择校池 · 完整调研</title>
+  <meta name="trace-id" content="c8929f22-a836-4ff9-87db-e9ee2a86a402">
+  <title>2027 择校池 · 按学校阅读</title>
   <link rel="stylesheet" href="./reader.css">
   <script defer src="./reader.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#research-content">跳到正文</a>
-  <header class="toolbar">
-    <a class="brand" href="#top" aria-label="返回择校池顶部">择校池 <span>2027</span></a>
-    <form id="search-form" role="search">
-      <label class="sr-only" for="search-input">搜索全部调研内容</label>
-      <input id="search-input" type="search" placeholder="搜索学校、专业、学费…" autocomplete="off" maxlength="120">
-      <button class="primary" type="submit">查找</button>
-    </form>
-    <div class="search-navigation" role="group" aria-label="搜索结果导航">
-      <button id="previous-result" type="button" disabled aria-label="上一个搜索结果">上一处</button>
-      <button id="next-result" type="button" disabled aria-label="下一个搜索结果">下一处</button>
-      <output id="search-status" role="status" aria-live="polite"></output>
-    </div>
-    <button id="collapse-all" type="button">收起全部</button>
-  </header>
-  <div class="reading-tools" id="top">
-    <div class="school-jump">
-      <label for="school-select">直达学校</label>
-      <select id="school-select"><option value="">选择学校（含待核与排除记录）</option>{{SCHOOL_OPTIONS}}</select>
-    </div>
+  <a class="skip-link" href="#research-content">跳到当前正文</a>
+  <aside class="sidebar" id="sidebar" aria-label="择校导航">
+    <a class="brand" href="#panel-overview">择校池 <span>2027</span></a>
+    <p class="sidebar-intro">选择一所学校，查看完整资料</p>
+    <p class="red-legend"><span aria-hidden="true">●</span> 红色：已核下半年改408公告<br><small>具体项目、年份与适配限制见校内说明</small></p>
+    <nav id="school-navigation" aria-label="学校列表">{{SCHOOL_NAVIGATION}}</nav>
+    <details class="resource-navigation">
+      <summary>比较依据与完整资料</summary>
+      <nav aria-label="阅读说明与跨校证据">{{RESOURCE_NAVIGATION}}</nav>
+    </details>
     <a class="download" href="./README.md" download="2027择校完整调研.md">下载完整正文</a>
+  </aside>
+  <div class="workspace">
+    <header class="toolbar">
+      <button id="toggle-sidebar" type="button" aria-controls="sidebar" aria-expanded="false">学校导航</button>
+      <form id="search-form" role="search">
+        <label class="sr-only" for="search-input">搜索全部学校与历史资料</label>
+        <input id="search-input" type="search" placeholder="搜索全部资料：学校、项目、分数…" autocomplete="off" maxlength="120">
+        <button class="primary" type="submit">查找</button>
+      </form>
+      <div class="search-navigation" role="group" aria-label="全文搜索结果">
+        <button id="previous-result" type="button" disabled aria-label="上一个搜索结果">上一处</button>
+        <button id="next-result" type="button" disabled aria-label="下一个搜索结果">下一处</button>
+        <output id="search-status" role="status" aria-live="polite"></output>
+      </div>
+    </header>
+    <div class="page-tools">
+      <span id="current-page" aria-live="polite">{{DEFAULT_TITLE}}</span>
+      <div><button id="expand-all" type="button">展开本页全部资料</button><button id="collapse-all" type="button">收起本页资料</button></div>
+    </div>
+    <noscript><p class="no-script">开启 JavaScript 后可切换学校与搜索全文；也可从左侧下载完整正文。</p></noscript>
+    <main id="research-content" tabindex="-1">{{CONTENT}}</main>
+    <footer>{{SCHOOL_COUNT}} 个学校条目，含待核与排除记录。学校与跨校依据均保留完整正文。</footer>
   </div>
-  <noscript><p class="no-script">全文和展开阅读均可直接使用；开启 JavaScript 后可搜索全文和选择学校。也可以使用浏览器的页面查找。</p></noscript>
-  <main id="research-content" tabindex="-1">{{CONTENT}}</main>
-  <footer><a href="#top">回到顶部</a><span>全文 {{SCHOOL_COUNT}} 个学校条目 · 包含待核与排除记录</span><span>网页与完整正文同步生成，年份和证据限制以各校说明为准。</span></footer>
 </body>
 </html>
