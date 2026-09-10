@@ -14,7 +14,7 @@ from pathlib import Path
 from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
-TRACE_ID = 'a5a6f785-04be-4f85-8104-c604a2d186af'
+TRACE_ID = '82224a8c-63f2-4d39-a923-a9069e5d11ac'
 
 
 def render(source: str) -> tuple[str, dict]:
@@ -34,10 +34,13 @@ def render(source: str) -> tuple[str, dict]:
     body = md.renderer.render(tokens, md.options, {})
     body = re.sub(r'(<table>.*?</table>)', r'<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的数据表">\1</div>', body, flags=re.S)
     schools = re.findall(r'<a id="(school-\d+)"></a>\s*\n\s*### ([^\n]+)', source)
+    tiers = dict(re.findall(r'<a id="(school-\d+)"></a>\s*\n\s*### [^\n]+\s*\n\s*<p class="school-tier">院校层次：(985|211（非985）|双非)</p>', source))
     if not schools or not body.count('<table>'):
         raise ValueError('完整正文或学校导航未生成，构建已停止。')
+    if set(tiers) != {anchor for anchor, _ in schools}:
+        raise ValueError('请为每所学校明确标注985、211（非985）或双非；不能自动推断缺失标签。')
     source_sha = hashlib.sha256(source.encode('utf-8')).hexdigest()
-    options = ''.join(f'<option value="{html.escape(anchor, quote=True)}">{html.escape(name)}</option>' for anchor, name in schools)
+    options = ''.join(f'<option value="{html.escape(anchor, quote=True)}">{html.escape(name)} · {tiers[anchor]}</option>' for anchor, name in schools)
     template = (ROOT / 'web/template.html').read_text(encoding='utf-8')
     result = template.replace('{{SOURCE_SHA}}', source_sha).replace('{{SCHOOL_OPTIONS}}', options).replace('{{SCHOOL_COUNT}}', str(len(schools))).replace('{{CONTENT}}', body)
     metadata = {'trace_id': TRACE_ID, 'source': 'README.md', 'source_sha256': source_sha,

@@ -86,6 +86,10 @@ class WebReaderTests(unittest.TestCase):
             self.assertIn(value, self.parser.ids)
             self.assertIn(f'<option value="{value}">', self.page)
         self.assertEqual(self.page.count('<details>'), self.source.count('<details>'))
+        self.assertEqual(self.page.count('<p class="school-tier">'), len(source_ids))
+        for school, tier in [('华东师范大学', '985'), ('西南大学', '211（非985）'), ('贵州大学', '211（非985）')]:
+            self.assertIn(f'{school} · {tier}</option>', self.page)
+        self.assertIn('双非指非985、非211', self.source)
 
     def test_original_numeric_rows_remain_tables_in_correct_sections(self):
         for group in self.manifest['quantitative_groups']:
