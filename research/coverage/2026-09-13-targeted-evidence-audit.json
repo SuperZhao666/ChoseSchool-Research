@@ -1,0 +1,182 @@
+{
+  "trace_id": "5df15b54-e895-4aa6-b4d3-6fa03bc0e957",
+  "checked_on": "2026-09-13",
+  "baseline_commit": "a6f656874659903d5393b2d048cee304d577e72a",
+  "readme_sha256": "25ed1387ebcdf736863cfed222098bd6897a719d9479afa9fb13f482f09b6994",
+  "scope": "Targeted supplement; not a full 104-school refresh. Public conclusions remain in README.md.",
+  "source_file_fingerprints": {
+    "dhu-2025-line.pdf": "d28c06bfdeb6d74e6a69681a3b68926b7277ea919b19e370bb904c88c65ba599",
+    "dhu-2025-rule.pdf": "2672ea65a40ab91499f1692fe4598a2b654bdff2d1bba730696a8f0a97255916",
+    "dhu-2026-rule.pdf": "790ecd0118f1809240b9bd570d33884059343be068d003c6b0311562f1b62eca",
+    "nxu-2026-catalog.pdf": "4d191c358e4c79671ee44e464d710c2522b4377d44fe0532a0132e2f808113ac",
+    "nxu-2026-admitted-1.pdf": "2b57d19434aa173116e3a8223dbaa9f34f908c687d6274c3ea43320c444ef30c",
+    "nxu-2026-admitted-2.pdf": "043f120a7eecc7e147aeefd76e62c35b1dec80385f132144047751a813ab5a2d",
+    "njau-2027-mentor-split.pdf": "0dc0dab92e438a571aa49b8566d90337ae9a3baa9bab520b6afcdf65bfb55741",
+    "hhu-2027-recommendation.pdf": "092cc2846b4e74285e8ac5d3046756df93ff523042ed872f506cf1fa61563edf"
+  },
+  "retained_previous_tables": 560,
+  "new_red_schools": 0,
+  "nxu_anonymous_aggregate": {
+    "trace_id": "ce3a9edc-34c1-446a-a3b7-b6a9b43ba10c",
+    "population": "school-level provisional admitted list; same college and full-time, blank remarks only; batches kept separate",
+    "groups": [
+      {
+        "file": "nxu-2026-admitted-1.pdf",
+        "major": "计算机技术",
+        "pages": [
+          18,
+          19,
+          20
+        ],
+        "all_n": 69,
+        "blank_remark_n": 69,
+        "min": 294,
+        "q25": 308.0,
+        "median": 321,
+        "mean": 323.2609,
+        "q75": 336.0,
+        "max": 394,
+        "below_315": 26,
+        "remark_nonblank": []
+      },
+      {
+        "file": "nxu-2026-admitted-1.pdf",
+        "major": "人工智能",
+        "pages": [
+          20
+        ],
+        "all_n": 5,
+        "blank_remark_n": 5,
+        "min": 259,
+        "q25": 272.0,
+        "median": 278,
+        "mean": 282.2,
+        "q75": 280.0,
+        "max": 322,
+        "below_315": 4,
+        "remark_nonblank": []
+      },
+      {
+        "file": "nxu-2026-admitted-2.pdf",
+        "major": "计算机技术",
+        "pages": [
+          7
+        ],
+        "all_n": 2,
+        "blank_remark_n": 2,
+        "min": 304,
+        "q25": 304.75,
+        "median": 305.5,
+        "mean": 305.5,
+        "q75": 306.25,
+        "max": 307,
+        "below_315": 2,
+        "remark_nonblank": []
+      },
+      {
+        "file": "nxu-2026-admitted-2.pdf",
+        "major": "人工智能",
+        "pages": [
+          7
+        ],
+        "all_n": 7,
+        "blank_remark_n": 7,
+        "min": 370,
+        "q25": 371.5,
+        "median": 374,
+        "mean": 376.4286,
+        "q75": 378.5,
+        "max": 391,
+        "below_315": 0,
+        "remark_nonblank": []
+      }
+    ]
+  },
+  "nxu_anonymous_linkage": {
+    "trace_id": "ce3a9edc-34c1-446a-a3b7-b6a9b43ba10c",
+    "first_choice_roster": {
+      "计算机技术": {
+        "all": 91,
+        "blank": 90,
+        "nonblank_remarks": [
+          "退役大学生士兵专项计划"
+        ]
+      },
+      "人工智能": {
+        "all": 5,
+        "blank": 5,
+        "nonblank_remarks": []
+      }
+    },
+    "joins": [
+      {
+        "batch": 1,
+        "major": "计算机技术",
+        "n": 69,
+        "matched_first_choice": 69,
+        "major_mismatch": 0,
+        "retest_mismatch": 0,
+        "roster_nonblank": 0
+      },
+      {
+        "batch": 1,
+        "major": "人工智能",
+        "n": 5,
+        "matched_first_choice": 5,
+        "major_mismatch": 0,
+        "retest_mismatch": 0,
+        "roster_nonblank": 0
+      },
+      {
+        "batch": 2,
+        "major": "计算机技术",
+        "n": 2,
+        "matched_first_choice": 2,
+        "major_mismatch": 0,
+        "retest_mismatch": 0,
+        "roster_nonblank": 0
+      },
+      {
+        "batch": 2,
+        "major": "人工智能",
+        "n": 7,
+        "matched_first_choice": 0,
+        "major_mismatch": 0,
+        "retest_mismatch": 0,
+        "roster_nonblank": 0
+      }
+    ],
+    "union": {
+      "计算机技术": {
+        "n": 71,
+        "unique_ids": 71,
+        "min": 294,
+        "q25": 308.0,
+        "median": 320,
+        "mean": 322.7606,
+        "q75": 334.0,
+        "max": 394,
+        "below315": 28,
+        "restriction": "two-published-batches union only; no final enrollment claim; AI contains unlinked origin"
+      },
+      "人工智能": {
+        "n": 12,
+        "unique_ids": 12,
+        "min": 259,
+        "q25": 279.5,
+        "median": 370.0,
+        "mean": 337.1667,
+        "q75": 374.5,
+        "max": 391,
+        "below315": 4,
+        "restriction": "two-published-batches union only; no final enrollment claim; AI contains unlinked origin"
+      }
+    }
+  },
+  "review": "Independent PDF target-page and anonymous aggregate audit; corrected Donghua opening to avoid assigning 2026 subjects to 2027.",
+  "internal_note_traces": [
+    "ce3a9edc-34c1-446a-a3b7-b6a9b43ba10c",
+    "85aa3217-1ff8-4e54-b3a7-1141e5b2d5d2",
+    "f2bc7c84-4245-4605-8d17-e58b58dc53af"
+  ]
+}
