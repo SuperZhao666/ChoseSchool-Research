@@ -1,0 +1,821 @@
+{
+  "trace_id": "b620e1e2-a0b0-4627-a110-a9455976871d",
+  "date": "2026-09-13",
+  "before_readme_sha256": "121bfa52a9896f4d2a87f584df53ae4c48761d779659c690f96331bf35dd5d32",
+  "public_research": "README.md school blocks only",
+  "updated_school_panels": [
+    "school-017",
+    "school-018",
+    "school-027",
+    "school-034",
+    "school-076"
+  ],
+  "new_2027_H2_408_confirmations": 0,
+  "boundaries": [
+    "Read coverage is bounded; no absence claim beyond the checked material.",
+    "Each score row keeps its own admission-year official exam subjects.",
+    "Karamay final direction subsets reuse application labels; final PDF has no direction column.",
+    "Blank remark proxies do not prove every special-plan or policy category is excluded.",
+    "Recommended exemption plans are not ordinary net capacity; roster counts are not applications.",
+    "Original personal records remain outside the repository; only aggregate statistics are published."
+  ],
+  "uibe": {
+    "tier": "211（非985）",
+    "program": "004-140500",
+    "same_year_catalogs": [
+      2026,
+      2027
+    ],
+    "subjects": [
+      "101",
+      "201",
+      "302",
+      "408"
+    ],
+    "mode": "全日制",
+    "duration_years": 2,
+    "catalog_plan_each_year": {
+      "total_provisional": 28,
+      "provisional_recommendations": 14,
+      "ordinary_net": null
+    },
+    "2027_publication_date": "2026-08-28",
+    "2027_parent": "https://yjsy.uibe.edu.cn/cms/infoSingleArticle.do?articleId=7866&columnId=2170",
+    "2027_source_sha256": "ee04259e2b2f524bc2e07b75aa788cde47131c66712564ef27848ff7de056a74",
+    "2027_original_fetched_at": "2026-09-06T11:36:20.640565+00:00",
+    "2027_original_trace_id": "f7efd050-fca9-48c7-861a-7a25fb282207",
+    "2027_pdf_visual_pages": [
+      2,
+      3
+    ],
+    "2026_source_sha256": "7e7bcb5b62b6b3287b5b28044a089a81e6685c807a7cfdfd1dd8dbfcc269aa31",
+    "first_admission_year": 2025,
+    "2025_registration_statistics": {
+      "parent": "https://yjsy.uibe.edu.cn/cms/infoSingleArticle.do?articleId=7663&columnId=2173",
+      "table_retrieved": false,
+      "applications": null,
+      "ordinary_final": null,
+      "status": "normal HTTPS and own IAB connection failures; no TLS relaxation"
+    },
+    "new_college_sources": {
+      "trace_id": "b620e1e2-a0b0-4627-a110-a9455976871d",
+      "fetched_at": "2026-09-13T12:52:34.021832+00:00",
+      "sources": [
+        {
+          "url": "https://it.uibe.edu.cn/docs/2025-04/00e80048c1204fc48a6d73c06d394b5a.pdf",
+          "file": "retest2025.pdf",
+          "bytes": 294568,
+          "sha256": "677d596ea66cf8ce054ad41061a2ba39c0743aecd26a47cb1f20abe15c16afc3",
+          "status": 200
+        },
+        {
+          "url": "https://it.uibe.edu.cn/yjsjx/pyfa_yjs/f6a721f3f2d74648920a08bc1d00b42d.htm",
+          "file": "training2025.html",
+          "bytes": 21249,
+          "sha256": "d7ce3e8f0656d8903c9f70c1e8aa5c71225e489e54ba6f7130d5bf37fab6a8cc",
+          "status": 200
+        },
+        {
+          "url": "https://it.uibe.edu.cn/zszl/02fb7ab10efe4a8e83f0bdd04e9e96d5.htm",
+          "file": "first-cohort-intro.html",
+          "bytes": 23253,
+          "sha256": "f2258bd57b5ae5f228d1dde84e6d2bc8e964626bd3c3dc42fee1154ca905ac48",
+          "status": 200
+        }
+      ]
+    },
+    "2025_retest_visual_pages": [
+      4
+    ],
+    "training_scope": "2025 cohort only; first-year deadline only applies to the literature review; research paper and software artifact are completed between admission and degree application.",
+    "review": "Independent local source review passed; no new online retrieval claimed for the archived 2027 catalogue."
+  },
+  "hfut": {
+    "tier": "211（非985）",
+    "source": "https://ci.hfut.edu.cn/info/1063/16571.htm",
+    "date": "2026-09-01",
+    "sha256": "117fcb65cbf1521622d8dfce470979e4ad43c959bbc822eecc04ba0bc08c308b",
+    "source_trace_id": "27fdeac9-3042-467b-87f1-17c8c21ac9bd",
+    "new_evidence": "2026 explicitly cites 2023 assignment rules and current mentor qualification; signed project-funding commitment required; advanced institute projects do not need this mutual selection.",
+    "limits": "Complete rule attachment not re-retrieved; mentor preference roster CAPTCHA respected; no final admission counts inferred."
+  },
+  "northeast": {
+    "trace_id": "bd989901-8db9-4eb0-9fbf-4bf37835fef1",
+    "as_of": "2026-09-13",
+    "repo_mutated": false,
+    "new_h2_target_408_confirmed_count": 0,
+    "ordinary_2026_final_population_newly_verified_count": 0,
+    "scope": [
+      "东北师范大学",
+      "东北林业大学",
+      "哈尔滨工程大学"
+    ],
+    "school_tiers": {
+      "东北师范大学": "211（非985）",
+      "东北林业大学": "211（非985）",
+      "哈尔滨工程大学": "211（非985）"
+    },
+    "facts": [
+      {
+        "school": "东北师范大学",
+        "admission_year": 2027,
+        "publication_date": "2026-09-11",
+        "source_url": "https://ist.nenu.edu.cn/info/1157/7521.htm",
+        "kind": "provisional_recommended_exemption_plan",
+        "ordinary_net_plan": null,
+        "mode": "该页面为推免硕士层次；不补普通统考学习方式",
+        "rows": [
+          {
+            "program_code": "085404",
+            "direction": "01 计算机软件开发技术",
+            "planned_push": 20
+          },
+          {
+            "program_code": "085404",
+            "direction": "03 智能系统设计与应用",
+            "planned_push": 5
+          },
+          {
+            "program_code": "085410",
+            "direction": "人工智能",
+            "planned_push": 20
+          }
+        ],
+        "exam_codes": null,
+        "limitations": [
+          "计划可根据生源和学科发展调整",
+          "不等于实际推免人数",
+          "不等于统考净计划",
+          "不能从2026旧计划中减去2027拟推免",
+          "推免机试2小时及20/80计分不得回填普通统考复试"
+        ]
+      },
+      {
+        "school": "东北师范大学",
+        "admission_year": 2027,
+        "publication_date": "2026-07-07",
+        "source_url": "https://ist.nenu.edu.cn/info/1157/7401.htm",
+        "kind": "self_set_outline_publication",
+        "attachment_subjects": [
+          "875 教育传播与教学设计",
+          "878 信息检索与服务",
+          "682 文献信息管理",
+          "684 计算机应用基础"
+        ],
+        "h2_408_change": false,
+        "limitations": [
+          "仅正文与附件题名已读；非目标大纲附件未取",
+          "不因879未列就独立认定四科"
+        ]
+      },
+      {
+        "school": "东北林业大学",
+        "admission_year": 2027,
+        "publication_date": "2026-07-26",
+        "source_url": "https://yz.nefu.edu.cn/info/1025/4486.htm",
+        "kind": "outline_and_other_subject_changes",
+        "h2_408_change": false,
+        "new_changes": [
+          "083300 城乡规划学 938→824",
+          "087200 设计学及135700设计 971→874"
+        ],
+        "linked_408_notice_first_date": "2026-05-08",
+        "limitations": [
+          "7月26日只是回链5月8日旧408公告；不得改红为H2",
+          "大纲附件未取；目标408无需自命题大纲"
+        ]
+      },
+      {
+        "school": "东北林业大学",
+        "admission_year": 2027,
+        "publication_date": null,
+        "source_url": "https://yz.nefu.edu.cn/zyjs.htm",
+        "kind": "program_introduction_matrix",
+        "rows": [
+          {
+            "college": "计算机与人工智能学院",
+            "degree": "专业学位",
+            "mode": "全日制",
+            "program_code": "085404",
+            "name": "计算机技术"
+          },
+          {
+            "college": "计算机与人工智能学院",
+            "degree": "专业学位",
+            "mode": "全日制",
+            "program_code": "085405",
+            "name": "软件工程"
+          }
+        ],
+        "full_exam_catalog": false,
+        "exam_codes": null,
+        "ordinary_net_plan": null,
+        "limitations": [
+          "页面标题为2027专业介绍，无可核首发日期",
+          "未列085410/085411不等于最终目录必不招生",
+          "不能把学院含人工智能字样当作新增085410"
+        ]
+      },
+      {
+        "school": "东北林业大学",
+        "admission_year": 2026,
+        "publication_date": "2026-04-02",
+        "source_url": "https://yz.nefu.edu.cn/info/1033/3926.htm",
+        "kind": "expected_transfer_demand",
+        "college": "012 计算机与控制工程学院",
+        "program_code": "085404",
+        "mode": "非全日制",
+        "expected_transfer": 11,
+        "ordinary_special_flag": "表中备注为空；只称该非全行预计调剂11",
+        "exam_codes": null,
+        "excludes_inference": [
+          "不属于全日制北方基因组02",
+          "不是实际录取或最终缺额",
+          "不是报名人数或报录比",
+          "该表未列全日制不等于全年无调剂"
+        ]
+      },
+      {
+        "school": "哈尔滨工程大学",
+        "admission_year": 2027,
+        "publication_date": "2026-09-04",
+        "source_url": "https://yzb.hrbeu.edu.cn/3262/list.htm",
+        "kind": "master_notice_index",
+        "latest_target_notice": "各学院2027年接收优秀应届生免试攻读研究生预报名（持续更新）",
+        "full_exam_catalog": false,
+        "exam_codes": null,
+        "ordinary_net_plan": null,
+        "limitations": [
+          "只读到官方硕士招生索引；推免详情和专业目录索引直接读取超时",
+          "9月4日为当前索引日期，详情URL含0831，不能以其中任一个判改考首发",
+          "未确认2027新目标并非证明未发布"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "stem": "nefu-transfer",
+        "url": "https://yz.nefu.edu.cn/info/1033/3926.htm",
+        "status": 200,
+        "sha256": "1345c9207dbeb177eeccb4daa7869cc4b77d0d09f152ca692d0375fe862b16c8",
+        "bytes": 76764
+      },
+      {
+        "stem": "nefu-h2-outline",
+        "url": "https://yz.nefu.edu.cn/info/1025/4486.htm",
+        "status": 200,
+        "sha256": "092b18434673889a89361f04e39236197062a541cff58ffc7be1f10f9799acdc",
+        "bytes": 26876
+      },
+      {
+        "stem": "nefu-2027-programs",
+        "url": "https://yz.nefu.edu.cn/zyjs.htm",
+        "status": 200,
+        "sha256": "36170680db7ec49cc4451bb78a079ff3b404a5a59eb0a34f258ff5012b9c56ac",
+        "bytes": 78155
+      },
+      {
+        "stem": "nefu-college-intro",
+        "url": "https://yz.nefu.edu.cn/info/1116/3173.htm",
+        "status": 200,
+        "sha256": "8190f382bbf71b8f62cc198385e47809ab1a12fdb7558f70416c2aa2dbf6b59b",
+        "bytes": 92295
+      },
+      {
+        "stem": "nenu-push",
+        "url": "https://ist.nenu.edu.cn/info/1157/7521.htm",
+        "status": 200,
+        "sha256": "27e8a9c6c137c1c475c662e89a749d4d5875beab75118d7c1dc20ab4e33c29f0",
+        "bytes": 69936
+      },
+      {
+        "stem": "nenu-outline",
+        "url": "https://ist.nenu.edu.cn/info/1157/7401.htm",
+        "status": 200,
+        "sha256": "ee5becd1fe1fa536575781023ece93fedb3057f0aaa092fc7c525f518e18617b",
+        "bytes": 20560
+      },
+      {
+        "stem": "nenu-change",
+        "url": "https://ist.nenu.edu.cn/info/1157/7361.htm",
+        "status": 200,
+        "sha256": "dc8898b316db7cdf76775db6d4dde34b2f13e818db9d8086070212a63415bb99",
+        "bytes": 26685
+      },
+      {
+        "stem": "heu-directory-index",
+        "url": "https://yzb.hrbeu.edu.cn/3277/list.htm",
+        "error": "ReadTimeout"
+      },
+      {
+        "stem": "heu-push-index",
+        "url": "https://yzb.hrbeu.edu.cn/2026/0831/c3262a351735/page.htm",
+        "error": "ReadTimeout"
+      }
+    ],
+    "access_limits": [
+      {
+        "url": "https://ist.nenu.edu.cn/system/_content/download.jsp?owner=1287844112&urltype=news.DownloadAttachUrl&wbfileid=AEDAB84A0B24D2F6393280622BDAF034",
+        "status": "CAPTCHA",
+        "parent": "https://ist.nenu.edu.cn/info/1157/6551.htm",
+        "pdf_sha256": null,
+        "pages_read": null
+      },
+      {
+        "url": "https://yz.nefu.edu.cn/system/_content/download.jsp?owner=1701911290&urltype=news.DownloadAttachUrl&wbfileid=9808F6B5C5B2A7DA9038B1DE0C2080E2",
+        "status": "attachment_download_page_and_timeout",
+        "parent": "https://yz.nefu.edu.cn/info/1025/3956.htm",
+        "pdf_sha256": null,
+        "pages_read": null
+      },
+      {
+        "url": "https://yz.nefu.edu.cn/system/_content/download.jsp?owner=1701911290&urltype=news.DownloadAttachUrl&wbfileid=2337BFCC029F059569761778CF0963E4",
+        "status": "CAPTCHA",
+        "parent": "https://yz.nefu.edu.cn/info/1026/3602.htm",
+        "pdf_sha256": null,
+        "pages_read": null
+      },
+      {
+        "url": "https://icec.nefu.edu.cn/",
+        "status": "502_and_unavailable"
+      }
+    ]
+  },
+  "ncepu_cup": {
+    "trace_id": "b280c336-b82d-40aa-8b72-00fdd5fa505b",
+    "checked_at": "2026-09-13",
+    "repository_read_only": true,
+    "sources": [
+      {
+        "key": "ncepu-bd-home",
+        "url": "https://gs.ncepu.edu.cn/",
+        "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)>"
+      },
+      {
+        "key": "ncepu-bj-masters",
+        "url": "https://yjsy.ncepu.edu.cn/zsxx/sszsxx/index.htm",
+        "status": 200,
+        "bytes": 22528,
+        "sha256": "cb370b70c014af56c3b225d3ab790fa3c8d644ecbef105c859578ad95e17b29e"
+      },
+      {
+        "key": "ncepu-bj-catalogs",
+        "url": "https://yjsy.ncepu.edu.cn/zsxx/yjszsjz/index.htm",
+        "status": 200,
+        "bytes": 16399,
+        "sha256": "95b1c860f8f2e34e2216d6d6cb650323e6cd738bcf18d8b23b397cc88c1ca311"
+      },
+      {
+        "key": "cup-catalogs",
+        "url": "https://grs.cup.edu.cn/zsssjzml/index.jhtml",
+        "status": 200,
+        "bytes": 14362,
+        "sha256": "106ad506725e8c815182455e4bd2cd76ce1430ec2e45531d4d7db1f8c234995a"
+      },
+      {
+        "key": "cup-masters",
+        "url": "https://grs.cup.edu.cn/zssstzgg/index.jhtml",
+        "status": 200,
+        "bytes": 15102,
+        "sha256": "0680cac81635fb115034984fa1f691dade08dac657946ac954ae957c03efd888"
+      },
+      {
+        "key": "cup-final-parent",
+        "url": "https://grs.cup.edu.cn/zssstzgg/91401.jhtml",
+        "status": 200,
+        "bytes": 14664,
+        "sha256": "180989aa32ef3e7a442e9fcb15167befe5163f2bece15fd8c33944eb1769dbcc"
+      },
+      {
+        "key": "cup-ai-rule",
+        "url": "https://www.cup.edu.cn/cupai/tzgg/81c94e57b3e542e19e16ac3eab2963a7.htm",
+        "status": 200,
+        "bytes": 115886,
+        "sha256": "81a238f2c1b5e10af3433a086a980294d1eb2a6e9c51b732fe71e21f12ccf32a"
+      },
+      {
+        "key": "cupk-masters",
+        "url": "https://www.cupk.edu.cn/yjsb/sszs/tzgg/",
+        "status": 200,
+        "bytes": 27958,
+        "sha256": "be5c9896101a77c25eae86800c82ea4370964e6e766b18a1ccf171e2fab5e363"
+      },
+      {
+        "key": "cup-final2026.pdf",
+        "url": "https://grs.cup.edu.cn/u/cms/www/202604/241712548z0g.pdf",
+        "status": 200,
+        "bytes": 40695300,
+        "sha256": "63deb0a5469a69d3cebb80fc4bb14630c8dd9a6198ba2a295e2bd6f31f7bbd44"
+      },
+      {
+        "key": "cup-catalog2026.pdf",
+        "url": "https://grs.cup.edu.cn/wenku/www/202510/08184008dkdv.pdf",
+        "status": 200,
+        "bytes": 333470,
+        "sha256": "fbc976c840735d10dd2f9820f98b8a13451c9c7371c335b06169e4d9b30d7398"
+      },
+      {
+        "key": "cupk-oil-rule2026.html",
+        "url": "https://www.cupk.edu.cn/syxy/c/2026-03-23/533156.shtml",
+        "status": 200,
+        "bytes": 121249,
+        "sha256": "ba7462c6d9538d83980fab3ee02cd6e2483e527427ddedc7bec76372c5da2482"
+      },
+      {
+        "key": "cupk-all-rules2026.html",
+        "url": "https://www.cupk.edu.cn/yjsb/c/2026-03-23/533161.shtml",
+        "status": 200,
+        "bytes": 29343,
+        "sha256": "b873227c3d9de39ce4e7cc8d529f65f09f86554dd884755221f5787fc7a4b06b"
+      },
+      {
+        "key": "cupk-first-roster2026.pdf",
+        "url": "https://www.cupk.edu.cn/syxy/upload/resources/file/2026/03/23/111193.pdf",
+        "status": 200,
+        "bytes": 145834,
+        "sha256": "fdefff3f6f008022da16972834d54bb51ebc78d3cdf088c49cde016c83ce4bdd"
+      }
+    ],
+    "new_H2_2027_target408_confirmation_count": 0,
+    "coverage": [
+      {
+        "entity": "华北电力大学北京校部",
+        "tier": "211（非985）",
+        "source": "https://yjsy.ncepu.edu.cn/zsxx/sszsxx/index.htm",
+        "observed": "硕士招生信息首页最新2026-07-14新生奖学金，6/30为复试科目通知；目录栏目最新普通硕士目录为2026。目标学院2027定向检索未见新普通四科。",
+        "boundary": "仅当前已读入口与定向检索，不断言不存在其他公告；2024-07-05服务2025改408是旧证据。北京2025失效PDF本轮未重试。"
+      },
+      {
+        "entity": "华北电力大学保定校区",
+        "tier": "211（非985）",
+        "observed": "网页读取首页及真实招生信息入口超时；本机HTTPS标准校验证书失败，未关闭验证。搜索索引有2026目录和2027教研项目新闻，后者不是招生公告。",
+        "boundary": "覆盖不足，不以北京目录补保定，也不把URL上传目录2025-09的保定2025标题PDF当2026。"
+      },
+      {
+        "entity": "中国石油大学（北京）校本部",
+        "tier": "211（非985）",
+        "observed": "校级通知与目录首页、人工智能学院通知及招生栏目已读；最新目标推免仍为已知2026-08-03，7/2旧大纲仅自命题附件未重复算新；无新增2027普通四科证据。"
+      },
+      {
+        "entity": "中国石油大学（北京）克拉玛依校区",
+        "tier": "211（非985）",
+        "observed": "校区研究生部通知、数理与人工智能学院及推免入口已读；最新推免7/27汇总与7/29学院既有证据，不作为408新改。"
+      }
+    ],
+    "cup_catalog2026": {
+      "admission_year": 2026,
+      "fulltime_professional_pdf_pages": 5,
+      "bj_computer_page": 2,
+      "bj_ai_pages": [
+        2,
+        3
+      ],
+      "karamay_computer_page": 4,
+      "karamay_unit_begin_page": 3,
+      "subject_codes": [
+        "101",
+        "204",
+        "302",
+        "408"
+      ],
+      "bj_computer_plan": {
+        "total": 36,
+        "expected_recommendations": 18
+      },
+      "bj_ai_plan": {
+        "total": 30,
+        "expected_recommendations": 15
+      },
+      "karamay_computer_plan": {
+        "total": 20,
+        "expected_recommendations": 10
+      },
+      "population_boundary": "目录拟人数不当春季净统考数，安全方向排除。"
+    },
+    "cup_bj_2026_retest_plan": {
+      "source": "https://www.cup.edu.cn/cupai/tzgg/81c94e57b3e542e19e16ac3eab2963a7.htm",
+      "date": "2026-03-23",
+      "stage": "一志愿复试细则原标签招生计划",
+      "groups": [
+        {
+          "unit": "008人工智能学院",
+          "code": "085404",
+          "mode": "全日制",
+          "subjects": [
+            "101",
+            "204",
+            "302",
+            "408"
+          ],
+          "plan": 21,
+          "included_routes": {
+            "海南专项": 2
+          },
+          "cutoff": 360,
+          "single100": 35,
+          "single150": 53
+        },
+        {
+          "unit": "008人工智能学院",
+          "code": "085410",
+          "mode": "全日制",
+          "subjects": [
+            "101",
+            "204",
+            "302",
+            "408"
+          ],
+          "plan": 13,
+          "included_routes": {
+            "海南专项": 4,
+            "中巴卓工学院": 2
+          },
+          "cutoff": 356,
+          "single100": 35,
+          "single150": 53
+        }
+      ],
+      "boundary": "北京普通/联合培养内容不可跨给克拉玛依，不推独立可报方向净份额。"
+    },
+    "karamay2026": {
+      "unit_code": "031",
+      "organizer_in_2026_rule": "石油学院",
+      "program": "085404计算机技术",
+      "mode": "全日制",
+      "first_choice_type": "非定向就业",
+      "initial_subjects": [
+        "101",
+        "204",
+        "302",
+        "408"
+      ],
+      "ordinary_proxy_definition": "2026一志愿复试名册全日制、非定向就业、备注空白，与校级拟录取全日制、备注空白目标10条按完整考生编号回连；姓名编号仅保留库外。",
+      "spring_plan": 10,
+      "spring_plan_label": "2026-03-23一志愿复试阶段招生计划",
+      "cutoff": 314,
+      "single100": 35,
+      "single150": 53,
+      "roster_pdf_pages": [
+        5,
+        6
+      ],
+      "roster_total_pages": 7,
+      "final_pdf_total_pages": 97,
+      "karamay_final_part_physical_pages": [
+        84,
+        97
+      ],
+      "final_target_pages": [
+        84,
+        85
+      ],
+      "target_public_serial_range": [
+        17,
+        26
+      ],
+      "initial_score_fields_verified": 5,
+      "matched_final_to_first_choice": 10,
+      "unmatched_final": 0,
+      "final_all_targets_visible_on_program_column_audit": 10,
+      "final_direction_is_original_application_label_not_final_training_assignment": true,
+      "stats": {
+        "linked_n": 10,
+        "all_four_scores_and_totals_match": true,
+        "roster": {
+          "n": 15,
+          "min": 314,
+          "q25_linear": 318.5,
+          "median": 338,
+          "mean": 336.5333,
+          "q75_linear": 354.5,
+          "max": 368,
+          "under300": 0,
+          "300to319": 5,
+          "320to339": 3,
+          "340to359": 5,
+          "360plus": 2
+        },
+        "final": {
+          "n": 10,
+          "min": 314,
+          "q25_linear": 326.5,
+          "median": 348.0,
+          "mean": 343.9,
+          "q75_linear": 357.75,
+          "max": 368,
+          "under300": 0,
+          "300to319": 2,
+          "320to339": 1,
+          "340to359": 5,
+          "360plus": 2
+        },
+        "by_original_first_choice_direction": {
+          "人工智能及应用": {
+            "roster": {
+              "n": 4,
+              "min": 315,
+              "q25_linear": 318.0,
+              "median": 320.5,
+              "mean": 328.25,
+              "q75_linear": 330.75,
+              "max": 357,
+              "under300": 0,
+              "300to319": 2,
+              "320to339": 1,
+              "340to359": 1,
+              "360plus": 0
+            },
+            "admit": {
+              "n": 3,
+              "min": 319,
+              "q25_linear": 320.5,
+              "median": 322,
+              "mean": 332.6667,
+              "q75_linear": 339.5,
+              "max": 357,
+              "under300": 0,
+              "300to319": 1,
+              "320to339": 1,
+              "340to359": 1,
+              "360plus": 0
+            }
+          },
+          "计算机网络及信息安全": {
+            "roster": {
+              "n": 1,
+              "scores_suppressed": "small group; no individual score disclosure"
+            },
+            "admit": {
+              "n": 0,
+              "scores_suppressed": "small group; no individual score disclosure"
+            }
+          },
+          "软件工程及数据库系统": {
+            "roster": {
+              "n": 9,
+              "min": 314,
+              "q25_linear": 338.0,
+              "median": 344,
+              "mean": 344.1111,
+              "q75_linear": 358.0,
+              "max": 368,
+              "under300": 0,
+              "300to319": 2,
+              "320to339": 1,
+              "340to359": 4,
+              "360plus": 2
+            },
+            "admit": {
+              "n": 7,
+              "min": 314,
+              "q25_linear": 342.0,
+              "median": 352,
+              "mean": 348.7143,
+              "q75_linear": 361.5,
+              "max": 368,
+              "under300": 0,
+              "300to319": 1,
+              "320to339": 0,
+              "340to359": 4,
+              "360plus": 2
+            }
+          },
+          "高性能计算与地震数据处理": {
+            "roster": {
+              "n": 1,
+              "scores_suppressed": "small group; no individual score disclosure"
+            },
+            "admit": {
+              "n": 0,
+              "scores_suppressed": "small group; no individual score disclosure"
+            }
+          }
+        },
+        "nonsecurity_roster": {
+          "n": 14,
+          "min": 314,
+          "q25_linear": 319.75,
+          "median": 339.0,
+          "mean": 338,
+          "q75_linear": 355.75,
+          "max": 368,
+          "under300": 0,
+          "300to319": 4,
+          "320to339": 3,
+          "340to359": 5,
+          "360plus": 2
+        },
+        "nonsecurity_admit": {
+          "n": 10,
+          "min": 314,
+          "q25_linear": 326.5,
+          "median": 348.0,
+          "mean": 343.9,
+          "q75_linear": 357.75,
+          "max": 368,
+          "under300": 0,
+          "300to319": 2,
+          "320to339": 1,
+          "340to359": 5,
+          "360plus": 2
+        },
+        "trace_id": "b280c336-b82d-40aa-8b72-00fdd5fa505b"
+      },
+      "final_formula": "(initial_total/5)*0.60+retest*0.40",
+      "retest_formula": "professional_interview*0.70+foreign_language_interview*0.30",
+      "retest_mode": "远程视频；专业含PPT、题库和问答；未写普通编程机考或CSP换算",
+      "qualification": "最终校级为拟录取公示，不含推免；不声称公示后无变化或最终学籍。",
+      "missing": [
+        "有效报考人数",
+        "2027正式四科与名额",
+        "2027承办学院及培养安排",
+        "是否独立按方向划线分配名额",
+        "最终导师培养方向确认"
+      ],
+      "inference_boundary": "7/9、3/4及10/15不是报名录取率；复试名单人数不等于实际到场人数；3人AI样本不能推2027低分或独立名额。"
+    },
+    "privacy": "来源元数据、项目聚合和取证过程；不含姓名、考生编号或个人行；不足3人的方向只保留人数，不披露成绩。"
+  },
+  "anhui_jiangxi_coverage": {
+    "trace_id": "27fdeac9-3042-467b-87f1-17c8c21ac9bd",
+    "as_of": "2026-09-13",
+    "repository_access": "read_only",
+    "foreground_browser_used": false,
+    "captchas_solved": false,
+    "anonymous_statistics": [],
+    "new_2027_official_confirmations": [],
+    "new_h2_408_switches": [],
+    "new_claims": [
+      {
+        "school": "合肥工业大学",
+        "tier": "211（非985）",
+        "date": "2026-09-01",
+        "target_enrollment_year": 2026,
+        "scope": "导师分配通知，不是招生结果",
+        "url": "https://ci.hfut.edu.cn/info/1063/16571.htm",
+        "sha256": "117fcb65cbf1521622d8dfce470979e4ad43c959bbc822eecc04ba0bc08c308b",
+        "pdf_pages": null,
+        "claims": [
+          "2026级明确继续引用2023版导师分配规定和2026硕导资格审核",
+          "导师经费承诺书须项目账号及负责人签名",
+          "高研院项目研究生不参加该轮师生双选"
+        ],
+        "unverified": [
+          "附件全部条文与历史版本逐字相同",
+          "2027适用性",
+          "选择导师汇总表人数/分数",
+          "005普通最终招生人数和初试分布"
+        ]
+      }
+    ],
+    "blocked_originals": [
+      {
+        "school": "安徽大学",
+        "url": "https://graschool.ahu.edu.cn/2026/0424/c9539a390363/page.htm",
+        "status": "HTTP_412",
+        "attachment_sha256": null,
+        "retained_fields": {
+          "actual_applicant_count": null,
+          "ordinary_final_count": null,
+          "initial_score_distribution": null
+        }
+      },
+      {
+        "school": "合肥工业大学",
+        "url": "https://ci.hfut.edu.cn/system/_content/download.jsp?owner=1941188696&urltype=news.DownloadAttachUrl&wbfileid=17991835",
+        "status": "explicit_download_captcha",
+        "attachment_sha256": null,
+        "retained_fields": {
+          "ordinary_final_count": null,
+          "initial_score_distribution": null
+        }
+      },
+      {
+        "school": "南昌大学",
+        "url": "https://yjsy.ncu.edu.cn/system/_content/download.jsp?owner=2125996941&urltype=news.DownloadAttachUrl&wbfileid=3414FE0E3AB0CFCA77607263B59E7C86",
+        "status": "explicit_download_captcha",
+        "attachment_sha256": null,
+        "retained_fields": {
+          "2027_complete_catalog_status": "pending_exact_catalog"
+        }
+      }
+    ],
+    "coverage_limits": [
+      "Search result absence is not proof of nonpublication.",
+      "Prior AHU July 2 official browser archive reused; not fresh HTTP bytes.",
+      "NCU July 8 attachment not newly read in this round.",
+      "2027 push notices are not ordinary exam catalog evidence."
+    ],
+    "manifest_files": [
+      "manifest.json",
+      "notice-manifest.json",
+      "hfut-mentor-manifest.json"
+    ]
+  },
+  "karamay_independent_review": {
+    "trace_id": "72768f9a-8951-4fb5-b1b9-726fa79f8b2e",
+    "sha256": "f6d16f57aedbfe596f14556ec54085f7347ab563c5bb0bfe236078ce970c93c4",
+    "status": "passed",
+    "scope": "PDF identifiers and page counts; catalogue and population; independent visual score transcription; 10 of 10 ID and five-score-field matches; overall and application-direction aggregate recomputation"
+  }
+}
