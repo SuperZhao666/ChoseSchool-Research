@@ -1,0 +1,1448 @@
+{
+  "trace_id": "a5c86a8e-e81a-4119-bff8-a45ec8b5de6b",
+  "date": "2026-09-13",
+  "before_readme_sha256": "1377d8f1070ba0844afd91d5b8914da5a7752c96337831addad7a5cd7ce8760b",
+  "updated_schools": [
+    "南京航空航天大学",
+    "石河子大学",
+    "陕西师范大学",
+    "西北大学",
+    "福州大学",
+    "安徽大学"
+  ],
+  "method": "Official original sources; observations preserve admissions year, stage, program, mode and cohort. Anonymous aggregates only. No registration inference, probability forecast or same-year subject backfill from other years.",
+  "shzu": {
+    "trace_id": "d574f032-694f-4d66-a86f-a46fa5fa3c3b",
+    "scope": {
+      "school": "石河子大学",
+      "tier": "211 non985",
+      "year": 2026,
+      "college": "信息科学与技术学院",
+      "code": "085400",
+      "program": "电子信息",
+      "mode": "全日制",
+      "admission_category": "普通计划",
+      "direction": "不区分研究方向",
+      "college_code": "008",
+      "subjects": [
+        {
+          "code": "101",
+          "name": "思想政治理论"
+        },
+        {
+          "code": "204",
+          "name": "英语（二）"
+        },
+        {
+          "code": "302",
+          "name": "数学（二）"
+        },
+        {
+          "code": "408",
+          "name": "计算机学科专业基础"
+        }
+      ]
+    },
+    "initial_publication": {
+      "date": "2026-03-30",
+      "pdf_rows_total": 94,
+      "rows_with_retest_score": 91,
+      "withdrew_before_retest": 3,
+      "proposed_admitted_n": 61,
+      "not_admitted_by_rank": 27,
+      "retest_below_120": 3,
+      "initial_stats": {
+        "n": 61,
+        "minimum": 268.0,
+        "p25": 291.0,
+        "median": 304.0,
+        "mean": 304.8688524590164,
+        "p75": 316.0,
+        "maximum": 380.0
+      },
+      "initial_below_300": 27,
+      "initial_below_315": 45,
+      "initial_histogram": [
+        {
+          "lo": 260,
+          "hi": 279,
+          "count": 10
+        },
+        {
+          "lo": 280,
+          "hi": 299,
+          "count": 17
+        },
+        {
+          "lo": 300,
+          "hi": 319,
+          "count": 21
+        },
+        {
+          "lo": 320,
+          "hi": 339,
+          "count": 7
+        },
+        {
+          "lo": 340,
+          "hi": 359,
+          "count": 5
+        },
+        {
+          "lo": 360,
+          "hi": 379,
+          "count": 0
+        },
+        {
+          "lo": 380,
+          "hi": 399,
+          "count": 1
+        }
+      ],
+      "admitted_subject_stats": {
+        "politics": {
+          "n": 61,
+          "minimum": 49.0,
+          "p25": 56.0,
+          "median": 59.0,
+          "mean": 58.295081967213115,
+          "p75": 62.0,
+          "maximum": 67.0
+        },
+        "english": {
+          "n": 61,
+          "minimum": 43.0,
+          "p25": 60.0,
+          "median": 65.0,
+          "mean": 65.65573770491804,
+          "p75": 74.0,
+          "maximum": 82.0
+        },
+        "math": {
+          "n": 61,
+          "minimum": 70.0,
+          "p25": 92.0,
+          "median": 103.0,
+          "mean": 101.54098360655738,
+          "p75": 112.0,
+          "maximum": 144.0
+        },
+        "business2": {
+          "n": 61,
+          "minimum": 56.0,
+          "p25": 73.0,
+          "median": 79.0,
+          "mean": 79.37704918032787,
+          "p75": 85.0,
+          "maximum": 101.0
+        }
+      },
+      "admitted_retest_stats": {
+        "n": 61,
+        "minimum": 132.43,
+        "p25": 146.86,
+        "median": 154.71,
+        "mean": 154.98852459016393,
+        "p75": 161.43,
+        "maximum": 176.86
+      },
+      "all_scored_retest_initial_stats": {
+        "n": 91,
+        "minimum": 268.0,
+        "p25": 275.5,
+        "median": 294.0,
+        "mean": 296.3626373626374,
+        "p75": 311.0,
+        "maximum": 380.0
+      }
+    },
+    "supplement": {
+      "date": "2026-04-17",
+      "n": 1,
+      "initial_total": 269,
+      "retest_total": 155.57,
+      "overall_score": 63.39,
+      "original_rank": 62,
+      "originally_listed_as_not_admitted_by_rank": true,
+      "source_does_not_identify_removed_person": true
+    },
+    "final_population": {
+      "verified_n": null,
+      "verified_distribution": null,
+      "cumulative_people_with_proposed_admit_announcement": 62,
+      "cumulative_people_is_final_net_count": false,
+      "reason": "Initial 61 + one supplementary admission; no official withdrawal or final list recovered. Do not infer unchanged 61 or final 62."
+    },
+    "checks": {
+      "source_ids_duplicate_within_each_pdf": false,
+      "subject_total_all_rows_match": true,
+      "overall_formula_all_scored_match": true,
+      "private_supplement_to_initial_match": true,
+      "visual_pages_checked": {
+        "shzu-admit": [
+          1,
+          2,
+          3
+        ],
+        "shzu-replace": [
+          1
+        ]
+      }
+    },
+    "catalog": {
+      "year": 2026,
+      "physical_page": 7,
+      "raw_plan": 58,
+      "plan_definition": "catalog plan, not independently identified as ordinary net admission",
+      "mode": "全日制",
+      "sha256": "4f3e0a7605b6f8b471bbe039dad6a3bdd3cd07240150a473f265123090243010",
+      "visual_checked": true,
+      "subjects_verified_this_pass": true
+    }
+  },
+  "recovered_sources": [
+    {
+      "key": "nwu2027",
+      "url": "https://yjs.nwu.edu.cn/info/1104/5630.htm",
+      "status": 200,
+      "sha256": "d338c0f1dc308c1cb1fec7a4eeedd26c1a734590dfbe4e2e2b360d6090519786",
+      "trace_id": "d574f032-694f-4d66-a86f-a46fa5fa3c3b"
+    },
+    {
+      "key": "shzu-admit",
+      "url": "https://cs.shzu.edu.cn/2026/0330/c12051a230306/page.htm",
+      "status": 200,
+      "sha256": "bdddb65872c1ca19fec04e3d4ed4a5fc24ffc2eb4f37d2954b848e702549ebbc",
+      "trace_id": "d574f032-694f-4d66-a86f-a46fa5fa3c3b"
+    },
+    {
+      "key": "shzu-replace",
+      "url": "https://cs.shzu.edu.cn/_t513/2026/0420/c12051a231325/page.htm",
+      "status": 200,
+      "sha256": "42a0125632b660cb2ddc902af7155049544baf7f2d8e5efb30facfde65b20065",
+      "trace_id": "d574f032-694f-4d66-a86f-a46fa5fa3c3b"
+    }
+  ],
+  "nuaa": {
+    "notice_date": "2026-07-13",
+    "relay_date": "2026-07-15",
+    "notice_url": "https://astro.nuaa.edu.cn/2026/0713/c2096a405402/page.htm",
+    "notice_pdf_url": "https://astro.nuaa.edu.cn/_upload/article/files/c0/44/c9448a144e66b3c9cc9c7ed47640/5fdbc1ee-645a-4b59-838f-eb793589f39c.pdf",
+    "changes": [
+      {
+        "code": "081000",
+        "business2": "821 信号系统与数字信号处理",
+        "retest": "596 信息与通信技术综合"
+      },
+      {
+        "code": "085400",
+        "business2": "879 电子技术基础",
+        "retest": "597 电子信息技术综合"
+      }
+    ],
+    "current_h2_408_switch": false,
+    "reading_method": "Own hidden Codex in-app browser PDF text and visual; independent HTTP PDF download failed; no raw-file hash claimed",
+    "ai2026": {
+      "college": "024",
+      "code": "085410",
+      "mode": "full_time",
+      "subjects": [
+        "101",
+        "201",
+        "302",
+        "408"
+      ],
+      "subject_evidence": "Previously verified official dynamic 2026 catalog retained in README",
+      "spring_plan": 12,
+      "plan_excludes": [
+        "separate_exam",
+        "soldier",
+        "minority_bone"
+      ],
+      "retest_line": 361,
+      "single_lines": [
+        35,
+        35,
+        53,
+        53
+      ],
+      "autumn_catalog_plan": 33,
+      "unverified_difference_explanation": true,
+      "retest_max": 300,
+      "written_max": 100,
+      "written_hours": 2,
+      "interview_max": 200,
+      "english_interview_max": 50,
+      "formula": "initial/5*0.5+retest/3*0.5",
+      "retest_percent_min": 60,
+      "source_url": "https://ai.nuaa.edu.cn/2026/0321/c19799a394990/page.htm",
+      "visual_plan_page": 1,
+      "verified_result_distribution": null
+    }
+  },
+  "snnu": {
+    "year": 2026,
+    "college": "020",
+    "mode": "full_time",
+    "cohort": "ordinary candidates as school official line/plan table",
+    "program_plans": {
+      "085404": 18,
+      "085405": 8,
+      "085410": 6,
+      "085411": 11
+    },
+    "retest_line": 264,
+    "single_100": 35,
+    "single_over100": 53,
+    "four_subject_evidence": "pending_exact_catalog",
+    "source": "https://yz.snnu.edu.cn/ss26-020.pdf",
+    "visual_pages": [
+      1
+    ]
+  },
+  "nwu2027": {
+    "date": "2026-09-05",
+    "data_rows": 10,
+    "target_041_042_rows": 0,
+    "new_408_rows": 0,
+    "complete_2027_catalog_inferred": false
+  },
+  "fzu": {
+    "TraceId": "738975ed-24ed-45a2-957b-32e41dc8979d",
+    "school": "福州大学",
+    "tier": "211（非985）",
+    "year": 2026,
+    "population": "校级 2026-05-13 公示，010 计算机与大数据学院，全日制、非定向、备注空白；原文排除推免。与一志愿复试名单按考生编号本地匹配。不是实际报到最终人数。",
+    "programs": [
+      {
+        "code": "085404",
+        "final_initial": {
+          "n": 87,
+          "minimum": 377.0,
+          "p25": 381.0,
+          "median": 389.0,
+          "mean": 389.7816,
+          "p75": 397.5,
+          "maximum": 417.0
+        },
+        "final_retest": {
+          "n": 87,
+          "minimum": 73.07,
+          "p25": 78.135,
+          "median": 79.65,
+          "mean": 80.1963,
+          "p75": 81.745,
+          "maximum": 91.53
+        },
+        "final_total": {
+          "n": 87,
+          "minimum": 76.38,
+          "p25": 77.21,
+          "median": 78.29,
+          "mean": 78.629,
+          "p75": 79.59,
+          "maximum": 85.84
+        },
+        "final_pages": [
+          93,
+          94,
+          95,
+          96
+        ],
+        "roster_count": 103,
+        "roster_minimum": 376,
+        "college_proposed_count": 85,
+        "roster_matched_final_count": 87,
+        "college_result_matched_final_count": 87,
+        "added_after_college_count": 2,
+        "added_after_college_status_counts": {
+          "候补2": 1,
+          "候补1": 1
+        },
+        "initial_band_counts": {
+          "300-319": 0,
+          "320-339": 0,
+          "340-359": 0,
+          "360-379": 15,
+          "380-399": 57,
+          "400-419": 15,
+          "420-439": 0
+        },
+        "spring_plan": {
+          "year": 2026,
+          "date": "2026-03-27",
+          "count": 85,
+          "mode": "全日制",
+          "excludes": [
+            "推免生",
+            "少干计划招生数",
+            "退役军人立功表彰免试生招生数"
+          ],
+          "includes_cultivation_notes": {
+            "provincial_joint_training": 5,
+            "tumor_hospital": 4
+          },
+          "note_blank_means_unknown": false,
+          "unallocated_pure_main_campus_count": null,
+          "source_url": "https://ccds.fzu.edu.cn/__local/A/81/D0/24F0D9BE8AAA0AE44702942F9BB_0E8D9576_39514.pdf",
+          "page": 1,
+          "status": "stage_plan_not_final_admission"
+        },
+        "policy_retest_line": {
+          "value": null,
+          "status": "not_verified",
+          "source_says": "在2026国家A线基础上结合招生计划确定名单，未单列项目政策总分线",
+          "observed_roster_minimum_not_policy_line": 376
+        },
+        "cultivation_cost": {
+          "year": 2026,
+          "annual_tuition_cny": 8000,
+          "standard_years": 3,
+          "computed_total_tuition_cny": 24000,
+          "includes_accommodation_living": false,
+          "tuition_source": "https://yjsy.fzu.edu.cn/info/1071/5811.htm",
+          "tuition_section": "二（二）学费标准",
+          "duration_source": "2026全日制目录 A99:D101 + 校级结果目标每行学制3",
+          "cultivation_location": "复试在旗山校区；培养地点/医院或省内联培安排未逐项闭合",
+          "joint_contract_extra_fees": null,
+          "2027_cost": null
+        }
+      },
+      {
+        "code": "085405",
+        "final_initial": {
+          "n": 28,
+          "minimum": 359.0,
+          "p25": 367.0,
+          "median": 376.0,
+          "mean": 377.25,
+          "p75": 383.0,
+          "maximum": 416.0
+        },
+        "final_retest": {
+          "n": 28,
+          "minimum": 74.4,
+          "p25": 77.74,
+          "median": 79.53,
+          "mean": 79.9089,
+          "p75": 81.16,
+          "maximum": 86.9
+        },
+        "final_total": {
+          "n": 28,
+          "minimum": 74.3,
+          "p25": 74.835,
+          "median": 76.63,
+          "mean": 76.7882,
+          "p75": 77.7075,
+          "maximum": 83.84
+        },
+        "final_pages": [
+          96,
+          97
+        ],
+        "roster_count": 34,
+        "roster_minimum": 359,
+        "college_proposed_count": 28,
+        "roster_matched_final_count": 28,
+        "college_result_matched_final_count": 28,
+        "added_after_college_count": 0,
+        "added_after_college_status_counts": {},
+        "initial_band_counts": {
+          "300-319": 0,
+          "320-339": 0,
+          "340-359": 1,
+          "360-379": 16,
+          "380-399": 9,
+          "400-419": 2,
+          "420-439": 0
+        },
+        "spring_plan": {
+          "year": 2026,
+          "date": "2026-03-27",
+          "count": 28,
+          "mode": "全日制",
+          "excludes": [
+            "推免生",
+            "少干计划招生数",
+            "退役军人立功表彰免试生招生数"
+          ],
+          "includes_cultivation_notes": {},
+          "note_blank_means_unknown": true,
+          "unallocated_pure_main_campus_count": null,
+          "source_url": "https://ccds.fzu.edu.cn/__local/A/81/D0/24F0D9BE8AAA0AE44702942F9BB_0E8D9576_39514.pdf",
+          "page": 1,
+          "status": "stage_plan_not_final_admission"
+        },
+        "policy_retest_line": {
+          "value": null,
+          "status": "not_verified",
+          "source_says": "在2026国家A线基础上结合招生计划确定名单，未单列项目政策总分线",
+          "observed_roster_minimum_not_policy_line": 359
+        },
+        "cultivation_cost": {
+          "year": 2026,
+          "annual_tuition_cny": 8000,
+          "standard_years": 3,
+          "computed_total_tuition_cny": 24000,
+          "includes_accommodation_living": false,
+          "tuition_source": "https://yjsy.fzu.edu.cn/info/1071/5811.htm",
+          "tuition_section": "二（二）学费标准",
+          "duration_source": "2026全日制目录 A99:D101 + 校级结果目标每行学制3",
+          "cultivation_location": "复试在旗山校区；培养地点/医院或省内联培安排未逐项闭合",
+          "joint_contract_extra_fees": null,
+          "2027_cost": null
+        }
+      },
+      {
+        "code": "085410",
+        "final_initial": {
+          "n": 36,
+          "minimum": 366.0,
+          "p25": 370.0,
+          "median": 379.5,
+          "mean": 380.6667,
+          "p75": 385.0,
+          "maximum": 411.0
+        },
+        "final_retest": {
+          "n": 36,
+          "minimum": 69.4,
+          "p25": 75.85,
+          "median": 78.4,
+          "mean": 78.2058,
+          "p75": 80.1525,
+          "maximum": 85.66
+        },
+        "final_total": {
+          "n": 36,
+          "minimum": 74.28,
+          "p25": 75.105,
+          "median": 76.215,
+          "mean": 76.7553,
+          "p75": 77.78,
+          "maximum": 81.66
+        },
+        "final_pages": [
+          97,
+          98
+        ],
+        "roster_count": 44,
+        "roster_minimum": 366,
+        "college_proposed_count": 36,
+        "roster_matched_final_count": 36,
+        "college_result_matched_final_count": 36,
+        "added_after_college_count": 0,
+        "added_after_college_status_counts": {},
+        "initial_band_counts": {
+          "300-319": 0,
+          "320-339": 0,
+          "340-359": 0,
+          "360-379": 18,
+          "380-399": 14,
+          "400-419": 4,
+          "420-439": 0
+        },
+        "spring_plan": {
+          "year": 2026,
+          "date": "2026-03-27",
+          "count": 36,
+          "mode": "全日制",
+          "excludes": [
+            "推免生",
+            "少干计划招生数",
+            "退役军人立功表彰免试生招生数"
+          ],
+          "includes_cultivation_notes": {
+            "provincial_joint_training": 2,
+            "tumor_hospital": 6
+          },
+          "note_blank_means_unknown": false,
+          "unallocated_pure_main_campus_count": null,
+          "source_url": "https://ccds.fzu.edu.cn/__local/A/81/D0/24F0D9BE8AAA0AE44702942F9BB_0E8D9576_39514.pdf",
+          "page": 1,
+          "status": "stage_plan_not_final_admission"
+        },
+        "policy_retest_line": {
+          "value": null,
+          "status": "not_verified",
+          "source_says": "在2026国家A线基础上结合招生计划确定名单，未单列项目政策总分线",
+          "observed_roster_minimum_not_policy_line": 366
+        },
+        "cultivation_cost": {
+          "year": 2026,
+          "annual_tuition_cny": 8000,
+          "standard_years": 3,
+          "computed_total_tuition_cny": 24000,
+          "includes_accommodation_living": false,
+          "tuition_source": "https://yjsy.fzu.edu.cn/info/1071/5811.htm",
+          "tuition_section": "二（二）学费标准",
+          "duration_source": "2026全日制目录 A99:D101 + 校级结果目标每行学制3",
+          "cultivation_location": "复试在旗山校区；培养地点/医院或省内联培安排未逐项闭合",
+          "joint_contract_extra_fees": null,
+          "2027_cost": null
+        }
+      }
+    ],
+    "quality": {
+      "final_target_rows": 152,
+      "final_unique_ids": 152,
+      "roster_rows": 182,
+      "roster_unique_ids": 182,
+      "college_result_rows": 178,
+      "college_result_unique_ids": 178,
+      "final_rows_missing_roster": 0,
+      "initial_disagreement_final_roster": 0,
+      "initial_disagreement_final_college": 0,
+      "max_formula_error": 0.005000000000009663,
+      "roster_without_college_result_by_code": {
+        "085404": 3,
+        "085410": 1
+      },
+      "final_special_count": 1,
+      "pdfplumber_independent_check": {
+        "rows": 152,
+        "unique_ids": 152,
+        "disagreement_count": 0,
+        "all_ids_equal": true
+      }
+    },
+    "sources": [
+      {
+        "file": "fzu-plan.pdf",
+        "sha256": "31e07c1fe30da1b39636d6b5e2bab32c9ac01bd5f2482597904851f1258eee46",
+        "date": "2026-03-27",
+        "parent_url": "https://ccds.fzu.edu.cn/info/1138/11673.htm",
+        "direct_url": "https://ccds.fzu.edu.cn/__local/A/81/D0/24F0D9BE8AAA0AE44702942F9BB_0E8D9576_39514.pdf"
+      },
+      {
+        "file": "fzu-roster.pdf",
+        "sha256": "9fd381ce8d4657a40c611f1166965bdc2c61a7fc2aea783406066ceed969411d",
+        "date": "2026-03-27",
+        "parent_url": "https://ccds.fzu.edu.cn/info/1138/11675.htm",
+        "direct_url": "https://ccds.fzu.edu.cn/__local/9/1A/85/DF87DB29705F6E74FA13A61F80B_50EA5130_14A1F.pdf"
+      },
+      {
+        "file": "fzu2026-prof-result.pdf",
+        "sha256": "76bf802afdefe37807a244e3b0f0f8f9d2984364c5e225e867a388c4219143b5",
+        "date": "2026-04-03",
+        "parent_url": "https://ccds.fzu.edu.cn/info/1138/11688.htm",
+        "direct_url": "https://ccds.fzu.edu.cn/__local/5/A0/A4/0783BF4570F22A0C4C42A8838C8_A0BA991B_1D1DE.pdf"
+      },
+      {
+        "file": "fzu-final.pdf",
+        "sha256": "4aa0696fd140a8ad8db2f423acfd51029195c6b7cdb0359a8a6a3ed7ce6af506",
+        "date": "2026-05-13",
+        "parent_url": "https://yjsy.fzu.edu.cn/info/1077/5901.htm",
+        "direct_url": "https://yjsy.fzu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1744984943&wbfileid=18265061"
+      }
+    ],
+    "2026_subjects": {
+      "school_code": "10386",
+      "college_code": "010",
+      "codes": [
+        "101",
+        "204",
+        "302",
+        "408"
+      ],
+      "names": [
+        "思想政治理论",
+        "英语（二）",
+        "数学（二）",
+        "计算机学科专业基础"
+      ],
+      "mode": "全日制",
+      "years": 3,
+      "catalog_file": "fzu2026-fulltime.xlsx",
+      "sheet": "全日制",
+      "range": "A99:D101",
+      "catalog_parent_url": "https://yjsy.fzu.edu.cn/info/1071/5811.htm",
+      "download_url": "https://yjsy.fzu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1744984943&wbfileid=16724742",
+      "CS_direction03_excluded_from_personal_scope": true,
+      "scores_not_separated_by_direction": true
+    },
+    "2025_official_counts": {
+      "source": "https://yjsy.fzu.edu.cn/info/1071/5811.htm",
+      "download": "https://yjsy.fzu.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1744984943&wbfileid=16722562",
+      "sheet": "福州大学2025年硕士研究生招生分专业数据统计",
+      "range": "A91:J93",
+      "columns": [
+        "code",
+        "applications",
+        "recommended_exempt",
+        "first_choice_admitted",
+        "transfer_admitted",
+        "total_admitted"
+      ],
+      "rows": [
+        [
+          "085404",
+          735,
+          31,
+          135,
+          0,
+          166
+        ],
+        [
+          "085405",
+          264,
+          6,
+          37,
+          0,
+          43
+        ],
+        [
+          "085410",
+          384,
+          7,
+          51,
+          0,
+          58
+        ]
+      ],
+      "limit": "原表未拆专项和方向，一志愿人数不等于普通净额；2025报考不得除2026录取"
+    },
+    "visual_verification": {
+      "plan_pages": [
+        1,
+        2
+      ],
+      "school_result_pages": [
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "status": "inspected rendered pages; table headings, mode/category, grades and specialty note checked",
+      "workbooks": "native cell values and headers read; no native spreadsheet visual rendering claimed"
+    },
+    "2027_refresh": {
+      "date": "2026-09-13",
+      "FZU": "Current school master prospectus list + department notices/jwgs newest/previous + official 2026 catalog read; no 2027 complete catalog obtained. Fresh 2027 department notices are undergraduate recommendation work, not intake plans. Existing H2 other departments excluded as prior work, not reclassified.",
+      "HUNNU": "2026-09-05 2027 recommendation prospectus cites 2026 catalog pending final2027. H2 change announcement table actually read; language/education technology rows are not 408. Current 08 professional fee14400/year from 2027 recommendation prospectus; not complete ordinary contract.",
+      "SCNU": "Dynamic master catalog HTML year options currently2026/2025/2024. Home and 2027 recommendation notice latest status checked via public web; no complete2027 041 catalog obtained.",
+      "ZUEL": "School and department home/list ordinary requests produce verification shells; public web search found no new official2027 catalog/partnership fees. Own hidden in-app browser creation returned Browser is not available:iab; no user browser operated. This is access/coverage limited, not proof of no publication."
+    },
+    "retest_2026": {
+      "source_url": "https://ccds.fzu.edu.cn/__local/A/81/D0/24F0D9BE8AAA0AE44702942F9BB_0E8D9576_39514.pdf",
+      "pages": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "initial_weight": 0.7,
+      "retest_weight": 0.3,
+      "formula": "initial / 5 * 0.70 + retest_100 * 0.30",
+      "retest_components": {
+        "programming_machine_test": 40,
+        "english": 20,
+        "comprehensive": 40
+      },
+      "machine_test_minutes": 120,
+      "content": [
+        "基本程序设计",
+        "模拟",
+        "枚举",
+        "递归",
+        "贪心",
+        "计算思维实际运用"
+      ],
+      "allowed_languages": null,
+      "language_status": "未取得附件机试须知，C语言参考书不等于明确语言规范",
+      "machine_test_separate_hard_line": null,
+      "retest_total_fail_below": 60,
+      "other_disqualifications": [
+        "思想品德考核不合格",
+        "体检不合格或未按时提交报告",
+        "国家录检未通过"
+      ],
+      "tie_breaking": [
+        "初试总分",
+        "业务科一+二",
+        "机试成绩",
+        "机试累计首达最高分耗时",
+        "学院领导小组综合审议"
+      ]
+    },
+    "HUNNU_current_tuition_signal": {
+      "source": "https://yjsy.hunnu.edu.cn/info/1027/16309.htm",
+      "source_date": "2026-09-05",
+      "source_scope": "2027招收推荐免试攻读研究生简章",
+      "section": "四、学费及奖助体系",
+      "policy": "湘发改价费[2026]205号",
+      "scope": "全日制工学类08专业学位硕士现行学费",
+      "annual_cny": 14400,
+      "duration": null,
+      "total_cny": null,
+      "limitation": "不确认2027普通统考目标项目目录、四科、人数、学制、联培合同；文中遇新文件按新规定"
+    }
+  },
+  "ahu": {
+    "trace_id": "59352e74-ba8e-4b9f-be15-58bd9c7609b6",
+    "school": "安徽大学",
+    "tier": "211（非985）",
+    "read_only_repository": true,
+    "parent_recovered_sources": [
+      {
+        "phase": "initial",
+        "file": "initial-plan.pdf",
+        "url": "https://graschool.ahu.edu.cn/_upload/article/files/7d/87/103892874fdb8c53a2b4c65ee1fb/d9749353-65e8-4618-a797-7d4ac0589a3d.pdf",
+        "bytes": 91554,
+        "sha256": "a25260ffcdff9a874cc356d9fd72d2d5ada662eb3e47035c8cc5718b4ff1b4ab",
+        "root_download_trace_id": "bf825353-a822-45f7-9cb4-ebd6caacf5bc",
+        "pages_audited_1_based": [
+          7,
+          8
+        ]
+      },
+      {
+        "phase": "adjusted",
+        "file": "adjusted-plan.pdf",
+        "url": "https://graschool.ahu.edu.cn/_upload/article/files/71/eb/10c2bd9d4ec99cb0ee15b6a21c66/eda69d80-6764-4fdd-884b-6935e0be04cf.pdf",
+        "bytes": 89290,
+        "sha256": "7deb0aff939a808677cf7c22c14da2772fd93ed5e13abf6d4f42467d278012af",
+        "root_download_trace_id": "9ad4206c-4606-4cea-955a-c9462b57d114",
+        "pages_audited_1_based": [
+          7,
+          8
+        ]
+      }
+    ],
+    "independent_checks": {
+      "pypdf_text": true,
+      "pdfplumber_cell_extraction": true,
+      "visual_initial_pages": [
+        7,
+        8
+      ],
+      "visual_adjusted_target_rows_pages": [
+        7,
+        8
+      ],
+      "all_six_target_row_sums_match": true,
+      "all_three_target_totals_match": true
+    },
+    "subject_binding_evidence": {
+      "path": "tmp\\408-next-mechanism-wave\\agent-211-browser-observations.md",
+      "section": "关键正文第3条",
+      "original_url": "https://graschool.ahu.edu.cn/2025/0925/c9539a374743/page.htm",
+      "published_date": "2025-09-25",
+      "original_reading_date": "2026-09-05",
+      "reading_trace_id": "7480b49d-070f-4575-bc94-e9abde621506",
+      "evidence_type": "official_page_browser_observation_not_original_http_bytes",
+      "local_record_sha256_not_official_original_hash": "4eb6b5fd6e2d86016d847f724e28bdd01f320b8d6e4df385664c6d79ff0e73ae",
+      "same_year_same_college_same_program_match": true,
+      "note": "Existing catalog HTML in tmp/pdfs/anhui_hfut is truncated before internet/data college blocks; complete prior browser observation supplies these bindings. It is not represented as fresh original bytes."
+    },
+    "programs": [
+      {
+        "college_code": "024",
+        "program_code": "085410",
+        "college": "物质科学与信息技术研究院",
+        "program": "人工智能",
+        "year": 2026,
+        "mode": "全日制",
+        "autumn_2025_for_2026_tentative_total_including_recommendations": 34,
+        "initial": {
+          "pdf_page": 7,
+          "raw_cells": {
+            "total": "43",
+            "public_exam": "43",
+            "recommendation": "",
+            "second_class_merit_recommendation": "",
+            "veteran_special": ""
+          },
+          "numeric_cells": {
+            "total": 43,
+            "public_exam": 43,
+            "recommendation": null,
+            "second_class_merit_recommendation": null,
+            "veteran_special": null
+          },
+          "blank_cells_not_upgraded_to_explicit_zero": true,
+          "second_class_merit_column_exists": true,
+          "remark": "含卓工专项7人（与合肥综合性科学中心环境研究院联合培养7人）",
+          "row_arithmetic_matches": true,
+          "row_arithmetic": "43=43"
+        },
+        "adjusted": {
+          "pdf_page": 7,
+          "raw_cells": {
+            "total": "43",
+            "public_exam": "43",
+            "recommendation": "",
+            "second_class_merit_recommendation": null,
+            "veteran_special": ""
+          },
+          "numeric_cells": {
+            "total": 43,
+            "public_exam": 43,
+            "recommendation": null,
+            "second_class_merit_recommendation": null,
+            "veteran_special": null
+          },
+          "blank_cells_not_upgraded_to_explicit_zero": true,
+          "second_class_merit_column_exists": false,
+          "remark": "含卓工专项7人（与合肥综合性科学中心环境研究院联合培养7人）",
+          "row_arithmetic_matches": true,
+          "row_arithmetic": "43=43"
+        },
+        "public_exam_change_same_year": 0,
+        "total_change_same_year": 0,
+        "subjects": {
+          "year": 2026,
+          "codes": [
+            "101",
+            "201",
+            "301",
+            "408"
+          ],
+          "names": [
+            "思想政治理论",
+            "英语（一）",
+            "数学（一）",
+            "计算机学科专业基础"
+          ],
+          "nominal_years": 3,
+          "retest_code": "F67",
+          "retest_name": "计算机专业综合（数据库原理、高级语言程序设计）",
+          "evidence": "existing_official_browser_reading_record_rechecked",
+          "fresh_catalog_original_bytes_recovered": false
+        }
+      },
+      {
+        "college_code": "025",
+        "program_code": "085410",
+        "college": "互联网学院",
+        "program": "人工智能",
+        "year": 2026,
+        "mode": "全日制",
+        "autumn_2025_for_2026_tentative_total_including_recommendations": 109,
+        "initial": {
+          "pdf_page": 7,
+          "raw_cells": {
+            "total": "129",
+            "public_exam": "122",
+            "recommendation": "6",
+            "second_class_merit_recommendation": "1",
+            "veteran_special": ""
+          },
+          "numeric_cells": {
+            "total": 129,
+            "public_exam": 122,
+            "recommendation": 6,
+            "second_class_merit_recommendation": 1,
+            "veteran_special": null
+          },
+          "blank_cells_not_upgraded_to_explicit_zero": true,
+          "second_class_merit_column_exists": true,
+          "remark": "含安徽高研院专项5人，含卓工专项2人（与中科合肥技术创新工程院联合培养2人）",
+          "row_arithmetic_matches": true,
+          "row_arithmetic": "129=122+6+1"
+        },
+        "adjusted": {
+          "pdf_page": 7,
+          "raw_cells": {
+            "total": "129",
+            "public_exam": "123",
+            "recommendation": "6",
+            "second_class_merit_recommendation": null,
+            "veteran_special": ""
+          },
+          "numeric_cells": {
+            "total": 129,
+            "public_exam": 123,
+            "recommendation": 6,
+            "second_class_merit_recommendation": null,
+            "veteran_special": null
+          },
+          "blank_cells_not_upgraded_to_explicit_zero": true,
+          "second_class_merit_column_exists": false,
+          "remark": "含安徽高研院专项5人，含卓工专项2人（与中科合肥技术创新工程院联合培养2人）",
+          "row_arithmetic_matches": true,
+          "row_arithmetic": "129=123+6"
+        },
+        "public_exam_change_same_year": 1,
+        "total_change_same_year": 0,
+        "subjects": {
+          "year": 2026,
+          "codes": [
+            "101",
+            "201",
+            "301",
+            "408"
+          ],
+          "names": [
+            "思想政治理论",
+            "英语（一）",
+            "数学（一）",
+            "计算机学科专业基础"
+          ],
+          "nominal_years": 3,
+          "retest_code": "F67",
+          "retest_name": "计算机专业综合（数据库原理、高级语言程序设计）",
+          "evidence": "existing_official_browser_reading_record_rechecked",
+          "fresh_catalog_original_bytes_recovered": false
+        }
+      },
+      {
+        "college_code": "031",
+        "program_code": "085411",
+        "college": "大数据与统计学院",
+        "program": "大数据技术与工程",
+        "year": 2026,
+        "mode": "全日制",
+        "autumn_2025_for_2026_tentative_total_including_recommendations": 10,
+        "initial": {
+          "pdf_page": 8,
+          "raw_cells": {
+            "total": "23",
+            "public_exam": "20",
+            "recommendation": "2",
+            "second_class_merit_recommendation": "1",
+            "veteran_special": ""
+          },
+          "numeric_cells": {
+            "total": 23,
+            "public_exam": 20,
+            "recommendation": 2,
+            "second_class_merit_recommendation": 1,
+            "veteran_special": null
+          },
+          "blank_cells_not_upgraded_to_explicit_zero": true,
+          "second_class_merit_column_exists": true,
+          "remark": "含安徽高研院专项9人",
+          "row_arithmetic_matches": true,
+          "row_arithmetic": "23=20+2+1"
+        },
+        "adjusted": {
+          "pdf_page": 8,
+          "raw_cells": {
+            "total": "38",
+            "public_exam": "36",
+            "recommendation": "2",
+            "second_class_merit_recommendation": null,
+            "veteran_special": ""
+          },
+          "numeric_cells": {
+            "total": 38,
+            "public_exam": 36,
+            "recommendation": 2,
+            "second_class_merit_recommendation": null,
+            "veteran_special": null
+          },
+          "blank_cells_not_upgraded_to_explicit_zero": true,
+          "second_class_merit_column_exists": false,
+          "remark": "含安徽高研院专项9人",
+          "row_arithmetic_matches": true,
+          "row_arithmetic": "38=36+2"
+        },
+        "public_exam_change_same_year": 16,
+        "total_change_same_year": 15,
+        "subjects": {
+          "year": 2026,
+          "codes": [
+            "101",
+            "201",
+            "301",
+            "408"
+          ],
+          "names": [
+            "思想政治理论",
+            "英语（一）",
+            "数学（一）",
+            "计算机学科专业基础"
+          ],
+          "nominal_years": 3,
+          "retest_code": "F67",
+          "retest_name": "计算机专业综合（数据库原理、高级语言程序设计）",
+          "evidence": "existing_official_browser_reading_record_rechecked",
+          "fresh_catalog_original_bytes_recovered": false
+        }
+      }
+    ],
+    "interpretation_limits": [
+      "公开招考 is reported official category; includes noted institutional training special routes and is not pure on-campus non-joint-training capacity",
+      "Do not equate 二等功推免 with 退役大学生专项",
+      "Adjusted document removes second-class-merit-recommendation column; do not invent individual withdrawal/reclassification cause from aggregate change",
+      "Same admission year 2026 spring initial to spring adjusted; no cross-year expansion claim",
+      "Earlier autumn 2025 values34/109/10 for2026 include recommendations and remain separate stage",
+      "No recovered application counts or final admissions/outcome means no claim low demand or predicted safe score",
+      "026人工智能学院085410 was out of requested subject revalidation scope; no new subject eligibility claim",
+      "Current2026 evidence does not confirm2027 subjects or classify2026H2 new408"
+    ],
+    "supersedes_previous_pending_retrieval_only": {
+      "audit_file": "audit.json",
+      "pending_initial_plan": false,
+      "pending_adjusted_plan": false,
+      "july2027_adjustment_conclusion_unchanged": true
+    },
+    "privacy": "Aggregate plan counts only; no student identifiers or personal names"
+  },
+  "northwest_handoff": {
+    "trace_id": "d574f032-694f-4d66-a86f-a46fa5fa3c3b",
+    "checked_on": "2026-09-13",
+    "data_policy": "Aggregate figures only; no names, candidate IDs or person-level records",
+    "schools": [
+      {
+        "scope": {
+          "school": "石河子大学",
+          "tier": "211 non985",
+          "year": 2026,
+          "college": "信息科学与技术学院",
+          "code": "085400",
+          "program": "电子信息",
+          "mode": "全日制",
+          "admission_category": "普通计划",
+          "direction": "不区分研究方向",
+          "college_code": "008",
+          "subjects": [
+            {
+              "code": "101",
+              "name": "思想政治理论"
+            },
+            {
+              "code": "204",
+              "name": "英语（二）"
+            },
+            {
+              "code": "302",
+              "name": "数学（二）"
+            },
+            {
+              "code": "408",
+              "name": "计算机学科专业基础"
+            }
+          ]
+        },
+        "initial_publication": {
+          "date": "2026-03-30",
+          "pdf_rows_total": 94,
+          "rows_with_retest_score": 91,
+          "withdrew_before_retest": 3,
+          "proposed_admitted_n": 61,
+          "not_admitted_by_rank": 27,
+          "retest_below_120": 3,
+          "initial_stats": {
+            "n": 61,
+            "minimum": 268.0,
+            "p25": 291.0,
+            "median": 304.0,
+            "mean": 304.8688524590164,
+            "p75": 316.0,
+            "maximum": 380.0
+          },
+          "initial_below_300": 27,
+          "initial_below_315": 45,
+          "initial_histogram": [
+            {
+              "lo": 260,
+              "hi": 279,
+              "count": 10
+            },
+            {
+              "lo": 280,
+              "hi": 299,
+              "count": 17
+            },
+            {
+              "lo": 300,
+              "hi": 319,
+              "count": 21
+            },
+            {
+              "lo": 320,
+              "hi": 339,
+              "count": 7
+            },
+            {
+              "lo": 340,
+              "hi": 359,
+              "count": 5
+            },
+            {
+              "lo": 360,
+              "hi": 379,
+              "count": 0
+            },
+            {
+              "lo": 380,
+              "hi": 399,
+              "count": 1
+            }
+          ],
+          "admitted_subject_stats": {
+            "politics": {
+              "n": 61,
+              "minimum": 49.0,
+              "p25": 56.0,
+              "median": 59.0,
+              "mean": 58.295081967213115,
+              "p75": 62.0,
+              "maximum": 67.0
+            },
+            "english": {
+              "n": 61,
+              "minimum": 43.0,
+              "p25": 60.0,
+              "median": 65.0,
+              "mean": 65.65573770491804,
+              "p75": 74.0,
+              "maximum": 82.0
+            },
+            "math": {
+              "n": 61,
+              "minimum": 70.0,
+              "p25": 92.0,
+              "median": 103.0,
+              "mean": 101.54098360655738,
+              "p75": 112.0,
+              "maximum": 144.0
+            },
+            "business2": {
+              "n": 61,
+              "minimum": 56.0,
+              "p25": 73.0,
+              "median": 79.0,
+              "mean": 79.37704918032787,
+              "p75": 85.0,
+              "maximum": 101.0
+            }
+          },
+          "admitted_retest_stats": {
+            "n": 61,
+            "minimum": 132.43,
+            "p25": 146.86,
+            "median": 154.71,
+            "mean": 154.98852459016393,
+            "p75": 161.43,
+            "maximum": 176.86
+          },
+          "all_scored_retest_initial_stats": {
+            "n": 91,
+            "minimum": 268.0,
+            "p25": 275.5,
+            "median": 294.0,
+            "mean": 296.3626373626374,
+            "p75": 311.0,
+            "maximum": 380.0
+          }
+        },
+        "supplement": {
+          "date": "2026-04-17",
+          "n": 1,
+          "initial_total": 269,
+          "retest_total": 155.57,
+          "overall_score": 63.39,
+          "original_rank": 62,
+          "originally_listed_as_not_admitted_by_rank": true,
+          "source_does_not_identify_removed_person": true
+        },
+        "final_population": {
+          "verified_n": null,
+          "verified_distribution": null,
+          "cumulative_people_with_proposed_admit_announcement": 62,
+          "cumulative_people_is_final_net_count": false,
+          "reason": "Initial 61 + one supplementary admission; no official withdrawal or final list recovered. Do not infer unchanged 61 or final 62."
+        },
+        "checks": {
+          "source_ids_duplicate_within_each_pdf": false,
+          "subject_total_all_rows_match": true,
+          "overall_formula_all_scored_match": true,
+          "private_supplement_to_initial_match": true,
+          "visual_pages_checked": {
+            "shzu-admit": [
+              1,
+              2,
+              3
+            ],
+            "shzu-replace": [
+              1
+            ]
+          }
+        },
+        "catalog": {
+          "year": 2026,
+          "physical_page": 7,
+          "raw_plan": 58,
+          "plan_definition": "catalog plan, not independently identified as ordinary net admission",
+          "mode": "全日制",
+          "sha256": "4f3e0a7605b6f8b471bbe039dad6a3bdd3cd07240150a473f265123090243010",
+          "visual_checked": true,
+          "subjects_verified_this_pass": true
+        },
+        "school": "石河子大学",
+        "tier": "211（非985）",
+        "retest_cost": {
+          "year": 2026,
+          "method": "线下",
+          "professional_test": "C语言程序设计笔试",
+          "professional_max": 100,
+          "professional_minutes": 120,
+          "foreign_listening_max": 20,
+          "foreign_speaking_max": 30,
+          "comprehensive_max": 50,
+          "retest_max": 200,
+          "retest_minimum": 120,
+          "formula": "(initial / 5) * 0.60 + (retest / 2) * 0.40",
+          "extra_test_minutes_each": 180,
+          "cross_discipline_extra_test": "determined by undergraduate major; not assumed exempt",
+          "fulltime_general_transfer_need_proved_by_rule": false
+        },
+        "2027": {
+          "adjustment_date": "2026-06-16",
+          "date_basis": "document signature; no separate original first-upload timestamp proved this pass",
+          "source": "https://yz.shzu.edu.cn/2026/0616/c6938a233397/page.htm",
+          "entire_adjustment_table_read": true,
+          "target_408_change_found": false,
+          "exact_catalog_status": "pending_exact_catalog"
+        }
+      },
+      {
+        "school": "陕西师范大学",
+        "tier": "211（非985）",
+        "year": 2026,
+        "college_code": "020",
+        "college": "人工智能与计算机学院",
+        "ordinary_plan_evidence_parent": "https://yz.snnu.edu.cn/info/1008/7951.htm",
+        "ordinary_plan_pdf": "https://yz.snnu.edu.cn/ss26-020.pdf",
+        "ordinary_plan_pdf_sha256": "2af65d69d0a87af3cde453ae6f1dace9dd2c50a723eebe20037bfc890aeda08a",
+        "publication_date": "2026-03-17",
+        "physical_page": 1,
+        "visual_checked": true,
+        "projects": [
+          {
+            "code": "085404",
+            "name": "计算机技术",
+            "mode": "全日制",
+            "plan": 18,
+            "plan_population": "ordinary-applicant section of official cutoff notice",
+            "line_total": 264,
+            "single_100": 35,
+            "single_over_100": 53,
+            "subjects": null,
+            "subjects_status": "pending_exact_catalog; same-year full-time professional catalog requires CAPTCHA",
+            "actual_final_admitted_n": null
+          },
+          {
+            "code": "085405",
+            "name": "软件工程",
+            "mode": "全日制",
+            "plan": 8,
+            "plan_population": "ordinary-applicant section of official cutoff notice",
+            "line_total": 264,
+            "single_100": 35,
+            "single_over_100": 53,
+            "subjects": null,
+            "subjects_status": "pending_exact_catalog; same-year full-time professional catalog requires CAPTCHA",
+            "actual_final_admitted_n": null
+          },
+          {
+            "code": "085410",
+            "name": "人工智能",
+            "mode": "全日制",
+            "plan": 6,
+            "plan_population": "ordinary-applicant section of official cutoff notice",
+            "line_total": 264,
+            "single_100": 35,
+            "single_over_100": 53,
+            "subjects": null,
+            "subjects_status": "pending_exact_catalog; same-year full-time professional catalog requires CAPTCHA",
+            "actual_final_admitted_n": null
+          },
+          {
+            "code": "085411",
+            "name": "大数据技术与工程",
+            "mode": "全日制",
+            "plan": 11,
+            "plan_population": "ordinary-applicant section of official cutoff notice",
+            "line_total": 264,
+            "single_100": 35,
+            "single_over_100": 53,
+            "subjects": null,
+            "subjects_status": "pending_exact_catalog; same-year full-time professional catalog requires CAPTCHA",
+            "actual_final_admitted_n": null
+          }
+        ],
+        "retest_method_official_link_status": 404,
+        "retest_method_official_link": "https://ccs.snnu.edu.cn/info/1061/86031.htm",
+        "2027": {
+          "adjustment_parent_date": "2026-06-17",
+          "adjustment_parent_url": "https://yz.snnu.edu.cn/info/1008/8181.htm",
+          "rolling_updated_parent": true,
+          "target_change_current_body": "045114 408 to 812; education master outside target",
+          "new_h2_target_408_found": false,
+          "exact_catalog_status": "pending_exact_catalog"
+        }
+      },
+      {
+        "school": "西北大学",
+        "tier": "211（非985）",
+        "2027": {
+          "page_date": "2026-09-05",
+          "page_url": "https://yjs.nwu.edu.cn/info/1104/5630.htm",
+          "attachment_url": "https://yjs.nwu.edu.cn/xibeidaxue2027nianquanguoshuoshiyanjiushengzhaoshengkaoshichushikemujicankaoshumubiangenggonggao.xls",
+          "attachment_sha256": "434c41b0708d034c2fa6e7d286dcfe87daf2d6f0f7e239068b304e689f97cef9",
+          "sheet_count": 1,
+          "sheet_name": "Sheet1",
+          "rows_including_title_header": 12,
+          "change_record_count": 10,
+          "all_cells_read": true,
+          "visual_render_done": false,
+          "affected_college_codes": [
+            "002",
+            "003",
+            "004",
+            "007",
+            "034"
+          ],
+          "408_present": false,
+          "target_041_042_change_present": false,
+          "exact_catalog_status": "pending_exact_catalog"
+        },
+        "historical_note": "2026 two-college fulltime 085405 was already 101+201+301+408 per current README; not a new 2027 408 change"
+      },
+      {
+        "school": "青海大学",
+        "tier": "211（非985）",
+        "read_current_official_pages": [
+          "https://yjs.qhu.edu.cn/zsgz/xlsszs/index.htm",
+          "https://cs.qhu.edu.cn/",
+          "https://cs.qhu.edu.cn/rcpy/ssyjs/index.htm"
+        ],
+        "increment": "No new target-specific claim beyond README; 9/10 non-target notice deliberately not repeated",
+        "2027": {
+          "new_h2_target_408_found": false,
+          "exact_catalog_status": "pending_exact_catalog"
+        },
+        "scope_note": "Current list and college pages, not a universal negative or claim of exhaustive searching"
+      }
+    ]
+  },
+  "status_policy": "No new official_confirmed / strict_match or red school status created. Existing 2026 qualifications preserved; new 2027 four-code evidence still pending.",
+  "validation": {
+    "trace_id": "a5c86a8e-e81a-4119-bff8-a45ec8b5de6b",
+    "full_unittest": {
+      "passed": 158,
+      "seconds": 65.228
+    },
+    "reader_node_tests": {
+      "passed": 6
+    },
+    "doctor": "ok",
+    "independent_content_reviews": [
+      "Fuzhou passed",
+      "Anhui passed",
+      "Shihezi/Shaanxi Normal/Northwest passed after announcement-year clarification"
+    ],
+    "browser_visual": "Own hidden IAB: Fuzhou one-school view, annual subjects adjacent to scores; not every table or mobile layout re-inspected",
+    "source_sha256": "a374a66ff9114fced4aa6d351b7fd870606dc5848c151f92aab5cf90d296519e",
+    "site_schools": 104,
+    "site_tables": 580,
+    "red_schools": 4
+  }
+}
