@@ -63,6 +63,16 @@ def render(source: str) -> tuple[str, dict]:
         wrapped.append(f'<section id="panel-{key}" class="reader-panel" data-panel="{key}" data-title="{html.escape(panel["title"], quote=True)}"{hidden}>\n\n{panel["source"]}\n\n</section>\n\n')
     md = MarkdownIt('commonmark', {'html': True}).enable('table')
     tokens = md.parse(''.join(wrapped))
+    # TraceId: d36580a9-e711-47ec-9786-53ec83803d21
+    # Keep long exam notes legible without changing any source cell or its order.
+    table_start = None
+    for i, token in enumerate(tokens):
+        if token.type == 'table_open': table_start = i
+        elif token.type == 'thead_close' and table_start is not None:
+            headers = [item.content for item in tokens[table_start:i] if item.type == 'inline']
+            if len(headers) > 1 and headers[1] == '当年初试科目与证据':
+                tokens[table_start].attrSet('class', 'exam-subjects')
+        elif token.type == 'table_close': table_start = None
     used = set(re.findall(r'<a id="([^"]+)"', source)) | {f'panel-{panel["key"]}' for panel in panels}
     for i, token in enumerate(tokens):
         if token.type != 'heading_open':
@@ -75,9 +85,9 @@ def render(source: str) -> tuple[str, dict]:
             slug = f'{base}-{number}'; number += 1
         used.add(slug); token.attrSet('id', slug)
     body = md.renderer.render(tokens, md.options, {})
-    body = re.sub(r'(<table>.*?</table>)', r'<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的数据表">\1</div>', body, flags=re.S)
+    body = re.sub(r'(<table(?:\s[^>]*)?>.*?</table>)', r'<div class="table-scroll" tabindex="0" role="region" aria-label="可横向滚动的数据表">\1</div>', body, flags=re.S)
     schools = [panel for panel in panels if panel['tier']]
-    if not schools or not body.count('<table>'):
+    if not schools or not body.count('<table'):
         raise ValueError('完整正文或学校导航未生成，构建已停止。')
     source_sha = hashlib.sha256(source.encode('utf-8')).hexdigest()
     navigation = []
@@ -93,7 +103,7 @@ def render(source: str) -> tuple[str, dict]:
                 'source_encoding': 'UTF-8, LF-normalized',
                 'school_count': len(schools), 'panel_count': len(panels),
                 'late_switch_school_count': sum(school['late'] for school in schools),
-                'table_count': body.count('<table>'),
+                'table_count': body.count('<table'),
                 'foldout_count': body.count('<details>'), 'source_bytes': len(source.encode('utf-8'))}
     return result, metadata
 

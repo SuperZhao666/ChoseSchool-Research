@@ -132,6 +132,7 @@ class WebReaderTests(unittest.TestCase):
     def test_score_rows_show_their_own_year_subjects_not_the_new_408_notice(self):
         # TraceId: 4633df94-71b7-4339-ae57-1ad2dd0576cb
         annotated = [table for table in self.parser.tables if SCORE_SUBJECT_COLUMN in table[0]]
+        self.assertEqual(self.page.count('<table class="exam-subjects">'), len(annotated))
         self.assertGreaterEqual(len(annotated), 194)
         self.assertGreaterEqual(sum(len(table) - 1 for table in annotated), 935)
         expected = {
@@ -172,6 +173,54 @@ class WebReaderTests(unittest.TestCase):
                     annotations.extend(row[0] + ' ' + row[column] for row in table[1:])
             text = '\n'.join(annotations)
             for fragment in fragments: self.assertIn(fragment, text, key)
+
+    def test_total_score_distributions_do_not_depend_on_subjects_in_a_previous_heading(self):
+        # TraceId: d36580a9-e711-47ec-9786-53ec83803d21
+        for table in self.parser.tables:
+            if table[0][0] not in ('成绩项目', '初试字段'):
+                continue
+            if not any(row[0] in ('初试总分', '总分') for row in table[1:]):
+                continue
+            self.assertEqual(table[0][1], SCORE_SUBJECT_COLUMN, table[0])
+            for row in table[1:]:
+                self.assertRegex(row[1], r'20\d{2}', row)
+
+    def test_backtest_rows_show_input_and_target_exams_without_rewriting_scores(self):
+        tables = [table for table in self.parser.tables if table[0][0] == '学校项目/目标年']
+        self.assertEqual(len(tables), 1)
+        table = tables[0]
+        self.assertEqual(len(table) - 1, 27)
+        self.assertEqual(table[0][1], SCORE_SUBJECT_COLUMN)
+        for row in table[1:]:
+            self.assertIn('输入', row[1])
+            self.assertIn('目标', row[1])
+            if row[0] == '西南交通大学 048-085410／2026':
+                self.assertIn('2024、2025', row[1])
+                self.assertIn('840数据结构与程序设计', row[1])
+                self.assertIn('目标2026', row[1])
+                self.assertIn('408计算机学科专业基础', row[1])
+                self.assertEqual(row[4], '340（19）')
+            if row[0] == '北京交通大学 010-085405／2026':
+                self.assertIn('输入2025', row[1])
+                self.assertIn('861软件工程专业基础', row[1])
+                self.assertIn('目标2026', row[1])
+                self.assertIn('408计算机学科专业基础', row[1])
+
+    def test_swu334_annual_lines_use_its_own_restored_catalogues(self):
+        swu = next(p['source'] for p in make_panels(self.source) if p['key'] == 'school-001')
+        parser = ReaderParser()
+        parser.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(swu) + '</main>')
+        annual_lines = [table for table in parser.tables
+                        if SCORE_SUBJECT_COLUMN in table[0] and any(
+                            row[0] == '2023' and row[2] == '318' for row in table[1:])]
+        self.assertEqual(len(annual_lines), 1)
+        for row, (year, code, score) in zip(annual_lines[0][1:], [(2023,'907','318'),(2024,'907','311'),(2025,'891','292'),(2026,'891','307')], strict=True):
+            self.assertEqual(row[0], str(year))
+            self.assertIn(code + '计算机基础与数字电路', row[1])
+            self.assertIn('334独立行', row[1])
+            self.assertEqual(row[2], score)
+        self.assertNotIn('当年完整目录未恢复，不能借321或2027四科', swu)
+        self.assertIn('不能据目录认定每个录取者原试卷', swu)
 
     def test_original_numeric_rows_remain_tables_in_correct_sections(self):
         for group in self.manifest['quantitative_groups']:

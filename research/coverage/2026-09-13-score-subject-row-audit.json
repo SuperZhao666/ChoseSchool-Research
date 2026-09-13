@@ -1,0 +1,300 @@
+{
+  "trace_id": "d36580a9-e711-47ec-9786-53ec83803d21",
+  "baseline_commit": "7970ba39f14f2b0c0fe71f250cfcdc066c184353",
+  "baseline_source_sha256": "25ed1387ebcdf736863cfed222098bd6897a719d9479afa9fb13f482f09b6994",
+  "source_sha256": "f1d6752ab8155178dfb81878f5dbc0b24be693d9ba9b2d2ae98e0a62a6f5e789",
+  "newly_annotated_tables": [
+    {
+      "original_header_line": 9430,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9440,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9450,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9460,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9470,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9480,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9522,
+      "header": "| 2024 可见后期人口 | 相容集合数 | 科目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 10
+    },
+    {
+      "original_header_line": 9490,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 1
+    },
+    {
+      "original_header_line": 9496,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 1
+    },
+    {
+      "original_header_line": 9502,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9512,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9783,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9793,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9803,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9813,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9823,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9833,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9843,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 9853,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10233,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10243,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10303,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10313,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10227,
+      "header": "| 项目 | 普通一志愿复试人数 | 复试专项人数 | 复试调剂人数 | 复试总分最低分 | 复试总分平均分 | 复试总分最高分 | 政治平均分 | 英语二平均分 | 数学一平均分 | 408 平均分 | 一志愿拟录取人数 | 另报专项、调剂拟录取人数 | 拟录取总分最低分 | 拟录取总分平均分 | 拟录取总分最高分 |",
+      "rows": 1
+    },
+    {
+      "original_header_line": 10297,
+      "header": "| 项目 | 普通一志愿复试人数 | 复试专项人数 | 复试调剂人数 | 复试总分最低分 | 复试总分平均分 | 复试总分最高分 | 政治平均分 | 英语二平均分 | 数学一平均分 | 408 平均分 | 一志愿拟录取人数 | 另报专项、调剂拟录取人数 | 拟录取总分最低分 | 拟录取总分平均分 | 拟录取总分最高分 |",
+      "rows": 1
+    },
+    {
+      "original_header_line": 10878,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10888,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10898,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10908,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 10918,
+      "header": "| 成绩项目 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 1626,
+      "header": "| 初试字段 | n | 最低值 | Q25 | 中位数 | 平均值 | Q75 | 最高值 |",
+      "rows": 5
+    },
+    {
+      "original_header_line": 15724,
+      "header": "| 2026均值，保留相同人口 | 东农50人 | 西南交大19人 | 新疆大学136人 |",
+      "rows": 6
+    },
+    {
+      "original_header_line": 15434,
+      "header": "| 规则 | 对2025的预测／实际353.5 | 对2026的预测／实际368 | 同一两任务的平均绝对误差 |",
+      "rows": 3
+    },
+    {
+      "original_header_line": 17531,
+      "header": "| 你最需要知道的字段 | 当前可确认结果 |",
+      "rows": 8
+    },
+    {
+      "original_header_line": 15839,
+      "header": "| 学校项目/目标年 | 分析层/模拟起点 | 前两年输入：年份中位(N) | 实际中位(N) | 规则 | 预测 | 误差/绝对误差 | 缺失原因 |",
+      "rows": 27
+    },
+    {
+      "original_header_line": 15425,
+      "header": "| 项目及目标招生年 | 历史输入：上年拟录取中位数（人数） | 目标年实际中位数（人数） | 沿用去年值的误差 |",
+      "rows": 2
+    }
+  ],
+  "newly_annotated_rows": 190,
+  "swu334_replaced_provisional_notes": 10,
+  "source_evidence": {
+    "njnu2024": {
+      "path": "tmp/211-late-switch-2026-09-06/agent-history-browser-observations.json",
+      "sha256": "e77e683fd2f9263250f3374c67a19f6a9576cad19d9bb3e48fcb290fbdd617b5"
+    },
+    "bjtu2023": {
+      "path": "tmp/pdfs/bjtu-2023-school-level-candidates/20220915145848.pdf",
+      "sha256": "dbfba5a151e0f9c3c32d48e7a6f8be06a34903738951f654e751de1b314f0f71"
+    },
+    "bjtu2024": {
+      "path": "tmp/pdfs/2026-08-22-211-three-year-batch-2/bjtu-2024-catalog-archive.pdf",
+      "sha256": "245bb4105f2ab4fbe78693926d3bbefcf31450c6c05e24f961966f4d2a7a3b90"
+    },
+    "bjtu2025": {
+      "path": "tmp/pdfs/2026-08-22-211-three-year-batch-2/bjtu-2025-catalog.pdf",
+      "sha256": "9e4fd2976613d1e989982d4f07dcc22409deff3c63792bbbbb36c285d00b9406"
+    }
+  },
+  "existing_subject_tables_with_year_added": [
+    {
+      "title": "**分科及总分：2026 核心普通，另排除嘉庚联培2；`101+204+302+408`；校方四科表与最终表无歧义交叉；41人**",
+      "rows": 5
+    },
+    {
+      "title": "**分科及总分：2026 普通项目，含嘉庚联培2，不含少民骨干2；`101+204+302+408`；校方四科表与最终表无歧义交叉；43人**",
+      "rows": 5
+    },
+    {
+      "title": "**分科及总分：2023 核心无备注，另排除3个联培备注；目录镜像 `101+204+302+408`；校方原页404；完整双镜像交叉，降级旁证；37人**",
+      "rows": 5
+    },
+    {
+      "title": "**分科及总分：2023 一志愿全体，含嘉庚联培2、先进技术联培1；目录镜像 `101+204+302+408`；校方原页404；完整双镜像交叉，降级旁证；40人**",
+      "rows": 5
+    }
+  ],
+  "swu334_catalogue_sources": [
+    {
+      "year": 2023,
+      "url": "https://yz.swu.edu.cn/__local/B/19/4A/35DF75869AB1970F4EE77444E9E_304781F6_937EC.pdf?e=.pdf",
+      "sha256": "6bfa4fe5bfc46b30013c4aab4c6f75c28923b702f0e35dcdeb726b425d2d0135",
+      "bytes": 604140,
+      "trace_id": "91f0c918-2368-44f5-99af-d3d3942086dd",
+      "verified_local_sha256": "6bfa4fe5bfc46b30013c4aab4c6f75c28923b702f0e35dcdeb726b425d2d0135",
+      "target_pdf_page": 8,
+      "subjects": [
+        "101思想政治理论",
+        "204英语（二）",
+        "302数学（二）",
+        "907计算机基础与数字电路"
+      ]
+    },
+    {
+      "year": 2024,
+      "url": "https://yz.swu.edu.cn/__local/A/24/5F/8B16A6F39311F7028A4B0D861F9_FCAA07B3_46454.pdf?e=.pdf",
+      "sha256": "86aa03f7ac4ced0a837bc94ecf0e68f90698a7e77807fdaa0a94869fee19ac5d",
+      "bytes": 287828,
+      "trace_id": "91f0c918-2368-44f5-99af-d3d3942086dd",
+      "verified_local_sha256": "86aa03f7ac4ced0a837bc94ecf0e68f90698a7e77807fdaa0a94869fee19ac5d",
+      "target_pdf_page": 8,
+      "subjects": [
+        "101思想政治理论",
+        "204英语（二）",
+        "302数学（二）",
+        "907计算机基础与数字电路"
+      ]
+    },
+    {
+      "year": 2025,
+      "url": "https://yz.swu.edu.cn/3.xinandaxue2025nianquanrizhizhuanyexueweishuoshiyanjiushengzhaoshengzhuanyemulu.pdf",
+      "sha256": "60106f7ae6b4c691bbff4a23ddb242fb6ab7c65be57d00d49b9ba3599a5130c2",
+      "bytes": 327343,
+      "trace_id": "91f0c918-2368-44f5-99af-d3d3942086dd",
+      "verified_local_sha256": "60106f7ae6b4c691bbff4a23ddb242fb6ab7c65be57d00d49b9ba3599a5130c2",
+      "target_pdf_page": 8,
+      "subjects": [
+        "101思想政治理论",
+        "204英语（二）",
+        "302数学（二）",
+        "891计算机基础与数字电路"
+      ]
+    },
+    {
+      "year": 2026,
+      "url": "https://yz.swu.edu.cn/xinandaxue2026nianquanrizhizhuanyexueweishuoshiyanjiushengzhaoshengzhuanyemulu.pdf",
+      "sha256": "dd12edaf809d585d5bc05255209fedb7b21265882fba7ef3d9beec66f9056dd8",
+      "bytes": 318342,
+      "trace_id": "91f0c918-2368-44f5-99af-d3d3942086dd",
+      "verified_local_sha256": "dd12edaf809d585d5bc05255209fedb7b21265882fba7ef3d9beec66f9056dd8",
+      "target_pdf_page": 7,
+      "subjects": [
+        "101思想政治理论",
+        "204英语（二）",
+        "302数学（二）",
+        "891计算机基础与数字电路"
+      ]
+    }
+  ],
+  "validation": {
+    "trace_id": "d36580a9-e711-47ec-9786-53ec83803d21",
+    "baseline_tables": 564,
+    "baseline_data_rows": 2951,
+    "lost_original_numeric_rows": 0,
+    "current_tables": 566,
+    "annotated_tables": 235,
+    "annotated_rows": 1145,
+    "independent_review": "36 annotated tables match their baseline cells after dropping only the subject note column; no further historical total-score table omissions found",
+    "visual_check": "Own hidden Codex in-app tab, local generated site: SWU334 annual rows and subject-column width inspected; no claim of all-table visual audit",
+    "original_archives_modified": false
+  }
+}
