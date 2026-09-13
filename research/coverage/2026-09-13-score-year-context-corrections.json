@@ -1,0 +1,1288 @@
+{
+  "trace_id": "08b14bba-791f-4838-89fc-df06a775482c",
+  "baseline_commit": "8e38323c4fe69cd67e0ae4b7c66a5c512a4cc188",
+  "baseline_source_sha256": "a374a66ff9114fced4aa6d351b7fd870606dc5848c151f92aab5cf90d296519e",
+  "source_sha256": "121bfa52a9896f4d2a87f584df53ae4c48761d779659c690f96331bf35dd5d32",
+  "corrected_year_labels": [
+    {
+      "original_line": 3582,
+      "field": "初试总分",
+      "old_year": "2023",
+      "correct_year": "2025"
+    },
+    {
+      "original_line": 3583,
+      "field": "政治",
+      "old_year": "2023",
+      "correct_year": "2025"
+    },
+    {
+      "original_line": 3584,
+      "field": "英语",
+      "old_year": "2023",
+      "correct_year": "2025"
+    },
+    {
+      "original_line": 3585,
+      "field": "数学",
+      "old_year": "2023",
+      "correct_year": "2025"
+    },
+    {
+      "original_line": 3586,
+      "field": "408",
+      "old_year": "2023",
+      "correct_year": "2025"
+    },
+    {
+      "original_line": 3592,
+      "field": "初试总分",
+      "old_year": "2024",
+      "correct_year": "2026"
+    },
+    {
+      "original_line": 3593,
+      "field": "政治",
+      "old_year": "2024",
+      "correct_year": "2026"
+    },
+    {
+      "original_line": 3594,
+      "field": "英语",
+      "old_year": "2024",
+      "correct_year": "2026"
+    },
+    {
+      "original_line": 3595,
+      "field": "数学",
+      "old_year": "2024",
+      "correct_year": "2026"
+    },
+    {
+      "original_line": 3596,
+      "field": "408",
+      "old_year": "2024",
+      "correct_year": "2026"
+    },
+    {
+      "original_line": 3602,
+      "field": "初试总分",
+      "old_year": "2025",
+      "correct_year": "2023"
+    },
+    {
+      "original_line": 3603,
+      "field": "政治",
+      "old_year": "2025",
+      "correct_year": "2023"
+    },
+    {
+      "original_line": 3604,
+      "field": "英语二",
+      "old_year": "2025",
+      "correct_year": "2023"
+    },
+    {
+      "original_line": 3605,
+      "field": "数学二",
+      "old_year": "2025",
+      "correct_year": "2023"
+    },
+    {
+      "original_line": 3606,
+      "field": "408",
+      "old_year": "2025",
+      "correct_year": "2023"
+    },
+    {
+      "original_line": 3612,
+      "field": "初试总分",
+      "old_year": "2026",
+      "correct_year": "2024"
+    },
+    {
+      "original_line": 3613,
+      "field": "政治",
+      "old_year": "2026",
+      "correct_year": "2024"
+    },
+    {
+      "original_line": 3614,
+      "field": "英语二",
+      "old_year": "2026",
+      "correct_year": "2024"
+    },
+    {
+      "original_line": 3615,
+      "field": "数学二",
+      "old_year": "2026",
+      "correct_year": "2024"
+    },
+    {
+      "original_line": 3616,
+      "field": "408",
+      "old_year": "2026",
+      "correct_year": "2024"
+    }
+  ],
+  "newly_annotated_tables": [
+    {
+      "original_header_line": 2784,
+      "header": "| 年度／项目 | n | 政治 | 英语二 | 数学二 | 408 | 初试总分 |",
+      "rows": 6
+    },
+    {
+      "original_header_line": 5384,
+      "header": "| 年度与人口 | 政治 | 英语二 | 数学二 | `859 数据结构` | 总分 |",
+      "rows": 2
+    },
+    {
+      "original_header_line": 7805,
+      "header": "| 年度与人数 | 政治（最低／中位／平均／最高） | 英语二（最低／中位／平均／最高） | 数学二（最低／中位／平均／最高） | `851 算法与程序设计`（最低／中位／平均／最高） | 总分（最低／中位／平均／最高） |",
+      "rows": 2
+    },
+    {
+      "original_header_line": 7814,
+      "header": "| 人口 | 政治（最低／中位／平均／最高） | 英语二（最低／中位／平均／最高） | 数学二（最低／中位／平均／最高） | 408（最低／中位／平均／最高） | 总分（最低／中位／平均／最高） |",
+      "rows": 3
+    },
+    {
+      "original_header_line": 9430,
+      "header": "| 科目 | 政治平均分 | 英语二平均分 | 数学二平均分 | 计算机综合平均分 |",
+      "rows": 1
+    },
+    {
+      "original_header_line": 13342,
+      "header": "| 招生年度 | 成绩字段 | 样本人数 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 12
+    },
+    {
+      "original_header_line": 13495,
+      "header": "| 招生年度 | 成绩字段 | 样本人数 | 最低分 | 25% 位置分数 | 中位数 | 平均分 | 75% 位置分数 | 最高分 |",
+      "rows": 16
+    }
+  ],
+  "newly_annotated_rows": 42,
+  "method": "Match explicit school, project, admission year and population; reuse only already documented same-year evidence. All original score and population cells preserved. No new source confirmation inferred.",
+  "independent_review_trace_id": "c93c4389-d427-42d5-ab31-ab2d26d5cfa5",
+  "corrected_stale_zzu_comparison_rows": 3,
+  "full_table_audit_trace_id": "39df50e1-8a2e-4e88-8c69-1c4705cb3c08",
+  "cuc_evidence": {
+    "trace_id": "0e9ad173-ae51-4edf-a957-e53d7b340233",
+    "checked_at": "2026-09-13",
+    "cuc_2026": {
+      "admission_year": 2026,
+      "catalog_publication_date": "2025-10-05",
+      "actual_recommendation_publication_date": "2025-10-20",
+      "cutoff_publication_date": "2026-03-14",
+      "cutoff_url_date_is_not_publication_date": true,
+      "subject_codes": [
+        "101",
+        "204",
+        "302",
+        "408"
+      ],
+      "subject_evidence": "2026官方目录HTML第181—183个tr（从0计），四科单元格rowspan=5覆盖085411三方向；此处只保留非安全学院02/03。",
+      "groups": [
+        {
+          "program": "085411",
+          "direction": "02 数据智能技术与应用",
+          "school_unit": "媒体融合与传播国家重点实验室",
+          "study_mode": "全日制",
+          "duration_years": 2,
+          "autumn_total_plan": 20,
+          "autumn_expected_recommendations": 10,
+          "actual_recommendations": 6,
+          "conditional_total_minus_actual_recommendations": 14,
+          "initial_cutoff": 264,
+          "single_subject_full_100_cutoff": 35,
+          "single_subject_full_150_cutoff": 53,
+          "composite_cutoff": 54.9
+        },
+        {
+          "program": "085411",
+          "direction": "03 大数据分析与智能计算",
+          "school_unit": "数据科学与智能媒体学院",
+          "study_mode": "全日制",
+          "duration_years": 2,
+          "autumn_total_plan": 9,
+          "autumn_expected_recommendations": 4,
+          "actual_recommendations": 2,
+          "conditional_total_minus_actual_recommendations": 7,
+          "initial_cutoff": 264,
+          "single_subject_full_100_cutoff": 35,
+          "single_subject_full_150_cutoff": 53,
+          "composite_cutoff": 57.1
+        }
+      ],
+      "composite_formula": "(initial_total/5)*0.70+material_review*0.30",
+      "final_formula": "(initial_total/5)*0.50+retest*0.50",
+      "composite_is_not_final_total": true,
+      "capacity_boundary": "14/7仅为2025年秋季目录总量减2026实际推免的条件差额，未恢复2026春季正式普通计划，未证明等额转统考或最终实录。",
+      "roster_pages": 31,
+      "admit_pages": 29,
+      "mapping_term_hits_across_all_pdf_pages": {
+        "专业": 0,
+        "方向": 0,
+        "学院": 0,
+        "085411": 0,
+        "数据智能": 0,
+        "大数据分析": 0
+      },
+      "roster_fields": [
+        "考生编号",
+        "姓名",
+        "政治理论成绩",
+        "外国语成绩",
+        "业务课一成绩",
+        "业务课二成绩",
+        "初试总分",
+        "材料评议成绩",
+        "综合成绩",
+        "备注"
+      ],
+      "admit_fields": [
+        "考生姓名",
+        "考生编号",
+        "初试成绩",
+        "复试成绩",
+        "总成绩",
+        "学习方式",
+        "备注"
+      ],
+      "result_distribution": null,
+      "result_blocker": "两份全校原名单均缺学院/专业/方向，不能凭编号段、顺序或分数猜出目标人口；缺官方方向映射或学院定向名单。",
+      "pdf_verification": "pdfplumber逐页文本检索全31+29页；首次页表头及复试末页表头目视。未公布任何考生姓名、编号或个人成绩行。"
+    },
+    "sources": [
+      {
+        "key": "bjut-notices",
+        "url": "https://yanzhao.bjut.edu.cn/sszs/tzgg.htm",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "buct-notices",
+        "url": "https://graduate.buct.edu.cn/1392/list.htm",
+        "status": 200,
+        "bytes": 23311,
+        "sha256": "7c1279f08f17b2ea81c781559e41b131436a16a05775ca30452e4cb4b6330734"
+      },
+      {
+        "key": "cuc-notices",
+        "url": "https://yz.cuc.edu.cn/8549/list.htm",
+        "status": 200,
+        "bytes": 20414,
+        "sha256": "a98fc2acd7e28285ead667feaec23b3e97cfd3603f6f32b26329d7b14f8bdab7"
+      },
+      {
+        "key": "cuc-masters",
+        "url": "https://yz.cuc.edu.cn/8543/list.htm",
+        "status": 200,
+        "bytes": 21216,
+        "sha256": "7dc7330e8553c9b12b504088b8e3c3ae5020d5bd2161e3adaa80896f373d4c6d"
+      },
+      {
+        "key": "buct-catalogs",
+        "url": "https://graduate.buct.edu.cn/jzml/list.htm",
+        "status": 200,
+        "bytes": 22822,
+        "sha256": "84a44ddbd8c826bca21ea27b179978bb952922d3c2a0b29e571391953faf61f6"
+      },
+      {
+        "key": "buct-project2027",
+        "url": "https://graduate.buct.edu.cn/2026/0904/c1392a222559/page.htm",
+        "status": 200,
+        "bytes": 9414,
+        "sha256": "2e2af3128f5f639f7183ec8c32829401a1e4f8619f7f5b36683a177c3cd27f7b"
+      },
+      {
+        "key": "buct-push2027",
+        "url": "https://graduate.buct.edu.cn/2026/0909/c1392a222632/page.htm",
+        "status": 200,
+        "bytes": 7631,
+        "sha256": "ffb2d4631cfaa6e06689f99dd8816a8248d80b2e046a4d4f6076df4f04620636"
+      },
+      {
+        "key": "cuc-first-admit",
+        "url": "https://yz.cuc.edu.cn/2026/0421/c8543a269388/page.htm",
+        "status": 200,
+        "bytes": 13287,
+        "sha256": "231d5ba34461ddab816eef95343b3b6ad688b344f55a549e5ac5a7ed07ce2df9"
+      },
+      {
+        "key": "cuc-first-roster",
+        "url": "https://yz.cuc.edu.cn/2026/0319/c8543a267896/page.htm",
+        "status": 200,
+        "bytes": 13453,
+        "sha256": "00a162516027796cdc3586a5cf8d6bfd27b1e89dcd91a5ffe1a2a85bdc8614b6"
+      },
+      {
+        "key": "cuc-2027-extend",
+        "url": "https://yz.cuc.edu.cn/2026/0911/c8549a273811/page.htm",
+        "status": 200,
+        "bytes": 14507,
+        "sha256": "dfcaecd4149c1696f6f020acf993da9203c68114eaff6258b29cee9132ca09b3"
+      },
+      {
+        "url": "https://yz.cuc.edu.cn/_upload/article/files/cf/90/3d0847db4b29a69224357ed857d2/ba252736-5b6f-4d5e-a309-49400abd4ed6.pdf",
+        "status": 200,
+        "bytes": 373081,
+        "sha256": "137d480b3df04792f88ab85b8c06364c9d92ee01055e8adaf2940f5eb77dc241"
+      },
+      {
+        "url": "https://yz.cuc.edu.cn/_upload/article/files/4e/0c/15eb7633447cb1ecabdb51189fdc/97eb251b-c034-49b7-8731-9dceb2b1b652.pdf",
+        "status": 200,
+        "bytes": 419619,
+        "sha256": "966f2ce2a73affce117d08fb5b0d1eccb64584fe5fa8627a047222bbb046d4b8"
+      },
+      {
+        "url": "https://graduate.buct.edu.cn/_upload/article/files/c8/d8/6619bcc542eebb097d04ab2b7b28/fb94717b-4fb9-4d81-9bb2-2cddb3587508.pdf",
+        "status": 200,
+        "bytes": 268827,
+        "sha256": "7c986ffd5538faee85579b81b9c52722fefdd24f3512e7aa918fee4549c4daaf"
+      },
+      {
+        "url": "https://gcsxy.buct.edu.cn/2026/0903/c14227a222557/page.htm",
+        "status": 200,
+        "bytes": 62888,
+        "sha256": "5de37481f28d4b5f94e7602fb9da2dac0e9a7d96e2ae0daf22da9ccdcd7ff8a5"
+      },
+      {
+        "key": "cuc-actual-push2026",
+        "url": "https://yz.cuc.edu.cn/2025/1020/c8678a261224/page.htm",
+        "path": "C:\\Users\\Administrator\\.codex\\tmp\\chose-2026-09-13\\beijing-three-refresh\\cuc-actual-push2026.html",
+        "status": 200,
+        "bytes": 270122,
+        "sha256": "41bff62b9d6386bd169989ff63637cf2311542fbec641ea44052b8b46d309eef"
+      },
+      {
+        "key": "cuc-cutoff2026",
+        "url": "https://yz.cuc.edu.cn/2026/0313/c8549a267631/page.htm",
+        "path": "C:\\Users\\Administrator\\.codex\\tmp\\chose-2026-09-13\\beijing-three-refresh\\cuc-cutoff2026.html",
+        "status": 200,
+        "bytes": 382557,
+        "sha256": "0305df08919a55c6275e88745c4f32ee33a246ef184efe4ecbc0d6aa06e2cb04"
+      },
+      {
+        "key": "cuc-rule2026",
+        "url": "https://yz.cuc.edu.cn/2026/0316/c8543a267670/page.htm",
+        "path": "C:\\Users\\Administrator\\.codex\\tmp\\chose-2026-09-13\\beijing-three-refresh\\cuc-rule2026.html",
+        "status": 200,
+        "bytes": 65186,
+        "sha256": "1d1d499c83b767b9f430ba7a66066ec3796af964c4692c0ba6120646a8fd37ae"
+      },
+      {
+        "key": "cuc-catalog2026",
+        "url": "https://yz.cuc.edu.cn/2025/1004/c8543a260623/page.htm",
+        "path": "C:\\Users\\Administrator\\.codex\\tmp\\chose-2026-09-13\\beijing-three-refresh\\cuc-catalog2026.html",
+        "status": 200,
+        "bytes": 364583,
+        "sha256": "dd7503cc9b085454ff50e8b5c9f745b6f95dbe8224dc3aae555e444ca412d0c8"
+      },
+      {
+        "key": "bjut-updated-push2027",
+        "url": "https://yanzhao.bjut.edu.cn/copy_1_content.jsp?urltype=news.NewsContentUrl&wbnewsid=18153&wbtreeid=1739",
+        "path": "C:\\Users\\Administrator\\.codex\\tmp\\chose-2026-09-13\\beijing-three-refresh\\bjut-updated-push2027.html",
+        "status": 200,
+        "bytes": 91606,
+        "sha256": "244d7c2137b1e0dfc6e1e556f9a59ab2e7e81f244c770f6e88319cc5c149bbc6"
+      }
+    ],
+    "privacy": "匿名审计只含项目聚合/来源/字段名称/缺口，没有姓名、考生编号、证件号或个人明细。原始名单仅库外保留。"
+  },
+  "hhu_evidence": {
+    "trace_id": "1b3e7ad4-2443-4795-b43b-0e421f25847a",
+    "year": 2026,
+    "institution": "河海大学",
+    "tier": "211（非985）",
+    "college": "人工智能与自动化学院",
+    "college_code": null,
+    "program_code": "085400",
+    "sources_population": "校级拟录取全日制备注空白；学院调剂前建议/调剂建议名单分别按考生编号回连。不是已注册入学；原表无非定向字段。03是专项培养方向，不能当普通02。",
+    "parsing_failures": {
+      "first": [],
+      "transfer": [],
+      "final": []
+    },
+    "formula_mismatches": 0,
+    "groups": {
+      "01": {
+        "school_final_count": 48,
+        "school_final_population_counts": [
+          {
+            "mode": "全日制",
+            "note": "推荐免试",
+            "count": 10
+          },
+          {
+            "mode": "全日制",
+            "note": "",
+            "count": 38
+          }
+        ],
+        "school_final_pages": [
+          69,
+          70,
+          71
+        ],
+        "college_pre_transfer": {
+          "count": 38,
+          "min": 377,
+          "p25": 404.25,
+          "median": 415.5,
+          "p75": 422.0,
+          "max": 436,
+          "mean": 412.2895,
+          "below320": 0,
+          "below340": 0,
+          "below360": 0,
+          "below380": 1,
+          "sorted_scores": [
+            377,
+            388,
+            388,
+            392,
+            392,
+            393,
+            398,
+            398,
+            399,
+            404,
+            405,
+            405,
+            407,
+            408,
+            411,
+            412,
+            412,
+            414,
+            415,
+            416,
+            416,
+            417,
+            417,
+            417,
+            418,
+            421,
+            422,
+            422,
+            422,
+            423,
+            424,
+            424,
+            426,
+            426,
+            433,
+            434,
+            435,
+            436
+          ]
+        },
+        "college_transfer": {
+          "count": 0
+        },
+        "matched_pre_transfer": {
+          "count": 38,
+          "min": 377,
+          "p25": 404.25,
+          "median": 415.5,
+          "p75": 422.0,
+          "max": 436,
+          "mean": 412.2895,
+          "below320": 0,
+          "below340": 0,
+          "below360": 0,
+          "below380": 1,
+          "sorted_scores": [
+            377,
+            388,
+            388,
+            392,
+            392,
+            393,
+            398,
+            398,
+            399,
+            404,
+            405,
+            405,
+            407,
+            408,
+            411,
+            412,
+            412,
+            414,
+            415,
+            416,
+            416,
+            417,
+            417,
+            417,
+            418,
+            421,
+            422,
+            422,
+            422,
+            423,
+            424,
+            424,
+            426,
+            426,
+            433,
+            434,
+            435,
+            436
+          ]
+        },
+        "matched_transfer": {
+          "count": 0
+        },
+        "final_blank_fulltime_count": 38,
+        "unmatched_school_final_blank_count": 0,
+        "pre_transfer_missing_from_school_final_blank": 0,
+        "transfer_missing_from_school_final_blank": 0,
+        "overlap_first_transfer": 0,
+        "college_pre_transfer_pages": [
+          2,
+          3
+        ],
+        "college_transfer_pages": [],
+        "college_remarks": {
+          "": 38
+        },
+        "direction_or_mode_mismatch_count": 0,
+        "combined_verified_blank_fulltime": {
+          "count": 38,
+          "min": 377,
+          "p25": 404.25,
+          "median": 415.5,
+          "p75": 422.0,
+          "max": 436,
+          "mean": 412.2895,
+          "below320": 0,
+          "below340": 0,
+          "below360": 0,
+          "below380": 1,
+          "sorted_scores": [
+            377,
+            388,
+            388,
+            392,
+            392,
+            393,
+            398,
+            398,
+            399,
+            404,
+            405,
+            405,
+            407,
+            408,
+            411,
+            412,
+            412,
+            414,
+            415,
+            416,
+            416,
+            417,
+            417,
+            417,
+            418,
+            421,
+            422,
+            422,
+            422,
+            423,
+            424,
+            424,
+            426,
+            426,
+            433,
+            434,
+            435,
+            436
+          ]
+        }
+      },
+      "02": {
+        "school_final_count": 19,
+        "school_final_population_counts": [
+          {
+            "mode": "全日制",
+            "note": "推荐免试",
+            "count": 1
+          },
+          {
+            "mode": "全日制",
+            "note": "支教团推免计划",
+            "count": 1
+          },
+          {
+            "mode": "全日制",
+            "note": "",
+            "count": 17
+          }
+        ],
+        "school_final_pages": [
+          71
+        ],
+        "college_pre_transfer": {
+          "count": 17,
+          "min": 353,
+          "p25": 363.0,
+          "median": 373,
+          "p75": 386.0,
+          "max": 405,
+          "mean": 374.5882,
+          "below320": 0,
+          "below340": 0,
+          "below360": 3,
+          "below380": 11,
+          "sorted_scores": [
+            353,
+            355,
+            355,
+            362,
+            363,
+            367,
+            371,
+            371,
+            373,
+            373,
+            378,
+            380,
+            386,
+            389,
+            392,
+            395,
+            405
+          ]
+        },
+        "college_transfer": {
+          "count": 0
+        },
+        "matched_pre_transfer": {
+          "count": 17,
+          "min": 353,
+          "p25": 363.0,
+          "median": 373,
+          "p75": 386.0,
+          "max": 405,
+          "mean": 374.5882,
+          "below320": 0,
+          "below340": 0,
+          "below360": 3,
+          "below380": 11,
+          "sorted_scores": [
+            353,
+            355,
+            355,
+            362,
+            363,
+            367,
+            371,
+            371,
+            373,
+            373,
+            378,
+            380,
+            386,
+            389,
+            392,
+            395,
+            405
+          ]
+        },
+        "matched_transfer": {
+          "count": 0
+        },
+        "final_blank_fulltime_count": 17,
+        "unmatched_school_final_blank_count": 0,
+        "pre_transfer_missing_from_school_final_blank": 0,
+        "transfer_missing_from_school_final_blank": 0,
+        "overlap_first_transfer": 0,
+        "college_pre_transfer_pages": [
+          3,
+          4
+        ],
+        "college_transfer_pages": [],
+        "college_remarks": {
+          "": 17
+        },
+        "direction_or_mode_mismatch_count": 0,
+        "combined_verified_blank_fulltime": {
+          "count": 17,
+          "min": 353,
+          "p25": 363.0,
+          "median": 373,
+          "p75": 386.0,
+          "max": 405,
+          "mean": 374.5882,
+          "below320": 0,
+          "below340": 0,
+          "below360": 3,
+          "below380": 11,
+          "sorted_scores": [
+            353,
+            355,
+            355,
+            362,
+            363,
+            367,
+            371,
+            371,
+            373,
+            373,
+            378,
+            380,
+            386,
+            389,
+            392,
+            395,
+            405
+          ]
+        },
+        "direction_name": "智能科学",
+        "mode": "全日制",
+        "exam_year": 2026,
+        "official_catalog_subjects": [
+          {
+            "code": 101,
+            "name": "思想政治理论"
+          },
+          {
+            "code": 204,
+            "name": "英语（二）"
+          },
+          {
+            "code": 302,
+            "name": "数学（二）"
+          },
+          {
+            "code": 408,
+            "name": "计算机学科专业基础"
+          }
+        ],
+        "official_policy_line": 338,
+        "plans": {
+          "autumn_total_including_push": 18,
+          "autumn_planned_push": 6,
+          "spring_expressly_published_unified_exam_plan": 16,
+          "transfer_stage_plan": null,
+          "all_plans_adjustable": true,
+          "not_final_admitted_counts": true
+        },
+        "pre_transfer_eligible": {
+          "count": 26,
+          "min": 338,
+          "median": 362.5,
+          "max": 405,
+          "sorted_scores": [
+            338,
+            341,
+            342,
+            344,
+            346,
+            350,
+            351,
+            352,
+            353,
+            353,
+            355,
+            355,
+            362,
+            363,
+            367,
+            371,
+            371,
+            373,
+            373,
+            378,
+            380,
+            386,
+            389,
+            392,
+            395,
+            405
+          ],
+          "pages": [
+            5,
+            6
+          ],
+          "remark": "全部空白",
+          "source_population": "复试资格名单，不是报名或实际到场名单",
+          "four_subject_sum_errors": 0
+        },
+        "retest2026": {
+          "course_code": "043002",
+          "course_name": "人工智能综合",
+          "first_wish_written_minutes": 120,
+          "professional_points": 100,
+          "foreign_language_points": 50,
+          "interview_points": 200,
+          "interview_pass": 120,
+          "total_points": 350,
+          "total_pass": 210,
+          "ranking_formula": "raw_initial + raw_retest",
+          "equivalent_education_additional": [
+            "043903人工智能专业基础",
+            "043904机器学习导论"
+          ],
+          "transfer_professional_format": null
+        },
+        "cultivation_cost": {
+          "duration_years": 3,
+          "duration_source_physical_page": 8,
+          "fees_exact_2026": null,
+          "fees_exact_2027": null,
+          "older_official_fee_reference": {
+            "published": "2022-02-27",
+            "yuan_per_year": 10000,
+            "url": "https://cwc.hhu.edu.cn/2022/0228/c16131a234454/page.htm",
+            "status": "older_general_reference_not_project_year_confirmation"
+          },
+          "enterprise_joint_training": null,
+          "training_description": null,
+          "enterprise_name": null,
+          "enterprise_months": null,
+          "accommodation_cost_exact": null,
+          "directed_employment_obligation": null,
+          "fulltime_non_directed_field_present_in_list": false
+        },
+        "target_2027": {
+          "official_catalog_status": "pending_exact_catalog",
+          "h2_announcement_seen": true,
+          "new_408_switch": false,
+          "announcement_subjects": [
+            101,
+            204,
+            302,
+            408
+          ],
+          "ordinary_plan": null
+        }
+      },
+      "03": {
+        "school_final_count": 21,
+        "school_final_population_counts": [
+          {
+            "mode": "全日制",
+            "note": "",
+            "count": 21
+          }
+        ],
+        "school_final_pages": [
+          71,
+          72
+        ],
+        "college_pre_transfer": {
+          "count": 8,
+          "min": 316,
+          "p25": 347.0,
+          "median": 355.5,
+          "p75": 366.5,
+          "max": 375,
+          "mean": 353,
+          "below320": 1,
+          "below340": 2,
+          "below360": 5,
+          "below380": 8,
+          "sorted_scores": [
+            316,
+            335,
+            351,
+            354,
+            357,
+            365,
+            371,
+            375
+          ]
+        },
+        "college_transfer": {
+          "count": 13,
+          "min": 382,
+          "p25": 384.0,
+          "median": 387,
+          "p75": 394.0,
+          "max": 408,
+          "mean": 390.3846,
+          "below320": 0,
+          "below340": 0,
+          "below360": 0,
+          "below380": 0,
+          "sorted_scores": [
+            382,
+            383,
+            384,
+            384,
+            385,
+            385,
+            387,
+            391,
+            394,
+            394,
+            396,
+            402,
+            408
+          ]
+        },
+        "matched_pre_transfer": {
+          "count": 8,
+          "min": 316,
+          "p25": 347.0,
+          "median": 355.5,
+          "p75": 366.5,
+          "max": 375,
+          "mean": 353,
+          "below320": 1,
+          "below340": 2,
+          "below360": 5,
+          "below380": 8,
+          "sorted_scores": [
+            316,
+            335,
+            351,
+            354,
+            357,
+            365,
+            371,
+            375
+          ]
+        },
+        "matched_transfer": {
+          "count": 13,
+          "min": 382,
+          "p25": 384.0,
+          "median": 387,
+          "p75": 394.0,
+          "max": 408,
+          "mean": 390.3846,
+          "below320": 0,
+          "below340": 0,
+          "below360": 0,
+          "below380": 0,
+          "sorted_scores": [
+            382,
+            383,
+            384,
+            384,
+            385,
+            385,
+            387,
+            391,
+            394,
+            394,
+            396,
+            402,
+            408
+          ]
+        },
+        "final_blank_fulltime_count": 21,
+        "unmatched_school_final_blank_count": 0,
+        "pre_transfer_missing_from_school_final_blank": 0,
+        "transfer_missing_from_school_final_blank": 0,
+        "overlap_first_transfer": 0,
+        "college_pre_transfer_pages": [
+          3
+        ],
+        "college_transfer_pages": [
+          2
+        ],
+        "college_remarks": {
+          "": 21
+        },
+        "direction_or_mode_mismatch_count": 0,
+        "combined_verified_blank_fulltime": {
+          "count": 21,
+          "min": 316,
+          "p25": 365.0,
+          "median": 384,
+          "p75": 391.0,
+          "max": 408,
+          "mean": 376.1429,
+          "below320": 1,
+          "below340": 2,
+          "below360": 5,
+          "below380": 8,
+          "sorted_scores": [
+            316,
+            335,
+            351,
+            354,
+            357,
+            365,
+            371,
+            375,
+            382,
+            383,
+            384,
+            384,
+            385,
+            385,
+            387,
+            391,
+            394,
+            394,
+            396,
+            402,
+            408
+          ]
+        },
+        "direction_name": "苏州高等研究院专项",
+        "mode": "全日制",
+        "exam_year": 2026,
+        "official_catalog_subjects": [
+          {
+            "code": 101,
+            "name": "思想政治理论"
+          },
+          {
+            "code": 204,
+            "name": "英语（二）"
+          },
+          {
+            "code": 302,
+            "name": "数学（二）"
+          },
+          {
+            "code": 408,
+            "name": "计算机学科专业基础"
+          }
+        ],
+        "official_policy_line": 306,
+        "plans": {
+          "autumn_total_including_push": 10,
+          "autumn_planned_push": 3,
+          "spring_expressly_published_unified_exam_plan": 10,
+          "transfer_stage_plan": 8,
+          "all_plans_adjustable": true,
+          "not_final_admitted_counts": true
+        },
+        "pre_transfer_eligible": {
+          "count": 12,
+          "min": 306,
+          "median": 344.5,
+          "max": 375,
+          "sorted_scores": [
+            306,
+            316,
+            325,
+            334,
+            335,
+            338,
+            351,
+            354,
+            357,
+            365,
+            371,
+            375
+          ],
+          "pages": [
+            6
+          ],
+          "remark": "全部空白",
+          "source_population": "复试资格名单，不是报名或实际到场名单",
+          "four_subject_sum_errors": 0
+        },
+        "retest2026": {
+          "course_code": "043002",
+          "course_name": "人工智能综合",
+          "first_wish_written_minutes": 120,
+          "professional_points": 100,
+          "foreign_language_points": 50,
+          "interview_points": 200,
+          "interview_pass": 120,
+          "total_points": 350,
+          "total_pass": 210,
+          "ranking_formula": "raw_initial + raw_retest",
+          "equivalent_education_additional": [
+            "043903人工智能专业基础",
+            "043904机器学习导论"
+          ],
+          "transfer_professional_format": "专业知识抽题考核"
+        },
+        "cultivation_cost": {
+          "duration_years": 3,
+          "duration_source_physical_page": 8,
+          "fees_exact_2026": null,
+          "fees_exact_2027": null,
+          "older_official_fee_reference": {
+            "published": "2022-02-27",
+            "yuan_per_year": 10000,
+            "url": "https://cwc.hhu.edu.cn/2022/0228/c16131a234454/page.htm",
+            "status": "older_general_reference_not_project_year_confirmation"
+          },
+          "enterprise_joint_training": true,
+          "training_description": "校企联合培养、双导师+项目制，在校课程学习、联培企业学习科研",
+          "enterprise_name": null,
+          "enterprise_months": null,
+          "accommodation_cost_exact": null,
+          "directed_employment_obligation": null,
+          "fulltime_non_directed_field_present_in_list": false
+        },
+        "target_2027": {
+          "official_catalog_status": "pending_exact_catalog",
+          "h2_announcement_seen": true,
+          "new_408_switch": false,
+          "announcement_subjects": [
+            101,
+            204,
+            302,
+            408
+          ],
+          "ordinary_plan": null
+        }
+      },
+      "04": {
+        "school_final_count": 1,
+        "school_final_population_counts": [
+          {
+            "mode": "非全日制",
+            "note": "",
+            "count": 1
+          }
+        ],
+        "school_final_pages": [
+          72
+        ],
+        "college_pre_transfer": {
+          "count": 0
+        },
+        "college_transfer": {
+          "count": 1,
+          "min": 377,
+          "p25": 377.0,
+          "median": 377,
+          "p75": 377.0,
+          "max": 377,
+          "mean": 377,
+          "below320": 0,
+          "below340": 0,
+          "below360": 0,
+          "below380": 1,
+          "sorted_scores": [
+            377
+          ]
+        },
+        "matched_pre_transfer": {
+          "count": 0
+        },
+        "matched_transfer": {
+          "count": 0
+        },
+        "final_blank_fulltime_count": 0,
+        "unmatched_school_final_blank_count": 0,
+        "pre_transfer_missing_from_school_final_blank": 0,
+        "transfer_missing_from_school_final_blank": 1,
+        "overlap_first_transfer": 0,
+        "college_pre_transfer_pages": [],
+        "college_transfer_pages": [
+          2
+        ],
+        "college_remarks": {
+          "": 1
+        },
+        "direction_or_mode_mismatch_count": 0,
+        "combined_verified_blank_fulltime": {
+          "count": 0
+        }
+      }
+    },
+    "as_of": "2026-09-13",
+    "target_directions": [
+      "02",
+      "03"
+    ],
+    "sources": {
+      "catalog2026": {
+        "url": "https://gs.hhu.edu.cn/_upload/article/files/0a/8f/2d05b73048b890674d43b32c9522/89f72dc4-d688-495d-8803-7bdd5e35a26a.pdf",
+        "physical_pages": [
+          41,
+          42
+        ]
+      },
+      "policy_lines2026": {
+        "url": "https://gs.hhu.edu.cn/_upload/article/files/87/8e/9b65c66a481cac72b231053b7cf4/9b49098a-824b-4452-991d-1c90546dadfb.pdf",
+        "physical_pages": [
+          3
+        ]
+      },
+      "spring_plan": {
+        "url": "https://ai.hhu.edu.cn/_upload/article/files/a7/7c/5ed936cf4728ba0ea32e844fe26e/5e362112-1360-4f36-8574-e08e5ac1171b.pdf",
+        "parent": "https://ai.hhu.edu.cn/2026/0324/c15659a323921/page.htm",
+        "date": "2026-03-24",
+        "physical_pages": [
+          1
+        ]
+      },
+      "pre_transfer_advice": {
+        "url": "https://ai.hhu.edu.cn/_upload/article/files/26/98/f5f1598340c58691f9bf5fbc5e5d/69760f59-aa6f-44f6-b2fc-a2386b282988.pdf",
+        "parent": "https://ai.hhu.edu.cn/2026/0403/c15659a324276/page.htm",
+        "date": "2026-04-03",
+        "physical_pages": [
+          3,
+          4
+        ]
+      },
+      "transfer_advice": {
+        "url": "https://ai.hhu.edu.cn/_upload/article/files/8f/3a/0624c61948ae800e07bda7bc03d1/3066eba0-d64e-4037-a7bc-79413c2cadc8.pdf",
+        "parent": "https://ai.hhu.edu.cn/2026/0416/c15659a324816/page.htm",
+        "date": "2026-04-16",
+        "physical_pages": [
+          2
+        ]
+      },
+      "school_final_publicity": {
+        "url": "https://gs.hhu.edu.cn/_upload/article/files/c9/bf/0ac2533243bda68acf9be9fcee62/56396445-96dd-4955-bdfc-bea19013fea2.pdf",
+        "parent": "https://gs.hhu.edu.cn/2026/0509/c17277a326366/page.htm",
+        "date": "2026-05-09",
+        "physical_pages": [
+          71,
+          72
+        ]
+      },
+      "eligibility_roster": {
+        "url": "https://ai.hhu.edu.cn/_upload/article/files/62/66/a6da3493417ab8564e4cd81add4d/9e325a7b-cadd-4273-8b9e-afd476ee1bf6.pdf",
+        "parent": "https://ai.hhu.edu.cn/2026/0324/c15659a323887/page.htm",
+        "date": "2026-03-24",
+        "physical_pages": [
+          5,
+          6
+        ]
+      },
+      "transfer_plan": {
+        "url": "https://ai.hhu.edu.cn/_upload/article/files/f0/45/1933487d4fed80a4260e3cee2f99/0c0fc5bb-3016-42e9-975f-ec05218369df.pdf",
+        "parent": "https://ai.hhu.edu.cn/2026/0404/c15659a324304/page.htm",
+        "date": "2026-04-04",
+        "physical_pages": [
+          3,
+          4
+        ]
+      },
+      "announcement2027": {
+        "url": "https://ai.hhu.edu.cn/_upload/article/files/d8/db/aacab34541bda5e2fadc65559890/22bec6eb-1a50-4aef-af11-67592c0392a2.pdf",
+        "parent": "https://ai.hhu.edu.cn/2026/0713/c15659a331508/page.htm",
+        "date": "2026-07-13",
+        "target_year": 2027,
+        "physical_pages": [
+          1
+        ]
+      }
+    },
+    "transfer_subject_boundary": "03调剂可接受201/301或204/302，原第四科未逐人核；所有调剂初试分不统一标22408。",
+    "quality_checks": {
+      "pypdf_matches_pdfplumber_score_multisets": true,
+      "target_rendered_pages_inspected": 9,
+      "all_085400_college_numeric_rows_checked": 77,
+      "target_02_03_numeric_rows_checked": 38,
+      "raw_initial_plus_retest_mismatch": 0,
+      "eligible_four_subject_sum_mismatch": 0
+    }
+  },
+  "final_reviews": {
+    "cuc": "passed: subject merge spans, thresholds, fees duration and admission population boundaries",
+    "hhu": "passed after clarifying announcement publication year 2026 and admission year 2027",
+    "data_privacy": "Public aggregate statistics and source metadata only; individual lists remain outside repository"
+  }
+}

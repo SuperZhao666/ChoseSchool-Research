@@ -185,6 +185,48 @@ class WebReaderTests(unittest.TestCase):
             for row in table[1:]:
                 self.assertRegex(row[1], r'20\d{2}', row)
 
+    def test_subject_years_follow_explicit_population_headings_not_table_order(self):
+        # TraceId: 08b14bba-791f-4838-89fc-df06a775482c
+        lines = self.source.splitlines()
+        checked = 0
+        for token in MarkdownIt('commonmark', {'html': True}).enable('table').parse(self.source):
+            if token.type != 'table_open':
+                continue
+            start, end = token.map
+            if SCORE_SUBJECT_COLUMN not in lines[start]:
+                continue
+            heading = next((lines[i] for i in range(start - 1, max(-1, start - 5), -1)
+                            if lines[i].strip()), '')
+            match = re.match(r'\*\*分科及总分：(20\d{2})\b', heading)
+            if not match:
+                continue
+            checked += 1
+            for line in lines[start + 2:end]:
+                cells = [cell.strip() for cell in line.split('|')[1:-1]]
+                with self.subTest(heading=heading, field=cells[0]):
+                    self.assertTrue(cells[1].startswith(match[1] + '：'), cells[1])
+        self.assertGreaterEqual(checked, 48)
+
+    def test_all_individual_subject_distributions_keep_full_exam_context(self):
+        # Covers horizontal subject columns and vertical subject rows alike.
+        # TraceId: 08b14bba-791f-4838-89fc-df06a775482c
+        checked = 0
+        for table in self.parser.tables:
+            headers = table[0]
+            vertical = '成绩字段' in headers and '招生年度' in headers and any(
+                '思想政治理论' in cell for row in table[1:] for cell in row)
+            horizontal = any('政治' in cell for cell in headers) and any(
+                '平均' in cell or '总分' in cell or '中位' in cell for cell in headers)
+            if not (vertical or horizontal):
+                continue
+            checked += 1
+            with self.subTest(headers=headers):
+                self.assertIn(SCORE_SUBJECT_COLUMN, headers)
+                column = headers.index(SCORE_SUBJECT_COLUMN)
+                for row in table[1:]:
+                    self.assertTrue(row[column].strip(), row)
+        self.assertGreaterEqual(checked, 7)
+
     def test_backtest_rows_show_input_and_target_exams_without_rewriting_scores(self):
         tables = [table for table in self.parser.tables if table[0][0] == '学校项目/目标年']
         self.assertEqual(len(tables), 1)
@@ -221,6 +263,23 @@ class WebReaderTests(unittest.TestCase):
             self.assertEqual(row[2], score)
         self.assertNotIn('当年完整目录未恢复，不能借321或2027四科', swu)
         self.assertIn('不能据目录认定每个录取者原试卷', swu)
+
+    def test_cuc_initial_and_material_review_thresholds_remain_separate(self):
+        # TraceId: 08b14bba-791f-4838-89fc-df06a775482c
+        panel = next(p['source'] for p in make_panels(self.source) if p['key'] == 'school-048')
+        parser = ReaderParser()
+        parser.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(panel) + '</main>')
+        tables = [table for table in parser.tables if '进入复试的综合成绩门槛' in table[0]]
+        self.assertEqual(len(tables), 1)
+        for row, direction, threshold, recommended in zip(tables[0][1:], ['02', '03'], ['54.9', '57.1'], ['6', '2'], strict=True):
+            self.assertIn('2026：085411/' + direction, row[0])
+            self.assertIn('204英语（二）', row[1])
+            self.assertIn('302数学（二）', row[1])
+            self.assertIn('408计算机学科专业基础', row[1])
+            self.assertEqual(row[2:6], ['264', '各35', '各53', threshold])
+            self.assertEqual(row[-1], recommended)
+        self.assertIn('不能称普通净名额或扩招人数', panel)
+        self.assertIn('没有学院、专业或方向列', panel)
 
     def test_original_numeric_rows_remain_tables_in_correct_sections(self):
         for group in self.manifest['quantitative_groups']:
