@@ -248,3 +248,38 @@ test('actual page preserves complete text, old deep links and cross-school evide
   r.search(''); assert.equal(researchText(content), before);
   assert.equal(r.document.querySelectorAll('a[id^="school-"]').length, 104);
 });
+
+// TraceId: 6e1e24ca-cd0a-45ae-9808-f82bd5b15ad8
+test('Hunan merged admissions and historical directions stay distinct across school navigation', () => {
+  const r = reader(fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8'), '#school-029');
+  const hnu = r.document.getElementById('panel-school-029');
+  const current = r.document.getElementById('project-school-029-csee-085400');
+  const historical = r.document.getElementById('project-school-029-former-csee-085400');
+  const software = r.document.getElementById('direction-school-029-former-csee-085400-software-history');
+  assert.deepEqual(r.visible(), ['school-029']);
+  assert.equal(hnu.querySelector('.admission-home').hidden, false);
+  assert.equal(current.hidden, true);
+  assert.equal(historical.hidden, true);
+  assert.equal(hnu.querySelectorAll('.late-project').length, 0, 'May announcement must not become a second-half red label');
+  r.go('#empirical-group-33');
+  assert.equal(current.hidden, false);
+  assert.equal(historical.hidden, true);
+  assert.equal(r.document.getElementById('empirical-group-33').closest('.admission-project'), current);
+  r.go('#' + software.id);
+  assert.equal(software.closest('.admission-project'), historical);
+  assert.equal(current.hidden, true);
+  assert.equal(historical.hidden, false);
+  assert.match(hnu.querySelector('.admission-breadcrumb').textContent, /软件工程/);
+  assert.match(software.textContent, /2023/);
+  assert.match(software.textContent, /2025/);
+  assert.match(software.textContent, /866/);
+  r.go('#project-school-069-207-085405');
+  assert.deepEqual(r.visible(), ['school-069']);
+  assert.equal(hnu.hidden, true);
+  assert.match(r.document.getElementById('current-page').textContent, /北京理工大学/);
+  r.go('#school-029');
+  assert.deepEqual(r.visible(), ['school-029']);
+  assert.equal(hnu.querySelector('.admission-home').hidden, false);
+  assert.equal(current.hidden, true);
+  assert.equal(historical.hidden, true);
+});

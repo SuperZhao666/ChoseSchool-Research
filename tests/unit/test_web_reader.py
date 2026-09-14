@@ -13,7 +13,10 @@ from urllib.parse import unquote
 
 from markdown_it import MarkdownIt
 from web.build import make_panels, prepare_admissions, render
-from tests.unit.test_unified_research_fidelity import numeric_signature, original_cells, SCORE_SUBJECT_COLUMN
+from tests.unit.test_unified_research_fidelity import (
+    numeric_signature, original_cells, SCORE_SUBJECT_COLUMN,
+    reviewed_hnu_numeric_migrations, is_reviewed_hnu_migration,
+)
 
 
 class ReaderParser(HTMLParser):
@@ -286,9 +289,17 @@ class WebReaderTests(unittest.TestCase):
         self.assertIn('没有学院、专业或方向列', panel)
 
     def test_original_numeric_rows_remain_tables_in_correct_sections(self):
+        # TraceId: 6e1e24ca-cd0a-45ae-9808-f82bd5b15ad8
+        # The exact eight old HNU policy rows have reviewed entity replacements.
+        # Their replacement semantics must pass; all score/other-school rows retain
+        # the original delivered-HTML signature check. Full source/HTML fidelity
+        # above also guarantees the validated replacement content is published.
+        migrations = reviewed_hnu_numeric_migrations(self.source)
         for group in self.manifest['quantitative_groups']:
             for row in group['numeric_rows']:
                 with self.subTest(destination=group['destination'], row=row):
+                    if is_reviewed_hnu_migration(group, row, migrations):
+                        continue
                     self.assertIn(tuple(row), self.parser.rows[group['destination']])
 
     def test_tables_preserve_columns_and_have_accessible_scroll_regions(self):

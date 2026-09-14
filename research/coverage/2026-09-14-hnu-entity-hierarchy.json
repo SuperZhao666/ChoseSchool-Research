@@ -1,0 +1,246 @@
+{
+  "trace_id": "528915ce-2a12-4868-95a8-d3d3e8338da8",
+  "scope": "README.md school-029 only; admission hierarchy, no raw catalog mutation",
+  "before_sha256": "ec7651ea831c15b6f3dd4870a337f668cf3b12159a5c7a8a3b43ee57b2d376b8",
+  "after_sha256": "a83d2a88e07c11d906f6e1063c0d0e8ebdbeb9412104c60f6a67f4b928c90a2c",
+  "before_characters": 12379,
+  "after_characters": 15367,
+  "outside_school_bytes_unchanged": true,
+  "college_keys": [
+    "csee",
+    "former-csee"
+  ],
+  "project_keys": [
+    "csee-085400",
+    "former-csee-085400"
+  ],
+  "direction_reading_keys": [
+    "merged",
+    "computer-history",
+    "software-history"
+  ],
+  "direction_keys_are_not_invented_official_codes": true,
+  "official_confirmation_status_changed": false,
+  "late_annoucement": false,
+  "announcement_date": "2026-05-19",
+  "all_original_unique_urls_preserved": true,
+  "original_unique_url_count": 25,
+  "new_unique_url_count": 26,
+  "new_live_verified_sources": [
+    {
+      "url": "https://csee.hnu.edu.cn/info/1036/14220.htm",
+      "scope": "2027 recommendation-exempt notice published 2026-08-28; five names are not ordinary-exam project proof"
+    },
+    {
+      "url": "https://csee.hnu.edu.cn/info/1036/13917.htm",
+      "scope": "2026 official retest group-normalization, same-score priority and no-adjustment rules verified by root"
+    }
+  ],
+  "original_anchor_ids_preserved": [
+    "school-029",
+    "empirical-group-33"
+  ],
+  "source_data_row_occurrences": 48,
+  "exact_preserved_row_occurrences": 27,
+  "raw_source_rows": [
+    "| 2023 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 信息科学与工程学院，计算机技术 | 96 | 325 | 326 | 365.5 | 367.24 | 411 |",
+    "| 2023 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 同学院，软件工程 | 38 | 360 | 361 | 384.5 | 385.42 | 414 |",
+    "| 2024 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 信息科学与工程学院，计算机技术 | 62 | 356 | 356 | 371.5 | 374.15 | 408 |",
+    "| 2024 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 同学院，软件工程 | 25 | 348 | 348 | 364 | 366.80 | 422 |",
+    "| 2025 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 信息科学与工程学院，计算机技术 | 80 | 364 | 364 | 385 | 385.20 | 417 |",
+    "| 2025 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 同学院，软件工程 | 24 | 350 | 350 | 369 | 372.54 | 415 |",
+    "| 2026 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 计算机学院，合并后 085400 电子信息 | 105 | 368 | 368 | **396** | 396.10 | 437 |",
+    "| 2023 | 专业课闭卷，100 分，120 分钟 | 在线编程，300 分，150 分钟；C／C++／Java／Python；不计入复试总分，但不通过即不录取 | 140 分，通常不少于 20 分钟 | 复试总分 240 分，由笔试和面试组成；初试与复试原始分相加排序；面试原始分低于 84 或复试原始分低于 144 不录取 | 算法能力能帮助过机试硬门槛，但不会替代笔试和面试 |",
+    "| 2024 | 专业课闭卷，100 分，120 分钟 | 与 2023 同类：在线普通编程，300 分，150 分钟；不计分但必须通过 | 140 分，通常不少于 20 分钟 | 初试与复试原始分相加；机试不通过、面试原始分低于 84 或复试原始分低于 144，均不录取 | 仍是“编程硬门槛＋材料可见面试” |",
+    "| 2025 | 专业课闭卷，100 分，120 分钟 | 在线普通编程，300 分，150 分钟；不计分但必须通过 | 140 分 | 复试总分 240 分；机试、面试和复试总分均有淘汰条件 | 与前两年结构基本连续，不是攻防 |",
+    "| 2026 | 不再单列旧式专业课笔试 | 闭卷编程机试，100 分，120 分钟，直接计入复试 | 综合面试 150 分，通常不少于 20 分钟 | 复试总分 250 分；最终按初试加复试排序；面试原始分低于 90 或复试原始分低于 150，均不录取 | 机试从“只设硬门槛”变为“既设门槛又直接拉分”；初试仍是总分主体，面试也很重要 |",
+    "| 学院是否看本科背景 | 复试要求提交简历、本科成绩单、英语证明，并可提交奖励、科研、论文或实习实践材料 | 背景不是匿名的；成绩、竞赛和项目都可能被问 |",
+    "| 是否有 985／211 本科硬门槛 | 当前正式复试文件没有写这种报名或录取限制 | 没发现书面硬门槛，但不能据此宣布“双非友好” |",
+    "| 能否统计普通本科录取率 | 最终名单不披露本科院校 | 不能计算；公平性保持 证据不足 |",
+    "| 电子竞赛证书怎么办 | 细则要求现场核验／提交材料，但没有要求发证单位必须原始签发纸质证书 | 对只发电子版的证书，准备清晰打印件并保留官网查询页、验证二维码或证书编号；2027 若要求盖章或验证页，再按当年书面通知执行 |",
+    "| 学制 | 全日制工程类专业学位基本学制 3 年 | 不代表每个人都能提前毕业 |",
+    "| 学费 | 每生每年 12,000 元；名义三年合计 36,000 元 | 不含住宿、生活、交通和设备成本；奖助不能预先抵扣家庭预算 |",
+    "| 专业实践 | 全日制专业学位硕士须完成不少于 6 个月专业实践 | 目标项目的具体企业、地点、补贴、知识产权和分配方式仍缺 |",
+    "| 住宿 | 全日制学生可按学校当年安排申请，受房源约束 | 招生文件没有承诺个人一定有床位，也没有承诺具体宿舍区 |",
+    "| 培养地点 | 学院招生与行政信息指向湖南大学南校区片区、软件大楼 | 招生文件没有承诺每名学生三年的课程、实验室、住宿和实践都固定在同一地点 |",
+    "| 毕业要求 | 须完成课程、学分、专业实践、学位论文／实践成果和答辩等校级要求 | 尚未取得当前 `085400` 项目级课程表、成果清单以及导师可能追加的论文／专利门槛 |",
+    "| 2023 | 信息科学与工程学院 `085400`，含计算机技术、软件工程、通信工程 | `101+204+302+866` | `non_strict` | 只观察旧卷历史压力，不与 408 学校直接比较 |",
+    "| 2024 | 同上；另有非全日制人工智能 | `101+204+302+866` | `non_strict` | 全日制计算机／软件方向可观察，但不进入严格主池 |",
+    "| 2025 | `085400`，含计算机技术、软件工程、通信工程等方向 | `101+204+302+866` | `non_strict` | 同上；网络与信息安全方向另行排除 |",
+    "| 2026 | 计算机学院 `085400`，目录不再按计算机技术／软件工程拆方向 | `101+204+302+866` | `non_strict` | 正式目录已经闭环，不能继续写成“待核” |",
+    "| 2027 | 计算机学院公告预告 `085400` 第四科改为 408 | 目前只确认“第四科：`866 → 408`” | 当年正式目录待核 | 等正式目录逐项确认 `101+204+302+408`、全日制、计划和方向后再决定是否入池 |",
+    "| 2023 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 计算机技术 | 96 | 325 | 326 | 365.5 | 367.24 | 411 |",
+    "| 2023 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 软件工程 | 38 | 360 | 361 | 384.5 | 385.42 | 414 |",
+    "| 2024 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 计算机技术 | 62 | 356 | 356 | 371.5 | 374.15 | 408 |",
+    "| 2024 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 软件工程 | 25 | 348 | 348 | 364 | 366.80 | 422 |",
+    "| 2025 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 计算机技术 | 80 | 364 | 364 | 385 | 385.20 | 417 |",
+    "| 2025 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 软件工程 | 24 | 350 | 350 | 369 | 372.54 | 415 |",
+    "| 2026 | 101 思想政治理论；204 英语二；302 数学二；866 数据结构（当年正式目录已核） | 合并后的 `085400 电子信息` | 105 | 368 | 368 | 396 | 396.10 | 437 |",
+    "| 2023 | 计算机技术 96 人；软件工程 38 人 | 使用正式首榜，并纳入同年度学院正式发布的递补／增补；明确专项不混入普通人口 |",
+    "| 2024 | 计算机技术 62 人；软件工程 25 人 | 软件工程在首榜后有正式补充／替补，最终有效普通人口为 25 人 |",
+    "| 2025 | 计算机技术 80 人；软件工程 24 人 | 后续补充公告只涉及其他方向，不改这两组人口 |",
+    "| 2026 | 合并项目普通人口 105 人 | 3 月 31 日首榜中有 104 名普通考生；4 月 7 日一名推免生放弃后，学院按总排名递补 1 名统考考生，最终有效普通人口为 105 人；12 名明确专项单列 |",
+    "| 2023 | 专业课闭卷，100 分，120 分钟 | 在线编程，300 分，150 分钟；C／C++／Java／Python；不计入复试总分，但不通过即不录取 | 140 分，通常不少于 20 分钟 | 复试总分 240 分，由笔试和面试组成；初试与复试原始分相加排序；面试原始分低于 84 或复试原始分低于 144 不录取 | 算法能力能帮助过机试硬门槛，但不会替代笔试和面试 |",
+    "| 2024 | 专业课闭卷，100 分，120 分钟 | 与 2023 同类：在线普通编程，300 分，150 分钟；不计分但必须通过 | 140 分，通常不少于 20 分钟 | 初试与复试原始分相加；机试不通过、面试原始分低于 84 或复试原始分低于 144，均不录取 | 仍是“编程硬门槛＋材料可见面试” |",
+    "| 2025 | 专业课闭卷，100 分，120 分钟 | 在线普通编程，300 分，150 分钟；不计分但必须通过 | 140 分 | 复试总分 240 分；机试、面试和复试总分均有淘汰条件 | 与前两年结构基本连续，不是攻防 |",
+    "| 2026 | 不再单列旧式专业课笔试 | 闭卷编程机试，100 分，120 分钟，直接计入复试 | 综合面试 150 分，通常不少于 20 分钟 | 复试总分 250 分；最终按初试加复试排序；面试原始分低于 90 或复试原始分低于 150，均不录取 | 机试改为直接计分；本行已核的是面试与复试总分合格门槛，未确认独立机试硬线，不能沿用旧年条件；初试仍是总分主体 |",
+    "| 专业方向 | 匹配 | 计算机技术、软件工程和普通电子信息路线属于软件／计算机范围；安全路线已排除 |",
+    "| 2026 初试合同 | 不匹配 | 正式四科为 `101+204+302+866`，不是固定 22408 |",
+    "| 2027 初试合同 | 待正式目录 | 只确认第四科改 408，完整同年四码尚未发布 |",
+    "| 历史录取压力 | 高 | 2025 计算机技术中位数 385；2026 合并项目中位数 396 |",
+    "| 算法背景利用率 | 中高 | 普通编程机试真实存在；2026 起直接计分，但面试和初试仍占更大部分 |",
+    "| 普通本科公平性 | 证据不足 | 没有硬门槛文本，但履历可见且没有本科来源统计 |",
+    "| 当前候选角色 | `high_pressure_catalog_gated_watchlist` | 只作 2027 高压观察项，不进入现有严格 22408 主池，不叫冲／稳／保 |"
+  ],
+  "numerical_fidelity": {
+    "score_populations": [
+      {
+        "year": 2023,
+        "direction": "computer",
+        "ordinary": 96,
+        "line": 325,
+        "minimum": 326,
+        "median": 365.5,
+        "mean": "367.24",
+        "maximum": 411
+      },
+      {
+        "year": 2023,
+        "direction": "software",
+        "ordinary": 38,
+        "line": 360,
+        "minimum": 361,
+        "median": 384.5,
+        "mean": "385.42",
+        "maximum": 414
+      },
+      {
+        "year": 2024,
+        "direction": "computer",
+        "ordinary": 62,
+        "line": 356,
+        "minimum": 356,
+        "median": 371.5,
+        "mean": "374.15",
+        "maximum": 408
+      },
+      {
+        "year": 2024,
+        "direction": "software",
+        "ordinary": 25,
+        "line": 348,
+        "minimum": 348,
+        "median": 364,
+        "mean": "366.80",
+        "maximum": 422
+      },
+      {
+        "year": 2025,
+        "direction": "computer",
+        "ordinary": 80,
+        "line": 364,
+        "minimum": 364,
+        "median": 385,
+        "mean": "385.20",
+        "maximum": 417
+      },
+      {
+        "year": 2025,
+        "direction": "software",
+        "ordinary": 24,
+        "line": 350,
+        "minimum": 350,
+        "median": 369,
+        "mean": "372.54",
+        "maximum": 415
+      },
+      {
+        "year": 2026,
+        "direction": "merged",
+        "ordinary": 105,
+        "line": 368,
+        "minimum": 368,
+        "median": 396,
+        "mean": "396.10",
+        "maximum": 437
+      }
+    ],
+    "historical_subjects": "2023-2026 101+204+302+866 in each score row",
+    "2026_population": "104 first-list ordinary + 1 official replacement = 105; 12 special separate",
+    "2026_retest": "100 coding/120min +150 interview/usually20min =250; interview<90 or retest<150 rejected; standalone coding cutoff unconfirmed",
+    "2023_2025_retest": "coding300/150min/pass gate only; written100/120min+interview140=240; 2023/2024 interview84/retest144 thresholds retained",
+    "costs": "3 years;12000 CNY/year;36000 CNY nominal tuition;6months minimum professional practice"
+  },
+  "approved_normalizations": [
+    "Duplicate score tables consolidated into one full cross-year table plus concrete project/direction rows; all seven numerical tuples retained.",
+    "Duplicate retest tables consolidated; inconsistent 2026 standalone coding gate replaced with already-corrected unconfirmed wording.",
+    "Old fixed English-II and blanket security exclusion interpreted as historical preference, not current scope; current scope Math-II+408 with English-I/II.",
+    "Obsolete independent-report self-links removed; entire content is now in concrete admissions entity bodies.",
+    "Old first-person time phrases corrected to original 2026-09-03 evidence audit, not a claim of new roster downloads.",
+    "Same-college aliases in software rows resolved to full historical college name.",
+    "Empty leftover headings and repeated conclusion removed after substantive facts were reassigned to project subsections.",
+    "2026 final ranking uses normalized interview scores while failure gates use raw interview and pre-normalization retest; the old raw-sum wording was corrected after live official source verification.",
+    "Internal non_strict/strict-22408 confirmation and high_pressure_catalog_gated_watchlist record definitions moved to school-end research notes; concrete project uses plain-language eligibility and competitiveness."
+  ],
+  "substantive_topic_coverage": [
+    "announcement and exact catalog boundary",
+    "all years subjects",
+    "seven score populations",
+    "supplements and replacements",
+    "historical vs merged scope",
+    "coding and retest scoring",
+    "interview and materials",
+    "electronic certificate advice",
+    "undergraduate background fairness limits",
+    "tuition duration practice housing campus graduation mentor gaps",
+    "empirical competitiveness limits",
+    "current user subject scope",
+    "other historical communication/non-fulltime AI/security clues",
+    "source timing anonymized OCR methodology"
+  ],
+  "validation": {
+    "trace_id": "6e1e24ca-cd0a-45ae-9808-f82bd5b15ad8",
+    "source_sha256": "8115388a651fa1ed8c689fdef8ba20b16a6e597e0d27d94f5feee17c977f2921",
+    "independent_content_audit": "passed",
+    "reader_dom_tests": {
+      "passed": 10,
+      "failed": 0
+    },
+    "focused_fidelity_tests": {
+      "passed": 26,
+      "failed": 0
+    },
+    "doctor": "ok",
+    "local_browser": {
+      "surface": "agent-created hidden in-app browser; user tabs untouched",
+      "checked": [
+        "school landing shows college entries",
+        "current college opens merged 085400 project",
+        "historical college opens historical 085400 and per-direction anchors",
+        "software direction preserves 2023-2025 subjects and scores",
+        "old empirical-group-33 opens current project",
+        "rendered layout inspected"
+      ],
+      "source_sha256": "8115388a651fa1ed8c689fdef8ba20b16a6e597e0d27d94f5feee17c977f2921"
+    },
+    "fidelity_migration": {
+      "old_rows": 8,
+      "scope": "school-029 / root-expanded.md / 湖南大学",
+      "reason": "Catalog and outdated personal-policy summaries relocated into project facts and research notes.",
+      "immutable_manifest_unchanged": true,
+      "negative_cases": [
+        "changed cutoff",
+        "changed median",
+        "changed historical subject",
+        "invented 2027 confirmation",
+        "invented 2027 first three subjects",
+        "wrong historical entity"
+      ]
+    },
+    "full_suite": {
+      "passed": 166,
+      "failed": 0,
+      "duration_seconds": 66.661
+    }
+  }
+}
