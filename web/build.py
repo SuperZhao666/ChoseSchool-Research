@@ -10,61 +10,116 @@ import html
 import json
 import re
 from datetime import date
+from html.parser import HTMLParser
 from pathlib import Path
 
 from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
 TRACE_ID = '4633df94-71b7-4339-ae57-1ad2dd0576cb'
-TOPIC_MARKER = re.compile(r'(?m)^<section class="school-topic" data-topic-key="([a-z][a-z0-9-]*)" data-topic-title="([^"\n]+)">[ \t]*$')
+ENTITY_TRACE_ID = '4fa2880a-e3d3-40b3-a2d9-8c69ad9fd505'
+ENTITY_CLASSES = {'school-college': 'college', 'admission-project': 'project',
+                  'research-direction': 'direction', 'admission-notes': 'notes'}
 
 
-def prepare_topics(source: str, panel_key: str) -> str:
-    """Add local navigation without changing the retained research body.
+class _SectionAttributes(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        self.attrs = dict(attrs)
 
-    TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61
-    Explicit, sibling sections are opt-in; unmarked schools render as before.
+
+def prepare_admissions(source: str, panel_key: str) -> str:
+    """Derive a college → project → direction tree from explicit source entities.
+
+    TraceId: 4fa2880a-e3d3-40b3-a2d9-8c69ad9fd505
+    Body text is never moved or summarized. Entity keys identify reading routes,
+    not catalog confirmation; the same program code in two colleges stays apart.
     """
-    matches = list(TOPIC_MARKER.finditer(source))
-    if source.count('class="school-topic"') != len(matches):
-        raise ValueError(f'校内栏目标记格式无效：{panel_key}')
-    if not matches:
+    if not any(f'class="{name}"' in source for name in ENTITY_CLASSES):
         return source
     if not panel_key.startswith('school-'):
-        raise ValueError(f'校内栏目只能属于学校：{panel_key}')
-    keys = [match[1] for match in matches]
-    if len(set(keys)) != len(keys):
-        raise ValueError(f'校内栏目键重复：{panel_key}')
-    opened = False
-    for tag in re.finditer(r'(?m)^</?section\b[^>]*>[ \t]*$', source):
-        if TOPIC_MARKER.fullmatch(tag[0]):
-            if opened:
-                raise ValueError(f'校内栏目必须同级，不能嵌套：{panel_key}')
-            opened = True
-        elif tag[0].startswith('</section'):
-            if not opened:
-                raise ValueError(f'校内栏目闭合标记无对应栏目：{panel_key}')
-            opened = False
-        elif opened:
-            raise ValueError(f'校内栏目不允许嵌套 section：{panel_key}')
-    if opened:
-        raise ValueError(f'校内栏目未闭合：{panel_key}')
-    selected = 'programs' if 'programs' in keys else keys[0]
-    buttons = []
-    for match in matches:
-        key, title = match[1], html.escape(html.unescape(match[2]), quote=True)
-        pressed = str(key == selected).lower()
-        buttons.append(f'<button type="button" class="school-topic-button" data-topic-target="{key}" aria-controls="topic-{panel_key}-{key}" aria-pressed="{pressed}">{title}</button>')
-    navigation = '<nav class="school-topic-navigation" data-reader-ui="true" aria-label="本校资料分类"><p class="topic-navigation-label">本校资料分类</p><div class="school-topic-buttons">' + ''.join(buttons) + '</div></nav>\n\n'
+        raise ValueError(f'招生实体只能属于学校：{panel_key}')
+    tags = list(re.finditer(r'(?m)^</?section\b[^>]*>[ \t]*$', source))
+    if len(tags) != len(re.findall(r'</?section\b', source)):
+        raise ValueError(f'招生实体标记必须独占一行：{panel_key}')
+    stack, colleges, nodes, all_keys = [], [], [], set()
+    notes = None
+    for tag in tags:
+        if tag[0].startswith('</section'):
+            if not stack:
+                raise ValueError(f'招生实体闭合标记无对应实体：{panel_key}')
+            stack.pop()['end'] = tag.end()
+            continue
+        parser = _SectionAttributes(); parser.feed(tag[0]); attrs = parser.attrs
+        kind = ENTITY_CLASSES.get(attrs.get('class'))
+        if kind is None:
+            raise ValueError(f'招生实体内存在未知 section：{panel_key}')
+        parent = stack[-1] if stack else None
+        expected = {'college': None, 'project': 'college', 'direction': 'project', 'notes': None}[kind]
+        if (parent['kind'] if parent else None) != expected:
+            raise ValueError(f'招生实体层级必须是学院→项目→方向：{panel_key}')
+        title = attrs.get(f'data-{kind}-title', '')
+        key = attrs.get(f'data-{kind}-key', 'notes' if kind == 'notes' else '')
+        if not title or not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9-]*', key):
+            raise ValueError(f'招生实体标题或键无效：{panel_key}')
+        qualified_key = (kind, parent['key'] if kind == 'direction' else '', key)
+        if qualified_key in all_keys:
+            raise ValueError(f'招生实体键重复：{panel_key}/{key}')
+        all_keys.add(qualified_key)
+        suffix = f'{parent["key"]}-{key}' if kind == 'direction' else key
+        identifier = f'{kind}-{panel_key}' + (f'-{suffix}' if kind != 'notes' else '')
+        node = {'kind': kind, 'key': key, 'title': title, 'id': identifier,
+                'status': attrs.get('data-project-status', ''), 'start': tag.start(),
+                'tag_end': tag.end(), 'tag': tag[0].rstrip(), 'children': []}
+        if parent: parent['children'].append(node)
+        elif kind == 'college': colleges.append(node)
+        else: notes = node
+        nodes.append(node); stack.append(node)
+    if stack or not colleges or any(not college['children'] for college in colleges):
+        raise ValueError(f'招生实体未闭合或学院没有招生项目：{panel_key}')
 
-    def enhance(match: re.Match) -> str:
-        key = match[1]
-        hidden = '' if key == selected else ' hidden'
-        title = html.escape(html.unescape(match[2]), quote=True)
-        prefix = navigation if match.start() == matches[0].start() else ''
-        return prefix + f'<section class="school-topic" data-topic-key="{key}" data-topic-title="{title}" id="topic-{panel_key}-{key}" aria-label="{title}"{hidden}>'
+    def link(node, css=''):
+        title = html.escape(node['title'])
+        if node['kind'] == 'project' and '改考408' in node['status'] and 'data-status="late-announcement"' in source:
+            css += ' late-project'
+        status = f'<small class="project-status">{html.escape(node["status"])}</small>' if node['status'] else ''
+        return f'<a class="{css}" href="#{node["id"]}" data-entity-target="{node["id"]}"><span>{title}</span>{status}</a>'
 
-    return TOPIC_MARKER.sub(enhance, source)
+    branches = []
+    for college in colleges:
+        projects = []
+        for project in college['children']:
+            directions = ''.join(f'<li>{link(direction, "direction-link")}</li>' for direction in project['children'])
+            project_tree = f'<ul class="direction-tree" data-directions-for="{project["id"]}" hidden>{directions}</ul>' if directions else ''
+            projects.append(f'<li>{link(project, "project-link")}{project_tree}</li>')
+        branches.append(f'<li>{link(college, "college-link")}<ul class="project-tree" data-projects-for="{college["id"]}" hidden>{"".join(projects)}</ul></li>')
+    home_id = f'admissions-{panel_key}'
+    navigation = (f'<div class="admission-layout" id="{home_id}">\n\n'
+                  '<nav class="admission-navigation" data-reader-ui="true" aria-label="学院、招生项目与研究方向">'
+                  f'<a class="admissions-home-link" href="#{home_id}" data-entity-home="true">本校招生结构</a>'
+                  '<p class="entity-tree-caption">学院 → 招生项目 → 研究方向</p>'
+                  f'<ul class="college-tree">{"".join(branches)}</ul>'
+                  + (link(notes, 'admissions-notes-link') if notes else '') + '</nav>\n\n'
+                  '<div class="admission-detail">\n\n'
+                  '<nav class="admission-breadcrumb" data-reader-ui="true" aria-label="当前招生项目位置">本校招生结构</nav>\n\n'
+                  '<nav class="admission-home" data-reader-ui="true" aria-label="选择招生学院"><h4>先选择学院，再查看具体招生项目</h4>'
+                  '<p>同名专业按学院分别列出。进入项目后，可以连续查看它的方向、科目、历年成绩与复试资料。</p>'
+                  '<div class="entity-cards">' + ''.join(link(college, 'entity-card') for college in colleges) + '</div></nav>\n\n')
+    edits = []
+    for node in nodes:
+        hidden = ' hidden' if node['kind'] in ('college', 'project', 'notes') else ''
+        enhanced = node['tag'][:-1] + f' id="{node["id"]}" aria-label="{html.escape(node["title"], quote=True)}"{hidden}>'
+        if node['kind'] == 'college':
+            enhanced += ('\n\n<nav class="college-overview" data-reader-ui="true" aria-label="本学院招生项目">'
+                         f'<h4>{html.escape(node["title"])}</h4><p>选择具体项目，查看属于该项目的完整资料。</p>'
+                         '<div class="entity-cards">' + ''.join(link(project, 'entity-card') for project in node['children']) + '</div></nav>')
+        edits.append((node['start'], node['tag_end'], enhanced))
+    edits.append((nodes[0]['start'], nodes[0]['start'], navigation))
+    last_end = max(node['end'] for node in nodes)
+    edits.append((last_end, last_end, '\n\n</div>\n\n</div>'))
+    # Apply right to left, enhancing the first marker before inserting navigation.
+    for start, end, replacement in sorted(edits, key=lambda edit: (edit[0], edit[1]), reverse=True):
+        source = source[:start] + replacement + source[end:]
+    return source
 
 
 def make_panels(source: str) -> list[dict]:
@@ -109,7 +164,7 @@ def render(source: str) -> tuple[str, dict]:
     wrapped = []
     for panel in panels:
         key = panel['key']; hidden = '' if key == default_panel else ' hidden'
-        panel_body = prepare_topics(panel['source'], key)
+        panel_body = prepare_admissions(panel['source'], key)
         wrapped.append(f'<section id="panel-{key}" class="reader-panel" data-panel="{key}" data-title="{html.escape(panel["title"], quote=True)}"{hidden}>\n\n{panel_body}\n\n</section>\n\n')
     md = MarkdownIt('commonmark', {'html': True}).enable('table')
     tokens = md.parse(''.join(wrapped))

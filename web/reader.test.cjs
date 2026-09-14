@@ -46,80 +46,126 @@ const fixture = `<html><body><header class="toolbar"></header><aside id="sidebar
 <table><tr><td>085410</td><td>41人</td></tr></table><p>末端 AI</p></section>
 </main></body></html>`;
 
-// TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61
-const topicFixture = fixture.replace('<h3>AI与数据</h3>', `<h3>AI与数据</h3>
-<nav class="school-topic-navigation" data-reader-ui="true" aria-label="本校资料分类">
-<p>本校资料分类</p><button type="button" id="topic-programs" data-topic-target="programs" aria-controls="programs" aria-pressed="true">招生项目</button>
-<button type="button" id="topic-scores" data-topic-target="scores" aria-controls="scores" aria-pressed="false">历年分数</button></nav>
-<section class="school-topic" id="programs" data-topic-key="programs" data-topic-title="招生项目"><h4>招生项目正文</h4>`)
-  .replace('<ul><li>父项独有文本<ul><li>子项</li></ul></li></ul>', `</section>
-<section class="school-topic" id="scores" data-topic-key="scores" data-topic-title="历年分数" hidden><h4>历年分数正文</h4>
-<details id="score-fold"><summary>软件分数</summary><a id="score-evidence"></a><p>科目885，年度2026，初试341</p></details></section>`);
+// TraceId: 4fa2880a-e3d3-40b3-a2d9-8c69ad9fd505
+const entityFixture = fixture.replace('<h3>AI与数据</h3>', `<h3>AI与数据</h3>
+<div class="admission-layout" id="admissions-school-001">
+<nav class="admission-navigation" data-reader-ui="true">
+<a id="home-link" href="#admissions-school-001" data-entity-home="true">本校招生结构</a>
+<a id="college1-link" class="college-link" href="#college1" data-entity-target="college1">207 计算机学院</a>
+<ul data-projects-for="college1" hidden><li><a id="project1-link" class="project-link" href="#project1" data-entity-target="project1">085404 计算机技术</a>
+<ul data-directions-for="project1" hidden><li><a id="direction1-link" href="#direction1" data-entity-target="direction1">00 不区分研究方向</a></li></ul></li></ul>
+<a id="college2-link" class="college-link" href="#college2" data-entity-target="college2">241 医学技术学院</a>
+<ul data-projects-for="college2" hidden><li><a id="project2-link" class="project-link" href="#project2" data-entity-target="project2">085404 计算机技术</a>
+<ul data-directions-for="project2" hidden><li><a id="direction2-link" href="#direction2" data-entity-target="direction2">00 不区分研究方向</a></li></ul></li></ul>
+<a id="notes-link" href="#notes" data-entity-target="notes">共同说明入口仅界面文字</a></nav>
+<div class="admission-detail"><nav class="admission-breadcrumb" data-reader-ui="true"></nav>
+<nav class="admission-home" data-reader-ui="true"><h4>选择学院</h4></nav>
+<section class="school-college" id="college1" data-college-key="207" data-college-title="207 计算机学院" hidden>
+<nav class="college-overview" data-reader-ui="true"><h4>207 计算机学院</h4>本学院项目入口</nav>
+<h4 id="college-source-heading">学院源标题独有检索文字</h4>
+<section class="admission-project" id="project1" data-project-key="207-085404" data-project-title="085404 计算机技术" hidden>
+<h4>计算机学院项目完整资料</h4><p>本项目共有科目、名额与历年分数</p>
+<section class="research-direction" id="direction1" data-direction-key="00" data-direction-title="00 不区分研究方向"><h5>计算机方向说明</h5></section>`)
+  .replace('<ul><li>父项独有文本<ul><li>子项</li></ul></li></ul>', `</section></section>
+<section class="school-college" id="college2" data-college-key="241" data-college-title="241 医学技术学院" hidden>
+<nav class="college-overview" data-reader-ui="true">本学院项目入口</nav>
+<section class="admission-project" id="project2" data-project-key="241-085404" data-project-title="085404 计算机技术" hidden>
+<h4>医学技术学院项目完整资料</h4><p>本医学项目2026考数学二408</p>
+<section class="research-direction" id="direction2" data-direction-key="00" data-direction-title="00 不区分研究方向"><h5>医学方向说明</h5><p>共享项目名额，不能独立拆分</p>
+<details id="score-fold"><summary>医学成绩</summary><a id="score-evidence"></a><p>年度2026，院线300</p></details></section></section></section>
+<section class="admission-notes" id="notes" data-notes-title="共同口径与来源核验" hidden><details id="notes-fold"><summary>口径</summary><p>不属于具体招生实体的方法说明</p></details></section></div></div>`);
 
-function visibleTopics(r) {
-  return [...r.document.querySelectorAll('#panel-school-001 .school-topic')].filter(topic => !topic.hidden).map(topic => topic.dataset.topicKey);
+function visibleProjects(r) {
+  return [...r.document.querySelectorAll('.admission-project')].filter(project => !project.hidden).map(project => project.dataset.projectKey);
 }
 
-test('school topics show one category, retain per-school choice and preserve original school hashes', () => {
-  const r = reader(topicFixture, '#s1');
-  const before = r.document.getElementById('research-content').textContent;
-  assert.deepEqual(visibleTopics(r), ['programs']);
-  assert.equal(r.document.getElementById('expand-all').textContent, '展开本栏资料');
-  assert.equal(r.document.getElementById('collapse-all').textContent, '收起本栏资料');
-  r.click('topic-scores');
-  assert.deepEqual(visibleTopics(r), ['scores']);
-  assert.equal(r.document.getElementById('topic-scores').getAttribute('aria-pressed'), 'true');
-  assert.equal(r.document.getElementById('topic-programs').getAttribute('aria-pressed'), 'false');
-  assert.equal(r.location.hash, '#s1');
-  r.click('nav2');
-  assert.equal(r.document.getElementById('expand-all').textContent, '展开本页全部资料');
-  assert.equal(r.document.getElementById('collapse-all').textContent, '收起本页资料');
-  r.click('nav1');
-  assert.equal(r.document.getElementById('expand-all').textContent, '展开本栏资料');
-  assert.equal(r.document.getElementById('collapse-all').textContent, '收起本栏资料');
-  assert.deepEqual(r.visible(), ['school-001']);
-  assert.deepEqual(visibleTopics(r), ['scores']);
-  assert.equal(r.document.getElementById('research-content').textContent, before);
-  for (const button of r.document.querySelectorAll('[data-topic-target]')) {
-    assert.equal(button.tagName, 'BUTTON');
-    assert.equal(button.getAttribute('type'), 'button');
-    assert.ok(r.document.getElementById(button.getAttribute('aria-controls')));
-  }
+function researchText(content) {
+  const copy = content.cloneNode(true);
+  copy.querySelectorAll('[data-reader-ui]').forEach(element => element.remove());
+  return copy.textContent;
+}
+
+test('school landing → college → program → direction keeps shared project facts and separates identical codes', () => {
+  const r = reader(entityFixture, '#s1');
+  assert.deepEqual(visibleProjects(r), []);
+  assert.equal(r.document.querySelector('.admission-home').hidden, false);
+  assert.equal(r.document.getElementById('expand-all').disabled, true);
+  r.click('college1-link');
+  assert.equal(r.location.hash, '#college1');
+  assert.equal(r.document.getElementById('college1').hidden, false);
+  assert.equal(r.document.getElementById('college2').hidden, true);
+  assert.deepEqual(visibleProjects(r), []);
+  assert.equal(r.document.getElementById('college-source-heading').hidden, true);
+  assert.equal(r.document.querySelector('#college1 .college-overview h4').hidden, false);
+  assert.equal(r.document.querySelector('[data-projects-for="college1"]').hidden, false);
+  r.click('project1-link');
+  assert.deepEqual(visibleProjects(r), ['207-085404']);
+  assert.equal(r.document.querySelector('#college1 .college-overview').hidden, true);
+  assert.equal(r.document.getElementById('expand-all').textContent, '展开本项目资料');
+  assert.equal(r.document.querySelector('.admission-breadcrumb').dataset.scrolled, 'true');
+  r.click('direction1-link');
+  assert.deepEqual(visibleProjects(r), ['207-085404']);
+  assert.equal(r.document.getElementById('direction1').classList.contains('is-current-direction'), true);
+  assert.equal(r.document.querySelector('.admission-breadcrumb').textContent, '学校一 / 207 计算机学院 / 085404 计算机技术 / 00 不区分研究方向');
+  assert.equal(r.document.getElementById('project1').querySelector('p').hidden, false);
+  r.click('college2-link'); r.click('project2-link');
+  assert.deepEqual(visibleProjects(r), ['241-085404']);
+  assert.equal(r.document.getElementById('college1').hidden, true);
+  assert.equal(r.document.getElementById('project2-link').getAttribute('aria-current'), 'location');
+  r.click('home-link');
+  assert.deepEqual(visibleProjects(r), []);
+  assert.equal(r.document.querySelector('.admission-home').hidden, false);
 });
 
-test('full-text search and old deep links reveal the matching topic and its folded evidence', () => {
-  const r = reader(topicFixture);
-  r.search('初试341');
-  assert.deepEqual(visibleTopics(r), ['scores']);
+test('full-text search, old anchors and shared direction links open the owning college and program', () => {
+  const r = reader(entityFixture);
+  r.search('院线300');
+  assert.deepEqual(visibleProjects(r), ['241-085404']);
   assert.equal(r.document.getElementById('score-fold').open, true);
-  assert.equal(r.document.querySelector('mark').textContent, '初试341');
-  r.click('topic-programs'); r.go('#score-evidence');
-  assert.deepEqual(visibleTopics(r), ['scores']);
-  assert.equal(r.document.getElementById('score-fold').open, true);
-  r.search('本校资料分类');
+  assert.equal(r.document.querySelector('mark').textContent, '院线300');
+  assert.equal(r.location.hash, '#direction2');
+  assert.equal(r.document.querySelector('[data-directions-for="project2"]').hidden, false);
+  r.click('project1-link'); r.go('#score-evidence');
+  assert.deepEqual(visibleProjects(r), ['241-085404']);
+  assert.equal(r.document.getElementById('direction2').classList.contains('is-current-direction'), true);
+  const direct = reader(entityFixture, '#direction2');
+  assert.deepEqual(visibleProjects(direct), ['241-085404']);
+  assert.equal(direct.document.getElementById('college2').hidden, false);
+  r.search('共同说明入口仅界面文字');
   assert.equal(r.document.getElementById('search-status').textContent, '没有找到匹配内容');
-  r.search('招生项目');
-  assert.equal(r.document.getElementById('search-status').textContent, '1 / 1 处');
-  assert.deepEqual(visibleTopics(r), ['programs']);
+  r.search('学院源标题独有检索文字');
+  assert.equal(r.document.getElementById('college-source-heading').hidden, false);
+  assert.equal(r.document.querySelector('#college1 .college-overview h4').hidden, true);
+  assert.equal(r.document.querySelector('#college1 .college-overview').hidden, false);
+  assert.equal(r.document.getElementById('college1').hidden, false);
+  assert.deepEqual(visibleProjects(r), []);
+  r.click('home-link'); r.go('#college-source-heading');
+  assert.equal(r.document.getElementById('college-source-heading').hidden, false);
+  r.search('具体招生实体的方法说明');
+  assert.deepEqual(visibleProjects(r), []);
+  assert.equal(r.document.getElementById('notes').hidden, false);
 });
 
-test('fold controls affect the selected topic; printing includes all current-school topics and restores state', () => {
-  const r = reader(topicFixture);
+test('fold controls and printing affect only the selected project and restore fold state', () => {
+  const r = reader(entityFixture, '#project1');
   r.click('expand-all');
   assert.equal(r.document.getElementById('first-fold').open, true);
   assert.equal(r.document.getElementById('score-fold').open, false);
-  r.click('topic-scores'); r.click('collapse-all');
+  r.click('project2-link'); r.click('collapse-all');
   assert.equal(r.document.getElementById('first-fold').open, true);
   r.window.dispatchEvent(new r.window.Event('beforeprint'));
-  assert.deepEqual(visibleTopics(r), ['programs', 'scores']);
+  assert.deepEqual(visibleProjects(r), ['241-085404']);
   assert.deepEqual(r.visible(), ['school-001']);
   assert.equal(r.document.getElementById('score-fold').open, true);
+  assert.equal(r.document.getElementById('notes-fold').open, false);
   assert.equal(r.document.getElementById('second-fold').open, false);
   r.window.dispatchEvent(new r.window.Event('afterprint'));
-  assert.deepEqual(visibleTopics(r), ['scores']);
+  assert.deepEqual(visibleProjects(r), ['241-085404']);
   assert.equal(r.document.getElementById('first-fold').open, true);
   assert.equal(r.document.getElementById('score-fold').open, false);
-  assert.equal(r.document.querySelectorAll('[data-print-open],[data-print-hidden]').length, 0);
+  assert.equal(r.document.querySelectorAll('[data-print-open]').length, 0);
+  r.click('nav2'); assert.equal(r.document.getElementById('expand-all').textContent, '展开本页全部资料');
+  r.click('nav1'); assert.deepEqual(visibleProjects(r), []);
 });
 
 test('sidebar selects exactly one school; hash back and empty hash restore prior/default panel', () => {
@@ -188,7 +234,7 @@ test('mobile navigation toggle closes on selection and Escape', () => {
 
 test('actual page preserves complete text, old deep links and cross-school evidence', () => {
   const r = reader(fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8'));
-  const content = r.document.getElementById('research-content'), before = content.textContent;
+  const content = r.document.getElementById('research-content'), before = researchText(content);
   assert.deepEqual(r.visible(), ['school-001']);
   assert.equal(r.document.querySelectorAll('#school-navigation .school-link').length, 104);
   assert.equal(r.document.querySelectorAll('#school-navigation .late-switch').length, 4);
@@ -199,6 +245,6 @@ test('actual page preserves complete text, old deep links and cross-school evide
     r.search(query); assert.match(r.document.getElementById('search-status').textContent, /^1 \/ \d+ 处$/, query);
     assert.equal(r.visible().length, 1);
   }
-  r.search(''); assert.equal(content.textContent, before);
+  r.search(''); assert.equal(researchText(content), before);
   assert.equal(r.document.querySelectorAll('a[id^="school-"]').length, 104);
 });

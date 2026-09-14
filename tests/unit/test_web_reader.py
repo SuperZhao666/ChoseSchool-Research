@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 from markdown_it import MarkdownIt
-from web.build import make_panels, prepare_topics, render
+from web.build import make_panels, prepare_admissions, render
 from tests.unit.test_unified_research_fidelity import numeric_signature, original_cells, SCORE_SUBJECT_COLUMN
 
 
@@ -35,7 +35,7 @@ class ReaderParser(HTMLParser):
                 self.section = attrs['id']
         if tag == 'a' and 'href' in attrs:
             self.links.append(attrs['href'])
-            if self.main: self.main_links.append(attrs['href'])
+            if self.main and not self.generated_navigation: self.main_links.append(attrs['href'])
         if tag == 'section' and attrs.get('class') == 'reader-panel':
             self.panels.append(attrs)
         if tag == 'main': self.main = True
@@ -300,27 +300,27 @@ class WebReaderTests(unittest.TestCase):
         self.assertIn('max-width:100%', (self.root / 'dist/reader.css').read_text(encoding='utf-8'))
 
 
-class SchoolTopicBuildTests(unittest.TestCase):
-    """TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61"""
+class SchoolEntityBuildTests(unittest.TestCase):
+    """TraceId: 4fa2880a-e3d3-40b3-a2d9-8c69ad9fd505"""
 
-    def test_topic_navigation_keeps_research_text_tables_and_links_intact(self):
+    def test_entity_hierarchy_keeps_research_text_tables_and_links_intact(self):
         source = '''<a id="school-069"></a>
 ### 北京理工大学
 <p class="school-tier">院校层次：985</p>
 
-<section class="school-topic" data-topic-key="scores" data-topic-title="历年分数">
+<section class="school-college" data-college-key="207" data-college-title="207 计算机学院">
 
-#### 历年分数
+<section class="admission-project" data-project-key="207-085405" data-project-title="085405 软件工程" data-project-status="2027下半年改考408公告">
+
+#### 软件工程：历年分数
 
 | 年份 | 科目 | 分数 |
 | --- | --- | --- |
 | 2026 | 885 | 341 |
 
-</section>
+<section class="research-direction" data-direction-key="00" data-direction-title="00 不区分研究方向">
 
-<section class="school-topic" data-topic-key="programs" data-topic-title="招生项目">
-
-#### 招生项目
+##### 不区分研究方向
 
 <details>
 <summary>软件工程</summary>
@@ -332,6 +332,16 @@ class SchoolTopicBuildTests(unittest.TestCase):
 </details>
 
 </section>
+
+</section>
+
+</section>
+
+<section class="admission-notes" data-notes-title="共同口径与来源核验">
+
+共同样本范围与来源界限。
+
+</section>
 '''
         page, _ = render(source)
         original = ReaderParser(); original.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(source) + '</main>')
@@ -340,20 +350,41 @@ class SchoolTopicBuildTests(unittest.TestCase):
         self.assertEqual(normalize(generated.text), normalize(original.text))
         self.assertEqual(generated.tables, original.tables)
         self.assertEqual(generated.main_links, original.main_links)
-        self.assertIn('data-topic-target="programs" aria-controls="topic-school-069-programs" aria-pressed="true"', page)
-        self.assertIn('id="topic-school-069-scores" aria-label="历年分数" hidden', page)
-        self.assertIn('id="topic-school-069-programs" aria-label="招生项目">', page)
+        self.assertIn('id="project-school-069-207-085405" aria-label="085405 软件工程" hidden', page)
+        self.assertIn('href="#direction-school-069-207-085405-00"', page)
+        self.assertIn('id="college-school-069-207" aria-label="207 计算机学院" hidden', page)
+        self.assertIn('data-projects-for="college-school-069-207" hidden', page)
+        self.assertIn('data-directions-for="project-school-069-207-085405" hidden', page)
+        self.assertNotIn('本校资料分类', page)
         self.assertIn('existing-evidence', generated.ids)
 
-    def test_only_explicit_sibling_topics_are_accepted(self):
-        topic = '<section class="school-topic" data-topic-key="programs" data-topic-title="招生项目">\n\n正文\n\n</section>\n'
-        self.assertEqual(prepare_topics('原有学校正文', 'school-001'), '原有学校正文')
-        invalid = [topic + topic, topic.replace('</section>', ''),
-                   topic.replace('正文', topic), topic.replace('data-topic-key="programs"', 'data-topic-key="bad/key"')]
+    def test_entities_require_distinct_project_keys_and_correct_parentage(self):
+        direction = '<section class="research-direction" data-direction-key="00" data-direction-title="00 不区分研究方向">\n\n正文\n\n</section>\n'
+        project = '<section class="admission-project" data-project-key="207-085404" data-project-title="085404 计算机技术">\n\n' + direction + '\n</section>\n'
+        college = '<section class="school-college" data-college-key="207" data-college-title="计算机学院">\n\n' + project + '\n</section>\n'
+        other = college.replace('207', '241').replace('计算机学院', '医学技术学院')
+        self.assertEqual(prepare_admissions('原有学校正文', 'school-001'), '原有学校正文')
+        generated = prepare_admissions(college + other, 'school-069')
+        for key in ('207-085404', '241-085404'):
+            self.assertIn(f'id="project-school-069-{key}"', generated)
+            self.assertIn(f'id="direction-school-069-{key}-00"', generated)
+        invalid = [college + college, college.replace('</section>', ''), project, direction,
+                   college.replace(project, direction), college.replace(direction, direction + direction),
+                   college.replace(project, project + project), college.replace('207-085404', 'bad/key'),
+                   college + other.replace('241-085404', '207-085404')]
         for source in invalid:
             with self.subTest(source=source):
-                with self.assertRaises(ValueError): prepare_topics(source, 'school-069')
-        with self.assertRaises(ValueError): prepare_topics(topic, 'chapter-1')
+                with self.assertRaises(ValueError): prepare_admissions(source, 'school-069')
+        with self.assertRaises(ValueError): prepare_admissions(college, 'chapter-1')
+
+    def test_only_explicit_late_switch_project_status_gets_red_navigation(self):
+        project = '<section class="school-college" data-college-key="207" data-college-title="计算机学院">\n\n<section class="admission-project" data-project-key="207-085405" data-project-title="软件工程" data-project-status="2027下半年改考408公告">\n\n正文\n\n</section>\n\n</section>'
+        self.assertNotIn('class="project-link late-project"', prepare_admissions(project, 'school-069'))
+        flag = '<p class="switch-flag" data-status="late-announcement" data-announced="2026-07-06" data-target-year="2027">软件工程改考公告</p>\n\n'
+        result = prepare_admissions(flag + project, 'school-069')
+        self.assertIn('class="project-link late-project"', result)
+        self.assertIn('class="entity-card late-project"', result)
+        self.assertNotIn('late-project', prepare_admissions(flag + project.replace('2027下半年改考408公告', '2026历史数一对照'), 'school-069'))
 
 
 if __name__ == '__main__':
