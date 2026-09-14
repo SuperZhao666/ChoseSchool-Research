@@ -12,6 +12,9 @@
   const previous = document.getElementById('previous-result');
   const next = document.getElementById('next-result');
   const toolbar = document.querySelector('.toolbar');
+  // TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61
+  // Topic state belongs to its school; every topic remains in the search index.
+  const topics = new Map(panels.map(panel => [panel, Array.from(panel.querySelectorAll('.school-topic'))]));
   const selector = 'p,li,tr,h1,h2,h3,h4,h5,h6,summary';
   // Index all panels, including closed folds and parent list text.
   const blocks = new Map();
@@ -19,6 +22,7 @@
   let textNode;
   while ((textNode = textWalker.nextNode())) {
     if (!textNode.nodeValue.trim()) continue;
+    if (textNode.parentElement.closest('[data-reader-ui]')) continue;
     const element = textNode.parentElement.closest(selector) || textNode.parentElement;
     if (!blocks.has(element)) blocks.set(element, {element, text: ''});
     blocks.get(element).text += textNode.nodeValue;
@@ -30,6 +34,18 @@
   function closeSidebar() {
     sidebar.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false');
   }
+  function showTopic(panel, key) {
+    const sections = topics.get(panel) || [];
+    if (!sections.length) return;
+    const selected = sections.find(section => section.dataset.topicKey === key) ||
+      sections.find(section => section.dataset.topicKey === panel.dataset.activeTopic) ||
+      sections.find(section => section.dataset.topicKey === 'programs') || sections[0];
+    panel.dataset.activeTopic = selected.dataset.topicKey;
+    for (const section of sections) section.hidden = section !== selected;
+    panel.querySelectorAll('[data-topic-target]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.topicTarget === selected.dataset.topicKey));
+    });
+  }
   function showPanel(panel) {
     if (!panel) return;
     active = panel;
@@ -40,8 +56,14 @@
     }
     document.getElementById('current-page').textContent = panel.dataset.title;
     document.title = `${panel.dataset.title} · 2027 择校池`;
+    const hasTopics = (topics.get(panel) || []).length > 0;
+    document.getElementById('expand-all').textContent = hasTopics ? '展开本栏资料' : '展开本页全部资料';
+    document.getElementById('collapse-all').textContent = hasTopics ? '收起本栏资料' : '收起本页资料';
+    showTopic(panel);
   }
   function expandParents(element) {
+    const topic = element.closest('.school-topic');
+    if (topic) showTopic(topic.closest('.reader-panel'), topic.dataset.topicKey);
     for (let parent = element.parentElement; parent; parent = parent.parentElement) {
       if (parent.tagName === 'DETAILS') parent.open = true;
     }
@@ -107,16 +129,25 @@
   previous.addEventListener('click', () => showMatch(current - 1));
   next.addEventListener('click', () => showMatch(current + 1));
   document.getElementById('expand-all').addEventListener('click', () => {
-    active.querySelectorAll('details').forEach(detail => { detail.open = true; });
+    const scope = active.querySelector('.school-topic:not([hidden])') || active;
+    scope.querySelectorAll('details').forEach(detail => { detail.open = true; });
   });
   document.getElementById('collapse-all').addEventListener('click', () => {
-    clearMarks(); active.querySelectorAll('details').forEach(detail => { detail.open = false; });
+    const scope = active.querySelector('.school-topic:not([hidden])') || active;
+    clearMarks(); scope.querySelectorAll('details').forEach(detail => { detail.open = false; });
   });
   toggle.addEventListener('click', () => {
     const open = sidebar.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(open));
   });
   document.addEventListener('keydown', event => { if (event.key === 'Escape') closeSidebar(); });
   document.addEventListener('click', event => {
+    const button = event.target.closest('[data-topic-target]');
+    if (button) {
+      clearMarks();
+      const panel = button.closest('.reader-panel');
+      showTopic(panel, button.dataset.topicTarget);
+      return;
+    }
     const link = event.target.closest('a[href^="#"]');
     if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     const href = link.getAttribute('href');
@@ -130,9 +161,11 @@
     new ResizeObserver(() => document.documentElement.style.setProperty('--toolbar-height', `${toolbar.offsetHeight}px`)).observe(toolbar);
   }
   window.addEventListener('beforeprint', () => {
+    (topics.get(active) || []).forEach(topic => { topic.dataset.printHidden = String(topic.hidden); topic.hidden = false; });
     active.querySelectorAll('details').forEach(detail => { detail.dataset.printOpen = String(detail.open); detail.open = true; });
   });
   window.addEventListener('afterprint', () => {
+    content.querySelectorAll('.school-topic[data-print-hidden]').forEach(topic => { topic.hidden = topic.dataset.printHidden === 'true'; delete topic.dataset.printHidden; });
     content.querySelectorAll('details[data-print-open]').forEach(detail => { detail.open = detail.dataset.printOpen === 'true'; delete detail.dataset.printOpen; });
   });
 })();

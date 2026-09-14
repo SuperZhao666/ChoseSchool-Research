@@ -1,0 +1,460 @@
+{
+  "TraceId": "c3810655-9d25-4f82-a7e0-4a4cb679d9ee",
+  "created_utc": "2026-09-14T11:54:13.421363+00:00",
+  "scope": "仅根README北京理工大学school-069新增非官方证据视图，现有原件与统计不覆盖",
+  "base_commit": "753ab393402eaf8daf976da9605bed2b2fd9d7e6",
+  "source_readme_sha256_before": "079fbb7d042c1ca7b87b773a94c587b3593b2b7cf2b6f51eb3777abe6d3a7c4e",
+  "source_readme_sha256_after": "c4d048b367a0832da4b85198982d4a37e218718e75906c54ea51bb0f71ace6ea",
+  "sources": [
+    {
+      "id": "lifei-zhuhai",
+      "author": "LiFei；个人站自述NCU本科AI",
+      "posted": "2024-09-30",
+      "cohort": "2025入学；2024申请",
+      "type": "第一人称推免回忆",
+      "match": "直接自述珠海计算机技术；文字仅写0854，未个人核验六位录取代码",
+      "usable": "已获得offer后导师双选；个人称所选导师允许实习；面试追问论文、基础知识",
+      "limits": "尚未入学；不能当已体验课程、毕业、普遍放实习；70+竞争32为宣讲回忆且作者自述不知道是否含优营，不作报录比",
+      "credibility": "具体时间、背景、目的项目，个人长期博客；个人经历可参考，导师判断与竞争数字未独立核验",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://lifei121.github.io/LF121Pages.github.io/posts/2022/02/academicpages-usage-guide/",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "lifei-zhuhai",
+        "url": "https://lifei121.github.io/LF121Pages.github.io/posts/2022/02/academicpages-usage-guide/",
+        "fetched_utc": "2026-09-14T11:50:08.214917+00:00",
+        "status": 200,
+        "final_url": "https://lifei121.github.io/LF121Pages.github.io/posts/2022/02/academicpages-usage-guide/",
+        "bytes": 39651,
+        "sha256": "8de90e5877ff3c8fb0bb46bf7ac5d58a4f97094d517675440314a5dd14af5f58",
+        "title": "2024年(2025届)中下211计算机保研回忆录（武大遥感&amp;&amp;北理珠海&amp;&amp;厦大信息学院计算机&amp;&amp;东南软件&amp;&amp;浙大工程师&amp;&amp;电子科大&amp;&amp;被中山十杀） - LiFei",
+        "text_chars": 9106
+      }
+    },
+    {
+      "id": "lifei-year0-followup",
+      "author": "同一LiFei",
+      "posted": "2025-05-04",
+      "cohort": "2025入学前研0",
+      "type": "同作者后续第一人称实习帖",
+      "match": "与前帖同作者同背景；不是独立第二名学生",
+      "usable": "入学前已断续参与研究生导师课题；拟提前到校但未成行；自述获得上海LLM相关实习offer",
+      "limits": "尚未正式入学；不能证明在读可离校实习、联培位置、毕业要求或后来实际入职",
+      "credibility": "时间与前帖衔接、背景一致；对入学前状态有用，不能双计为两名独立样本",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://lifei121.github.io/LF121Pages.github.io/posts/work%20experience/",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "lifei-year0-followup",
+        "url": "https://lifei121.github.io/LF121Pages.github.io/posts/work%20experience/",
+        "status": 200,
+        "final_url": "https://lifei121.github.io/LF121Pages.github.io/posts/work%20experience/",
+        "fetched_utc": "2026-09-14T11:51:17.109839+00:00",
+        "sha256": "bf36f13b957c23436245eaa8b2e35f434c8c574804ffc6b538d152ff22c49a64",
+        "bytes": 20184
+      }
+    },
+    {
+      "id": "csdn-zjs-zhuhai",
+      "author": "zjsnnn",
+      "posted": "2025-09-24",
+      "cohort": "2026入学申请；2025预推免",
+      "type": "第一人称面试回忆",
+      "match": "珠海计算机相关预推免；未明示085404/085410代码和方向；最终自述去北航CS",
+      "usable": "9月12日通知、14日线下面试；PPT、最短路径、虚拟页、论文与英语；有线上导师远程提问",
+      "limits": "访问校园并非在读；老师温柔为个人感受；不能推断所有方向考题、导师驻地或长期培养地点",
+      "credibility": "日期和面试内容具体，署名平台自报；对应院校明确但专业方向不足",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://damodev.csdn.net/6a4355aa662f9a54cb865fe8.html",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "csdn-zjs-zhuhai",
+        "url": "https://damodev.csdn.net/6a4355aa662f9a54cb865fe8.html",
+        "fetched_utc": "2026-09-14T11:50:08.214917+00:00",
+        "status": 200,
+        "final_url": "https://damodev.csdn.net/6a4355aa662f9a54cb865fe8.html",
+        "bytes": 87045,
+        "sha256": "92565379ab03dc24ead470a2fd76501f38c280020f371fb0fd6ab6ee31eecccb",
+        "title": "【CS保研分享】2026届计算机保研经历回顾_面试_zjsnnn-DAMO开发者矩阵",
+        "text_chars": 3589
+      }
+    },
+    {
+      "id": "szu-chen-medical",
+      "author": "陈潇泳；深大飞跃手册",
+      "posted": "2025-02-17",
+      "cohort": "2025届；2024夏令营/预推免",
+      "type": "具名第一人称保研",
+      "match": "最终去向明确为医学技术学院，页面标题CS；未给085404代码",
+      "usable": "夏令营线上PPT和软硬件能力/英语问答；优营与导师口头offer后仍等9月补录",
+      "limits": "不是统考408经验；其CVPR/竞赛背景不代表普通考生；不能将本科科研叙述当北理研究生培养；不能推断医学085404统考无专业题",
+      "credibility": "具名、经历阶段明确、最终学院自报；可作学院推免机制线索，未独立验证录取代码",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://szu-feiyue.github.io/baoyan/CompSci/2025/cases/xiaoyongchen/",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "szu-chen-medical",
+        "url": "https://szu-feiyue.github.io/baoyan/CompSci/2025/cases/xiaoyongchen/",
+        "fetched_utc": "2026-09-14T11:50:08.213893+00:00",
+        "status": 200,
+        "final_url": "https://szu-feiyue.github.io/baoyan/CompSci/2025/cases/xiaoyongchen/",
+        "bytes": 55843,
+        "sha256": "91132862a470c04daf09297d82c9750cdb312a8a01a787037fdcf971faae574d",
+        "title": "陈潇泳 · 北理工@CS - 深圳大学飞跃手册",
+        "text_chars": 5788
+      }
+    },
+    {
+      "id": "szu-li-cs",
+      "author": "李尚憬；深大飞跃手册",
+      "posted": "2026-08-05",
+      "cohort": "2026入学",
+      "type": "具名第一人称统考",
+      "match": "计算机学院，数学一408；不属于本轮跨学院数学二候选",
+      "usable": "初试自报375=65/78/120/112；为了解的目标导师择校；初试后沟通，强调工程项目与机试",
+      "limits": "不能外推241/246/280；没有说明北理在读课程或毕业；机试影响面试的判断属个人看法",
+      "credibility": "科目总分与自述一致，可给主院经验任务作对照；不放入本子任务培养证据",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://szu-feiyue.github.io/kaoyan/CompSci/2026/cases/shangjingli/",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "szu-li-cs",
+        "url": "https://szu-feiyue.github.io/kaoyan/CompSci/2026/cases/shangjingli/",
+        "fetched_utc": "2026-09-14T11:50:08.215913+00:00",
+        "status": 200,
+        "final_url": "https://szu-feiyue.github.io/kaoyan/CompSci/2026/cases/shangjingli/",
+        "bytes": 52616,
+        "sha256": "6c80fa81a42e3a9bc61150efdf1b30a18913ff145a60c2a5b1b801b783695abb",
+        "title": "李尚憬 · 北理@计算机 - 深圳大学飞跃手册",
+        "text_chars": 3685
+      }
+    },
+    {
+      "id": "qlu-chen-communication",
+      "author": "陈声杰；齐鲁工业大学电子电气与控制学部具名访谈",
+      "posted": "页面2025-07-17；URL含2026/0111不作经历年份",
+      "cohort": "2025入学",
+      "type": "第一人称答问，母校发布",
+      "match": "085402通信工程、数一826，非计算机408",
+      "usable": "自述原志愿复试失利后在北京与珠海调剂面试冲突时选珠海",
+      "limits": "其校线300、只收校内调剂、不歧视等概括不可外推数二408；带培训课程推荐；无在读培养细节",
+      "credibility": "具名与母校发布有来源链，但主观广泛判断仍未经验证；只作错配提醒",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://dqxy.qlu.edu.cn/2026/0111/c8214a271659/page.htm",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "qlu-chen-communication",
+        "url": "https://dqxy.qlu.edu.cn/2026/0111/c8214a271659/page.htm",
+        "fetched_utc": "2026-09-14T11:50:09.625819+00:00",
+        "status": 200,
+        "final_url": "https://dqxy.qlu.edu.cn/2026/0111/c8214a271659/page.htm",
+        "bytes": 50205,
+        "sha256": "3cd06caa760050cf72d565e197242c6175781c47cbf7e62bba063df1494f92b5",
+        "title": "考研经验分享：陈声杰",
+        "text_chars": 3531
+      }
+    },
+    {
+      "id": "neworiental-platform",
+      "author": "新东方考研四六级；教育宝转载平台",
+      "posted": "2024-10-15更新",
+      "cohort": "主要23录取/24考情",
+      "type": "培训机构汇总，非亲历",
+      "match": "含医学技术学院与计算机学院统计，但不含2026新AI分组亲历",
+      "usable": "来源发现和与原件核验之用",
+      "limits": "近等额、入复试大概率上岸为无人口细分的泛化营销；不使用作为保底判断；配图统计未逐项核本轮不引用数字",
+      "credibility": "作者利益相关且非个体亲历，低于正式当年原件及清楚对应项目的经历",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://www.jiaoyubao.cn/news/n128097.html",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "neworiental-platform",
+        "url": "https://www.jiaoyubao.cn/news/n128097.html",
+        "fetched_utc": "2026-09-14T11:50:09.683791+00:00",
+        "status": 200,
+        "final_url": "https://www.jiaoyubao.cn/news/n128097.html",
+        "bytes": 49383,
+        "sha256": "00bbe2ee1a6c7cf5e210de59d8c61669d9a942e97499ed3eff70a85c8a156112",
+        "title": " 计算机考研05｜北京理工大学报考录取信息汇总-北京新东方 ",
+        "text_chars": 5140
+      }
+    },
+    {
+      "id": "noobdream-platform",
+      "author": "N诺考研平台",
+      "posted": "动态汇总页，多年混排",
+      "cohort": "跨年",
+      "type": "平台学校信息入口，非个人亲历",
+      "match": "北理总校页面，不是目标方向在读体验",
+      "usable": "只能定位资料/经验入口",
+      "limits": "web全文可读学校页但部分资料与学长信息要求登录；普通HTTPS取回TLS EOF失败，未绕；未拿到目标项目具名体验全文",
+      "credibility": "不将平台标题的经验分享升级为已有目标项目亲历",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://noobdream.com/schoolinfo/24/",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "noobdream-platform",
+        "url": "https://noobdream.com/schoolinfo/24/",
+        "fetched_utc": "2026-09-14T11:50:09.639210+00:00",
+        "error_type": "URLError",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+      }
+    },
+    {
+      "id": "2020-cs-mirror",
+      "author": "转载镜像，原作者待追",
+      "posted": "标题2020保研；网页索引发布时间约2020",
+      "cohort": "2020申请历史",
+      "type": "搜索发现的旧院经验镜像",
+      "match": "旧计算机学院，不是2026人工智能学院或2024起珠海新校区培养",
+      "usable": "不纳正文结论",
+      "limits": "直接取回403未绕；仅搜索摘要；旧实验室选择规则不可迁移到新学院",
+      "credibility": "未取全文且项目年代错位，排除",
+      "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+      "url": "https://icode.best/i/37604135534060",
+      "retrieval": {
+        "TraceId": "525ce48b-82af-48e6-8776-6329b9f1b163",
+        "id": "2020-cs-mirror",
+        "url": "https://icode.best/i/37604135534060",
+        "fetched_utc": "2026-09-14T11:50:10.924213+00:00",
+        "error_type": "HTTPError",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    {
+      "id": "platform-crosscheck",
+      "url": "https://noobdream.com/schoolinfo/24/",
+      "read_scope": "web正文表格；独立HTTP失败见cross取回记录",
+      "type": "platform_aggregate",
+      "claims": "2025大数据302与正式303不符；珠海AI当年12408标签与正式数一810不符；2026AI混合人口；软件92+4与普通90/专项4/非全2口径不同",
+      "usable": "逐项交叉核对；2026珠海43+1/14/9仅待核线索",
+      "limits": "不计算方向408录取率，不把最低分当制度线",
+      "TraceId": "c3810655-9d25-4f82-a7e0-4a4cb679d9ee",
+      "retrieval_provenance": "web正文实读，不声称本地原始响应哈希"
+    },
+    {
+      "id": "noob-2019-partial",
+      "url": "https://noobdream.com/post/208/",
+      "posted": "2019-09-23",
+      "read_scope": "公开片段，后半登录限制",
+      "type": "first_person_unverified",
+      "usable": "英语专业介绍及动机追问线索",
+      "limits": "招生年/代码未钉死，不移植旧复试结构",
+      "TraceId": "c3810655-9d25-4f82-a7e0-4a4cb679d9ee",
+      "retrieval_provenance": "web正文实读，不声称本地原始响应哈希"
+    },
+    {
+      "id": "csdn-2024-partial",
+      "url": "https://blog.csdn.net/2401_84434442/article/details/138831096",
+      "posted": "2024-05-14",
+      "read_scope": "公开片段，后半付费限制",
+      "type": "provenance_uncertain",
+      "usable": "标题年份与实际经历不能直接等同的例子",
+      "limits": "未证明实际2024经历，未证明与2018回忆的直接转载链",
+      "TraceId": "c3810655-9d25-4f82-a7e0-4a4cb679d9ee",
+      "retrieval_provenance": "web正文实读，不声称本地原始响应哈希"
+    },
+    {
+      "id": "xu-2018",
+      "url": "https://www.cnblogs.com/xuwangzihao/p/8650174.html",
+      "posted": "2018-03-26",
+      "read_scope": "全文",
+      "type": "exam_recollection",
+      "usable": "回文题与现场评测叙述的旧年对照",
+      "limits": "非官方试卷，非2026评分机制",
+      "TraceId": "c3810655-9d25-4f82-a7e0-4a4cb679d9ee",
+      "retrieval_provenance": "web正文实读，不声称本地原始响应哈希"
+    },
+    {
+      "id": "github-general-repost",
+      "url": "https://github.com/puge-up/programming-play/blob/main/article/考研就业打法/全网最全计算机_软件工程考研复试经验贴.md",
+      "read_scope": "全文",
+      "type": "repost_hearsay_for_BIT",
+      "usable": "北理AC3条款属于就其了解的转述",
+      "limits": "不能作招生规则或独立第一人称北理样本",
+      "TraceId": "c3810655-9d25-4f82-a7e0-4a4cb679d9ee",
+      "retrieval_provenance": "web正文实读，不声称本地原始响应哈希"
+    },
+    {
+      "id": "E02",
+      "url": "https://www.bilibili.com/read/cv49708363/",
+      "final_url": "https://www.bilibili.com/opus/1207027286446964744",
+      "date": "2026-05-28 19:40（编辑）",
+      "year": 2026,
+      "project": "计算机学院专硕，自称12408；正文明确英一、408，未给专业代码",
+      "type": "个人账号小賽2号机第一人称，文末标原创",
+      "readability": "Web工具完整读取141行；非摘要；原站普通HTTPS下载失败已留日志",
+      "grade": "初试过程可用，复试细节不可用",
+      "source_capture": "web-page-captures.json",
+      "claims": [
+        "正文明确26考研上岸；按2025年复习阶段叙述，2024年第一次报名学硕未参加，后来改报专硕",
+        "先反复听课而遗忘，后转向刷题、标记错题与限时模拟；个人材料清单不等于必要购物单",
+        "复试备考标题下明确暂时不更新"
+      ],
+      "limits": [
+        "没有给初试总分、单科成绩、录取专业代码或培养地点",
+        "不能猜085404或085411，也不能由标题“也适用22408”把本人的英语一改成英语二",
+        "部分阶段标题2024.11-2024.1自相矛盾，属原文时间笔误；仅按正文理解备考年度，不精确量化有效学习时长",
+        "复试章节留白，不可据此复原题量、题型、导师或面试规则"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    },
+    {
+      "id": "E03",
+      "url": "https://noobdream.com/post/271192/",
+      "date": "2022-05-07 15:44",
+      "year": 2022,
+      "project": "软件工程、885；原帖未给专业代码，不回填085405",
+      "type": "N诺账号Fag**第一人称署名；原作者身份及是否转载未另证",
+      "readability": "公开前半已读，复试段在3.29-3.30两天附近截断，明确登录查看完整内容",
+      "grade": "有限片段，仅能用明确可见的旧年自述",
+      "source_capture": "web-page-captures.json",
+      "claims": [
+        "本科北理计算机，排名60%+；自称无项目无科研无奖项",
+        "初试380+、业务二120+，总成绩10+/65并留在中关村（保留复合原文，禁止取首数做统计）",
+        "自称2022年2月22日获初试分、3月21日晚院线、3月25日前审查、3月29-30日软件复试"
+      ],
+      "limits": [
+        "不是2023–2026经验；不能反推出2027地点选择顺序",
+        "只是本校考生样本；不能推出本校优待或普通跨考同等难度",
+        "阅读全文未完成；不从标题或截断后臆造机试和面试",
+        "旧885准备方法不能直接替代2027软件408"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    },
+    {
+      "id": "E04",
+      "url": "https://noobdream.com/post/84610/",
+      "date": "2021-04-26 03:35（平台日期）；事件为2020",
+      "year": 2020,
+      "project": "计算机学硕；帖子未给专业代码及完整四科",
+      "type": "N诺账号uty**第一人称回忆；转帖链未完成",
+      "readability": "公开复试段读到末尾建议后仍有登录截断；并非完整原文",
+      "grade": "仅作疫情年制度不同的反例",
+      "source_capture": "web-page-captures.json",
+      "claims": [
+        "2020线上复试、5月17日，自述该年无机试",
+        "自述英语听译并被问生活目的、Word功能，预备问题未命中",
+        "自述专业题涉及数据库设计、用户/内核线程、完全图变树与丢包原因"
+      ],
+      "limits": [
+        "本轮不将旧题当2026或2027题库",
+        "自述初试372并获录取；把结果归因于本科成绩/老师理解紧张是作者猜测",
+        "疫情年线上流程不能套当前现场复试"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    },
+    {
+      "id": "E05",
+      "url": "https://www.sohu.com/a/549352718_826076",
+      "date": "2022-05-22 08:51",
+      "year": null,
+      "project": "软件工程885；标题2023面向读者，未证明作者2023入学",
+      "type": "新祥旭考研考博机构发布、未署独立个人名的第一人称广告稿",
+      "readability": "全文已读，含付费辅导推广；关联shuoedu链接未另读",
+      "grade": "低可信经验参考；不作独立考生样本或录取规律",
+      "source_sha256": "2028845eb7f7dbfc40fd3360f8ee7c71034579023ff0734456d6368b2d3f92cd",
+      "claims": [
+        "作者口吻称东北普通大学软件本科，因学长与唐山名额考虑择校",
+        "主张英语听说、计算机基础课与简历成果准备；无具体面试题或个人最终分",
+        "文中声称超复试线40分较稳，但没有可复算样本或置信区间"
+      ],
+      "limits": [
+        "发布日期早于2023招生复试，不计2023亲历",
+        "“报考人数”段实际描述复试/拟录取，不能当报名人数",
+        "不采“超线40稳”作2027阈值",
+        "不能当无广告独立推荐"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    },
+    {
+      "id": "E06",
+      "url": "https://www.yuejiaxmz.com/news/view/249066",
+      "date": "2024-11-25 03:15",
+      "year": null,
+      "project": "同E05；非新的2024考生",
+      "type": "生活站同文转载；核心正文逐字相同",
+      "readability": "全文已读；与E05比较相同正文",
+      "grade": "合并到E05同一个传播链，不计第二样本",
+      "source_sha256": "01a19a4cd4a7ebd79f9961838e051e0deb33628f04ea704d345aca81ff00c909",
+      "claims": [
+        "更新为2024站内日期但保留2021/2022内容、相同广告及shuoedu链接"
+      ],
+      "limits": [
+        "不能以转载时间证明考研年份",
+        "多站出现不等于多位考生独立证实"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    },
+    {
+      "id": "E07",
+      "url": "https://www.bilibili.com/video/BV1Kw4m1275Z/",
+      "date": "2024-04-19 02:05:43",
+      "year": null,
+      "project": "软件工程885，自述400+专业135+；没有可读正文证明入学年份",
+      "type": "个人/商业经验视频账号北理软工885考研",
+      "readability": "标题、简介、作者简介完整已读；未观看视频或取得字幕，网页显示暂无课程总结",
+      "grade": "仅记录入口，不采用视频经验结论",
+      "source_sha256": "0d44e393d6a8eaecf41bd120f62ab7305048875df36d6cd51a64bb3ae0abf3c2",
+      "claims": [
+        "账号自称机试满分、高分上岸；简介主要列售卖/合作资料"
+      ],
+      "limits": [
+        "未独立核成绩、不把复合数变精确值",
+        "不能声称已读完视频或知道题目、面试细节",
+        "商业动机需要标识，不能据个人高分推出人人易拿高分"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    },
+    {
+      "id": "E08",
+      "url": "https://www.bilibili.com/video/BV11z421Y7iX/",
+      "date": "2024-05-21 22:25:09",
+      "year": null,
+      "project": "软件885；标题2025但发布日期为2024",
+      "type": "北理工考研账号招生辅导视频",
+      "readability": "标题、简介、作者简介完整已读；未观看视频或取得字幕，暂无课程总结",
+      "grade": "年份陷阱示例；经验结论不采用",
+      "source_sha256": "adf5c98d7affd95fb534b0b70210bf6ebb0a851b1ddfb7cadaf3a9d338f32411",
+      "claims": [
+        "标题2025应理解为面向2025备考者，不能直接给讲者绑定2025录取"
+      ],
+      "limits": [
+        "无字幕/内容不能读全",
+        "与E07是否同一讲者未证，不能算两个独立成功者"
+      ],
+      "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0"
+    }
+  ],
+  "missing_scope": [
+    "246人工智能学院085410/02与140500/02、04、05未获取对应方向在读或毕业亲历",
+    "241医学085404未获取精确代码统考/在读亲历，只有学院层推免",
+    "280珠海085410/02与140500/05未获取精确方向亲历",
+    "RISC-V班/海鸥班/异地联培实际分配、课程负担、科研毕业、驻地、可否实习缺目标项目亲历",
+    "未在本轮找到2023–2026、明确085411项目、能全文读取且有具体复试细节的独立第一人称样本；这不是没有经验帖或没有竞争的证据。"
+  ],
+  "interpretation_rules": [
+    "posted date != admission year",
+    "repost != independent corroboration",
+    "same author followup != new individual",
+    "personal observation != admission policy",
+    "Math I comparison != Math II candidate",
+    "unknown != zero",
+    "ordinary / special / part-time retained separately"
+  ],
+  "root_sources_hash_note": "web-only reads have no invented original-byte hash; local successful retrievals retain agent manifests",
+  "public_personal_data": "No contacts, candidate identifiers, individual roster joins or full source transcripts",
+  "changes_database_status": false,
+  "duplicate_check": {
+    "TraceId": "f5fb043c-0991-4790-bc61-85278d1b2fa0",
+    "pair": [
+      "E05",
+      "E06"
+    ],
+    "method": "取共同首句至相同shuoedu链接之前的可见正文；去空白后精确比较",
+    "exact_equal": true,
+    "normalized_char_count": 1921,
+    "normalized_sha256": "5d2a8df6ccbb01f757e0f574ad99d3c2a7f3e708047b1ae41023092aef6d81b8"
+  },
+  "source_count_note": "来源页数量不是独立考生数量；同作者续帖及已确认同文转载保留链条，不计多名独立亲历。少量排除来源留作审计。"
+}

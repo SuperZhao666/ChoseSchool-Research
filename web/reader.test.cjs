@@ -46,6 +46,82 @@ const fixture = `<html><body><header class="toolbar"></header><aside id="sidebar
 <table><tr><td>085410</td><td>41人</td></tr></table><p>末端 AI</p></section>
 </main></body></html>`;
 
+// TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61
+const topicFixture = fixture.replace('<h3>AI与数据</h3>', `<h3>AI与数据</h3>
+<nav class="school-topic-navigation" data-reader-ui="true" aria-label="本校资料分类">
+<p>本校资料分类</p><button type="button" id="topic-programs" data-topic-target="programs" aria-controls="programs" aria-pressed="true">招生项目</button>
+<button type="button" id="topic-scores" data-topic-target="scores" aria-controls="scores" aria-pressed="false">历年分数</button></nav>
+<section class="school-topic" id="programs" data-topic-key="programs" data-topic-title="招生项目"><h4>招生项目正文</h4>`)
+  .replace('<ul><li>父项独有文本<ul><li>子项</li></ul></li></ul>', `</section>
+<section class="school-topic" id="scores" data-topic-key="scores" data-topic-title="历年分数" hidden><h4>历年分数正文</h4>
+<details id="score-fold"><summary>软件分数</summary><a id="score-evidence"></a><p>科目885，年度2026，初试341</p></details></section>`);
+
+function visibleTopics(r) {
+  return [...r.document.querySelectorAll('#panel-school-001 .school-topic')].filter(topic => !topic.hidden).map(topic => topic.dataset.topicKey);
+}
+
+test('school topics show one category, retain per-school choice and preserve original school hashes', () => {
+  const r = reader(topicFixture, '#s1');
+  const before = r.document.getElementById('research-content').textContent;
+  assert.deepEqual(visibleTopics(r), ['programs']);
+  assert.equal(r.document.getElementById('expand-all').textContent, '展开本栏资料');
+  assert.equal(r.document.getElementById('collapse-all').textContent, '收起本栏资料');
+  r.click('topic-scores');
+  assert.deepEqual(visibleTopics(r), ['scores']);
+  assert.equal(r.document.getElementById('topic-scores').getAttribute('aria-pressed'), 'true');
+  assert.equal(r.document.getElementById('topic-programs').getAttribute('aria-pressed'), 'false');
+  assert.equal(r.location.hash, '#s1');
+  r.click('nav2');
+  assert.equal(r.document.getElementById('expand-all').textContent, '展开本页全部资料');
+  assert.equal(r.document.getElementById('collapse-all').textContent, '收起本页资料');
+  r.click('nav1');
+  assert.equal(r.document.getElementById('expand-all').textContent, '展开本栏资料');
+  assert.equal(r.document.getElementById('collapse-all').textContent, '收起本栏资料');
+  assert.deepEqual(r.visible(), ['school-001']);
+  assert.deepEqual(visibleTopics(r), ['scores']);
+  assert.equal(r.document.getElementById('research-content').textContent, before);
+  for (const button of r.document.querySelectorAll('[data-topic-target]')) {
+    assert.equal(button.tagName, 'BUTTON');
+    assert.equal(button.getAttribute('type'), 'button');
+    assert.ok(r.document.getElementById(button.getAttribute('aria-controls')));
+  }
+});
+
+test('full-text search and old deep links reveal the matching topic and its folded evidence', () => {
+  const r = reader(topicFixture);
+  r.search('初试341');
+  assert.deepEqual(visibleTopics(r), ['scores']);
+  assert.equal(r.document.getElementById('score-fold').open, true);
+  assert.equal(r.document.querySelector('mark').textContent, '初试341');
+  r.click('topic-programs'); r.go('#score-evidence');
+  assert.deepEqual(visibleTopics(r), ['scores']);
+  assert.equal(r.document.getElementById('score-fold').open, true);
+  r.search('本校资料分类');
+  assert.equal(r.document.getElementById('search-status').textContent, '没有找到匹配内容');
+  r.search('招生项目');
+  assert.equal(r.document.getElementById('search-status').textContent, '1 / 1 处');
+  assert.deepEqual(visibleTopics(r), ['programs']);
+});
+
+test('fold controls affect the selected topic; printing includes all current-school topics and restores state', () => {
+  const r = reader(topicFixture);
+  r.click('expand-all');
+  assert.equal(r.document.getElementById('first-fold').open, true);
+  assert.equal(r.document.getElementById('score-fold').open, false);
+  r.click('topic-scores'); r.click('collapse-all');
+  assert.equal(r.document.getElementById('first-fold').open, true);
+  r.window.dispatchEvent(new r.window.Event('beforeprint'));
+  assert.deepEqual(visibleTopics(r), ['programs', 'scores']);
+  assert.deepEqual(r.visible(), ['school-001']);
+  assert.equal(r.document.getElementById('score-fold').open, true);
+  assert.equal(r.document.getElementById('second-fold').open, false);
+  r.window.dispatchEvent(new r.window.Event('afterprint'));
+  assert.deepEqual(visibleTopics(r), ['scores']);
+  assert.equal(r.document.getElementById('first-fold').open, true);
+  assert.equal(r.document.getElementById('score-fold').open, false);
+  assert.equal(r.document.querySelectorAll('[data-print-open],[data-print-hidden]').length, 0);
+});
+
 test('sidebar selects exactly one school; hash back and empty hash restore prior/default panel', () => {
   const r = reader(fixture);
   assert.deepEqual(r.visible(), ['school-001']);

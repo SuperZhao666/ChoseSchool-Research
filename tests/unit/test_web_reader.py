@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 from markdown_it import MarkdownIt
-from web.build import make_panels, render
+from web.build import make_panels, prepare_topics, render
 from tests.unit.test_unified_research_fidelity import numeric_signature, original_cells, SCORE_SUBJECT_COLUMN
 
 
@@ -23,9 +23,12 @@ class ReaderParser(HTMLParser):
         self.section = None; self.cells = None; self.cell = None
         self.tables = []; self.table = None; self.main = False; self.text = []
         self.main_links = []; self.panels = []
+        self.generated_navigation = False
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'nav' and attrs.get('data-reader-ui') == 'true':
+            self.generated_navigation = True
         if 'id' in attrs:
             self.ids.append(attrs['id'])
             if re.fullmatch(r'(school|evidence)-\d+|complete-evidence', attrs['id']):
@@ -41,10 +44,11 @@ class ReaderParser(HTMLParser):
         if tag in ('td', 'th'): self.cell = []
 
     def handle_data(self, data):
-        if self.main: self.text.append(data)
+        if self.main and not self.generated_navigation: self.text.append(data)
         if self.cell is not None: self.cell.append(data)
 
     def handle_endtag(self, tag):
+        if tag == 'nav': self.generated_navigation = False
         if tag == 'main': self.main = False
         if tag in ('td', 'th') and self.cell is not None:
             self.cells.append(''.join(self.cell)); self.cell = None
@@ -294,6 +298,62 @@ class WebReaderTests(unittest.TestCase):
                 self.assertEqual(len(row), len(table[0]))
         self.assertEqual(self.page.count('aria-label="可横向滚动的数据表"'), len(self.parser.tables))
         self.assertIn('max-width:100%', (self.root / 'dist/reader.css').read_text(encoding='utf-8'))
+
+
+class SchoolTopicBuildTests(unittest.TestCase):
+    """TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61"""
+
+    def test_topic_navigation_keeps_research_text_tables_and_links_intact(self):
+        source = '''<a id="school-069"></a>
+### 北京理工大学
+<p class="school-tier">院校层次：985</p>
+
+<section class="school-topic" data-topic-key="scores" data-topic-title="历年分数">
+
+#### 历年分数
+
+| 年份 | 科目 | 分数 |
+| --- | --- | --- |
+| 2026 | 885 | 341 |
+
+</section>
+
+<section class="school-topic" data-topic-key="programs" data-topic-title="招生项目">
+
+#### 招生项目
+
+<details>
+<summary>软件工程</summary>
+
+<a id="existing-evidence"></a>
+
+[已有来源](https://example.com/source)和完整正文。
+
+</details>
+
+</section>
+'''
+        page, _ = render(source)
+        original = ReaderParser(); original.feed('<main>' + MarkdownIt('commonmark', {'html': True}).enable('table').render(source) + '</main>')
+        generated = ReaderParser(); generated.feed(page)
+        normalize = lambda parts: re.sub(r'\s+', ' ', ''.join(parts)).strip()
+        self.assertEqual(normalize(generated.text), normalize(original.text))
+        self.assertEqual(generated.tables, original.tables)
+        self.assertEqual(generated.main_links, original.main_links)
+        self.assertIn('data-topic-target="programs" aria-controls="topic-school-069-programs" aria-pressed="true"', page)
+        self.assertIn('id="topic-school-069-scores" aria-label="历年分数" hidden', page)
+        self.assertIn('id="topic-school-069-programs" aria-label="招生项目">', page)
+        self.assertIn('existing-evidence', generated.ids)
+
+    def test_only_explicit_sibling_topics_are_accepted(self):
+        topic = '<section class="school-topic" data-topic-key="programs" data-topic-title="招生项目">\n\n正文\n\n</section>\n'
+        self.assertEqual(prepare_topics('原有学校正文', 'school-001'), '原有学校正文')
+        invalid = [topic + topic, topic.replace('</section>', ''),
+                   topic.replace('正文', topic), topic.replace('data-topic-key="programs"', 'data-topic-key="bad/key"')]
+        for source in invalid:
+            with self.subTest(source=source):
+                with self.assertRaises(ValueError): prepare_topics(source, 'school-069')
+        with self.assertRaises(ValueError): prepare_topics(topic, 'chapter-1')
 
 
 if __name__ == '__main__':

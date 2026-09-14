@@ -16,6 +16,55 @@ from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
 TRACE_ID = '4633df94-71b7-4339-ae57-1ad2dd0576cb'
+TOPIC_MARKER = re.compile(r'(?m)^<section class="school-topic" data-topic-key="([a-z][a-z0-9-]*)" data-topic-title="([^"\n]+)">[ \t]*$')
+
+
+def prepare_topics(source: str, panel_key: str) -> str:
+    """Add local navigation without changing the retained research body.
+
+    TraceId: aab7da2b-f5ac-4368-932e-f8f414c5ad61
+    Explicit, sibling sections are opt-in; unmarked schools render as before.
+    """
+    matches = list(TOPIC_MARKER.finditer(source))
+    if source.count('class="school-topic"') != len(matches):
+        raise ValueError(f'校内栏目标记格式无效：{panel_key}')
+    if not matches:
+        return source
+    if not panel_key.startswith('school-'):
+        raise ValueError(f'校内栏目只能属于学校：{panel_key}')
+    keys = [match[1] for match in matches]
+    if len(set(keys)) != len(keys):
+        raise ValueError(f'校内栏目键重复：{panel_key}')
+    opened = False
+    for tag in re.finditer(r'(?m)^</?section\b[^>]*>[ \t]*$', source):
+        if TOPIC_MARKER.fullmatch(tag[0]):
+            if opened:
+                raise ValueError(f'校内栏目必须同级，不能嵌套：{panel_key}')
+            opened = True
+        elif tag[0].startswith('</section'):
+            if not opened:
+                raise ValueError(f'校内栏目闭合标记无对应栏目：{panel_key}')
+            opened = False
+        elif opened:
+            raise ValueError(f'校内栏目不允许嵌套 section：{panel_key}')
+    if opened:
+        raise ValueError(f'校内栏目未闭合：{panel_key}')
+    selected = 'programs' if 'programs' in keys else keys[0]
+    buttons = []
+    for match in matches:
+        key, title = match[1], html.escape(html.unescape(match[2]), quote=True)
+        pressed = str(key == selected).lower()
+        buttons.append(f'<button type="button" class="school-topic-button" data-topic-target="{key}" aria-controls="topic-{panel_key}-{key}" aria-pressed="{pressed}">{title}</button>')
+    navigation = '<nav class="school-topic-navigation" data-reader-ui="true" aria-label="本校资料分类"><p class="topic-navigation-label">本校资料分类</p><div class="school-topic-buttons">' + ''.join(buttons) + '</div></nav>\n\n'
+
+    def enhance(match: re.Match) -> str:
+        key = match[1]
+        hidden = '' if key == selected else ' hidden'
+        title = html.escape(html.unescape(match[2]), quote=True)
+        prefix = navigation if match.start() == matches[0].start() else ''
+        return prefix + f'<section class="school-topic" data-topic-key="{key}" data-topic-title="{title}" id="topic-{panel_key}-{key}" aria-label="{title}"{hidden}>'
+
+    return TOPIC_MARKER.sub(enhance, source)
 
 
 def make_panels(source: str) -> list[dict]:
@@ -60,7 +109,8 @@ def render(source: str) -> tuple[str, dict]:
     wrapped = []
     for panel in panels:
         key = panel['key']; hidden = '' if key == default_panel else ' hidden'
-        wrapped.append(f'<section id="panel-{key}" class="reader-panel" data-panel="{key}" data-title="{html.escape(panel["title"], quote=True)}"{hidden}>\n\n{panel["source"]}\n\n</section>\n\n')
+        panel_body = prepare_topics(panel['source'], key)
+        wrapped.append(f'<section id="panel-{key}" class="reader-panel" data-panel="{key}" data-title="{html.escape(panel["title"], quote=True)}"{hidden}>\n\n{panel_body}\n\n</section>\n\n')
     md = MarkdownIt('commonmark', {'html': True}).enable('table')
     tokens = md.parse(''.join(wrapped))
     # TraceId: d36580a9-e711-47ec-9786-53ec83803d21
@@ -73,7 +123,7 @@ def render(source: str) -> tuple[str, dict]:
             if len(headers) > 1 and headers[1] == '当年初试科目与证据':
                 tokens[table_start].attrSet('class', 'exam-subjects')
         elif token.type == 'table_close': table_start = None
-    used = set(re.findall(r'<a id="([^"]+)"', source)) | {f'panel-{panel["key"]}' for panel in panels}
+    used = set(re.findall(r'\bid="([^"]+)"', ''.join(wrapped)))
     for i, token in enumerate(tokens):
         if token.type != 'heading_open':
             continue

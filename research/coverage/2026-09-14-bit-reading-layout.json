@@ -1,0 +1,61 @@
+{
+  "TraceId": "36aa879d-d3fd-4817-aae7-3552cf393aef",
+  "school": "school-069",
+  "scope": "repartition existing complete research without data deletion",
+  "source_before_sha256": "c4d048b367a0832da4b85198982d4a37e218718e75906c54ea51bb0f71ace6ea",
+  "source_after_sha256": "92fdf348db6f802e9672eb9f2a004ef62af83950681facc739549df3fd744a0c",
+  "topic_keys": [
+    {
+      "key": "programs",
+      "title": "招生项目与方向"
+    },
+    {
+      "key": "subjects",
+      "title": "历年科目与备考"
+    },
+    {
+      "key": "scores",
+      "title": "历年分数与录取"
+    },
+    {
+      "key": "retest",
+      "title": "复试笔试与机试"
+    },
+    {
+      "key": "interview",
+      "title": "面试与考生经验"
+    },
+    {
+      "key": "training",
+      "title": "培养地点与费用"
+    },
+    {
+      "key": "comparison",
+      "title": "885与408比较"
+    },
+    {
+      "key": "competition",
+      "title": "竞争判断与证据"
+    }
+  ],
+  "project_disclosure_groups": 10,
+  "cs_history_project_groups": 6,
+  "old_table_count": 29,
+  "new_table_count": 43,
+  "substantive_line_preservation": true,
+  "all_original_source_links_preserved": true,
+  "other_schools_unchanged": true,
+  "approved_wording_corrections": [
+    "LiFei实习为作者自述，不称取得导师证言",
+    "医学亲历不再引入无证的学院排序"
+  ],
+  "source_reading_artifact": "README.md only",
+  "notes": [
+    "Repeated table headers are intentional after project split",
+    "Old software table numbers retained for traceability",
+    "All years, subjects, population exclusions and source caveats retained"
+  ],
+  "front_page_polish": "Long scope and catalogue explanations retained in dedicated foldouts; programs shows 2027 software plus ten historical groups first.",
+  "program_disclosure_groups_including_2027_software": 11,
+  "score_entrances": "Six CS programs each one entrance; software and big-data deep details nested within same project; three other college/campus entrances."
+}
