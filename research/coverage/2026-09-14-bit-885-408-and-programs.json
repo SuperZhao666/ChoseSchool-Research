@@ -1,0 +1,4056 @@
+{
+  "trace_id": "9ccf3fb0-5aa8-465b-968a-3dac2299bb85",
+  "as_of": "2026-09-14",
+  "school_anchor": "school-069",
+  "school": "北京理工大学",
+  "school_tier": "985",
+  "baseline_commit": "85a27bc3a7fefb049644203ff403af537d3a7e7e",
+  "readme_sha256": "079fbb7d042c1ca7b87b773a94c587b3593b2b7cf2b6f51eb3777abe6d3a7c4e",
+  "current_selection": {
+    "math_code": "302",
+    "professional_code": "408",
+    "english_I_allowed": true,
+    "cross_disciplinary_names_not_excluded": true
+  },
+  "catalog_scope": {
+    "admission_year": 2026,
+    "colleges_scanned": 27,
+    "direction_rows_scanned": 351,
+    "all_408_directions": 17,
+    "math_II_408_directions": 10,
+    "math_I_408_comparison_directions": 7,
+    "source_url": "https://grd.bit.edu.cn/docs/2025-10/0b618c2b641a405ab808bea471df3308.xlsx",
+    "sha256": "6b5dfc23c40f7605e2c654d86dfec0ced669aa91d746dd35ba0a44101ea9d555",
+    "all_408_rows": [
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 127,
+        "college": "207 计算机学院",
+        "major_code": "081200",
+        "major_name": "计算机科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "01",
+        "direction_name": "语言智能与社会计算",
+        "unified_exam_plan": 27,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B127",
+          "major_name": "C127",
+          "study_mode": "D127",
+          "direction_code": "E127",
+          "direction_name": "F127",
+          "unified_exam_plan": "G127",
+          "subject_1_code": "H127",
+          "subject_1_name": "I127",
+          "subject_2_code": "J127",
+          "subject_2_name": "K127",
+          "subject_3_code": "L127",
+          "subject_3_name": "M127",
+          "subject_4_code": "N127",
+          "subject_4_name": "O127",
+          "notes": "P127"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 128,
+        "college": "207 计算机学院",
+        "major_code": "081200",
+        "major_name": "计算机科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "02",
+        "direction_name": "图像计算与感知智能",
+        "unified_exam_plan": 27,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B127",
+          "major_name": "C127",
+          "study_mode": "D127",
+          "direction_code": "E128",
+          "direction_name": "F128",
+          "unified_exam_plan": "G127",
+          "subject_1_code": "H128",
+          "subject_1_name": "I128",
+          "subject_2_code": "J128",
+          "subject_2_name": "K128",
+          "subject_3_code": "L128",
+          "subject_3_name": "M128",
+          "subject_4_code": "N128",
+          "subject_4_name": "O128",
+          "notes": "P127"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 129,
+        "college": "207 计算机学院",
+        "major_code": "081200",
+        "major_name": "计算机科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "03",
+        "direction_name": "软件智能与软件工程",
+        "unified_exam_plan": 27,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B127",
+          "major_name": "C127",
+          "study_mode": "D127",
+          "direction_code": "E129",
+          "direction_name": "F129",
+          "unified_exam_plan": "G127",
+          "subject_1_code": "H129",
+          "subject_1_name": "I129",
+          "subject_2_code": "J129",
+          "subject_2_name": "K129",
+          "subject_3_code": "L129",
+          "subject_3_name": "M129",
+          "subject_4_code": "N129",
+          "subject_4_name": "O129",
+          "notes": "P127"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 130,
+        "college": "207 计算机学院",
+        "major_code": "081200",
+        "major_name": "计算机科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "04",
+        "direction_name": "数据科学与知识工程",
+        "unified_exam_plan": 27,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B127",
+          "major_name": "C127",
+          "study_mode": "D127",
+          "direction_code": "E130",
+          "direction_name": "F130",
+          "unified_exam_plan": "G127",
+          "subject_1_code": "H130",
+          "subject_1_name": "I130",
+          "subject_2_code": "J130",
+          "subject_2_name": "K130",
+          "subject_3_code": "L130",
+          "subject_3_name": "M130",
+          "subject_4_code": "N130",
+          "subject_4_name": "O130",
+          "notes": "P127"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 131,
+        "college": "207 计算机学院",
+        "major_code": "081200",
+        "major_name": "计算机科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "05",
+        "direction_name": "可视媒体计算",
+        "unified_exam_plan": 27,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B127",
+          "major_name": "C127",
+          "study_mode": "D127",
+          "direction_code": "E131",
+          "direction_name": "F131",
+          "unified_exam_plan": "G127",
+          "subject_1_code": "H131",
+          "subject_1_name": "I131",
+          "subject_2_code": "J131",
+          "subject_2_name": "K131",
+          "subject_3_code": "L131",
+          "subject_3_name": "M131",
+          "subject_4_code": "N131",
+          "subject_4_name": "O131",
+          "notes": "P127"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 132,
+        "college": "207 计算机学院",
+        "major_code": "081200",
+        "major_name": "计算机科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "06",
+        "direction_name": "计算机体系结构与先进网络",
+        "unified_exam_plan": 27,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B127",
+          "major_name": "C127",
+          "study_mode": "D127",
+          "direction_code": "E132",
+          "direction_name": "F132",
+          "unified_exam_plan": "G127",
+          "subject_1_code": "H132",
+          "subject_1_name": "I132",
+          "subject_2_code": "J132",
+          "subject_2_name": "K132",
+          "subject_3_code": "L132",
+          "subject_3_name": "M132",
+          "subject_4_code": "N132",
+          "subject_4_name": "O132",
+          "notes": "P127"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 133,
+        "college": "207 计算机学院",
+        "major_code": "0812J1",
+        "major_name": "智能数字表演",
+        "study_mode": "全日制",
+        "direction_code": "01",
+        "direction_name": "智能表演与仿真",
+        "unified_exam_plan": 5,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "301",
+        "subject_3_name": "数学（一）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B133",
+          "major_name": "C133",
+          "study_mode": "D133",
+          "direction_code": "E133",
+          "direction_name": "F133",
+          "unified_exam_plan": "G133",
+          "subject_1_code": "H133",
+          "subject_1_name": "I133",
+          "subject_2_code": "J133",
+          "subject_2_name": "K133",
+          "subject_3_code": "L133",
+          "subject_3_name": "M133",
+          "subject_4_code": "N133",
+          "subject_4_name": "O133",
+          "notes": "P133"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 134,
+        "college": "207 计算机学院",
+        "major_code": "085404",
+        "major_name": "计算机技术",
+        "study_mode": "全日制",
+        "direction_code": "00",
+        "direction_name": "不区分研究方向",
+        "unified_exam_plan": 45,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n备注：含全日制异地科研联合培养10人。",
+        "source_cells": {
+          "major_code": "B134",
+          "major_name": "C134",
+          "study_mode": "D134",
+          "direction_code": "E134",
+          "direction_name": "F134",
+          "unified_exam_plan": "G134",
+          "subject_1_code": "H134",
+          "subject_1_name": "I134",
+          "subject_2_code": "J134",
+          "subject_2_name": "K134",
+          "subject_3_code": "L134",
+          "subject_3_name": "M134",
+          "subject_4_code": "N134",
+          "subject_4_name": "O134",
+          "notes": "P134"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 136,
+        "college": "207 计算机学院",
+        "major_code": "085411",
+        "major_name": "大数据技术与工程",
+        "study_mode": "全日制",
+        "direction_code": "00",
+        "direction_name": "不区分研究方向",
+        "unified_exam_plan": 10,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：c/c++语言程序设计（上机考试）。\n面试内容：外语口语、听力测试；计算机专业相关基础与专业知识。\n",
+        "source_cells": {
+          "major_code": "B136",
+          "major_name": "C136",
+          "study_mode": "D136",
+          "direction_code": "E136",
+          "direction_name": "F136",
+          "unified_exam_plan": "G136",
+          "subject_1_code": "H136",
+          "subject_1_name": "I136",
+          "subject_2_code": "J136",
+          "subject_2_name": "K136",
+          "subject_3_code": "L136",
+          "subject_3_name": "M136",
+          "subject_4_code": "N136",
+          "subject_4_name": "O136",
+          "notes": "P136"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 318,
+        "college": "241 医学技术学院",
+        "major_code": "085404",
+        "major_name": "计算机技术",
+        "study_mode": "全日制",
+        "direction_code": "00",
+        "direction_name": "不区分研究方向",
+        "unified_exam_plan": 5,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：C/C++语言程序设计（上机）。\n面试内容：外语口语听力测试；专业基础知识与实践能力综合测试。\n",
+        "source_cells": {
+          "major_code": "B318",
+          "major_name": "C318",
+          "study_mode": "D318",
+          "direction_code": "E318",
+          "direction_name": "F318",
+          "unified_exam_plan": "G318",
+          "subject_1_code": "H318",
+          "subject_1_name": "I318",
+          "subject_2_code": "J318",
+          "subject_2_name": "K318",
+          "subject_3_code": "L318",
+          "subject_3_name": "M318",
+          "subject_4_code": "N318",
+          "subject_4_name": "O318",
+          "notes": "P318"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 394,
+        "college": "246 人工智能学院",
+        "major_code": "085410",
+        "major_name": "人工智能",
+        "study_mode": "全日制",
+        "direction_code": "02",
+        "direction_name": "计算机基础",
+        "unified_exam_plan": 2,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：选择业务课810的考生：电子技术（含模拟数字部分）（70%）+微机原理（30%）\n选择业务课408的考生：C/C++语言程序设计（上机）\n面试内容：外语口语听力测试；人工智能专业基础与专业知识、实践能力综合测试。\n",
+        "source_cells": {
+          "major_code": "B393",
+          "major_name": "C393",
+          "study_mode": "D393",
+          "direction_code": "E394",
+          "direction_name": "F394",
+          "unified_exam_plan": "G394",
+          "subject_1_code": "H394",
+          "subject_1_name": "I394",
+          "subject_2_code": "J394",
+          "subject_2_name": "K394",
+          "subject_3_code": "L394",
+          "subject_3_name": "M394",
+          "subject_4_code": "N394",
+          "subject_4_name": "O394",
+          "notes": "P393"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 396,
+        "college": "246 人工智能学院",
+        "major_code": "140500",
+        "major_name": "智能科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "02",
+        "direction_name": "类脑智能",
+        "unified_exam_plan": 3,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：选择业务课810的考生：电子技术（含模拟数字部分）（70%）+微机原理（30%）\n选择业务课408的考生：C/C++语言程序设计（上机）\n面试内容：外语口语听力测试；人工智能专业基础与专业知识、实践能力综合测试。\n",
+        "source_cells": {
+          "major_code": "B395",
+          "major_name": "C395",
+          "study_mode": "D395",
+          "direction_code": "E396",
+          "direction_name": "F396",
+          "unified_exam_plan": "G396",
+          "subject_1_code": "H396",
+          "subject_1_name": "I396",
+          "subject_2_code": "J396",
+          "subject_2_name": "K396",
+          "subject_3_code": "L396",
+          "subject_3_name": "M396",
+          "subject_4_code": "N396",
+          "subject_4_name": "O396",
+          "notes": "P395"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 398,
+        "college": "246 人工智能学院",
+        "major_code": "140500",
+        "major_name": "智能科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "04",
+        "direction_name": "智能安全与反智",
+        "unified_exam_plan": 1,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：选择业务课810的考生：电子技术（含模拟数字部分）（70%）+微机原理（30%）\n选择业务课408的考生：C/C++语言程序设计（上机）\n面试内容：外语口语听力测试；人工智能专业基础与专业知识、实践能力综合测试。\n",
+        "source_cells": {
+          "major_code": "B395",
+          "major_name": "C395",
+          "study_mode": "D395",
+          "direction_code": "E398",
+          "direction_name": "F398",
+          "unified_exam_plan": "G398",
+          "subject_1_code": "H398",
+          "subject_1_name": "I398",
+          "subject_2_code": "J398",
+          "subject_2_name": "K398",
+          "subject_3_code": "L398",
+          "subject_3_name": "M398",
+          "subject_4_code": "N398",
+          "subject_4_name": "O398",
+          "notes": "P395"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 399,
+        "college": "246 人工智能学院",
+        "major_code": "140500",
+        "major_name": "智能科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "05",
+        "direction_name": "智能技术及应用",
+        "unified_exam_plan": 6,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：选择业务课810的考生：电子技术（含模拟数字部分）（70%）+微机原理（30%）\n选择业务课408的考生：C/C++语言程序设计（上机）\n面试内容：外语口语听力测试；人工智能专业基础与专业知识、实践能力综合测试。\n",
+        "source_cells": {
+          "major_code": "B395",
+          "major_name": "C395",
+          "study_mode": "D395",
+          "direction_code": "E399",
+          "direction_name": "F399",
+          "unified_exam_plan": "G399",
+          "subject_1_code": "H399",
+          "subject_1_name": "I399",
+          "subject_2_code": "J399",
+          "subject_2_name": "K399",
+          "subject_3_code": "L399",
+          "subject_3_name": "M399",
+          "subject_4_code": "N399",
+          "subject_4_name": "O399",
+          "notes": "P395"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 468,
+        "college": "280 珠海校区",
+        "major_code": "085404",
+        "major_name": "计算机技术",
+        "study_mode": "全日制",
+        "direction_code": "00",
+        "direction_name": "不区分研究方向",
+        "unified_exam_plan": 11,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：C/C++语言程序设计（上机考试）。\n\n面试内容：外语口语听力测试；计算机技术相关基础与专业知识。\n备注：含RISC-V班3人，海鸥班2人",
+        "source_cells": {
+          "major_code": "B468",
+          "major_name": "C468",
+          "study_mode": "D468",
+          "direction_code": "E468",
+          "direction_name": "F468",
+          "unified_exam_plan": "G468",
+          "subject_1_code": "H468",
+          "subject_1_name": "I468",
+          "subject_2_code": "J468",
+          "subject_2_name": "K468",
+          "subject_3_code": "L468",
+          "subject_3_name": "M468",
+          "subject_4_code": "N468",
+          "subject_4_name": "O468",
+          "notes": "P468"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 473,
+        "college": "280 珠海校区",
+        "major_code": "085410",
+        "major_name": "人工智能",
+        "study_mode": "全日制",
+        "direction_code": "02",
+        "direction_name": "计算机基础",
+        "unified_exam_plan": 3,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：选择业务课810的考生：电子 技术(含模拟数字部分)(70%)+微机原理(30%)\n选择业务课408的考生：C/C++语言程序 设计(上机考试)\n面试内容：外语口语听力测试；人工智能专业基础与专业知识、实践能力综合测试。\n备注：01方向含Risc-V班 3人。\n02方向含RISC-V班1人",
+        "source_cells": {
+          "major_code": "B472",
+          "major_name": "C472",
+          "study_mode": "D472",
+          "direction_code": "E473",
+          "direction_name": "F473",
+          "unified_exam_plan": "G473",
+          "subject_1_code": "H473",
+          "subject_1_name": "I473",
+          "subject_2_code": "J473",
+          "subject_2_name": "K473",
+          "subject_3_code": "L473",
+          "subject_3_name": "M473",
+          "subject_4_code": "N473",
+          "subject_4_name": "O473",
+          "notes": "P472"
+        }
+      },
+      {
+        "sheet": "zs_ss_zsmldynew",
+        "row": 493,
+        "college": "280 珠海校区",
+        "major_code": "140500",
+        "major_name": "智能科学与技术",
+        "study_mode": "全日制",
+        "direction_code": "05",
+        "direction_name": "智能技术及应用",
+        "unified_exam_plan": 2,
+        "subject_1_code": "101",
+        "subject_1_name": "思想政治理论",
+        "subject_2_code": "201",
+        "subject_2_name": "英语（一）",
+        "subject_3_code": "302",
+        "subject_3_name": "数学（二）",
+        "subject_4_code": "408",
+        "subject_4_name": "计算机学科专业基础",
+        "notes": "笔试科目：选择业务课810的考生：电子技术(含模拟数字部分)(70%)+微机原理(30%)。\n选择业务课408的考生：C/C++语言程序设计（上机）。\n面试内容：外语口语听力测试；人工智能专业基础与专业知识、实践能力综合测试。\n",
+        "source_cells": {
+          "major_code": "B491",
+          "major_name": "C491",
+          "study_mode": "D491",
+          "direction_code": "E493",
+          "direction_name": "F493",
+          "unified_exam_plan": "G493",
+          "subject_1_code": "H493",
+          "subject_1_name": "I493",
+          "subject_2_code": "J493",
+          "subject_2_name": "K493",
+          "subject_3_code": "L493",
+          "subject_3_name": "M493",
+          "subject_4_code": "N493",
+          "subject_4_name": "O493",
+          "notes": "P491"
+        }
+      }
+    ],
+    "independent_verification": {
+      "TraceId": "87315a0a-5aad-46dd-9edb-72e3dd254bce",
+      "direct_xml_408_cells": [
+        "N127",
+        "N128",
+        "N129",
+        "N130",
+        "N131",
+        "N132",
+        "N133",
+        "N134",
+        "N136",
+        "N318",
+        "N394",
+        "N396",
+        "N398",
+        "N399",
+        "N468",
+        "N473",
+        "N493"
+      ],
+      "direct_xml_408_count": 17,
+      "openpyxl_408_count": 17,
+      "matches": true,
+      "direct_xml_direction_count": 351,
+      "college_count": 27,
+      "unique_college_major_groups": 10,
+      "unique_plan_cells": {
+        "G127": 27,
+        "G133": 5,
+        "G134": 45,
+        "G136": 10,
+        "G318": 5,
+        "G394": 2,
+        "G396": 3,
+        "G398": 1,
+        "G399": 6,
+        "G468": 11,
+        "G473": 3,
+        "G493": 2
+      },
+      "deduplicated_2026_unified_exam_plan_sum": 120,
+      "rendered_ranges": [
+        "B123:P136",
+        "B309:P319",
+        "B389:P399",
+        "B468:P473",
+        "B491:P493",
+        "B180:P192"
+      ],
+      "visual_review": "Viewed all six source-range images; merged plan27 is one shared cell, AI and Zhuhai 408/810 boundaries and 212 no408 confirmed. Renderer drops leading zeros in displayed codes; original typed source strings retained in JSON."
+    }
+  },
+  "2027_software_switch": {
+    "announcement_date": "2026-07-06",
+    "program_code": "085405",
+    "direction_code": "00",
+    "old_subjects": [
+      "101",
+      "201",
+      "302",
+      "885"
+    ],
+    "new_subjects": [
+      "101",
+      "201",
+      "302",
+      "408"
+    ],
+    "source_url": "https://grd.bit.edu.cn/zsgz/zsxx/b09aa8505207404abedad0c4be2f5bce.htm",
+    "complete_2027_catalog_obtained": false
+  },
+  "885_sources": [
+    {
+      "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+      "year": 2013,
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/885/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-885-2013-%E7%9C%9F%E9%A2%98%E5%9B%9E%E5%BF%86%E7%89%88.pdf",
+      "bytes": 593030,
+      "sha256": "70c4523219700ab3c61905686d5077838a45b7cc2021c8229f3ebfdb74e64970",
+      "kind": "public unofficial recollection"
+    },
+    {
+      "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+      "year": 2014,
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/885/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-885-2014-%E7%9C%9F%E9%A2%98%E5%9B%9E%E5%BF%86%E7%89%88.pdf",
+      "bytes": 341220,
+      "sha256": "05c25135d80f29b66a2985f40e756c2c83c39107acb34e53aa2a969099e8425f",
+      "kind": "public unofficial recollection"
+    },
+    {
+      "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+      "year": 2015,
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/885/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-885-2015-%E7%9C%9F%E9%A2%98%E5%9B%9E%E5%BF%86%E7%89%88.pdf",
+      "bytes": 394406,
+      "sha256": "ab3a75e425120348846995f208bd8cb20f6aae26802eba9565081e5bb67a5a31",
+      "kind": "public unofficial recollection"
+    },
+    {
+      "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+      "year": 2016,
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/885/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-885-2016-%E7%9C%9F%E9%A2%98%E5%9B%9E%E5%BF%86%E7%89%88.pdf",
+      "bytes": 453772,
+      "sha256": "41bf138d4cd730d2a019e72728e20c0b8bc66dbd574590d59a208c17d78bb0f4",
+      "kind": "public unofficial recollection"
+    },
+    {
+      "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+      "year": 2017,
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/885/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-885-2017-%E7%9C%9F%E9%A2%98%E5%9B%9E%E5%BF%86%E7%89%88.pdf",
+      "bytes": 240748,
+      "sha256": "76b28cbc05cd4f96c17ef100fab55f89764ef48d5d13ce5b9aa849ef19fa6820",
+      "kind": "public unofficial recollection"
+    },
+    {
+      "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+      "year": 2018,
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/885/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6-885-2018-%E7%9C%9F%E9%A2%98%E5%9B%9E%E5%BF%86%E7%89%88.pdf",
+      "bytes": 301480,
+      "sha256": "c5d08e959b201daa6fcdc126a58aa84a62ed1752c5fa952eb21818dfb72864ee",
+      "kind": "public unofficial recollection"
+    }
+  ],
+  "885_official_2026_syllabus": {
+    "TraceId": "2ccd4530-8075-4c10-9e90-76a6b41c2030",
+    "index": "https://grd.bit.edu.cn/zsgz/ssyjs/tzgg_ss/07c466759a8a4c1e801625dc542154e7.htm",
+    "url": "https://grd.bit.edu.cn/docs/2025-10/b10189d35ddc41d7b2c10936eae8315d.rar",
+    "bytes": 447216,
+    "sha256": "cef5dc25eed6f8752465f7371dbae4d0d4bb335aca655ff20393192eb61765a4"
+  },
+  "408_sources": [
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "year": 2013,
+      "file": "paper2013.pdf",
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/联考408/408-2013-真题和答案.pdf",
+      "fetched_at_utc": "2026-09-14T11:33:40.432203+00:00",
+      "bytes": 672141,
+      "sha256": "482e570c80c074bcb8818b57747e95fe743c7612f1c6a4ba558fc0e3775b6110",
+      "status": 200
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "year": 2014,
+      "file": "paper2014.pdf",
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/联考408/408-2014-真题和答案.pdf",
+      "fetched_at_utc": "2026-09-14T11:33:40.432203+00:00",
+      "bytes": 5230381,
+      "sha256": "d82388e8a53eb47a97f217a36669302835bb5d952c113c104404b49d587d115f",
+      "status": 200
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "year": 2015,
+      "file": "paper2015.pdf",
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/联考408/408-2015-真题和答案.pdf",
+      "fetched_at_utc": "2026-09-14T11:33:40.432203+00:00",
+      "bytes": 709413,
+      "sha256": "1604dd15cc7fc2f0464b255437048281adb0e790e62cedac45a7b2d0463e2770",
+      "status": 200
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2023.pdf",
+      "url": "https://www.zehaowang.xin/zhenti/408_2023.pdf",
+      "status": 200,
+      "sha256": "e168bc9aa4663316ec3c5dd7051a060e08c4f708ff7ef0c555c41ff34f8a7433",
+      "bytes": 5176912
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2024.pdf",
+      "url": "https://www.zehaowang.xin/zhenti/408_2024.pdf",
+      "status": 200,
+      "sha256": "12b00d267c59232e763d94341b05823e73ecda732694686775d48c27142151f1",
+      "bytes": 844959
+    },
+    {
+      "url": "https://gxwendu.com/h-nd-2376.html",
+      "error": "SSLError"
+    },
+    {
+      "url": "https://s.wanxue.cn/sls/dataNon/queryNonListByCourseId?courseId=0&exaid=1",
+      "error": "SSLError"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "outline2025.pdf",
+      "url": "https://www.uwh.edu.cn/uploads/article/20250609/660428d58334252302af691bf99e064e.pdf",
+      "status": 200,
+      "sha256": "8ee1e0c917675bdc3a51fa283fd50dcd4f652a962370762704d50f05b23100a5"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2016.pdf",
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/联考408/408-2016-真题和答案.pdf",
+      "status": 200,
+      "sha256": "21fbc0ffc00fc94d1e9e9ea4bc6c52aae5795f71af468a4924b9229e70cd2fdd",
+      "bytes": 1263825
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2017.pdf",
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/联考408/408-2017-真题和答案.pdf",
+      "status": 200,
+      "sha256": "e02c5fd059979e6210f36eccfda76dff34641786779ac9a1519f9cd62cc79620",
+      "bytes": 1353136
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2018.pdf",
+      "url": "https://raw.githubusercontent.com/LemonJuice98/Computer-Science/master/联考408/408-2018-真题和答案.pdf",
+      "status": 200,
+      "sha256": "1a2171a0efcc7658cf7560094777e25816ead584d68ca62b76eb02b7b931a8ca",
+      "bytes": 6603943
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2023.pdf",
+      "source_url": "https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf",
+      "fetched_at_utc": "2026-09-14T11:16:46.748991+00:00",
+      "error": "SSLError"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "paper2025.pdf",
+      "source_url": "https://static.kaoyan.cn/file/question/2025/11/04/ea4c362c1e27e35785676e188b094e37.pdf",
+      "fetched_at_utc": "2026-09-14T11:16:46.748991+00:00",
+      "status": 200,
+      "bytes": 841952,
+      "sha256": "44f3dfe7f5d2085db792b6c63ab00960055c6f9c17b4014151694f2f4a276ada",
+      "content_type": "application/pdf"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "index2024.html",
+      "source_url": "https://www.zehaowang.xin/408_choice.html",
+      "fetched_at_utc": "2026-09-14T11:16:46.748991+00:00",
+      "status": 200,
+      "bytes": 36995,
+      "sha256": "0c8d63e7c4b44813ee5868df084d40177858538f1fed2fd2a047d12f1548f11c",
+      "content_type": "text/html"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "reproduction2026.html",
+      "source_url": "https://www.csgraduates.com/study_methods/408quiz/2026/",
+      "fetched_at_utc": "2026-09-14T11:16:46.749974+00:00",
+      "status": 200,
+      "bytes": 1730787,
+      "sha256": "71a40c4e3eca453b14ba0adbcadde887a9d4a55155dd11457e1051bd4003f085",
+      "content_type": "text/html"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "reproduction2025.html",
+      "source_url": "https://www.csgraduates.com/study_methods/408quiz/2025/",
+      "fetched_at_utc": "2026-09-14T11:16:47.784494+00:00",
+      "status": 200,
+      "bytes": 1324936,
+      "sha256": "a4263a8482c74c98955b664e29e420027ea7b57797d3c2e6aea7fbe589ee8410",
+      "content_type": "text/html"
+    },
+    {
+      "trace_id": "35849fe2-32e2-49e2-a1c0-91f2985778da",
+      "file": "outline2026.pdf",
+      "source_url": "https://www.kmxwd.com/uploads/images/20251015/68eef5daf0564.pdf",
+      "fetched_at_utc": "2026-09-14T11:16:49.788872+00:00",
+      "error": "SSLError"
+    }
+  ],
+  "history_sources": {
+    "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+    "sources": [
+      {
+        "file": "ai-2026-final.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://ai.bit.edu.cn/tzgg/1709540484fc416787018925bda9fe81.htm",
+        "fetched_utc": "2026-09-14T11:21:01.254225+00:00",
+        "status": 200,
+        "bytes": 129236,
+        "sha256": "63cc855366581069f0326356345e134e552c28d971164d10effa1d7643733448",
+        "content_type": "text/html",
+        "final_url": "https://ai.bit.edu.cn/tzgg/1709540484fc416787018925bda9fe81.htm"
+      },
+      {
+        "file": "ai-2026-locations-plan.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://ai.bit.edu.cn/docs/2026-03/65de0018763d4ac5beb4a175b6fdae2a.pdf",
+        "fetched_utc": "2026-09-14T11:17:58.374429+00:00",
+        "status": 200,
+        "bytes": 52653,
+        "sha256": "5662ff34a8b3f7f0afc6da8f2bf52263fe3245cbd444450ba05d58f38ca2621b",
+        "content_type": "application/pdf",
+        "final_url": "https://ai.bit.edu.cn/docs/2026-03/65de0018763d4ac5beb4a175b6fdae2a.pdf"
+      },
+      {
+        "file": "ai-2026-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://ai.bit.edu.cn/tzgg/2e1c1b4a084949959259a6f84f901a3f.htm",
+        "fetched_utc": "2026-09-14T11:17:13.466583+00:00",
+        "status": 200,
+        "bytes": 62511,
+        "sha256": "0442dccea06833d49d3d2916556d82aeccbad6f4bbbdeca2961e0b32bb09128e",
+        "content_type": "text/html",
+        "final_url": "https://ai.bit.edu.cn/tzgg/2e1c1b4a084949959259a6f84f901a3f.htm"
+      },
+      {
+        "file": "ai-2026-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://ai.bit.edu.cn/docs/2026-03/cc3148deb2724810952122867be2c6d1.pdf",
+        "fetched_utc": "2026-09-14T11:17:58.260660+00:00",
+        "status": 200,
+        "bytes": 431384,
+        "sha256": "531cbedac762fbdc3cd2f8856ca395558403f75c6867077674ff1fad82004626",
+        "content_type": "application/pdf",
+        "final_url": "https://ai.bit.edu.cn/docs/2026-03/cc3148deb2724810952122867be2c6d1.pdf"
+      },
+      {
+        "file": "ai-index.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://ai.bit.edu.cn/tzgg/index.htm",
+        "fetched_utc": "2026-09-14T11:17:55.581198+00:00",
+        "status": 200,
+        "bytes": 19141,
+        "sha256": "1a5288e452cc27e4177cb83ad1dce658188c80e131f775b40dbcf9979f467891",
+        "content_type": "text/html",
+        "final_url": "https://ai.bit.edu.cn/tzgg/index.htm"
+      },
+      {
+        "file": "cs-2023-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/8b01cb912c1a48abb1f350cb18b29795.htm",
+        "fetched_utc": "2026-09-14T11:17:09.806287+00:00",
+        "status": 200,
+        "bytes": 43243,
+        "sha256": "d1155de557a260cfe5b573b8b741631c02cfc50f5340d81e59844d8dfdc8e760",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/8b01cb912c1a48abb1f350cb18b29795.htm"
+      },
+      {
+        "file": "cs-2023-roster.docx",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/docs/2023-03/0093fa14c13d4b5abc974c1127c935b1.docx",
+        "fetched_utc": "2026-09-14T11:17:09.808282+00:00",
+        "status": 200,
+        "bytes": 47025,
+        "sha256": "53b0189a94c2d3dd2c921e1c2419eabe682d91140c8c60f7740f75f44862f9e6",
+        "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "final_url": "https://cs.bit.edu.cn/docs/2023-03/0093fa14c13d4b5abc974c1127c935b1.docx"
+      },
+      {
+        "file": "cs-2024-final-group1.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/rcpy/gzdt/d532bbf9945e44f8a19a9ef9efc1cad3.htm",
+        "fetched_utc": "2026-09-14T11:23:39.658500+00:00",
+        "status": 200,
+        "bytes": 139816,
+        "sha256": "de4fd685936a45d9f66631ba5e510ad5f9a3dc2bfe8238a2a19c916dd5d8ddbc",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/rcpy/gzdt/d532bbf9945e44f8a19a9ef9efc1cad3.htm"
+      },
+      {
+        "file": "cs-2024-final-group2.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/8e68f3a2808a4758b8e593076b173dd2.htm",
+        "fetched_utc": "2026-09-14T11:17:15.575307+00:00",
+        "status": 200,
+        "bytes": 122163,
+        "sha256": "f033eccd1aa4518e27266374dbc9a2fcfb1b721eaf2d34650e307ec721d09d2c",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/8e68f3a2808a4758b8e593076b173dd2.htm"
+      },
+      {
+        "file": "cs-2024-retest-group1.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/a027dae544a1473e9bf8dc65a237b8e9.htm",
+        "fetched_utc": "2026-09-14T11:17:55.580195+00:00",
+        "status": 200,
+        "bytes": 41882,
+        "sha256": "dfc89bde0d88d7e27cdae71c1024e16aacdb33c2792e6f60804315635aaa0771",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/a027dae544a1473e9bf8dc65a237b8e9.htm"
+      },
+      {
+        "file": "cs-2024-retest-group2.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/f31348fbae4e4170902cebcbcc90d334.htm",
+        "fetched_utc": "2026-09-14T11:17:09.807319+00:00",
+        "status": 200,
+        "bytes": 41460,
+        "sha256": "6f93924cfdfbb323b5d8d14b359ac22ac68542b8989f9856ae2092b11483559a",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/f31348fbae4e4170902cebcbcc90d334.htm"
+      },
+      {
+        "file": "cs-2024-roster-group1.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/docs/2024-03/6a6c45ce19834b6481ee06b80c86176e.pdf",
+        "fetched_utc": "2026-09-14T11:21:01.254225+00:00",
+        "status": 200,
+        "bytes": 297411,
+        "sha256": "234c4bb6c8ead0adb77560fa073c324b79f642286cfe5183c265f777c510ad58",
+        "content_type": "application/pdf",
+        "final_url": "https://cs.bit.edu.cn/docs/2024-03/6a6c45ce19834b6481ee06b80c86176e.pdf"
+      },
+      {
+        "file": "cs-2024-roster-group2.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/docs/2024-03/76de64afa4cd4c1baf65c90f6972efe1.pdf",
+        "fetched_utc": "2026-09-14T11:17:13.212490+00:00",
+        "status": 200,
+        "bytes": 285191,
+        "sha256": "7025a28b632e88cd8c687fba01403bc78790ab54ab955edadcc817883b89a8b4",
+        "content_type": "application/pdf",
+        "final_url": "https://cs.bit.edu.cn/docs/2024-03/76de64afa4cd4c1baf65c90f6972efe1.pdf"
+      },
+      {
+        "file": "cs-2025-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/48207a0d62694ab286a7c6d6f5456a17.htm",
+        "fetched_utc": "2026-09-14T11:17:09.807319+00:00",
+        "status": 200,
+        "bytes": 43173,
+        "sha256": "153cb29c0e4efac0eca077b4caa057a7ed7e47346c6778f3db23408998932ce3",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/48207a0d62694ab286a7c6d6f5456a17.htm"
+      },
+      {
+        "file": "cs-2025-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/docs/2025-03/642ac27e1a3b462ea262be8fecbac9ca.pdf",
+        "fetched_utc": "2026-09-14T11:17:13.222230+00:00",
+        "status": 200,
+        "bytes": 230508,
+        "sha256": "1a709c1d64f814e2fe0b65b6969466478d2a62459e55e6fca1db8c92967d3ea8",
+        "content_type": "application/pdf",
+        "final_url": "https://cs.bit.edu.cn/docs/2025-03/642ac27e1a3b462ea262be8fecbac9ca.pdf"
+      },
+      {
+        "file": "cs-2026-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/73af61ff989544648c966d7f9b8155ad.htm",
+        "fetched_utc": "2026-09-14T11:17:09.808282+00:00",
+        "status": 200,
+        "bytes": 41802,
+        "sha256": "cabe1949cf31db54662d01694c3e143d1d95a4676d9946beae6a9d82fb781f04",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/73af61ff989544648c966d7f9b8155ad.htm"
+      },
+      {
+        "file": "cs-2026-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/docs/2026-03/4bc12a61bd564034a20edad09d45fcc1.pdf",
+        "fetched_utc": "2026-09-14T11:17:13.247798+00:00",
+        "status": 200,
+        "bytes": 232425,
+        "sha256": "b8de2e5e03bda8f58d71b49707d159ae7c743cf7a3c0d46b140ec6db99ad3fda",
+        "content_type": "application/pdf",
+        "final_url": "https://cs.bit.edu.cn/docs/2026-03/4bc12a61bd564034a20edad09d45fcc1.pdf"
+      },
+      {
+        "file": "cs-2026-schedule.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/docs/2026-03/6908a3ac18fb45338ec7f3927c96a3b2.pdf",
+        "fetched_utc": "2026-09-14T11:17:17.631912+00:00",
+        "status": 200,
+        "bytes": 199082,
+        "sha256": "88c39fdfbcf214c900f544330c7b964aa924761852cf92af095248362cdf866f",
+        "content_type": "application/pdf",
+        "final_url": "https://cs.bit.edu.cn/docs/2026-03/6908a3ac18fb45338ec7f3927c96a3b2.pdf"
+      },
+      {
+        "file": "cs-final-search.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&searchScope=0&combinedSearch=1&title=%E6%8B%9F%E5%BD%95%E5%8F%96&keyword=%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&rows=100&startDate=2023-01-01&endDate=2026-09-14",
+        "fetched_utc": "2026-09-14T11:30:07.905888+00:00",
+        "status": 200,
+        "bytes": 164626,
+        "sha256": "892373cceb48713cb00e11831d598abecc97b01c0f681642a8012b162587c46a",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&searchScope=0&combinedSearch=1&title=%E6%8B%9F%E5%BD%95%E5%8F%96&keyword=%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&rows=100&startDate=2023-01-01&endDate=2026-09-14"
+      },
+      {
+        "file": "cs-index.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://cs.bit.edu.cn/tzgg/index.htm",
+        "fetched_utc": "2026-09-14T11:21:06.895267+00:00",
+        "status": 200,
+        "bytes": 39004,
+        "sha256": "e6e6abdc7842e4adc2fc1e8ca91b99f7ef65d36bd5dfe106554933895e0036d9",
+        "content_type": "text/html",
+        "final_url": "https://cs.bit.edu.cn/tzgg/index.htm"
+      },
+      {
+        "file": "cs-title-search.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&searchScope=0&position=title&rows=100",
+        "fetched_utc": "2026-09-14T11:30:36.241369+00:00",
+        "status": 200,
+        "bytes": 378800,
+        "sha256": "b34b3a93ab63bcc544ddcbda899da15934be8f9437aa6e33a3d261530f37fe1a",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&searchScope=0&position=title&rows=100"
+      },
+      {
+        "file": "fees-2026.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/zsgz/zsxx/d0f931a3bb114c219ac8b0e4b76dfd09.htm",
+        "fetched_utc": "2026-09-14T11:17:58.171810+00:00",
+        "status": 200,
+        "bytes": 332496,
+        "sha256": "b467a97fafc4a2ac2d2d4ddc9fdc28a1970422986d5b623175701a74154ab0ef",
+        "content_type": "text/html",
+        "final_url": "https://grd.bit.edu.cn/zsgz/zsxx/d0f931a3bb114c219ac8b0e4b76dfd09.htm"
+      },
+      {
+        "file": "school-2026-lines.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/zsgz/zsxx/7bc769d2d97e467d85737268f1a56953.htm",
+        "fetched_utc": "2026-09-14T11:23:39.660245+00:00",
+        "status": 200,
+        "bytes": 58672,
+        "sha256": "b508d950bbd424c9c91f329d07282e42db33aa83cb59f455859609189e19b8e5",
+        "content_type": "text/html",
+        "final_url": "https://grd.bit.edu.cn/zsgz/zsxx/7bc769d2d97e467d85737268f1a56953.htm"
+      },
+      {
+        "file": "school-2026-lines1.jpg",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/ToGVSphqycrUNQg3ohuKba0xgDhZzg820HcrWUxI3x8gtdewBTYV167NrzXz4xo5eDbH5DxpFGG00FHRa3US0PoiaI8ho3085xoiaJUsa9pyg/640?wx_fmt=jpeg",
+        "fetched_utc": "2026-09-14T11:24:43.814889+00:00",
+        "status": 200,
+        "bytes": 170480,
+        "sha256": "456e6d52d7c863a9d3143b65cf249d6567dc32177ca6a7c0a543c99e59ac53ef",
+        "content_type": "image/jpeg",
+        "final_url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/ToGVSphqycrUNQg3ohuKba0xgDhZzg820HcrWUxI3x8gtdewBTYV167NrzXz4xo5eDbH5DxpFGG00FHRa3US0PoiaI8ho3085xoiaJUsa9pyg/640?wx_fmt=jpeg"
+      },
+      {
+        "file": "school-2026-lines2.jpg",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/ToGVSphqycpYTTXeNPetFwktwOvDBTq7HfoHA2aT1SSMThda0s3nz5LNU5Ew3qicxdKTpP1XyY7AHy8Ox2Pm0ibBUPdY0mF66ruvybJgnm7g0/640?wx_fmt=jpeg",
+        "fetched_utc": "2026-09-14T11:24:43.814889+00:00",
+        "status": 200,
+        "bytes": 114892,
+        "sha256": "bf4a197dba6950869d683715d12a4bfb327ea734c42d8cf72ae82b7f4f564642",
+        "content_type": "image/jpeg",
+        "final_url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/ToGVSphqycpYTTXeNPetFwktwOvDBTq7HfoHA2aT1SSMThda0s3nz5LNU5Ew3qicxdKTpP1XyY7AHy8Ox2Pm0ibBUPdY0mF66ruvybJgnm7g0/640?wx_fmt=jpeg"
+      },
+      {
+        "file": "smt-2024-final1.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/docs/2024-03/835229a9754848cfad34a028051ec675.pdf",
+        "fetched_utc": "2026-09-14T11:23:39.659100+00:00",
+        "status": 200,
+        "bytes": 87110,
+        "sha256": "9ede88006c007286a959ca9fcd0f0e8b518a2f07b56106d51054ab36b0808986",
+        "content_type": "application/pdf",
+        "final_url": "https://smt.bit.edu.cn/docs/2024-03/835229a9754848cfad34a028051ec675.pdf"
+      },
+      {
+        "file": "smt-2024-final2.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/docs/2024-04/212965f7f5e54adca2dff3102ead6f8a.pdf",
+        "fetched_utc": "2026-09-14T11:23:39.659725+00:00",
+        "status": 200,
+        "bytes": 45892,
+        "sha256": "c1c910b69e8e7f477cd63260d45de2a8b26b4b428d0810fb6fee91eba11ca370",
+        "content_type": "application/pdf",
+        "final_url": "https://smt.bit.edu.cn/docs/2024-04/212965f7f5e54adca2dff3102ead6f8a.pdf"
+      },
+      {
+        "file": "smt-2024-roster-exact.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/docs//2024-03/9bab439c147f4e1496ac15dc1d48e9e9.pdf",
+        "fetched_utc": "2026-09-14T11:24:43.813924+00:00",
+        "error": "HTTPError: HTTP Error 404: Not Found"
+      },
+      {
+        "file": "smt-2024-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/docs/2024-03/9bab439c147f4e1496ac15dc1d48e9e9.pdf",
+        "fetched_utc": "2026-09-14T11:23:39.659725+00:00",
+        "error": "HTTPError: HTTP Error 404: Not Found"
+      },
+      {
+        "file": "smt-2025-search.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A22025%E5%B9%B4%E7%A1%95%E5%A3%AB&searchScope=0",
+        "fetched_utc": "2026-09-14T11:23:43.032768+00:00",
+        "status": 200,
+        "bytes": 164599,
+        "sha256": "d37b54b7adbc716b2114822d6c5a208b7b3ce3a6084a9b52d57abd264525fad2",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A22025%E5%B9%B4%E7%A1%95%E5%A3%AB&searchScope=0"
+      },
+      {
+        "file": "smt-2026-lines.png",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/images/2026-03/c7d8d8a8e5ce47b8be39d59739586027.png",
+        "fetched_utc": "2026-09-14T11:21:01.253223+00:00",
+        "status": 200,
+        "bytes": 9189,
+        "sha256": "ba120db3ef9ad26cc8e16d11ae58199bf8ad8ea7deb3cc8b219abe1e4fcc6adc",
+        "content_type": "image/png",
+        "final_url": "https://smt.bit.edu.cn/images/2026-03/c7d8d8a8e5ce47b8be39d59739586027.png"
+      },
+      {
+        "file": "smt-2026-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/rcpy/yjszs/cc25c27431b14f3d88943a33db8bb75e.htm",
+        "fetched_utc": "2026-09-14T11:21:01.252223+00:00",
+        "status": 200,
+        "bytes": 29800,
+        "sha256": "25e5ad08cb0241269300ba6400c87721cc51ee81a6a0b0b245694854d37d6ee4",
+        "content_type": "text/html",
+        "final_url": "https://smt.bit.edu.cn/rcpy/yjszs/cc25c27431b14f3d88943a33db8bb75e.htm"
+      },
+      {
+        "file": "smt-2026-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/docs/2026-03/164d7ca2d3ff4927baac1fff47c7475d.pdf",
+        "fetched_utc": "2026-09-14T11:21:01.253223+00:00",
+        "status": 200,
+        "bytes": 444479,
+        "sha256": "4923444df6bb05c7a32313f404b8e63b0671dc082d01bbde4330ab1d0f303890",
+        "content_type": "application/pdf",
+        "final_url": "https://smt.bit.edu.cn/docs/2026-03/164d7ca2d3ff4927baac1fff47c7475d.pdf"
+      },
+      {
+        "file": "smt-history-search.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&searchScope=0",
+        "fetched_utc": "2026-09-14T11:24:43.814889+00:00",
+        "status": 200,
+        "bytes": 189963,
+        "sha256": "19ac3d365e31c72a1ffcf2e2364065edd5f25cbd19be094929e61eec9b716bcc",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&searchScope=0"
+      },
+      {
+        "file": "smt-index.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://smt.bit.edu.cn/rcpy/index.htm",
+        "fetched_utc": "2026-09-14T11:17:55.582203+00:00",
+        "status": 200,
+        "bytes": 2568,
+        "sha256": "63967f585e4b63cde5cfc7ed2a5b47abe8672638a57c110cc0bc227a78f51e0a",
+        "content_type": "text/html",
+        "final_url": "https://smt.bit.edu.cn/rcpy/index.htm"
+      },
+      {
+        "file": "smt-search-title.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&searchScope=0&position=title&rows=100",
+        "fetched_utc": "2026-09-14T11:30:07.904888+00:00",
+        "status": 200,
+        "bytes": 392452,
+        "sha256": "ef52cf78640095c82a9f6ea440fca2c47087b06ca6aecc28424384656312965a",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&searchScope=0&position=title&rows=100"
+      },
+      {
+        "file": "smt-search-title2.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&searchScope=0&position=title&rows=100&page=2",
+        "fetched_utc": "2026-09-14T11:30:36.242367+00:00",
+        "status": 200,
+        "bytes": 347835,
+        "sha256": "771a45afea4e2645ad3750f108c1f4ba38e902781cfd5718ba3dc6c3c9dffd56",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E5%8C%BB%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&searchScope=0&position=title&rows=100&page=2"
+      },
+      {
+        "file": "zh-2025-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/zsjy/yjszs/29f779b080cb46718820e91c14b059e2.htm",
+        "fetched_utc": "2026-09-14T11:23:42.236123+00:00",
+        "status": 200,
+        "bytes": 67308,
+        "sha256": "3dd7e90cf041aa3a9ea8f163ddf643b812b416c5d6cf2eed53d469e7172e20d7",
+        "content_type": "text/html",
+        "final_url": "https://zh.bit.edu.cn/zsjy/yjszs/29f779b080cb46718820e91c14b059e2.htm"
+      },
+      {
+        "file": "zh-2025-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/docs/2025-07/040c9630cc6d49f7ad0f3a22e0ef67ee.pdf",
+        "fetched_utc": "2026-09-14T11:27:56.194741+00:00",
+        "status": 200,
+        "bytes": 129686,
+        "sha256": "ed2227a3617c38a93e0dcbc4e34dad8cd858a7d89d6e0c9fd9e2fd4ae7f2ef58",
+        "content_type": "application/pdf",
+        "final_url": "https://zh.bit.edu.cn/docs/2025-07/040c9630cc6d49f7ad0f3a22e0ef67ee.pdf"
+      },
+      {
+        "file": "zh-2026-retest.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/zsjy/yjszs/859f908a0f3545f1b20b3df2e7e4f33b.htm",
+        "fetched_utc": "2026-09-14T11:17:55.582203+00:00",
+        "status": 200,
+        "bytes": 57731,
+        "sha256": "e77e4338333b0df3ca86ae81637f14edad8b464a6d2cdf838e78a98c659d433c",
+        "content_type": "text/html",
+        "final_url": "https://zh.bit.edu.cn/zsjy/yjszs/859f908a0f3545f1b20b3df2e7e4f33b.htm"
+      },
+      {
+        "file": "zh-2026-roster.pdf",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/docs/2026-03/f63a1246c3284f61ba7a267701ad1eda.pdf",
+        "fetched_utc": "2026-09-14T11:21:04.123549+00:00",
+        "status": 200,
+        "bytes": 219435,
+        "sha256": "802b9bf5dae258554eb24637fe4a6017f82314c1b07e3296d02be83cfe31b87b",
+        "content_type": "application/pdf",
+        "final_url": "https://zh.bit.edu.cn/docs/2026-03/f63a1246c3284f61ba7a267701ad1eda.pdf"
+      },
+      {
+        "file": "zh-2026-transfer.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/zsjy/yjszs/33a33dbb97e54453a3aa757bbb3c965e.htm",
+        "fetched_utc": "2026-09-14T11:21:04.433739+00:00",
+        "status": 200,
+        "bytes": 61391,
+        "sha256": "97a05228f62d9ec03577be95d1f05cb1e22ae443f66cc96a662569941b91e92a",
+        "content_type": "text/html",
+        "final_url": "https://zh.bit.edu.cn/zsjy/yjszs/33a33dbb97e54453a3aa757bbb3c965e.htm"
+      },
+      {
+        "file": "zh-final-search.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E7%8F%A0%E6%B5%B7&searchScope=0&combinedSearch=1&title=%E6%8B%9F%E5%BD%95%E5%8F%96&keyword=%E7%8F%A0%E6%B5%B7&rows=100&startDate=2025-01-01&endDate=2026-09-14",
+        "fetched_utc": "2026-09-14T11:30:07.905888+00:00",
+        "status": 200,
+        "bytes": 164569,
+        "sha256": "c72779561b111a7013cd2968206bb8010c2828572923df547891e506d6d25680",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E7%8F%A0%E6%B5%B7&searchScope=0&combinedSearch=1&title=%E6%8B%9F%E5%BD%95%E5%8F%96&keyword=%E7%8F%A0%E6%B5%B7&rows=100&startDate=2025-01-01&endDate=2026-09-14"
+      },
+      {
+        "file": "zh-index.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/zsjy/yjszs/index.htm",
+        "fetched_utc": "2026-09-14T11:17:55.582203+00:00",
+        "status": 200,
+        "bytes": 55591,
+        "sha256": "dfd1ce20803405c4cd45c3a826217bc965999ed19b01ee17991eefba87856a56",
+        "content_type": "text/html",
+        "final_url": "https://zh.bit.edu.cn/zsjy/yjszs/index.htm"
+      },
+      {
+        "file": "zh-index2.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://zh.bit.edu.cn/zsjy/yjszs/index1.htm",
+        "fetched_utc": "2026-09-14T11:21:05.426453+00:00",
+        "status": 200,
+        "bytes": 50642,
+        "sha256": "20064f9002d13ff56c31816eb416b36bc1adb96c1902b4ee8a40ce7c33eec233",
+        "content_type": "text/html",
+        "final_url": "https://zh.bit.edu.cn/zsjy/yjszs/index1.htm"
+      },
+      {
+        "file": "zh-title-search.html",
+        "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+        "url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E7%8F%A0%E6%B5%B7&searchScope=0&position=title&rows=100",
+        "fetched_utc": "2026-09-14T11:30:36.242367+00:00",
+        "status": 200,
+        "bytes": 355140,
+        "sha256": "baadd825c740d0aa644242108791eb4a58fc65d83de006903619d12e12a0b7e0",
+        "content_type": "text/html;charset=UTF-8",
+        "final_url": "https://grd.bit.edu.cn/cms/web/search/index.jsp?query=%E7%8F%A0%E6%B5%B7&searchScope=0&position=title&rows=100"
+      }
+    ]
+  },
+  "cs_retest_aggregate": {
+    "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+    "method": "Pypdf line extraction; DOCX cell extraction with per-row total-position arithmetic validation. Ordinary = blank note. 100 percent identities matched to parsed rows and four-subject sums checked. Quantiles linear interpolation at (n-1)p.",
+    "summary": [
+      {
+        "year": 2023,
+        "code": "081200",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 50,
+            "min": 335,
+            "p25": 345.25,
+            "median": 360.5,
+            "mean": 360.4,
+            "p75": 375.0,
+            "max": 395
+          },
+          "politics": {
+            "n": 50,
+            "min": 51,
+            "p25": 58.0,
+            "median": 61.0,
+            "mean": 60.38,
+            "p75": 63.75,
+            "max": 69
+          },
+          "english": {
+            "n": 50,
+            "min": 54,
+            "p25": 68.0,
+            "median": 71.0,
+            "mean": 71.28,
+            "p75": 77.0,
+            "max": 83
+          },
+          "math": {
+            "n": 50,
+            "min": 88,
+            "p25": 107.25,
+            "median": 118.0,
+            "mean": 115.84,
+            "p75": 127.25,
+            "max": 142
+          },
+          "professional": {
+            "n": 50,
+            "min": 89,
+            "p25": 106.25,
+            "median": 114.0,
+            "mean": 112.9,
+            "p75": 118.0,
+            "max": 132
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "0812J1",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 10,
+            "min": 323,
+            "p25": 338.75,
+            "median": 351.0,
+            "mean": 354,
+            "p75": 356.25,
+            "max": 394
+          },
+          "politics": {
+            "n": 10,
+            "min": 51,
+            "p25": 54.75,
+            "median": 60.0,
+            "mean": 60.1,
+            "p75": 62.0,
+            "max": 73
+          },
+          "english": {
+            "n": 10,
+            "min": 49,
+            "p25": 59.0,
+            "median": 70.0,
+            "mean": 66.9,
+            "p75": 74.5,
+            "max": 79
+          },
+          "math": {
+            "n": 10,
+            "min": 93,
+            "p25": 96.75,
+            "median": 105.5,
+            "mean": 109,
+            "p75": 118.75,
+            "max": 138
+          },
+          "professional": {
+            "n": 10,
+            "min": 106,
+            "p25": 111.25,
+            "median": 116.0,
+            "mean": 118,
+            "p75": 125.0,
+            "max": 133
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "085404",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 70,
+            "min": 328,
+            "p25": 343.25,
+            "median": 357.5,
+            "mean": 360.0286,
+            "p75": 371.0,
+            "max": 427
+          },
+          "politics": {
+            "n": 70,
+            "min": 48,
+            "p25": 59.0,
+            "median": 61.0,
+            "mean": 61.8571,
+            "p75": 65.0,
+            "max": 76
+          },
+          "english": {
+            "n": 70,
+            "min": 48,
+            "p25": 61.0,
+            "median": 69.0,
+            "mean": 67.9,
+            "p75": 75.0,
+            "max": 83
+          },
+          "math": {
+            "n": 70,
+            "min": 96,
+            "p25": 113.25,
+            "median": 123.0,
+            "mean": 123.4857,
+            "p75": 134.0,
+            "max": 150
+          },
+          "professional": {
+            "n": 70,
+            "min": 80,
+            "p25": 99.0,
+            "median": 107.5,
+            "mean": 106.7857,
+            "p75": 114.75,
+            "max": 129
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "085405",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 115,
+            "min": 330,
+            "p25": 345.0,
+            "median": 359,
+            "mean": 362.313,
+            "p75": 377.0,
+            "max": 424
+          },
+          "politics": {
+            "n": 115,
+            "min": 47,
+            "p25": 57.0,
+            "median": 61,
+            "mean": 60.2957,
+            "p75": 63.5,
+            "max": 71
+          },
+          "english": {
+            "n": 115,
+            "min": 45,
+            "p25": 60.0,
+            "median": 66,
+            "mean": 66.0609,
+            "p75": 74.0,
+            "max": 83
+          },
+          "math": {
+            "n": 115,
+            "min": 84,
+            "p25": 111.5,
+            "median": 119,
+            "mean": 119.8957,
+            "p75": 130.0,
+            "max": 150
+          },
+          "professional": {
+            "n": 115,
+            "min": 85,
+            "p25": 111.5,
+            "median": 118,
+            "mean": 116.0609,
+            "p75": 121.0,
+            "max": 138
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "085405",
+        "note": "专项计划",
+        "statistics": {
+          "total": {
+            "n": 2,
+            "min": 342,
+            "p25": 342.75,
+            "median": 343.5,
+            "mean": 343.5,
+            "p75": 344.25,
+            "max": 345
+          },
+          "politics": {
+            "n": 2,
+            "min": 57,
+            "p25": 60.25,
+            "median": 63.5,
+            "mean": 63.5,
+            "p75": 66.75,
+            "max": 70
+          },
+          "english": {
+            "n": 2,
+            "min": 67,
+            "p25": 68.0,
+            "median": 69.0,
+            "mean": 69,
+            "p75": 70.0,
+            "max": 71
+          },
+          "math": {
+            "n": 2,
+            "min": 90,
+            "p25": 98.5,
+            "median": 107.0,
+            "mean": 107,
+            "p75": 115.5,
+            "max": 124
+          },
+          "professional": {
+            "n": 2,
+            "min": 93,
+            "p25": 98.5,
+            "median": 104.0,
+            "mean": 104,
+            "p75": 109.5,
+            "max": 115
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "085405",
+        "note": "非全日制",
+        "statistics": {
+          "total": {
+            "n": 8,
+            "min": 237,
+            "p25": 262.5,
+            "median": 277.0,
+            "mean": 280.625,
+            "p75": 296.75,
+            "max": 323
+          },
+          "politics": {
+            "n": 8,
+            "min": 64,
+            "p25": 69.0,
+            "median": 71.0,
+            "mean": 72.375,
+            "p75": 75.75,
+            "max": 84
+          },
+          "english": {
+            "n": 8,
+            "min": 36,
+            "p25": 50.75,
+            "median": 60.5,
+            "mean": 57.875,
+            "p75": 69.0,
+            "max": 73
+          },
+          "math": {
+            "n": 8,
+            "min": 54,
+            "p25": 63.25,
+            "median": 69.0,
+            "mean": 75.75,
+            "p75": 86.0,
+            "max": 115
+          },
+          "professional": {
+            "n": 8,
+            "min": 53,
+            "p25": 65.25,
+            "median": 72.5,
+            "mean": 74.625,
+            "p75": 89.0,
+            "max": 94
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "085410",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 8,
+            "min": 350,
+            "p25": 355.0,
+            "median": 360.5,
+            "mean": 363.125,
+            "p75": 364.75,
+            "max": 389
+          },
+          "politics": {
+            "n": 8,
+            "min": 54,
+            "p25": 55.75,
+            "median": 59.0,
+            "mean": 59.125,
+            "p75": 62.5,
+            "max": 64
+          },
+          "english": {
+            "n": 8,
+            "min": 52,
+            "p25": 68.5,
+            "median": 73.0,
+            "mean": 71,
+            "p75": 77.25,
+            "max": 81
+          },
+          "math": {
+            "n": 8,
+            "min": 110,
+            "p25": 116.75,
+            "median": 131.0,
+            "mean": 128.625,
+            "p75": 138.25,
+            "max": 145
+          },
+          "professional": {
+            "n": 8,
+            "min": 90,
+            "p25": 96.75,
+            "median": 103.5,
+            "mean": 104.375,
+            "p75": 108.5,
+            "max": 129
+          }
+        }
+      },
+      {
+        "year": 2023,
+        "code": "085411",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 6,
+            "min": 329,
+            "p25": 332.25,
+            "median": 335.0,
+            "mean": 342,
+            "p75": 340.75,
+            "max": 379
+          },
+          "politics": {
+            "n": 6,
+            "min": 51,
+            "p25": 53.5,
+            "median": 59.0,
+            "mean": 57.6667,
+            "p75": 61.5,
+            "max": 63
+          },
+          "english": {
+            "n": 6,
+            "min": 54,
+            "p25": 59.75,
+            "median": 62.0,
+            "mean": 62.8333,
+            "p75": 67.25,
+            "max": 71
+          },
+          "math": {
+            "n": 6,
+            "min": 98,
+            "p25": 103.75,
+            "median": 113.5,
+            "mean": 116.1667,
+            "p75": 127.0,
+            "max": 140
+          },
+          "professional": {
+            "n": 6,
+            "min": 93,
+            "p25": 97.5,
+            "median": 109.0,
+            "mean": 105.3333,
+            "p75": 110.75,
+            "max": 116
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "081200",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 45,
+            "min": 360,
+            "p25": 366.0,
+            "median": 372,
+            "mean": 375.3778,
+            "p75": 384.0,
+            "max": 409
+          },
+          "politics": {
+            "n": 45,
+            "min": 58,
+            "p25": 65.0,
+            "median": 68,
+            "mean": 67.9778,
+            "p75": 72.0,
+            "max": 77
+          },
+          "english": {
+            "n": 45,
+            "min": 65,
+            "p25": 73.0,
+            "median": 76,
+            "mean": 76.0222,
+            "p75": 80.0,
+            "max": 87
+          },
+          "math": {
+            "n": 45,
+            "min": 89,
+            "p25": 104.0,
+            "median": 114,
+            "mean": 112.6,
+            "p75": 121.0,
+            "max": 136
+          },
+          "professional": {
+            "n": 45,
+            "min": 98,
+            "p25": 115.0,
+            "median": 120,
+            "mean": 118.7778,
+            "p75": 123.0,
+            "max": 133
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "0812J1",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 12,
+            "min": 316,
+            "p25": 327.75,
+            "median": 337.0,
+            "mean": 347.25,
+            "p75": 368.25,
+            "max": 397
+          },
+          "politics": {
+            "n": 12,
+            "min": 55,
+            "p25": 61.75,
+            "median": 63.5,
+            "mean": 65.1667,
+            "p75": 69.25,
+            "max": 75
+          },
+          "english": {
+            "n": 12,
+            "min": 47,
+            "p25": 64.75,
+            "median": 72.5,
+            "mean": 70.5,
+            "p75": 78.5,
+            "max": 85
+          },
+          "math": {
+            "n": 12,
+            "min": 68,
+            "p25": 75.75,
+            "median": 85.5,
+            "mean": 87.4167,
+            "p75": 99.0,
+            "max": 117
+          },
+          "professional": {
+            "n": 12,
+            "min": 95,
+            "p25": 118.25,
+            "median": 125.0,
+            "mean": 124.1667,
+            "p75": 135.5,
+            "max": 140
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "085404",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 114,
+            "min": 324,
+            "p25": 339.0,
+            "median": 354.0,
+            "mean": 357.5877,
+            "p75": 375.75,
+            "max": 413
+          },
+          "politics": {
+            "n": 114,
+            "min": 50,
+            "p25": 62.0,
+            "median": 66.0,
+            "mean": 65.5614,
+            "p75": 69.0,
+            "max": 76
+          },
+          "english": {
+            "n": 114,
+            "min": 54,
+            "p25": 70.0,
+            "median": 75.0,
+            "mean": 73.807,
+            "p75": 78.0,
+            "max": 85
+          },
+          "math": {
+            "n": 114,
+            "min": 80,
+            "p25": 98.0,
+            "median": 110.0,
+            "mean": 110.193,
+            "p75": 120.75,
+            "max": 145
+          },
+          "professional": {
+            "n": 114,
+            "min": 71,
+            "p25": 100.0,
+            "median": 109.0,
+            "mean": 108.0263,
+            "p75": 115.0,
+            "max": 133
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "085405",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 118,
+            "min": 352,
+            "p25": 364.25,
+            "median": 379.0,
+            "mean": 380.3729,
+            "p75": 392.5,
+            "max": 431
+          },
+          "politics": {
+            "n": 118,
+            "min": 48,
+            "p25": 63.25,
+            "median": 67.0,
+            "mean": 65.822,
+            "p75": 69.0,
+            "max": 78
+          },
+          "english": {
+            "n": 118,
+            "min": 53,
+            "p25": 70.0,
+            "median": 74.0,
+            "mean": 73.4322,
+            "p75": 78.0,
+            "max": 87
+          },
+          "math": {
+            "n": 118,
+            "min": 83,
+            "p25": 102.0,
+            "median": 112.5,
+            "mean": 112.6017,
+            "p75": 121.0,
+            "max": 143
+          },
+          "professional": {
+            "n": 118,
+            "min": 106,
+            "p25": 124.0,
+            "median": 128.0,
+            "mean": 128.5169,
+            "p75": 133.0,
+            "max": 147
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "085405",
+        "note": "专项计划",
+        "statistics": {
+          "total": {
+            "n": 3,
+            "min": 336,
+            "p25": 340.5,
+            "median": 345,
+            "mean": 355.3333,
+            "p75": 365.0,
+            "max": 385
+          },
+          "politics": {
+            "n": 3,
+            "min": 54,
+            "p25": 57.5,
+            "median": 61,
+            "mean": 62.6667,
+            "p75": 67.0,
+            "max": 73
+          },
+          "english": {
+            "n": 3,
+            "min": 73,
+            "p25": 73.5,
+            "median": 74,
+            "mean": 74.3333,
+            "p75": 75.0,
+            "max": 76
+          },
+          "math": {
+            "n": 3,
+            "min": 90,
+            "p25": 97.0,
+            "median": 104,
+            "mean": 100.6667,
+            "p75": 106.0,
+            "max": 108
+          },
+          "professional": {
+            "n": 3,
+            "min": 102,
+            "p25": 111.0,
+            "median": 120,
+            "mean": 117.6667,
+            "p75": 125.5,
+            "max": 131
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "085405",
+        "note": "单独考试",
+        "statistics": {
+          "total": {
+            "n": 11,
+            "min": 245,
+            "p25": 294.5,
+            "median": 300,
+            "mean": 301.1818,
+            "p75": 313.0,
+            "max": 338
+          },
+          "politics": {
+            "n": 11,
+            "min": 62,
+            "p25": 66.5,
+            "median": 68,
+            "mean": 67.6364,
+            "p75": 69.5,
+            "max": 73
+          },
+          "english": {
+            "n": 11,
+            "min": 49,
+            "p25": 55.5,
+            "median": 61,
+            "mean": 63.3636,
+            "p75": 72.0,
+            "max": 81
+          },
+          "math": {
+            "n": 11,
+            "min": 56,
+            "p25": 66.5,
+            "median": 81,
+            "mean": 86.6364,
+            "p75": 100.0,
+            "max": 144
+          },
+          "professional": {
+            "n": 11,
+            "min": 64,
+            "p25": 72.0,
+            "median": 86,
+            "mean": 83.5455,
+            "p75": 90.5,
+            "max": 104
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "085410",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 6,
+            "min": 351,
+            "p25": 353.25,
+            "median": 354.5,
+            "mean": 354.8333,
+            "p75": 356.5,
+            "max": 359
+          },
+          "politics": {
+            "n": 6,
+            "min": 60,
+            "p25": 65.0,
+            "median": 65.5,
+            "mean": 66.1667,
+            "p75": 69.0,
+            "max": 71
+          },
+          "english": {
+            "n": 6,
+            "min": 71,
+            "p25": 73.75,
+            "median": 78.0,
+            "mean": 77.3333,
+            "p75": 80.75,
+            "max": 83
+          },
+          "math": {
+            "n": 6,
+            "min": 101,
+            "p25": 105.0,
+            "median": 105.0,
+            "mean": 108.1667,
+            "p75": 106.5,
+            "max": 126
+          },
+          "professional": {
+            "n": 6,
+            "min": 87,
+            "p25": 99.75,
+            "median": 105.5,
+            "mean": 103.1667,
+            "p75": 108.25,
+            "max": 114
+          }
+        }
+      },
+      {
+        "year": 2024,
+        "code": "085411",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 5,
+            "min": 353,
+            "p25": 354.0,
+            "median": 365,
+            "mean": 374,
+            "p75": 395.0,
+            "max": 403
+          },
+          "politics": {
+            "n": 5,
+            "min": 58,
+            "p25": 61.0,
+            "median": 66,
+            "mean": 65.2,
+            "p75": 68.0,
+            "max": 73
+          },
+          "english": {
+            "n": 5,
+            "min": 65,
+            "p25": 70.0,
+            "median": 73,
+            "mean": 74,
+            "p75": 79.0,
+            "max": 83
+          },
+          "math": {
+            "n": 5,
+            "min": 109,
+            "p25": 112.0,
+            "median": 119,
+            "mean": 121.2,
+            "p75": 126.0,
+            "max": 140
+          },
+          "professional": {
+            "n": 5,
+            "min": 105,
+            "p25": 110.0,
+            "median": 112,
+            "mean": 113.6,
+            "p75": 117.0,
+            "max": 124
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "081200",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 54,
+            "min": 331,
+            "p25": 341.25,
+            "median": 349.0,
+            "mean": 354.3333,
+            "p75": 368.0,
+            "max": 417
+          },
+          "politics": {
+            "n": 54,
+            "min": 49,
+            "p25": 57.0,
+            "median": 59.5,
+            "mean": 59.7407,
+            "p75": 62.75,
+            "max": 73
+          },
+          "english": {
+            "n": 54,
+            "min": 44,
+            "p25": 59.0,
+            "median": 62.0,
+            "mean": 63.1296,
+            "p75": 69.0,
+            "max": 81
+          },
+          "math": {
+            "n": 54,
+            "min": 99,
+            "p25": 115.0,
+            "median": 122.0,
+            "mean": 121.6296,
+            "p75": 129.75,
+            "max": 139
+          },
+          "professional": {
+            "n": 54,
+            "min": 89,
+            "p25": 102.25,
+            "median": 110.0,
+            "mean": 109.8333,
+            "p75": 115.0,
+            "max": 129
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "0812J1",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 14,
+            "min": 319,
+            "p25": 331.5,
+            "median": 342.0,
+            "mean": 343,
+            "p75": 344.75,
+            "max": 391
+          },
+          "politics": {
+            "n": 14,
+            "min": 46,
+            "p25": 52.0,
+            "median": 57.0,
+            "mean": 56,
+            "p75": 59.5,
+            "max": 65
+          },
+          "english": {
+            "n": 14,
+            "min": 44,
+            "p25": 52.25,
+            "median": 57.0,
+            "mean": 57.0714,
+            "p75": 63.0,
+            "max": 68
+          },
+          "math": {
+            "n": 14,
+            "min": 90,
+            "p25": 98.25,
+            "median": 108.0,
+            "mean": 109.2143,
+            "p75": 118.25,
+            "max": 130
+          },
+          "professional": {
+            "n": 14,
+            "min": 105,
+            "p25": 110.25,
+            "median": 118.5,
+            "mean": 120.7143,
+            "p75": 131.5,
+            "max": 140
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085404",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 65,
+            "min": 341,
+            "p25": 349.0,
+            "median": 359,
+            "mean": 360.4154,
+            "p75": 366.0,
+            "max": 404
+          },
+          "politics": {
+            "n": 65,
+            "min": 49,
+            "p25": 57.0,
+            "median": 60,
+            "mean": 59.5538,
+            "p75": 63.0,
+            "max": 73
+          },
+          "english": {
+            "n": 65,
+            "min": 46,
+            "p25": 56.0,
+            "median": 62,
+            "mean": 62.2769,
+            "p75": 69.0,
+            "max": 79
+          },
+          "math": {
+            "n": 65,
+            "min": 104,
+            "p25": 122.0,
+            "median": 128,
+            "mean": 126.7538,
+            "p75": 133.0,
+            "max": 142
+          },
+          "professional": {
+            "n": 65,
+            "min": 92,
+            "p25": 107.0,
+            "median": 113,
+            "mean": 111.8308,
+            "p75": 118.0,
+            "max": 132
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085404",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 3,
+            "min": 303,
+            "p25": 303.5,
+            "median": 304,
+            "mean": 308.6667,
+            "p75": 311.5,
+            "max": 319
+          },
+          "politics": {
+            "n": 3,
+            "min": 47,
+            "p25": 51.5,
+            "median": 56,
+            "mean": 53.6667,
+            "p75": 57.0,
+            "max": 58
+          },
+          "english": {
+            "n": 3,
+            "min": 45,
+            "p25": 47.5,
+            "median": 50,
+            "mean": 48.6667,
+            "p75": 50.5,
+            "max": 51
+          },
+          "math": {
+            "n": 3,
+            "min": 103,
+            "p25": 105.5,
+            "median": 108,
+            "mean": 107.6667,
+            "p75": 110.0,
+            "max": 112
+          },
+          "professional": {
+            "n": 3,
+            "min": 89,
+            "p25": 96.0,
+            "median": 103,
+            "mean": 98.6667,
+            "p75": 103.5,
+            "max": 104
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085405",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 117,
+            "min": 330,
+            "p25": 346.0,
+            "median": 359,
+            "mean": 360.453,
+            "p75": 374.0,
+            "max": 422
+          },
+          "politics": {
+            "n": 117,
+            "min": 46,
+            "p25": 55.0,
+            "median": 58,
+            "mean": 58.3846,
+            "p75": 62.0,
+            "max": 69
+          },
+          "english": {
+            "n": 117,
+            "min": 42,
+            "p25": 54.0,
+            "median": 60,
+            "mean": 60.2308,
+            "p75": 67.0,
+            "max": 77
+          },
+          "math": {
+            "n": 117,
+            "min": 81,
+            "p25": 110.0,
+            "median": 117,
+            "mean": 116.8376,
+            "p75": 124.0,
+            "max": 149
+          },
+          "professional": {
+            "n": 117,
+            "min": 92,
+            "p25": 120.0,
+            "median": 126,
+            "mean": 125,
+            "p75": 132.0,
+            "max": 140
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085405",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 3,
+            "min": 335,
+            "p25": 335.0,
+            "median": 335,
+            "mean": 338.3333,
+            "p75": 340.0,
+            "max": 345
+          },
+          "politics": {
+            "n": 3,
+            "min": 57,
+            "p25": 57.0,
+            "median": 57,
+            "mean": 58.6667,
+            "p75": 59.5,
+            "max": 62
+          },
+          "english": {
+            "n": 3,
+            "min": 46,
+            "p25": 46.5,
+            "median": 47,
+            "mean": 51.3333,
+            "p75": 54.0,
+            "max": 61
+          },
+          "math": {
+            "n": 3,
+            "min": 90,
+            "p25": 100.5,
+            "median": 111,
+            "mean": 108.3333,
+            "p75": 117.5,
+            "max": 124
+          },
+          "professional": {
+            "n": 3,
+            "min": 115,
+            "p25": 116.5,
+            "median": 118,
+            "mean": 120,
+            "p75": 122.5,
+            "max": 127
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085405",
+        "note": "非全单考",
+        "statistics": {
+          "total": {
+            "n": 2,
+            "min": 253,
+            "p25": 255.0,
+            "median": 257.0,
+            "mean": 257,
+            "p75": 259.0,
+            "max": 261
+          },
+          "politics": {
+            "n": 2,
+            "min": 68,
+            "p25": 69.75,
+            "median": 71.5,
+            "mean": 71.5,
+            "p75": 73.25,
+            "max": 75
+          },
+          "english": {
+            "n": 2,
+            "min": 50,
+            "p25": 51.0,
+            "median": 52.0,
+            "mean": 52,
+            "p75": 53.0,
+            "max": 54
+          },
+          "math": {
+            "n": 2,
+            "min": 24,
+            "p25": 28.5,
+            "median": 33.0,
+            "mean": 33,
+            "p75": 37.5,
+            "max": 42
+          },
+          "professional": {
+            "n": 2,
+            "min": 82,
+            "p25": 91.25,
+            "median": 100.5,
+            "mean": 100.5,
+            "p75": 109.75,
+            "max": 119
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085405",
+        "note": "骨干计划",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 340,
+            "p25": 340.0,
+            "median": 340,
+            "mean": 340,
+            "p75": 340.0,
+            "max": 340
+          },
+          "politics": {
+            "n": 1,
+            "min": 57,
+            "p25": 57.0,
+            "median": 57,
+            "mean": 57,
+            "p75": 57.0,
+            "max": 57
+          },
+          "english": {
+            "n": 1,
+            "min": 55,
+            "p25": 55.0,
+            "median": 55,
+            "mean": 55,
+            "p75": 55.0,
+            "max": 55
+          },
+          "math": {
+            "n": 1,
+            "min": 103,
+            "p25": 103.0,
+            "median": 103,
+            "mean": 103,
+            "p75": 103.0,
+            "max": 103
+          },
+          "professional": {
+            "n": 1,
+            "min": 125,
+            "p25": 125.0,
+            "median": 125,
+            "mean": 125,
+            "p75": 125.0,
+            "max": 125
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085410",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 15,
+            "min": 318,
+            "p25": 326.5,
+            "median": 333,
+            "mean": 338.7333,
+            "p75": 351.0,
+            "max": 369
+          },
+          "politics": {
+            "n": 15,
+            "min": 47,
+            "p25": 54.0,
+            "median": 58,
+            "mean": 57.2667,
+            "p75": 61.0,
+            "max": 67
+          },
+          "english": {
+            "n": 15,
+            "min": 45,
+            "p25": 56.5,
+            "median": 60,
+            "mean": 60.6,
+            "p75": 67.0,
+            "max": 74
+          },
+          "math": {
+            "n": 15,
+            "min": 101,
+            "p25": 109.0,
+            "median": 118,
+            "mean": 117.4667,
+            "p75": 123.0,
+            "max": 138
+          },
+          "professional": {
+            "n": 15,
+            "min": 90,
+            "p25": 98.5,
+            "median": 106,
+            "mean": 103.4,
+            "p75": 109.5,
+            "max": 111
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085411",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 2,
+            "min": 303,
+            "p25": 304.0,
+            "median": 305.0,
+            "mean": 305,
+            "p75": 306.0,
+            "max": 307
+          },
+          "politics": {
+            "n": 2,
+            "min": 46,
+            "p25": 49.25,
+            "median": 52.5,
+            "mean": 52.5,
+            "p75": 55.75,
+            "max": 59
+          },
+          "english": {
+            "n": 2,
+            "min": 55,
+            "p25": 55.25,
+            "median": 55.5,
+            "mean": 55.5,
+            "p75": 55.75,
+            "max": 56
+          },
+          "math": {
+            "n": 2,
+            "min": 89,
+            "p25": 91.25,
+            "median": 93.5,
+            "mean": 93.5,
+            "p75": 95.75,
+            "max": 98
+          },
+          "professional": {
+            "n": 2,
+            "min": 103,
+            "p25": 103.25,
+            "median": 103.5,
+            "mean": 103.5,
+            "p75": 103.75,
+            "max": 104
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "081200",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 58,
+            "min": 338,
+            "p25": 348.25,
+            "median": 367.0,
+            "mean": 366.3276,
+            "p75": 382.5,
+            "max": 406
+          },
+          "politics": {
+            "n": 58,
+            "min": 51,
+            "p25": 58.0,
+            "median": 61.0,
+            "mean": 61.1724,
+            "p75": 64.0,
+            "max": 70
+          },
+          "english": {
+            "n": 58,
+            "min": 52,
+            "p25": 63.0,
+            "median": 71.0,
+            "mean": 69.8448,
+            "p75": 77.0,
+            "max": 84
+          },
+          "math": {
+            "n": 58,
+            "min": 99,
+            "p25": 113.25,
+            "median": 125.0,
+            "mean": 125.8793,
+            "p75": 135.75,
+            "max": 150
+          },
+          "professional": {
+            "n": 58,
+            "min": 89,
+            "p25": 101.5,
+            "median": 111.0,
+            "mean": 109.431,
+            "p75": 118.0,
+            "max": 129
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "081200",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 402,
+            "p25": 402.0,
+            "median": 402,
+            "mean": 402,
+            "p75": 402.0,
+            "max": 402
+          },
+          "politics": {
+            "n": 1,
+            "min": 74,
+            "p25": 74.0,
+            "median": 74,
+            "mean": 74,
+            "p75": 74.0,
+            "max": 74
+          },
+          "english": {
+            "n": 1,
+            "min": 80,
+            "p25": 80.0,
+            "median": 80,
+            "mean": 80,
+            "p75": 80.0,
+            "max": 80
+          },
+          "math": {
+            "n": 1,
+            "min": 124,
+            "p25": 124.0,
+            "median": 124,
+            "mean": 124,
+            "p75": 124.0,
+            "max": 124
+          },
+          "professional": {
+            "n": 1,
+            "min": 124,
+            "p25": 124.0,
+            "median": 124,
+            "mean": 124,
+            "p75": 124.0,
+            "max": 124
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "0812J1",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 8,
+            "min": 311,
+            "p25": 320.25,
+            "median": 343.5,
+            "mean": 341.375,
+            "p75": 357.0,
+            "max": 378
+          },
+          "politics": {
+            "n": 8,
+            "min": 52,
+            "p25": 55.0,
+            "median": 58.0,
+            "mean": 59.75,
+            "p75": 64.0,
+            "max": 70
+          },
+          "english": {
+            "n": 8,
+            "min": 59,
+            "p25": 60.0,
+            "median": 63.0,
+            "mean": 66.875,
+            "p75": 68.25,
+            "max": 85
+          },
+          "math": {
+            "n": 8,
+            "min": 87,
+            "p25": 100.5,
+            "median": 109.0,
+            "mean": 108.125,
+            "p75": 117.5,
+            "max": 124
+          },
+          "professional": {
+            "n": 8,
+            "min": 95,
+            "p25": 99.75,
+            "median": 104.0,
+            "mean": 106.625,
+            "p75": 113.25,
+            "max": 122
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085404",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 103,
+            "min": 354,
+            "p25": 367.0,
+            "median": 378,
+            "mean": 379.0874,
+            "p75": 389.5,
+            "max": 420
+          },
+          "politics": {
+            "n": 103,
+            "min": 50,
+            "p25": 57.5,
+            "median": 61,
+            "mean": 60.4951,
+            "p75": 63.0,
+            "max": 71
+          },
+          "english": {
+            "n": 103,
+            "min": 54,
+            "p25": 66.0,
+            "median": 72,
+            "mean": 70.9515,
+            "p75": 76.0,
+            "max": 86
+          },
+          "math": {
+            "n": 103,
+            "min": 110,
+            "p25": 132.5,
+            "median": 139,
+            "mean": 136.3592,
+            "p75": 144.0,
+            "max": 150
+          },
+          "professional": {
+            "n": 103,
+            "min": 91,
+            "p25": 104.0,
+            "median": 111,
+            "mean": 111.2816,
+            "p75": 116.0,
+            "max": 133
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085404",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 2,
+            "min": 331,
+            "p25": 339.25,
+            "median": 347.5,
+            "mean": 347.5,
+            "p75": 355.75,
+            "max": 364
+          },
+          "politics": {
+            "n": 2,
+            "min": 58,
+            "p25": 58.75,
+            "median": 59.5,
+            "mean": 59.5,
+            "p75": 60.25,
+            "max": 61
+          },
+          "english": {
+            "n": 2,
+            "min": 70,
+            "p25": 70.5,
+            "median": 71.0,
+            "mean": 71,
+            "p75": 71.5,
+            "max": 72
+          },
+          "math": {
+            "n": 2,
+            "min": 118,
+            "p25": 118.0,
+            "median": 118.0,
+            "mean": 118,
+            "p75": 118.0,
+            "max": 118
+          },
+          "professional": {
+            "n": 2,
+            "min": 85,
+            "p25": 92.0,
+            "median": 99.0,
+            "mean": 99,
+            "p75": 106.0,
+            "max": 113
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085405",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 109,
+            "min": 341,
+            "p25": 354.0,
+            "median": 374,
+            "mean": 375.7982,
+            "p75": 395.0,
+            "max": 424
+          },
+          "politics": {
+            "n": 109,
+            "min": 46,
+            "p25": 56.0,
+            "median": 61,
+            "mean": 59.9541,
+            "p75": 64.0,
+            "max": 70
+          },
+          "english": {
+            "n": 109,
+            "min": 52,
+            "p25": 63.0,
+            "median": 69,
+            "mean": 68.6147,
+            "p75": 75.0,
+            "max": 83
+          },
+          "math": {
+            "n": 109,
+            "min": 81,
+            "p25": 112.0,
+            "median": 124,
+            "mean": 123.5229,
+            "p75": 135.0,
+            "max": 150
+          },
+          "professional": {
+            "n": 109,
+            "min": 99,
+            "p25": 118.0,
+            "median": 125,
+            "mean": 123.7064,
+            "p75": 131.0,
+            "max": 137
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085405",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 4,
+            "min": 324,
+            "p25": 328.5,
+            "median": 351.0,
+            "mean": 351.75,
+            "p75": 374.25,
+            "max": 381
+          },
+          "politics": {
+            "n": 4,
+            "min": 58,
+            "p25": 58.0,
+            "median": 60.0,
+            "mean": 61,
+            "p75": 63.0,
+            "max": 66
+          },
+          "english": {
+            "n": 4,
+            "min": 50,
+            "p25": 64.25,
+            "median": 70.0,
+            "mean": 66.5,
+            "p75": 72.25,
+            "max": 76
+          },
+          "math": {
+            "n": 4,
+            "min": 109,
+            "p25": 109.75,
+            "median": 116.5,
+            "mean": 117,
+            "p75": 123.75,
+            "max": 126
+          },
+          "professional": {
+            "n": 4,
+            "min": 86,
+            "p25": 101.0,
+            "median": 111.0,
+            "mean": 107.25,
+            "p75": 117.25,
+            "max": 121
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085405",
+        "note": "骨干计划",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 372,
+            "p25": 372.0,
+            "median": 372,
+            "mean": 372,
+            "p75": 372.0,
+            "max": 372
+          },
+          "politics": {
+            "n": 1,
+            "min": 51,
+            "p25": 51.0,
+            "median": 51,
+            "mean": 51,
+            "p75": 51.0,
+            "max": 51
+          },
+          "english": {
+            "n": 1,
+            "min": 66,
+            "p25": 66.0,
+            "median": 66,
+            "mean": 66,
+            "p75": 66.0,
+            "max": 66
+          },
+          "math": {
+            "n": 1,
+            "min": 121,
+            "p25": 121.0,
+            "median": 121,
+            "mean": 121,
+            "p75": 121.0,
+            "max": 121
+          },
+          "professional": {
+            "n": 1,
+            "min": 134,
+            "p25": 134.0,
+            "median": 134,
+            "mean": 134,
+            "p75": 134.0,
+            "max": 134
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085411",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 15,
+            "min": 317,
+            "p25": 330.0,
+            "median": 336,
+            "mean": 339.8667,
+            "p75": 350.5,
+            "max": 376
+          },
+          "politics": {
+            "n": 15,
+            "min": 50,
+            "p25": 55.0,
+            "median": 59,
+            "mean": 58.7333,
+            "p75": 61.5,
+            "max": 66
+          },
+          "english": {
+            "n": 15,
+            "min": 54,
+            "p25": 66.0,
+            "median": 68,
+            "mean": 68.8667,
+            "p75": 73.0,
+            "max": 82
+          },
+          "math": {
+            "n": 15,
+            "min": 98,
+            "p25": 106.0,
+            "median": 121,
+            "mean": 117.6,
+            "p75": 126.5,
+            "max": 133
+          },
+          "professional": {
+            "n": 15,
+            "min": 83,
+            "p25": 90.0,
+            "median": 92,
+            "mean": 94.6667,
+            "p75": 101.0,
+            "max": 112
+          }
+        }
+      }
+    ],
+    "issues": []
+  },
+  "cs_2024_final_aggregate": {
+    "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+    "summary": [
+      {
+        "year": 2024,
+        "name": "人工智能",
+        "phase": "拟录取",
+        "population": "two official final batches, excluding notes containing 专项 or 非全; training-site joint plans retained and separately counted",
+        "statistics": {
+          "total": {
+            "n": 5,
+            "min": 351.0,
+            "p25": 353.0,
+            "median": 355.0,
+            "mean": 355.0,
+            "p75": 357.0,
+            "max": 359.0
+          },
+          "retest": {
+            "n": 5,
+            "min": 72.6,
+            "p25": 80.8,
+            "median": 81.2,
+            "mean": 81.0,
+            "p75": 81.8,
+            "max": 88.6
+          },
+          "final": {
+            "n": 5,
+            "min": 360.0,
+            "p25": 379.5,
+            "median": 380.0,
+            "mean": 380.0,
+            "p75": 381.5,
+            "max": 399.0
+          }
+        },
+        "locations": {
+          "空白": 5
+        }
+      },
+      {
+        "year": 2024,
+        "name": "大数据技术与工程",
+        "phase": "拟录取",
+        "population": "two official final batches, excluding notes containing 专项 or 非全; training-site joint plans retained and separately counted",
+        "statistics": {
+          "total": {
+            "n": 4,
+            "min": 354.0,
+            "p25": 362.25,
+            "median": 380.0,
+            "mean": 379.25,
+            "p75": 397.0,
+            "max": 403.0
+          },
+          "retest": {
+            "n": 4,
+            "min": 75.1,
+            "p25": 78.475,
+            "median": 81.44999999999999,
+            "mean": 80.775,
+            "p75": 83.75,
+            "max": 85.1
+          },
+          "final": {
+            "n": 4,
+            "min": 364.8,
+            "p25": 384.3,
+            "median": 395.65,
+            "mean": 391.6,
+            "p75": 402.95,
+            "max": 410.3
+          }
+        },
+        "locations": {
+          "空白": 4
+        }
+      },
+      {
+        "year": 2024,
+        "name": "智能数字表演",
+        "phase": "拟录取",
+        "population": "two official final batches, excluding notes containing 专项 or 非全; training-site joint plans retained and separately counted",
+        "statistics": {
+          "total": {
+            "n": 12,
+            "min": 316.0,
+            "p25": 327.75,
+            "median": 337.0,
+            "mean": 347.25,
+            "p75": 368.25,
+            "max": 397.0
+          },
+          "retest": {
+            "n": 12,
+            "min": 67.7,
+            "p25": 77.05,
+            "median": 80.7,
+            "mean": 81.0667,
+            "p75": 85.64999999999999,
+            "max": 94.8
+          },
+          "final": {
+            "n": 12,
+            "min": 333.8,
+            "p25": 355.225,
+            "median": 369.8,
+            "mean": 376.3167,
+            "p75": 399.45,
+            "max": 427.8
+          }
+        },
+        "locations": {
+          "空白": 12
+        }
+      },
+      {
+        "year": 2024,
+        "name": "计算机技术",
+        "phase": "拟录取",
+        "population": "two official final batches, excluding notes containing 专项 or 非全; training-site joint plans retained and separately counted",
+        "statistics": {
+          "total": {
+            "n": 98,
+            "min": 324.0,
+            "p25": 342.0,
+            "median": 361.5,
+            "mean": 360.8469,
+            "p75": 377.75,
+            "max": 413.0
+          },
+          "retest": {
+            "n": 98,
+            "min": 65.7,
+            "p25": 75.625,
+            "median": 80.15,
+            "mean": 79.9071,
+            "p75": 83.775,
+            "max": 93.6
+          },
+          "final": {
+            "n": 98,
+            "min": 340.8,
+            "p25": 366.35,
+            "median": 378.65,
+            "mean": 380.2204,
+            "p75": 393.45,
+            "max": 439.3
+          }
+        },
+        "locations": {
+          "空白": 29,
+          "长三角": 8,
+          "华北所": 1,
+          "深北莫": 9,
+          "东南研究院": 3,
+          "唐山研究院": 2,
+          "郑州研究院": 6,
+          "珠海": 40
+        }
+      },
+      {
+        "year": 2024,
+        "name": "计算机科学与技术",
+        "phase": "拟录取",
+        "population": "two official final batches, excluding notes containing 专项 or 非全; training-site joint plans retained and separately counted",
+        "statistics": {
+          "total": {
+            "n": 34,
+            "min": 360.0,
+            "p25": 367.25,
+            "median": 372.0,
+            "mean": 377.4412,
+            "p75": 386.5,
+            "max": 409.0
+          },
+          "retest": {
+            "n": 34,
+            "min": 71.9,
+            "p25": 79.025,
+            "median": 80.85,
+            "mean": 82.55,
+            "p75": 87.475,
+            "max": 92.2
+          },
+          "final": {
+            "n": 34,
+            "min": 370.5,
+            "p25": 382.75,
+            "median": 391.0,
+            "mean": 395.1176,
+            "p75": 405.225,
+            "max": 432.5
+          }
+        },
+        "locations": {
+          "空白": 27,
+          "华北所": 3,
+          "深北莫": 4
+        }
+      },
+      {
+        "year": 2024,
+        "name": "软件工程",
+        "phase": "拟录取",
+        "population": "two official final batches, excluding notes containing 专项 or 非全; training-site joint plans retained and separately counted",
+        "statistics": {
+          "total": {
+            "n": 78,
+            "min": 355.0,
+            "p25": 373.0,
+            "median": 383.5,
+            "mean": 386.0385,
+            "p75": 398.0,
+            "max": 431.0
+          },
+          "retest": {
+            "n": 78,
+            "min": 69.5,
+            "p25": 78.225,
+            "median": 81.05,
+            "mean": 81.5462,
+            "p75": 84.6,
+            "max": 93.5
+          },
+          "final": {
+            "n": 78,
+            "min": 373.3,
+            "p25": 386.125,
+            "median": 394.5,
+            "mean": 396.9103,
+            "p75": 405.5,
+            "max": 449.3
+          }
+        },
+        "locations": {
+          "空白": 29,
+          "信创": 30,
+          "唐山": 19
+        }
+      }
+    ],
+    "audit": {
+      "n": 245,
+      "all_initial_match": true,
+      "all_program_match": true,
+      "unique_ids": 245
+    }
+  },
+  "zh_retest_aggregate": {
+    "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+    "audits": [
+      {
+        "year": 2025,
+        "all_rows": 209,
+        "all_candidate_ids": 209,
+        "unique_ids": 209
+      },
+      {
+        "year": 2026,
+        "all_rows": 513,
+        "all_candidate_ids": 513,
+        "unique_ids": 513
+      }
+    ],
+    "method": "2026 pypdf regex; all IDs parsed and four-subject sums checked. 2025 roster discloses total only, no direction, no individual subject or special-plan column. Statistics describe published retest lists, never admissions or applicants.",
+    "summary": [
+      {
+        "year": 2025,
+        "code": "081200",
+        "direction": "",
+        "note": "not_disclosed",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 342,
+            "p25": 342.0,
+            "median": 342,
+            "mean": 342,
+            "p75": 342.0,
+            "max": 342
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085404",
+        "direction": "",
+        "note": "not_disclosed",
+        "statistics": {
+          "total": {
+            "n": 22,
+            "min": 300,
+            "p25": 308.25,
+            "median": 321.0,
+            "mean": 325.1364,
+            "p75": 335.75,
+            "max": 400
+          }
+        }
+      },
+      {
+        "year": 2025,
+        "code": "085410",
+        "direction": "",
+        "note": "not_disclosed",
+        "statistics": {
+          "total": {
+            "n": 3,
+            "min": 307,
+            "p25": 319.0,
+            "median": 331,
+            "mean": 329,
+            "p75": 340.0,
+            "max": 349
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085404",
+        "direction": "不区分研究方向",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 72,
+            "min": 300,
+            "p25": 316.75,
+            "median": 328.0,
+            "mean": 333.8333,
+            "p75": 352.25,
+            "max": 390
+          },
+          "politics": {
+            "n": 72,
+            "min": 44,
+            "p25": 54.0,
+            "median": 58.0,
+            "mean": 57.7778,
+            "p75": 62.0,
+            "max": 73
+          },
+          "english": {
+            "n": 72,
+            "min": 42,
+            "p25": 55.0,
+            "median": 65.0,
+            "mean": 62.9167,
+            "p75": 71.0,
+            "max": 79
+          },
+          "math": {
+            "n": 72,
+            "min": 82,
+            "p25": 111.0,
+            "median": 116.5,
+            "mean": 117.875,
+            "p75": 127.25,
+            "max": 146
+          },
+          "professional": {
+            "n": 72,
+            "min": 65,
+            "p25": 89.75,
+            "median": 96.0,
+            "mean": 95.2639,
+            "p75": 100.5,
+            "max": 123
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085404",
+        "direction": "不区分研究方向",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 329,
+            "p25": 329.0,
+            "median": 329,
+            "mean": 329,
+            "p75": 329.0,
+            "max": 329
+          },
+          "politics": {
+            "n": 1,
+            "min": 53,
+            "p25": 53.0,
+            "median": 53,
+            "mean": 53,
+            "p75": 53.0,
+            "max": 53
+          },
+          "english": {
+            "n": 1,
+            "min": 55,
+            "p25": 55.0,
+            "median": 55,
+            "mean": 55,
+            "p75": 55.0,
+            "max": 55
+          },
+          "math": {
+            "n": 1,
+            "min": 135,
+            "p25": 135.0,
+            "median": 135,
+            "mean": 135,
+            "p75": 135.0,
+            "max": 135
+          },
+          "professional": {
+            "n": 1,
+            "min": 86,
+            "p25": 86.0,
+            "median": 86,
+            "mean": 86,
+            "p75": 86.0,
+            "max": 86
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085410",
+        "direction": "自动化基础",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 6,
+            "min": 313,
+            "p25": 322.5,
+            "median": 341.5,
+            "mean": 345.8333,
+            "p75": 363.5,
+            "max": 392
+          },
+          "politics": {
+            "n": 6,
+            "min": 51,
+            "p25": 53.0,
+            "median": 55.5,
+            "mean": 56.5,
+            "p75": 58.75,
+            "max": 65
+          },
+          "english": {
+            "n": 6,
+            "min": 49,
+            "p25": 60.25,
+            "median": 61.5,
+            "mean": 60,
+            "p75": 63.5,
+            "max": 64
+          },
+          "math": {
+            "n": 6,
+            "min": 91,
+            "p25": 106.25,
+            "median": 113.5,
+            "mean": 113.6667,
+            "p75": 119.25,
+            "max": 139
+          },
+          "professional": {
+            "n": 6,
+            "min": 105,
+            "p25": 106.25,
+            "median": 108.5,
+            "mean": 115.6667,
+            "p75": 120.5,
+            "max": 142
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085410",
+        "direction": "自动化基础",
+        "note": "退役计划",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 400,
+            "p25": 400.0,
+            "median": 400,
+            "mean": 400,
+            "p75": 400.0,
+            "max": 400
+          },
+          "politics": {
+            "n": 1,
+            "min": 65,
+            "p25": 65.0,
+            "median": 65,
+            "mean": 65,
+            "p75": 65.0,
+            "max": 65
+          },
+          "english": {
+            "n": 1,
+            "min": 66,
+            "p25": 66.0,
+            "median": 66,
+            "mean": 66,
+            "p75": 66.0,
+            "max": 66
+          },
+          "math": {
+            "n": 1,
+            "min": 145,
+            "p25": 145.0,
+            "median": 145,
+            "mean": 145,
+            "p75": 145.0,
+            "max": 145
+          },
+          "professional": {
+            "n": 1,
+            "min": 124,
+            "p25": 124.0,
+            "median": 124,
+            "mean": 124,
+            "p75": 124.0,
+            "max": 124
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "085410",
+        "direction": "计算机基础",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 17,
+            "min": 306,
+            "p25": 330.0,
+            "median": 357,
+            "mean": 350.7647,
+            "p75": 366.0,
+            "max": 402
+          },
+          "politics": {
+            "n": 17,
+            "min": 53,
+            "p25": 57.0,
+            "median": 60,
+            "mean": 60.8235,
+            "p75": 64.0,
+            "max": 71
+          },
+          "english": {
+            "n": 17,
+            "min": 53,
+            "p25": 62.0,
+            "median": 68,
+            "mean": 67.3529,
+            "p75": 74.0,
+            "max": 81
+          },
+          "math": {
+            "n": 17,
+            "min": 97,
+            "p25": 109.0,
+            "median": 128,
+            "mean": 124.4118,
+            "p75": 135.0,
+            "max": 142
+          },
+          "professional": {
+            "n": 17,
+            "min": 78,
+            "p25": 87.0,
+            "median": 102,
+            "mean": 98.1765,
+            "p75": 106.0,
+            "max": 115
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "140500",
+        "direction": "人工智能理论基础",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 1,
+            "min": 307,
+            "p25": 307.0,
+            "median": 307,
+            "mean": 307,
+            "p75": 307.0,
+            "max": 307
+          },
+          "politics": {
+            "n": 1,
+            "min": 52,
+            "p25": 52.0,
+            "median": 52,
+            "mean": 52,
+            "p75": 52.0,
+            "max": 52
+          },
+          "english": {
+            "n": 1,
+            "min": 52,
+            "p25": 52.0,
+            "median": 52,
+            "mean": 52,
+            "p75": 52.0,
+            "max": 52
+          },
+          "math": {
+            "n": 1,
+            "min": 103,
+            "p25": 103.0,
+            "median": 103,
+            "mean": 103,
+            "p75": 103.0,
+            "max": 103
+          },
+          "professional": {
+            "n": 1,
+            "min": 100,
+            "p25": 100.0,
+            "median": 100,
+            "mean": 100,
+            "p75": 100.0,
+            "max": 100
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "140500",
+        "direction": "智能技术及应用",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 11,
+            "min": 304,
+            "p25": 322.5,
+            "median": 330,
+            "mean": 330.1818,
+            "p75": 340.0,
+            "max": 359
+          },
+          "politics": {
+            "n": 11,
+            "min": 46,
+            "p25": 56.0,
+            "median": 60,
+            "mean": 59.1818,
+            "p75": 64.0,
+            "max": 65
+          },
+          "english": {
+            "n": 11,
+            "min": 45,
+            "p25": 60.5,
+            "median": 69,
+            "mean": 65.9091,
+            "p75": 71.5,
+            "max": 77
+          },
+          "math": {
+            "n": 11,
+            "min": 89,
+            "p25": 109.5,
+            "median": 115,
+            "mean": 113.5455,
+            "p75": 117.5,
+            "max": 137
+          },
+          "professional": {
+            "n": 11,
+            "min": 71,
+            "p25": 86.0,
+            "median": 95,
+            "mean": 91.5455,
+            "p75": 98.0,
+            "max": 104
+          }
+        }
+      },
+      {
+        "year": 2026,
+        "code": "140500",
+        "direction": "群体智能",
+        "note": "",
+        "statistics": {
+          "total": {
+            "n": 2,
+            "min": 370,
+            "p25": 378.75,
+            "median": 387.5,
+            "mean": 387.5,
+            "p75": 396.25,
+            "max": 405
+          },
+          "politics": {
+            "n": 2,
+            "min": 62,
+            "p25": 62.5,
+            "median": 63.0,
+            "mean": 63,
+            "p75": 63.5,
+            "max": 64
+          },
+          "english": {
+            "n": 2,
+            "min": 59,
+            "p25": 63.0,
+            "median": 67.0,
+            "mean": 67,
+            "p75": 71.0,
+            "max": 75
+          },
+          "math": {
+            "n": 2,
+            "min": 128,
+            "p25": 130.0,
+            "median": 132.0,
+            "mean": 132,
+            "p75": 134.0,
+            "max": 136
+          },
+          "professional": {
+            "n": 2,
+            "min": 121,
+            "p25": 123.25,
+            "median": 125.5,
+            "mean": 125.5,
+            "p75": 127.75,
+            "max": 130
+          }
+        }
+      }
+    ]
+  },
+  "ai_medical_aggregate": {
+    "trace_id": "965343fe-016f-45f1-96f8-94936c50009b",
+    "medical_2026_retest_counts": {
+      "083100": 20,
+      "085404": 4,
+      "085408": 1,
+      "085409": 47
+    },
+    "medical_2024_085404_final_batch_count": {
+      "1": 8
+    },
+    "medical_2024_085404_first_batch_total": {
+      "n": 8,
+      "min": 326,
+      "median": 346.0,
+      "mean": 348.125,
+      "max": 385
+    },
+    "ai_2026_major_only_retest_counts": {
+      "140500": 25,
+      "085410": 19
+    },
+    "ai_2026_major_only_final_counts": {
+      "140500": 24,
+      "085410": 16
+    },
+    "limitation": "AI cannot separate 810 and 408; SMT 2026 has no score/special columns; SMT 2024 first batch only, no special/learning-mode columns.",
+    "ai_final_crosscheck": {
+      "matched_to_sameyear_retest": 40,
+      "unique_ids": 40,
+      "same_initial_score_and_program": true,
+      "formula_tolerance": 0.01001,
+      "notes_by_program": {
+        "智能科学与技术": {
+          "blank": 23,
+          "深圳北理莫斯科大学专项": 1
+        },
+        "人工智能": {
+          "blank": 11,
+          "电子六所联培专项": 3,
+          "深圳北理莫斯科大学专项": 2
+        }
+      }
+    }
+  },
+  "boundaries": [
+    "2013-2018 885 PDFs are incomplete recollections, not official complete papers; same-year 408 comparisons do not yield a score conversion.",
+    "No directly checkable 2019-2026 885 initial-exam paper was obtained after the documented bounded search; sales pages and retest coding tasks are not substitutes.",
+    "2025 and 2026 408 reproductions have known numbering or score inconsistencies and are not treated as complete verified original papers.",
+    "Retest lists are selected entry populations, not applicant counts or attendance; policy cutoffs, list minimums and provisional-admission minimums remain distinct.",
+    "2026 AI admission lists mix 810 and 408 groups; do not infer exact-direction admissions from profession, score, list order or candidate identity.",
+    "Digital-performance pre/post cohorts change in size and public-subject scores; the observed professional-score difference is not a causal exam-difficulty estimate.",
+    "Historical software 2026 final distribution remains search-index reconstruction at the official URL, not recovered original PDF bytes.",
+    "2026 catalog and spring plans are separate dated populations; no actual 2027 ordinary quota, score or personal admission probability is inferred.",
+    "No database fields, admissions states or strict 101+204+302+408 official-confirmation rules are changed by the broader preference."
+  ]
+}
