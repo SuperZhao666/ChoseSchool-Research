@@ -170,13 +170,48 @@ def render(source: str) -> tuple[str, dict]:
     tokens = md.parse(''.join(wrapped))
     # TraceId: d36580a9-e711-47ec-9786-53ec83803d21
     # Keep long exam notes legible without changing any source cell or its order.
+    # TraceId: c4d5b28b-0b67-4d2f-89e1-b46eb1090822
+    # Labels are derived from the same table, never a second copy of its values.
+    # Projects opt into stacked record reading with data-reading-layout="records".
     table_start = None
+    headers = []
+    column = 0
+    record_sections = []
+    record_table = False
     for i, token in enumerate(tokens):
-        if token.type == 'table_open': table_start = i
+        if token.type == 'html_block':
+            for match in re.finditer(r'</?section\b[^>]*>', token.content):
+                if match[0].startswith('</'):
+                    if record_sections: record_sections.pop()
+                else:
+                    attrs = _SectionAttributes(); attrs.feed(match[0])
+                    record_sections.append(attrs.attrs.get('data-reading-layout') == 'records'
+                                           or bool(record_sections and record_sections[-1]))
+        elif token.type == 'table_open':
+            table_start = i
+            headers = []
+            record_table = bool(record_sections and record_sections[-1])
         elif token.type == 'thead_close' and table_start is not None:
-            headers = [item.content for item in tokens[table_start:i] if item.type == 'inline']
+            headers = [''.join(child.content for child in (item.children or [])
+                               if child.type in ('text', 'code_inline'))
+                       for item in tokens[table_start:i] if item.type == 'inline']
             if len(headers) > 1 and headers[1] == '当年初试科目与证据':
                 tokens[table_start].attrSet('class', 'exam-subjects')
+            if record_table and len(headers) >= 5:
+                tokens[table_start].attrJoin('class', 'record-table')
+                if headers == ['招生年度', '当年初试科目与证据', '当年学院与统计方向',
+                               '普通录取人数', '复试总分线', '录取最低分', '录取中位数',
+                               '录取平均分', '录取最高分']:
+                    tokens[table_start].attrJoin('class', 'score-record-table')
+        elif token.type == 'tr_open':
+            column = 0
+        elif token.type == 'th_open' and record_table:
+            token.attrSet('scope', 'col')
+        elif token.type == 'td_open' and record_table and len(headers) >= 5:
+            if column >= len(headers):
+                raise ValueError('表格数据列多于表头，不能生成年度阅读标签。')
+            token.attrSet('data-label', headers[column])
+            column += 1
         elif token.type == 'table_close': table_start = None
     used = set(re.findall(r'\bid="([^"]+)"', ''.join(wrapped)))
     for i, token in enumerate(tokens):

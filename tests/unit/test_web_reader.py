@@ -139,7 +139,7 @@ class WebReaderTests(unittest.TestCase):
     def test_score_rows_show_their_own_year_subjects_not_the_new_408_notice(self):
         # TraceId: 4633df94-71b7-4339-ae57-1ad2dd0576cb
         annotated = [table for table in self.parser.tables if SCORE_SUBJECT_COLUMN in table[0]]
-        self.assertEqual(self.page.count('<table class="exam-subjects">'), len(annotated))
+        self.assertEqual(len(re.findall(r'<table\b[^>]*class="[^"]*\bexam-subjects\b[^"]*"', self.page)), len(annotated))
         self.assertGreaterEqual(len(annotated), 194)
         self.assertGreaterEqual(sum(len(table) - 1 for table in annotated), 935)
         expected = {
@@ -313,6 +313,40 @@ class WebReaderTests(unittest.TestCase):
 
 class SchoolEntityBuildTests(unittest.TestCase):
     """TraceId: 4fa2880a-e3d3-40b3-a2d9-8c69ad9fd505"""
+
+    def test_record_labels_preserve_unknown_values_and_original_table_cells(self):
+        # TraceId: c4d5b28b-0b67-4d2f-89e1-b46eb1090822
+        source = '''<a id="school-001"></a>
+### 测试大学
+<p class="school-tier">院校层次：985</p>
+
+<section class="school-college" data-college-key="college" data-college-title="测试学院">
+
+<section class="admission-project" data-project-key="program" data-project-title="测试项目" data-reading-layout="records">
+
+| 招生年度 | 当年初试科目与证据 | 当年学院与统计方向 | 普通录取人数 | 复试总分线 | 录取最低分 | 录取中位数 | 录取平均分 | 录取最高分 |
+|---|---|---|---|---|---|---|---|---|
+| 2026 | 101+204+302+866 | 原学院，软件方向 | 24 | 350 | 350 | 369 | 372.54 | 415 |
+| 2027 | 仅公告408 | 当前合并项目 | 未公布 | 未公布 | 未公布 | 未公布 | 未公布 | 未公布 |
+
+</section>
+
+</section>
+'''
+        page, _ = render(source)
+        expected = ['招生年度', SCORE_SUBJECT_COLUMN, '当年学院与统计方向', '普通录取人数',
+                    '复试总分线', '录取最低分', '录取中位数', '录取平均分', '录取最高分']
+        labels = re.findall(r'<td[^>]*data-label="([^"]+)"', page)
+        self.assertEqual(labels, expected * 2)
+        self.assertIn('score-record-table', page)
+        self.assertEqual(page.count('<table '), 1)
+        parser = ReaderParser(); parser.feed(page)
+        self.assertEqual(parser.tables[0][1], ['2026', '101+204+302+866', '原学院，软件方向',
+                                            '24', '350', '350', '369', '372.54', '415'])
+        self.assertEqual(parser.tables[0][2][-6:], ['未公布'] * 6)
+        unselected, _ = render(source.replace(' data-reading-layout="records"', ''))
+        self.assertNotIn('data-label=', unselected)
+        self.assertNotIn('score-record-table', unselected)
 
     def test_entity_hierarchy_keeps_research_text_tables_and_links_intact(self):
         source = '''<a id="school-069"></a>

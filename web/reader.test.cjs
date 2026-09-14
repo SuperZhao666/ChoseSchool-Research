@@ -283,3 +283,36 @@ test('Hunan merged admissions and historical directions stay distinct across sch
   assert.equal(current.hidden, true);
   assert.equal(historical.hidden, true);
 });
+
+// TraceId: c4d5b28b-0b67-4d2f-89e1-b46eb1090822
+test('Hunan direction outline reaches shared retest facts and keeps every annual field', () => {
+  const r = reader(fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8'), '#direction-school-029-former-csee-085400-computer-history');
+  const panel = r.document.getElementById('panel-school-029');
+  const history = r.document.getElementById('project-school-029-former-csee-085400');
+  const direction = r.document.getElementById('direction-school-029-former-csee-085400-computer-history');
+  const before = researchText(r.document.getElementById('research-content'));
+  assert.equal(history.dataset.readingLayout, 'records');
+  const rows = [...direction.querySelectorAll('table.score-record-table tbody tr')];
+  assert.equal(rows.length, 3);
+  for (const row of rows) {
+    assert.deepEqual([...row.querySelectorAll('td')].map(td => td.dataset.label), [
+      '招生年度', '当年初试科目与证据', '当年学院与统计方向', '普通录取人数',
+      '复试总分线', '录取最低分', '录取中位数', '录取平均分', '录取最高分'
+    ]);
+  }
+  const outline = panel.querySelector('.project-contents');
+  assert.equal(outline.hidden, false);
+  assert.ok([...outline.querySelectorAll('[data-direction-owner$="software-history"]')].every(link => link.hidden));
+  const retest = [...outline.querySelectorAll('a')].find(link => /共同初试与复试|逐年笔试|共同复试/.test(link.textContent));
+  assert.ok(retest, 'Shared retest section is one click away from this direction');
+  retest.dispatchEvent(new r.window.Event('click', {bubbles:true,cancelable:true}));
+  assert.equal(panel.querySelector(`.project-contents [data-section-target="${retest.dataset.sectionTarget}"]`), retest, 'In-project navigation must preserve the focused link node');
+  assert.equal(history.hidden, false);
+  assert.equal(r.document.getElementById('project-school-029-csee-085400').hidden, true);
+  assert.equal(r.document.getElementById(retest.dataset.sectionTarget).dataset.scrolled, 'true');
+  assert.equal(direction.querySelector('.table-scroll').getAttribute('aria-label'), '项目数据记录');
+  assert.equal(direction.querySelector('.table-scroll').hasAttribute('tabindex'), false);
+  r.go('#school-029');
+  assert.equal(panel.querySelector('.project-contents').hidden, true);
+  assert.equal(researchText(r.document.getElementById('research-content')), before);
+});

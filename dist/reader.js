@@ -20,6 +20,51 @@
     notes: panel.querySelector('.admission-notes')
   }]));
   const entitySelector = '.research-direction,.admission-project,.school-college,.admission-notes';
+  // TraceId: c4d5b28b-0b67-4d2f-89e1-b46eb1090822
+  content.querySelectorAll('.admission-project[data-reading-layout="records"] .record-table').forEach(table => {
+    const region = table.closest('.table-scroll');
+    if (region) {
+      region.setAttribute('aria-label', '项目数据记录');
+      region.removeAttribute('tabindex');
+    }
+  });
+  // Within a chosen project, expose direct links to its actual content headings.
+  // This is a project outline, not another school-wide topic classification.
+  function updateProjectContents(panel, project, direction) {
+    const navigation = panel.querySelector('.admission-navigation');
+    if (!navigation) return;
+    let outline = navigation.querySelector('.project-contents');
+    if (!outline) {
+      outline = document.createElement('div');
+      outline.className = 'project-contents';
+      outline.setAttribute('data-reader-ui', 'true');
+      navigation.insertBefore(outline, navigation.querySelector('.admissions-notes-link'));
+    }
+    outline.hidden = !project;
+    if (!project) return;
+    const filterDirection = () => outline.querySelectorAll('[data-direction-owner]').forEach(link => {
+      link.hidden = Boolean(direction && link.dataset.directionOwner !== direction.id);
+    });
+    // Preserve focused links while moving between sections of the same project.
+    if (outline.dataset.projectId === project.id) { filterDirection(); return; }
+    outline.dataset.projectId = project.id;
+    outline.replaceChildren();
+    const label = document.createElement('p');
+    label.className = 'project-contents-title';
+    label.textContent = '本项目详细内容';
+    outline.append(label);
+    const headings = Array.from(project.querySelectorAll('h4[id],h5[id],h6[id]'));
+    for (const heading of headings.slice(1)) {
+      const owner = heading.closest('.research-direction');
+      const link = document.createElement('a');
+      link.href = `#${heading.id}`;
+      link.dataset.sectionTarget = heading.id;
+      if (owner) link.dataset.directionOwner = owner.id;
+      link.textContent = heading.textContent;
+      outline.append(link);
+    }
+    filterDirection();
+  }
   const selector = 'p,li,tr,h1,h2,h3,h4,h5,h6,summary';
   // Index all panels, including closed folds and parent list text.
   const blocks = new Map();
@@ -62,6 +107,7 @@
     panel.querySelectorAll('[data-projects-for]').forEach(branch => { branch.hidden = branch.dataset.projectsFor !== college?.id; });
     panel.querySelectorAll('[data-directions-for]').forEach(branch => { branch.hidden = branch.dataset.directionsFor !== project?.id; });
     panel.querySelectorAll('.research-direction').forEach(item => item.classList.toggle('is-current-direction', item === direction));
+    updateProjectContents(panel, project, direction);
     panel.querySelectorAll('[data-entity-target]').forEach(link => {
       const target = link.dataset.entityTarget;
       if (target === panel.dataset.activeEntity) link.setAttribute('aria-current', 'location');

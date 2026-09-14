@@ -1,0 +1,192 @@
+{
+  "trace_id": "91b947ec-a6d2-40be-96c8-00606c8c6a15",
+  "scope": "README.md school-029 only; original 9-column score tables retained exactly",
+  "before_sha256": "a83d2a88e07c11d906f6e1063c0d0e8ebdbeb9412104c60f6a67f4b928c90a2c",
+  "after_sha256": "108dc4c631435ac514b95e94e91fa1b890e18c7cd12633fa6b638cf6f1fe8a2d",
+  "outside_school_bytes_unchanged": true,
+  "original_score_table_count": 4,
+  "score_tables_byte_identical_as_multiset": true,
+  "original_source_urls_preserved": true,
+  "before_url_count": 26,
+  "after_url_count": 37,
+  "archive_checked": "research\\archive\\docs\\hunan-university-085400-four-year-score-subject-retest-training-and-fairness-audit-2026-09-03.md",
+  "archive_sha256": "153691a7bda204cf7b43fa452682e0ebae9cd0afc94bf7176a1049c640373b1a",
+  "archive_findings": "All seven populations, subjects, supplement handling, retest, material/fairness and costs survived previous reorganization. Problem was order/readability and hidden numeric columns; no missing raw application counts or interview transcripts were found.",
+  "changes": [
+    "Current 2026 scores and full 2023-2026 comparison moved before direction/catalog caveats without modifying source tables.",
+    "Added descriptive direction-specific population/score changes calculated directly from retained tables; no causal or future-score claims.",
+    "Added per-direction historical retest synopsis and direct same-project anchors to retest/interview/training.",
+    "Expanded historical shared interview, electronic-certificate preparation and 2026-referenced training details from existing archived evidence.",
+    "Corrected historical raw-score sum shorthand: retest ranking follows year-specific interview normalization; formal source updates are documented separately.",
+    "Preserved 2027 incomplete catalog boundary, Math-II+408 with English-I/II acceptable, and no blanket security exclusion.",
+    "Unfolded all-year score comparison and 2026 normalization into ordinary headings so key details are visible by default.",
+    "Added records reading-layout marker only on two HNU project sections for parent UI implementation.",
+    "Per-direction coding summaries explicitly limit verified C/C++/Java/Python languages to 2023/2024; 2025 official attachment unavailable and languages remain unverified. Qualified population absence means incomplete multi-year coverage, not absence of the newly verified2023 counts."
+  ],
+  "computed_descriptive_deltas": {
+    "computer": {
+      "ordinary": [
+        96,
+        62,
+        80
+      ],
+      "line": [
+        325,
+        356,
+        364
+      ],
+      "median": [
+        365.5,
+        371.5,
+        385
+      ],
+      "ordinary_changes": [
+        -34,
+        18
+      ],
+      "line_changes": [
+        31,
+        8
+      ],
+      "median_changes": [
+        6,
+        13.5
+      ]
+    },
+    "software": {
+      "ordinary": [
+        38,
+        25,
+        24
+      ],
+      "line": [
+        360,
+        348,
+        350
+      ],
+      "median": [
+        384.5,
+        364,
+        369
+      ],
+      "ordinary_changes": [
+        -13,
+        -1
+      ],
+      "line_changes": [
+        -12,
+        2
+      ],
+      "median_changes": [
+        -20.5,
+        5
+      ]
+    },
+    "computer_minus_software_median": [
+      -19,
+      7.5,
+      16
+    ]
+  },
+  "local_anchors": [
+    "hnu-current-scores",
+    "hnu-current-retest",
+    "hnu-current-interview",
+    "hnu-current-training",
+    "hnu-history-retest",
+    "hnu-history-interview",
+    "hnu-history-training"
+  ],
+  "unknowns_preserved": [
+    "true application counts",
+    "complete 2027 courses/quota/directions",
+    "individual interview questions or verified firsthand interview accounts",
+    "historical direction-specific training contracts",
+    "mentor-specific graduation conditions"
+  ],
+  "official_refresh": {
+    "2023_retest": {
+      "url": "https://csee.hnu.edu.cn/info/1062/12457.htm",
+      "details": "140=120 comprehensive+20 foreign; normalize 120 part excluding raw<72 and centering at96; raw professional comprehensive<84 or retest<144 fail; tie math then English"
+    },
+    "2024_retest": {
+      "url": "https://csee.hnu.edu.cn/info/1036/13032.htm",
+      "details": "normalize entire140 excluding raw<84 and centering112; raw interview<84 or retest<144 fail; tie math then English; part-time AI coding exemption/adjustment not generalized"
+    },
+    "2025_retest": {
+      "url": "https://csee.hnu.edu.cn/info/1062/13477.htm",
+      "details": "normalize entire140 excluding raw<84 and centering112; raw interview<84 or retest<144 fail; tie math then English; no adjustment; AI coding exception not generalized"
+    },
+    "2024_images": {
+      "line": "https://csee.hnu.edu.cn/__local/1/55/66/23F5242C71A439C31064D271267_08BE8958_6D84.png",
+      "plan": "https://csee.hnu.edu.cn/__local/B/BC/54/E2BAA4D95BB3DA1F2ACE3A7774E_D21F29A2_5ECE.png",
+      "written_exam": "https://csee.hnu.edu.cn/__local/1/77/C8/552C8EEA85D3A7A5212681F7B2C_51967610_7C46.png",
+      "facts": "computer356/50/80;software348/50/80;ordinary plans62/24;computer written DB50+OS50,software DB50+SE50"
+    },
+    "2026_images": {
+      "line": "https://csee.hnu.edu.cn/__local/0/0F/5C/B5C48B6A3BC1C25361B79621DE7_9AE55CF0_4AFD.png",
+      "plan": "https://csee.hnu.edu.cn/__local/B/E5/20/2190E336930AB14160A22A703E4_9C186229_3635.png",
+      "facts": "368/50/75;ordinary plan103 vs first-list104 vs final105; unexplained plan-to-first-list difference retained"
+    },
+    "verification": "Live official HTML/images read and visually inspected by sibling hnu_content_audit; no raw person records persisted here.",
+    "2023_2025_images": {
+      "sources": [
+        "https://csee.hnu.edu.cn/__local/0/43/8F/0DA9CFC83895D9060424690584F_980C0E61_E625.png",
+        "https://csee.hnu.edu.cn/__local/2/57/FE/5763274A64389999BB923462576_6FE373A9_7898.png",
+        "https://csee.hnu.edu.cn/__local/5/4C/F1/CDC74FA63CA8F17487A4DF73538_F8E706C2_8DC3.png",
+        "https://csee.hnu.edu.cn/__local/6/70/41/397355C9C80BB6C0D3E144E839B_96378914_E74A.png",
+        "https://csee.hnu.edu.cn/__local/8/CB/B0/0694ECFC7066972E5CA96088F23_85B44B32_A0F0.png"
+      ],
+      "facts": "2023 computer plan96/qualified122 and software35/45; both50/80 single lines; written DB50+OS50 or SE50.2025 computer plan80/software24,both50/80; source images visually read by sibling auditor."
+    },
+    "plan_to_qualified_ratios": {
+      "computer_2023": "122/96=1.2708333333",
+      "software_2023": "45/35=1.2857142857",
+      "boundary": "qualified-to-spring-plan ratio only; not applicant, actual interview population, admission ratio or final admitted denominator"
+    },
+    "final_notes": {
+      "2026_score_rounding": "retest and total scores round to two decimals",
+      "part_time_ai_2024": "plan50,line305,coding exemption,adjustment permitted",
+      "part_time_ai_2025": "plan9,line305,coding exemption,whole college no adjustment",
+      "2025_written_exam_original": "two download attempts failed; previous-year official subjects not inherited;2025 personal recollection remains labeled"
+    }
+  },
+  "firsthand_source": {
+    "url": "https://damodev.csdn.net/6862510eba8a30336764fafa.html",
+    "title": "2025年湖南大学计算机专硕上岸经验",
+    "published": "2025-04-19",
+    "self_reported_identity": "鞋柜上的不呐呐; non-elite computer-science undergraduate;GPA3.89/5,top10%;worked about1year,resigned in August;self-reported first-choice ordinary admission",
+    "exact_program_code_disclosed": false,
+    "individual_scores_disclosed": false,
+    "official_proof_available": false,
+    "verified_by": "sibling hnu_content_audit read full page",
+    "scope": "labeled firsthand clues about old866 preparation and interview; no statistical claims",
+    "unconfirmed_claims": [
+      "2025 written DB+OS",
+      "coding pass120",
+      "CSP substitution",
+      "printed materials permitted"
+    ],
+    "opinions_not_adopted": [
+      "small interview differentiation",
+      "few coding eliminations"
+    ],
+    "financial_conflict": "no explicit paid sign-up/sales funnel found in read text;brand recommendations present;absence of interest not established"
+  },
+  "reading_validation": {
+    "trace_id": "c4d5b28b-0b67-4d2f-89e1-b46eb1090822",
+    "source_sha256": "8b4c7f5acfa2bdbe55a554a10a84844170781b0da8d5443f56e459fecb6fdb69",
+    "full_tests": {"passed": 167, "failed": 0, "seconds": 69.794},
+    "reader_dom_tests": {"passed": 11, "failed": 0},
+    "doctor": "ok",
+    "opted_in_projects": 2,
+    "record_tables": 9,
+    "independent_review": "No research text duplication; heading-link identity and region labels corrected; labels derived from visible header text; only opted-in projects annotated.",
+    "local_browser": {
+      "surface": "agent-owned hidden in-app browser; user tab untouched",
+      "before": {"viewport_content_width": 547, "table_scroll_width": 1089, "only_first_three_columns_visible": true},
+      "after": {"viewport_content_width": 549, "table_scroll_width": 549, "all_historical_score_cells_within_width": true},
+      "checked": ["three-year computer score cards visually inspected", "project outline jumps directly to shared retest", "current project starts with actual scores", "original source SHA verified", "other schools do not opt into records"]
+    }
+  }
+}
