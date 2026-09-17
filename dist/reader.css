@@ -19,17 +19,55 @@ footer{max-width:1180px;margin:2rem auto;padding:0 1.5rem 2rem;font-size:.8rem;c
 @media(max-width:500px){.admission-navigation .project-tree,.admission-navigation .direction-tree{grid-template-columns:1fr}.admission-navigation a{padding:.4rem}.research-direction{padding:.6rem .75rem}.page-tools>div{flex-shrink:1}.admission-navigation{max-height:20rem}}
 /* TraceId: c4d5b28b-0b67-4d2f-89e1-b46eb1090822 */
 .project-contents{border-top:1px solid #cbd9e0;margin-top:1rem;padding-top:.65rem}.project-contents-title{font-weight:700;color:#234e64;margin:.2rem .5rem .5rem}.project-contents a{font-size:.77rem;padding:.35rem .5rem}.project-contents a[data-direction-owner]{border-left:2px solid #9cbccf}
-.admission-project[data-reading-layout="records"] .table-scroll:has(>.record-table){overflow:visible;border:0;border-radius:0;background:transparent}
-.admission-project[data-reading-layout="records"] .record-table{display:block;width:100%;min-width:0;font-size:.9rem}
-.admission-project[data-reading-layout="records"] .record-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.admission-project[data-reading-layout="records"] .record-table tbody{display:block}
-.admission-project[data-reading-layout="records"] .record-table tbody tr{display:block;margin:0 0 1rem;border:1px solid #bad0dc;border-radius:.5rem;padding:.75rem;background:#fff;box-shadow:0 2px 5px #153a4c08}
-.admission-project[data-reading-layout="records"] .record-table td{display:block;min-width:0!important;width:auto!important;max-width:none;padding:.45rem .55rem;border:0;overflow-wrap:anywhere;text-align:left!important}
-.admission-project[data-reading-layout="records"] .record-table td::before{content:attr(data-label);display:block;color:#57717f;font-size:.73rem;font-weight:500;line-height:1.5;margin-bottom:.12rem}
-.admission-project[data-reading-layout="records"] .record-table td:first-child{font-size:1.14rem;font-weight:750;color:#174c62;border-bottom:1px solid #dde8ef;margin-bottom:.4rem}
-.admission-project[data-reading-layout="records"] .score-record-table tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.3rem}
-.admission-project[data-reading-layout="records"] .score-record-table td:nth-child(-n+3){grid-column:1/-1;font-size:.79rem;font-weight:400}
-.admission-project[data-reading-layout="records"] .score-record-table td:first-child{font-size:1.2rem;font-weight:750}
-.admission-project[data-reading-layout="records"] .score-record-table td:nth-child(n+4){background:#f0f6f9;border-radius:.35rem;font-size:1.15rem;font-weight:700;color:#153f54;font-variant-numeric:tabular-nums}
-@media(max-width:500px){.admission-project[data-reading-layout="records"] .score-record-table tbody tr{grid-template-columns:repeat(2,minmax(0,1fr))}.admission-project[data-reading-layout="records"] .record-table tbody tr{padding:.5rem}.admission-project[data-reading-layout="records"] .record-table td{padding:.4rem}}
-@media print{.sidebar,.toolbar,.page-tools,.skip-link,.admission-navigation,.admission-home,.college-overview,footer{display:none}.admission-layout{display:block}.workspace{margin:0}body,main{background:white}main{border:0;margin:0;padding:0;max-width:none}.table-scroll{overflow:visible}details{break-inside:auto}summary{font-weight:bold}a{color:inherit;text-decoration:none}.admission-project[data-reading-layout="records"] .record-table tbody tr{break-inside:avoid}}
+.table-scroll:has(>.record-table){overflow:visible;border:0;border-radius:0;background:transparent}
+.record-table{display:block;width:100%;min-width:0;font-size:1rem}
+.record-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.record-table tbody{display:block}
+.record-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin:0 0 1rem;border:1px solid #bad0dc;border-radius:.5rem;padding:.75rem;background:#fff;box-shadow:0 2px 5px #153a4c08}
+.record-table td{display:block;min-width:0!important;width:auto!important;max-width:none;padding:.45rem .55rem;border:0;overflow-wrap:anywhere;text-align:left!important}
+.record-table td::before{content:attr(data-label);display:block;color:#57717f;font-size:.875rem;font-weight:500;line-height:1.5;margin-bottom:.12rem}
+.record-table td:first-child{grid-column:1/-1;font-size:1.14rem;font-weight:750;color:#174c62;border-bottom:1px solid #dde8ef;margin-bottom:.4rem}
+.score-record-table tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.3rem}
+.score-record-table td:nth-child(-n+3){grid-column:1/-1;font-size:1rem;font-weight:400}
+.score-record-table td:first-child{font-size:1.2rem;font-weight:750}
+.score-record-table td:nth-child(n+4){background:#f0f6f9;border-radius:.35rem;font-size:1.15rem;font-weight:700;color:#153f54;font-variant-numeric:tabular-nums}
+@media(max-width:500px){.score-record-table tbody tr{grid-template-columns:repeat(2,minmax(0,1fr))}.record-table tbody tr{padding:.5rem}.record-table td{padding:.4rem}}
+@media print{.sidebar,.toolbar,.page-tools,.skip-link,.admission-navigation,.admission-home,.college-overview,footer{display:none}.admission-layout{display:block}.workspace{margin:0}body,main{background:white}main{border:0;margin:0;padding:0;max-width:none}.table-scroll{overflow:visible}details{break-inside:auto}summary{font-weight:bold}a{color:inherit;text-decoration:none}.record-table tbody tr{break-inside:avoid}}
+
+/* TraceId: 12977bfb-1cef-4a83-b35a-0c58141c1a37 — shared school reading layout */
+.reader-panel[data-panel^="school-"]{container-type:inline-size}
+.table-scroll:has(>.readable-table){container-type:inline-size}
+.readable-table{font-size:1rem;width:100%}
+.record-table td.long-field,.record-table.exam-subjects td:nth-child(2){grid-column:1/-1}
+.reader-panel h4{margin-top:2.5rem;padding-top:1.1rem;border-top:2px solid #dbe5eb}
+.reader-panel h5,.reader-panel h6{margin-top:2rem;padding-top:.5rem}
+.reader-panel details{margin:1.6rem 0}
+.reader-panel li{margin:.65rem 0}
+.school-contents{margin:1.2rem 0 2rem;border:1px solid #c3d4de;border-radius:.5rem;background:#f5f9fb;overflow:hidden}
+.school-contents>button{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;border:0;background:#eaf2f7;color:#234e64;padding:.85rem 1rem;font-size:1rem;font-weight:700}
+.school-contents>button::after{content:'收起';font-size:.875rem;font-weight:400;margin-left:1rem;white-space:nowrap}
+.school-contents>button[aria-expanded="false"]::after{content:'展开'}
+.school-contents-list{padding:.6rem;max-height:16rem;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.school-contents a{display:block;border-radius:.3rem;padding:.6rem .7rem;font-size:.9375rem;line-height:1.65;text-decoration:none}
+.school-contents a:hover,.school-contents a[aria-current]{background:#dcecf5;color:#174c62}
+.school-contents a[data-depth="1"]{margin-left:1rem;border-left:2px solid #c7dbe6}
+.school-contents a[data-depth="2"]{margin-left:2rem;border-left:2px solid #c7dbe6}
+.sidebar-intro,.resource-navigation summary,.resource-navigation a,.download,.toolbar button,.search-navigation output,.page-tools button,.admission-navigation,.direction-link,.admission-breadcrumb,.project-contents a,.project-status,.entity-card .project-status{font-size:.875rem}
+.school-meta,.late-badge,.red-legend,.entity-tree-caption{font-size:.8125rem}
+.project-contents a{line-height:1.8;padding:.5rem}
+@container (max-width:40rem){
+ .readable-table{display:block;min-width:0}
+ .readable-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+ .readable-table tbody{display:block}
+ .readable-table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem;margin:0 0 1rem;border:1px solid #bad0dc;border-radius:.5rem;padding:.6rem;background:white}
+ .readable-table td{display:block;min-width:0!important;width:auto!important;max-width:none;padding:.5rem;border:0;text-align:left!important;overflow-wrap:anywhere}
+ .readable-table td::before{content:attr(data-label);display:block;color:#57717f;font-size:.875rem;font-weight:500;line-height:1.6;margin-bottom:.2rem}
+ .readable-table td:first-child{grid-column:1/-1;font-size:1.14rem;font-weight:750;color:#174c62;border-bottom:1px solid #dde8ef;margin-bottom:.4rem}
+ .readable-table td.long-field{grid-column:1/-1}
+ .score-record-table td:nth-child(-n+3){grid-column:1/-1}
+}
+@container (max-width:26rem){
+ .readable-table:not(.score-record-table) tbody tr{grid-template-columns:minmax(0,1fr)}
+ .score-record-table tbody tr{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media print{.school-contents{display:none}.reader-panel[data-panel^="school-"],.table-scroll:has(>.readable-table){container-type:normal}}

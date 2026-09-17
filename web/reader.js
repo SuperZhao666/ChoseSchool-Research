@@ -21,13 +21,52 @@
   }]));
   const entitySelector = '.research-direction,.admission-project,.school-college,.admission-notes';
   // TraceId: c4d5b28b-0b67-4d2f-89e1-b46eb1090822
-  content.querySelectorAll('.admission-project[data-reading-layout="records"] .record-table').forEach(table => {
+  content.querySelectorAll('.readable-table').forEach(table => {
     const region = table.closest('.table-scroll');
     if (region) {
       region.setAttribute('aria-label', '项目数据记录');
       region.removeAttribute('tabindex');
     }
   });
+  // TraceId: 12977bfb-1cef-4a83-b35a-0c58141c1a37
+  // Outline actual source headings/folds, without guessing admissions entities.
+  function addSchoolContents(panel) {
+    if (!panel.dataset.panel.startsWith('school-') || entities.get(panel).colleges.length) return;
+    const targets = Array.from(panel.querySelectorAll('h4,h5,h6,summary'));
+    if (!targets.length) return;
+    const navigation = document.createElement('nav');
+    navigation.className = 'school-contents';
+    navigation.id = `contents-${panel.dataset.panel}`;
+    navigation.setAttribute('data-reader-ui', 'true');
+    navigation.setAttribute('aria-label', '本校内容导航');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = '本校内容导航';
+    button.setAttribute('aria-expanded', 'true');
+    const list = document.createElement('div');
+    list.className = 'school-contents-list';
+    list.id = `sections-${panel.dataset.panel}`;
+    button.setAttribute('aria-controls', list.id);
+    button.addEventListener('click', () => {
+      list.hidden = !list.hidden;
+      button.setAttribute('aria-expanded', String(!list.hidden));
+    });
+    targets.forEach((target, index) => {
+      if (!target.id) target.id = `reading-${panel.dataset.panel}-${index + 1}`;
+      const link = document.createElement('a');
+      link.href = `#${target.id}`;
+      link.dataset.sectionTarget = target.id;
+      link.textContent = target.textContent;
+      const depth = target.tagName === 'SUMMARY' ? 0 : Number(target.tagName.slice(1)) - 4;
+      link.dataset.depth = String(Math.max(0, depth));
+      if (target.closest('details')) link.classList.add('fold-section-link');
+      list.append(link);
+    });
+    navigation.append(button, list);
+    const intro = panel.querySelector('.switch-flag,.switch-note') || panel.querySelector('.school-tier') || panel.querySelector('h3');
+    if (intro) intro.after(navigation); else panel.prepend(navigation);
+  }
+  panels.forEach(addSchoolContents);
   // Within a chosen project, expose direct links to its actual content headings.
   // This is a project outline, not another school-wide topic classification.
   function updateProjectContents(panel, project, direction) {
@@ -47,6 +86,7 @@
     });
     // Preserve focused links while moving between sections of the same project.
     if (outline.dataset.projectId === project.id) { filterDirection(); return; }
+    navigation.scrollTop = 0;
     outline.dataset.projectId = project.id;
     outline.replaceChildren();
     const label = document.createElement('p');
@@ -159,6 +199,11 @@
     for (let parent = element.parentElement; parent; parent = parent.parentElement) {
       if (parent.tagName === 'DETAILS') parent.open = true;
     }
+    if (element.tagName === 'SUMMARY') element.parentElement.open = true;
+    panel?.querySelectorAll('.school-contents [data-section-target]').forEach(link => {
+      if (link.dataset.sectionTarget === element.id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
   }
   function clearMarks() {
     content.querySelectorAll('.search-current').forEach(el => el.classList.remove('search-current'));

@@ -85,6 +85,52 @@ function researchText(content) {
   return copy.textContent;
 }
 
+test('every school gets readable column labels and real-source navigation without duplicating research', () => {
+  // TraceId: 12977bfb-1cef-4a83-b35a-0c58141c1a37
+  const html = fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8');
+  const before = researchText(parseHTML(html).document.getElementById('research-content'));
+  const r = reader(html);
+  const schools = [...r.document.querySelectorAll('.reader-panel[data-panel^="school-"]')];
+  assert.equal(schools.length, 104);
+  let tables = 0;
+  for (const school of schools) {
+    for (const table of school.querySelectorAll('table')) {
+      tables++;
+      assert.ok(table.classList.contains('readable-table'), school.id);
+      const headers = [...table.querySelectorAll('thead th')].map(cell => cell.textContent.trim());
+      for (const row of table.querySelectorAll('tbody tr')) {
+        assert.deepEqual([...row.querySelectorAll('td')].map(cell => cell.dataset.label), headers, school.id);
+      }
+    }
+    if (school.querySelector('.admission-layout')) {
+      assert.equal(school.querySelector('.school-contents'), null);
+      continue;
+    }
+    const nav = school.querySelector('.school-contents');
+    assert.ok(nav, school.id);
+    for (const link of nav.querySelectorAll('a')) {
+      const target = r.document.getElementById(link.dataset.sectionTarget);
+      assert.equal(target.closest('.reader-panel'), school);
+      assert.equal(link.textContent, target.textContent);
+    }
+  }
+  assert.equal(tables, 544);
+  assert.equal(r.document.querySelectorAll('.school-contents').length, 102);
+  assert.equal(researchText(r.document.getElementById('research-content')), before);
+  const nav = r.document.querySelector('#panel-school-001 .school-contents');
+  const button = nav.querySelector('button');
+  button.dispatchEvent(new r.window.Event('click', {bubbles:true}));
+  assert.equal(button.getAttribute('aria-expanded'), 'false');
+  assert.equal(nav.querySelector('.school-contents-list').hidden, true);
+  button.dispatchEvent(new r.window.Event('click', {bubbles:true}));
+  const summaryLink = [...nav.querySelectorAll('a')].find(link => r.document.getElementById(link.dataset.sectionTarget).tagName === 'SUMMARY');
+  summaryLink.dispatchEvent(new r.window.Event('click', {bubbles:true,cancelable:true}));
+  assert.equal(r.document.getElementById(summaryLink.dataset.sectionTarget).parentElement.open, true);
+  assert.deepEqual(r.visible(), ['school-001']);
+  const ids = [...r.document.querySelectorAll('[id]')].map(e=>e.id);
+  assert.equal(new Set(ids).size, ids.length);
+});
+
 test('school landing → college → program → direction keeps shared project facts and separates identical codes', () => {
   const r = reader(entityFixture, '#s1');
   assert.deepEqual(visibleProjects(r), []);

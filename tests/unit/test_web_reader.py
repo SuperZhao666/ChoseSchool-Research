@@ -345,8 +345,8 @@ class SchoolEntityBuildTests(unittest.TestCase):
                                             '24', '350', '350', '369', '372.54', '415'])
         self.assertEqual(parser.tables[0][2][-6:], ['未公布'] * 6)
         unselected, _ = render(source.replace(' data-reading-layout="records"', ''))
-        self.assertNotIn('data-label=', unselected)
-        self.assertNotIn('score-record-table', unselected)
+        self.assertEqual(re.findall(r'<td[^>]*data-label="([^"]+)"', unselected), expected * 2)
+        self.assertIn('score-record-table', unselected)
 
     def test_entity_hierarchy_keeps_research_text_tables_and_links_intact(self):
         source = '''<a id="school-069"></a>
