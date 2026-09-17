@@ -264,5 +264,97 @@
     "https://grs.muc.edu.cn/yjsyzsw/info/1065/3269.htm",
     "https://grs.muc.edu.cn/yjsyzsw/info/1065/3279.htm",
     "https://grs.muc.edu.cn/yjsyzsw/info/1065/3939.htm"
+  ],
+  "follow_up_audits": [
+    {
+      "trace_id": "4dc7f8d6-64f7-4d9d-8647-0e290113ea35",
+      "checked_at": "2026-09-17",
+      "purpose": "Compare historical 852 curricula with user supplied 853 outline; verify available past-paper leads, without upgrading ordinary admission status.",
+      "user_pdf": {
+        "name": "853数据结构.pdf",
+        "sha256": "760c7645ac55b2a685a1ace5ff82c78089cc3cbdcdbf5068eb30b2f8abe47d6f",
+        "pages": 5,
+        "all_pages_visually_reviewed": true,
+        "year_printed_in_body": false,
+        "official_attachment_byte_match": false
+      },
+      "downloaded_outlines": [
+        {
+          "name": "852-2024-chsi",
+          "url": "https://t1.chei.com.cn/news/getfile/2293111464-2293111463-e5fe56fae2ff042205821a5ee0479652.pdf",
+          "sha256": "07a5a7b6cee42a9bbdb7c2d0017481609e8dfa89a183db645e9a3df95d821d20",
+          "pages": 8
+        },
+        {
+          "name": "852-2025-mirror",
+          "url": "https://static.kaoyan.cn/file/2024/10/11/411e7254540e5d8df405cc806d9bb9d9.pdf",
+          "sha256": "3f9bd45ecfa2c12fe3643bf7b284e597d4c569a2304a42339c2c2e7e73793d4f",
+          "pages": 8
+        }
+      ],
+      "primary_old_outline": {
+        "url": "https://xingong.muc.edu.cn/info/1042/1977.htm",
+        "published_at": "2020-09-22",
+        "computer_track": {
+          "data_structure_marks": 150,
+          "choice_marks": 60,
+          "answer_marks": 50,
+          "algorithm_marks": 40
+        },
+        "claims_boundary": "Official old outline, not proof of actual exam questions or every later year."
+      },
+      "curriculum_change": {
+        "url": "https://yzst.chsi.com.cn/kyzx/yxzc/202308/20230822/2293111463.html",
+        "effective_admission_year": 2024,
+        "computer_track": {
+          "C_marks": 100,
+          "DS_marks": 50
+        },
+        "electronics_track": {
+          "C_marks": 100,
+          "circuit_marks": 50
+        },
+        "C_question_structure": {
+          "multiple_choice": 40,
+          "algorithm_design": 60
+        },
+        "2026_attachment_status": "captcha_required_not_retrieved"
+      },
+      "paper_leads": [
+        {
+          "url": "https://noobdream.com/post/84788/",
+          "published_at": "2021-04-27",
+          "claimed_exam_year": 2021,
+          "claimed_code": "852",
+          "level": "incomplete_candidate_recollection",
+          "public_body_read": true,
+          "official_complete_paper": false,
+          "limitations": [
+            "No multiple-choice stems",
+            "One long question forgotten",
+            "Diagrams and specific inputs omitted",
+            "Question structure agrees with old official outline, not sufficient to authenticate each question"
+          ]
+        },
+        {
+          "url": "https://www.jingdukaoyan.com/cpxq_3050063.html",
+          "level": "unverified_vendor_claim",
+          "claimed_years": "2020-2022",
+          "purchased": false
+        },
+        {
+          "url": "https://wx.100xuexi.com/product/skipToRead.aspx?id=1001875&isPackage=1&platNum=1",
+          "level": "other_universities_practice_material",
+          "vendor_discloses_substitution": true
+        }
+      ],
+      "not_established": [
+        "2022-2026 complete authentic 852 paper",
+        "2027 new 853 past exam before examination",
+        "Fixed raw-score conversion between 852 and 853",
+        "2027 ordinary direction-level quota",
+        "Final admission counts from spring plan subtraction"
+      ]
+    }
   ]
 }
