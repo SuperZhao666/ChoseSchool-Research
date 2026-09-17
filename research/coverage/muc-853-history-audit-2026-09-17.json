@@ -356,5 +356,232 @@
         "Final admission counts from spring plan subtraction"
       ]
     }
+  ],
+  "supplemental_audits": [
+    {
+      "trace_id": "f0ac1df7-1766-4384-9b56-62a6a61d4137",
+      "checked_on": "2026-09-17",
+      "kind": "member_admission_lists_reviewed",
+      "source": "https://www.kaoyan.cn/school/119/plan/1386114?tab=lqfx",
+      "population": "Information Engineering College, 085400, full time, first choice; exclude explicit special-plan remarks, do not infer identity from score; directions combined",
+      "method": "Read every UI page; omit names; aggregate only, no bulk republication of member list",
+      "status": "platform_admission_list_recomputed_not_official_final_original",
+      "years": {
+        "2024": {
+          "pages_read": 8,
+          "all_rows": 78,
+          "unmarked_rows": 76,
+          "excluded_explicit_specials": [
+            {
+              "serial": 4,
+              "initial": 375,
+              "plan": "minority backbone"
+            },
+            {
+              "serial": 5,
+              "initial": 373,
+              "plan": "minority backbone"
+            }
+          ],
+          "initial": {
+            "sum": 24302,
+            "min": 273,
+            "median": 318.5,
+            "mean": 319.7631578947368,
+            "max": 396
+          },
+          "bins_starting_at_260_width_20": [
+            6,
+            16,
+            17,
+            20,
+            8,
+            7,
+            2,
+            0
+          ],
+          "final": {
+            "min": 67.47,
+            "median": 74.28,
+            "max": 85.54
+          },
+          "subject_mean": 99.5657894736842,
+          "math_mean": 90.77631578947368,
+          "english_mean": 67.22368421052632,
+          "ordinary_sum_mismatch_count": 0,
+          "ordinary_final_formula_mismatch_count": 0
+        },
+        "2025": {
+          "pages_read": 12,
+          "all_rows": 118,
+          "unmarked_rows": 117,
+          "excluded_explicit_specials": [
+            {
+              "serial": 118,
+              "initial": 291,
+              "plan": "retired soldier"
+            }
+          ],
+          "initial": {
+            "sum": 38234,
+            "min": 271,
+            "median": 325,
+            "mean": 326.78632478632477,
+            "max": 398
+          },
+          "bins_starting_at_260_width_20": [
+            6,
+            18,
+            23,
+            32,
+            21,
+            13,
+            4,
+            0
+          ],
+          "final": {
+            "min": 67.66,
+            "median": 74.6,
+            "max": 85.44
+          },
+          "subject_mean": 112.23931623931624,
+          "math_mean": 95.82905982905983,
+          "english_mean": 62.41880341880342,
+          "ordinary_sum_mismatch_count": 0,
+          "ordinary_final_formula_mismatch_count": 0
+        },
+        "2026": {
+          "pages_read": 19,
+          "all_rows": 184,
+          "unmarked_rows": 182,
+          "excluded_explicit_specials": [
+            {
+              "serial": 183,
+              "initial": 302,
+              "plan": "minority backbone"
+            },
+            {
+              "serial": 184,
+              "initial": 299,
+              "plan": "minority backbone"
+            }
+          ],
+          "initial": {
+            "sum": 64906,
+            "min": 313,
+            "median": 353,
+            "mean": 356.6263736263736,
+            "max": 412
+          },
+          "bins_starting_at_260_width_20": [
+            0,
+            0,
+            8,
+            40,
+            61,
+            35,
+            28,
+            10
+          ],
+          "final": {
+            "min": 74.26,
+            "median": 78.71,
+            "max": 86.88
+          },
+          "subject_mean": 112.48901098901099,
+          "math_mean": 113.13736263736264,
+          "english_mean": 74.02747252747253,
+          "ordinary_sum_mismatch_count": 0,
+          "ordinary_final_formula_mismatch_count": 0
+        }
+      },
+      "limitations": [
+        "Official final admission attachment not acquired",
+        "Unmarked rows might contain unlabelled plans",
+        "Enrollment registration outcome not verified",
+        "No separate computer or AI count",
+        "No 2023 list available in this page"
+      ],
+      "2025_official_scores_crosscheck": {
+        "trace_id": "f0ac1df7-1766-4384-9b56-62a6a61d4137",
+        "member_rows": 117,
+        "matched": 117,
+        "unmatched": [],
+        "method": "multiset of initial, retest, final; no personal identity matching; official score table does not certify admission"
+      },
+      "source_conflicts": [
+        {
+          "source": "kaoyan.cn overview",
+          "year": 2024,
+          "displayed_count": 78,
+          "displayed_mean": 321.15,
+          "reason": "Includes two explicit special-plan rows despite generic exclusion banner"
+        },
+        {
+          "source": "kaoyan.cn overview",
+          "year": 2026,
+          "displayed_count": 184,
+          "displayed_min": 299,
+          "displayed_mean": 356.02,
+          "reason": "Includes two explicit special-plan rows despite generic exclusion banner"
+        },
+        {
+          "url": "https://www.dianqikaoyan.com/8980.html",
+          "claims": "138 admitted, minimum 264 in 2025",
+          "status": "not_adopted",
+          "reason": "Conflicts with 117 non-special admission rows, min 271; 138 matches score-publication population"
+        }
+      ],
+      "paper_followup": {
+        "url": "https://www.kaoyan.cn/tools-box/zhenti/classify/self?packageId=629b0d05386676f988042ce5dcd1741c&schoolId=119&speId=20467",
+        "visible_titles": [
+          "2027 852 volume 1",
+          "2027 852 volume 2",
+          "2027 855"
+        ],
+        "body_opened": true,
+        "new_payment": false,
+        "authentic_complete_paper_obtained": false,
+        "route": "existing paid-order view button",
+        "reader_document_id": "7C2AD429A37044A58AC541FAEE886A7A",
+        "visible_page_count": 1940,
+        "toc_visual_page": 5,
+        "toc_paper_labels": [
+          "other leading universities C 2019-2025",
+          "other leading universities circuits 2017-2025"
+        ],
+        "muc_specific_paper_years_seen": []
+      },
+      "public_mirror_download_failure": {
+        "url": "https://www.kaoyany.top/post/173437.html",
+        "result": "HTTP 200 returned guest daily-limit HTML, not a ZIP; not accepted as evidence"
+      },
+      "retest_grouping_review": {
+        "trace_id": "f0ac1df7-1766-4384-9b56-62a6a61d4137",
+        "college_official_pdf": "https://xingong.muc.edu.cn/__local/2/18/9E/E37AB89799644FC92EF6F8B4886_1D583475_28ABB.pdf",
+        "university_policy_url": "https://grs.muc.edu.cn/yjsyzsw/info/1065/5699.htm",
+        "university_policy_sha256": "8d396cd6112a190c565dc67c3dd543562cf9db87ac48fcf1d94d0aa087fc1cae",
+        "confirmed": [
+          "Separate interview schedules for 081200, 083500 and 085400",
+          "085400 computer and AI take C programming practical; electronics takes digital circuits written",
+          "085400 seven rooms listed; drawing determines interview order only",
+          "University says admission follows program/direction quotas and final scores"
+        ],
+        "not_established": [
+          "Common or separate rank and quotas among 085400 tracks",
+          "Mapping of interview rooms to tracks",
+          "Random grouping rather than random order",
+          "Identical papers across practical exams",
+          "Score normalization across groups",
+          "2027 ordinary retest rules"
+        ],
+        "recommendation_exempt_rule_not_transferred_to_ordinary": true,
+        "member_tabs_reviewed": [
+          "admissions information",
+          "retest analysis",
+          "admission analysis"
+        ]
+      }
+    }
   ]
 }
