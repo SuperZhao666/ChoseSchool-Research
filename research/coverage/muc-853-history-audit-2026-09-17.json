@@ -582,6 +582,136 @@
           "admission analysis"
         ]
       }
+    },
+    {
+      "trace_id": "6ad3a0e8-7ef9-4098-bcc0-85a19e3f7294",
+      "checked_on": "2026-09-17",
+      "kind": "application_ratio_gap_and_retest_list_ratio",
+      "population": "017 Information Engineering College, 085400 electronic information, full time; computing, AI and electronics combined; exclude only explicitly marked special plans",
+      "application_counts": {
+        "2023": null,
+        "2024": null,
+        "2025": null,
+        "2026": null,
+        "2027": null
+      },
+      "application_ratio_status": "not_established_missing_same_population_application_counts",
+      "sources": {
+        "member_retest": "https://www.kaoyan.cn/school/119/plan/1386114",
+        "member_admission": "https://www.kaoyan.cn/school/119/plan/1386114?tab=lqfx",
+        "2024_retest": "https://m-jixun.iqihang.com/zixun/fenshuxian/2024385839.html"
+      },
+      "retest_list_audit": {
+        "2024": {
+          "source_level": "secondary contemporaneous reproduction",
+          "all_selected_rows": 91,
+          "unmarked_rows": 91,
+          "source_serial_range": [
+            37,
+            127
+          ],
+          "remarks_nonempty": 0,
+          "source_sha256": "c183c7178d909f401e5f9c2f66e5ba68cd8c2e423baf4b6f19191f629afdbe27"
+        },
+        "2025": {
+          "source_level": "member UI pages read in full",
+          "pages_read": 15,
+          "all_rows": 143,
+          "unmarked_rows": 142,
+          "unique_serials": 143,
+          "excluded_explicit_specials": [
+            {
+              "serial": 143,
+              "initial": 291,
+              "plan": "retired soldier"
+            }
+          ],
+          "initial_sum_unmarked": 45496,
+          "initial_min_unmarked": 264,
+          "initial_max_unmarked": 398,
+          "subject_sum_mismatch": 0
+        },
+        "2026": {
+          "source_level": "member UI pages read in full",
+          "pages_read": 23,
+          "all_rows": 224,
+          "unmarked_rows": 220,
+          "excluded_explicit_specials": [
+            {
+              "serial": 221,
+              "initial": 308,
+              "plan": "retired soldier"
+            },
+            {
+              "serial": 222,
+              "initial": 302,
+              "plan": "minority backbone"
+            },
+            {
+              "serial": 223,
+              "initial": 302,
+              "plan": "retired soldier"
+            },
+            {
+              "serial": 224,
+              "initial": 299,
+              "plan": "minority backbone"
+            }
+          ],
+          "overview_count_includes_specials": 224
+        }
+      },
+      "computed_list_ratios": [
+        {
+          "year": 2024,
+          "retest_list_unmarked": 91,
+          "admission_list_unmarked": 76,
+          "retest_per_admission": 1.1973684210526316,
+          "admission_share_percent": 83.51648351648352,
+          "list_count_difference": 15
+        },
+        {
+          "year": 2025,
+          "retest_list_unmarked": 142,
+          "admission_list_unmarked": 117,
+          "retest_per_admission": 1.2136752136752136,
+          "admission_share_percent": 82.3943661971831,
+          "list_count_difference": 25
+        },
+        {
+          "year": 2026,
+          "retest_list_unmarked": 220,
+          "admission_list_unmarked": 182,
+          "retest_per_admission": 1.2087912087912087,
+          "admission_share_percent": 82.72727272727273,
+          "list_count_difference": 38
+        }
+      ],
+      "rejected_application_evidence": [
+        {
+          "url": "https://yz.kaoyan.com/cun/baolubi/5bfbe53ee1595.html",
+          "reason": "2019 reproduced applications: computer science 100; not 085400 and not current years"
+        },
+        {
+          "url": "https://yz.kaoyan.com/cun/zhaosheng/583655ee88602.html",
+          "reason": "2017准考人数; old college 025, 081200 and 083500; not current 085400"
+        },
+        {
+          "url": "https://jixun.iqihang.com/zixun/fenshuxian/2026713885.html",
+          "reason": "Uses planned 48 as actual admissions and estimates 58 retest entrants with factor 1.2; supplies no application numerator"
+        }
+      ],
+      "limitations": [
+        "No same-year target-program application denominator/numerator pair established",
+        "Member lists are transcriptions, not school final enrollment originals",
+        "No person-identity matching between retest and admission lists",
+        "2024 mixes contemporary retest reproduction and member admission source",
+        "Unmarked may include unlabelled special plans",
+        "List differences do not establish interview elimination or absence",
+        "2025 official ordinary score publication contains 138 records, versus 142 retest shortlist entries; four-record stage difference unexplained",
+        "Ratios are not computing/AI-specific or personal admission probabilities"
+      ],
+      "reading_location": "README.md / school-079 / information-085400 / scores"
     }
   ],
   "supervisor_followup_2026_09_17": {
