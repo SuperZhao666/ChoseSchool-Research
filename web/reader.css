@@ -76,3 +76,43 @@ footer{max-width:1180px;margin:2rem auto;padding:0 1.5rem 2rem;font-size:.8rem;c
  .admission-layout{grid-template-columns:minmax(0,1fr);gap:1rem}
  .admission-navigation{position:static;max-height:20rem}
 }
+
+/* Project-first, conclusion-first reading. TraceId: 620a4022-cd30-48ab-992b-4a26e0cff841 */
+.admission-layout{display:block}
+.admission-navigation{position:static;max-height:none;padding:0;border:0;background:transparent;margin-bottom:1rem}
+.admission-navigation .college-tree,.admission-navigation .entity-tree-caption,.admission-navigation .project-contents{display:none}
+.admission-navigation>a{display:inline-block;font-size:.875rem;padding:.45rem .8rem;border:1px solid #c9d9e3;background:#f4f8fb;margin-right:.6rem}
+.admission-navigation .admissions-notes-link{margin-top:0;border:1px solid #c9d9e3;border-radius:.3rem}
+.school-background{font-size:.9375rem;margin:.6rem 0!important;background:white}
+.school-background summary{padding:.65rem 0;font-weight:500;color:#4b6676}
+.reading-tabs{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.6rem;padding-bottom:1rem;border-bottom:1px solid #d7e3eb;position:sticky;top:var(--toolbar-height);z-index:10;background:white;padding-top:.7rem}
+.reading-tabs a{display:block;padding:.55rem .9rem;border:1px solid #c8d8e2;border-radius:.35rem;text-decoration:none;font-size:.9375rem;background:#f6f9fb;line-height:1.6;scroll-margin-top:calc(var(--toolbar-height) + 1rem)}
+.reading-tabs a[aria-current]{background:#174c62;border-color:#174c62;color:white;font-weight:650}
+.reading-chapter{max-width:58rem}
+.reading-chapter>h4:first-child,.reading-chapter>h5:first-child,.reading-chapter>h6:first-child{margin-top:1rem;padding-top:0;border-top:0}
+.reading-chapter>details{border:0;padding:0;background:transparent;margin-top:0}
+.reading-chapter>details>summary{font-size:1.05rem}
+.project-verdict{border-left:4px solid #26718b;background:#eff6fa;padding:1rem 1.3rem;margin:1rem 0 1.6rem;line-height:1.9}
+.project-verdict p:first-child{margin-top:0}.project-verdict p:last-child{margin-bottom:0}
+.admission-home .entity-card,.college-overview .entity-card{background:white;padding:1.25rem;box-shadow:0 2px 8px #12384d09}
+.admission-home .entity-cards,.college-overview .entity-cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1rem}
+.reader-panel:has(.admission-layout)>h3{margin-bottom:.65rem}
+@media(max-width:760px){.reading-tabs{position:static;gap:.35rem}.reading-tabs a{padding:.5rem .65rem;font-size:.875rem}.project-verdict{padding:.75rem 1rem}.admission-navigation>a{margin-bottom:.4rem}}
+@media print{.reading-tabs,.school-background,.admission-navigation{display:none}.reading-chapter{max-width:none}}
+
+main{padding:1.5rem 2rem}
+.admission-home>h4,.college-overview>h4{border:0;padding-top:0;margin-top:0}
+.college-choice{margin:1.5rem 0 2rem}
+.college-choice>h5{margin:0 0 .6rem;padding:0;border:0;font-size:1rem}
+.college-choice-title{text-decoration:none;color:#3c5f70}
+.shared-reading-link{display:block;margin-top:1.5rem;font-size:.875rem;color:#627985}
+.reader-panel:has(.admission-home:not([hidden])) .admission-navigation,.reader-panel:has(.admission-home:not([hidden])) .admission-breadcrumb{display:none}
+.reader-panel:has(.admission-project:not([hidden]))>.school-background,.reader-panel:has(.admission-project:not([hidden]))>h3{display:none}
+.reader-panel:has(.admission-project:not([hidden])) .school-college>h4{display:none}
+.admission-breadcrumb{margin-bottom:.75rem;padding-bottom:.5rem}
+.direction-choices{display:flex;flex-wrap:wrap;gap:.4rem .75rem;align-items:baseline;margin:1rem 0;font-size:.9rem}
+.direction-choices>span{color:var(--muted)}
+.direction-choices a{padding:.25rem .5rem;border-bottom:2px solid transparent;text-decoration:none}
+.direction-choices a[aria-current]{border-color:#26718b;background:#eff6fa;font-weight:650}
+@media print{.direction-choices{display:none}}
+@media(max-width:760px){main{padding:1rem}.college-choice{margin:1rem 0 1.4rem}}

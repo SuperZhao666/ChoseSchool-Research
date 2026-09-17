@@ -76,7 +76,7 @@ const entityFixture = fixture.replace('<h3>AI与数据</h3>', `<h3>AI与数据</
 <section class="admission-notes" id="notes" data-notes-title="共同口径与来源核验" hidden><details id="notes-fold"><summary>口径</summary><p>不属于具体招生实体的方法说明</p></details></section></div></div>`);
 
 function visibleProjects(r) {
-  return [...r.document.querySelectorAll('.admission-project')].filter(project => !project.hidden).map(project => project.dataset.projectKey);
+  return [...r.document.querySelectorAll('.admission-project')].filter(isRevealed).map(project => project.dataset.projectKey);
 }
 
 function researchText(content) {
@@ -84,6 +84,66 @@ function researchText(content) {
   copy.querySelectorAll('[data-reader-ui]').forEach(element => element.remove());
   return copy.textContent;
 }
+
+// TraceId: 620a4022-cd30-48ab-992b-4a26e0cff841
+function isRevealed(element) {
+  for (let node=element;node;node=node.parentElement) {
+    if (node.hidden || (node.tagName==='DETAILS' && !node.open && node!==element)) return false;
+  }
+  return true;
+}
+
+test('project chooser separates real projects and defaults to a short conclusion', () => {
+  const r=reader(fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8'),'#school-013');
+  const school=r.document.getElementById('panel-school-013');
+  const home=school.querySelector('.admission-home');
+  assert.equal(school.querySelector('.school-background').open,false);
+  assert.deepEqual([...home.querySelectorAll('.entity-card')].map(link=>link.getAttribute('href')),['#project-school-013-018-085405','#project-school-013-018-085410']);
+  home.querySelector('.entity-card').dispatchEvent(new r.window.Event('click',{bubbles:true,cancelable:true}));
+  const project=r.document.getElementById('project-school-013-018-085405');
+  assert.deepEqual(visibleProjects(r),['018-085405']);
+  assert.equal(project.dataset.readingTopic,'overview');
+  const visibleChapters=[...project.querySelectorAll('.reading-chapter')].filter(isRevealed);
+  assert.ok(visibleChapters.reduce((total,ch)=>total+ch.textContent.length,0)<350);
+  assert.match(visibleChapters.map(ch=>ch.textContent).join(''),/无专项分类/);
+  assert.ok([...project.querySelectorAll('table')].every(table=>!isRevealed(table)));
+  r.go('#view-project-school-013-018-085405-scores');
+  assert.equal(project.dataset.readingTopic,'scores');
+  assert.ok([...project.querySelectorAll('table')].some(isRevealed));
+  assert.ok(!isRevealed(project.querySelector('.project-verdict')));
+  assert.ok([...project.querySelectorAll('.reading-chapter[data-reading-topic="training"]')].every(ch=>!isRevealed(ch)));
+  r.go('#view-project-school-013-018-085405-retest');
+  assert.ok([...project.querySelectorAll('.reading-chapter')].filter(isRevealed).every(ch=>ch.dataset.readingTopic.split(' ').includes('retest')));
+  r.go('#project-school-019-017-085405');
+  assert.deepEqual(visibleProjects(r),['017-085405']);
+  assert.equal(r.document.getElementById('project-school-019-006-085405').hidden,true);
+});
+
+test('topic deep links, direction choice, hidden summary search and print retain the full dossier', () => {
+  const r=reader(fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8'),'#hnu-current-retest');
+  const current=r.document.getElementById('project-school-029-csee-085400');
+  assert.equal(current.dataset.readingTopic,'retest');
+  const heading=[...current.querySelectorAll('h5')].find(h=>h.textContent.includes('复试：编程机试'));
+  assert.ok(isRevealed(heading));
+  r.go('#direction-school-029-former-csee-085400-computer-history');
+  const history=r.document.getElementById('project-school-029-former-csee-085400');
+  const software=r.document.getElementById('direction-school-029-former-csee-085400-software-history');
+  assert.equal(history.dataset.readingTopic,'scores');
+  assert.ok(!isRevealed(software));
+  r.go('#directions-project-school-029-former-csee-085400');
+  assert.ok(isRevealed(software));
+  r.go('#view-project-school-029-former-csee-085400-retest');
+  const states=[...history.querySelectorAll('.reading-chapter,details,.research-direction')].map(el=>[el,el.hidden,el.open]);
+  r.window.dispatchEvent(new r.window.Event('beforeprint'));
+  assert.ok([...history.querySelectorAll('.reading-chapter,details,.research-direction')].every(el=>!el.hidden));
+  r.window.dispatchEvent(new r.window.Event('afterprint'));
+  for(const [el,hidden,open] of states) {assert.equal(el.hidden,hidden);assert.equal(el.open,open);}
+  r.search('历年科目、录取人口与全部成绩分布：10. 辽宁大学');
+  const mark=r.document.querySelector('mark');
+  assert.ok(mark);
+  assert.ok(isRevealed(mark));
+  assert.deepEqual(visibleProjects(r),['018-085405']);
+});
 
 test('every school gets readable column labels and real-source navigation without duplicating research', () => {
   // TraceId: 12977bfb-1cef-4a83-b35a-0c58141c1a37
@@ -115,14 +175,17 @@ test('every school gets readable column labels and real-source navigation withou
     }
   }
   assert.equal(tables, 544);
-  assert.equal(r.document.querySelectorAll('.school-contents').length, 102);
-  assert.equal(researchText(r.document.getElementById('research-content')), before);
+  assert.equal(r.document.querySelectorAll('.school-contents').length, schools.filter(school => !school.querySelector('.admission-layout')).length);
+  const after = researchText(r.document.getElementById('research-content'));
+  const mismatch = [...before].findIndex((char, index) => after[index] !== char);
+  assert.ok(after === before, JSON.stringify({mismatch,before:before.slice(mismatch-80,mismatch+160),after:after.slice(mismatch-80,mismatch+160)}));
   const nav = r.document.querySelector('#panel-school-001 .school-contents');
   const button = nav.querySelector('button');
-  button.dispatchEvent(new r.window.Event('click', {bubbles:true}));
   assert.equal(button.getAttribute('aria-expanded'), 'false');
   assert.equal(nav.querySelector('.school-contents-list').hidden, true);
   button.dispatchEvent(new r.window.Event('click', {bubbles:true}));
+  assert.equal(button.getAttribute('aria-expanded'), 'true');
+  assert.equal(nav.querySelector('.school-contents-list').hidden, false);
   const summaryLink = [...nav.querySelectorAll('a')].find(link => r.document.getElementById(link.dataset.sectionTarget).tagName === 'SUMMARY');
   summaryLink.dispatchEvent(new r.window.Event('click', {bubbles:true,cancelable:true}));
   assert.equal(r.document.getElementById(summaryLink.dataset.sectionTarget).parentElement.open, true);

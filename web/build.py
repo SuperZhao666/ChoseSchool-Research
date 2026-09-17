@@ -101,9 +101,11 @@ def prepare_admissions(source: str, panel_key: str) -> str:
                   + (link(notes, 'admissions-notes-link') if notes else '') + '</nav>\n\n'
                   '<div class="admission-detail">\n\n'
                   '<nav class="admission-breadcrumb" data-reader-ui="true" aria-label="当前招生项目位置">本校招生结构</nav>\n\n'
-                  '<nav class="admission-home" data-reader-ui="true" aria-label="选择招生学院"><h4>先选择学院，再查看具体招生项目</h4>'
-                  '<p>同名专业按学院分别列出。进入项目后，可以连续查看它的方向、科目、历年成绩与复试资料。</p>'
-                  '<div class="entity-cards">' + ''.join(link(college, 'entity-card') for college in colleges) + '</div></nav>\n\n')
+                  '<nav class="admission-home" data-reader-ui="true" aria-label="选择招生学院与项目"><h4>选择招生项目</h4>'
+                  + ''.join('<div class="college-choice"><h5>' + link(college, 'college-choice-title')
+                            + '</h5><div class="entity-cards">' + ''.join(link(project, 'entity-card') for project in college['children'])
+                            + '</div></div>' for college in colleges)
+                  + (link(notes, 'shared-reading-link') if notes else '') + '</nav>\n\n')
     edits = []
     for node in nodes:
         hidden = ' hidden' if node['kind'] in ('college', 'project', 'notes') else ''

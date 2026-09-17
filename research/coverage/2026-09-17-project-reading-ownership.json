@@ -1,0 +1,280 @@
+{
+  "trace_id": "620a4022-cd30-48ab-992b-4a26e0cff841",
+  "purpose": "Project ownership and conclusion-first reading; no new catalog verification",
+  "schools": [
+    {
+      "school": "school-002",
+      "title": "华东师范大学",
+      "original_sha256": "3959e63eff2a4f37fcdb8a1f193984609e8785a6907fcfb63dacc5ff01dab0d1",
+      "projects": [
+        {
+          "key": "135-085404-01",
+          "title": "085404 计算机技术 · 01方向（历史范围）（全日制）",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：5. 华东师范大学 135 计算机科学与技术学院 `085404-01`（全日制）",
+            "复试、费用、导师、实践和毕业条件：华东师范大学｜135计算机技术"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-005",
+      "title": "新疆大学",
+      "original_sha256": "e0eeeee882ec488238f8f325939d749fa6724682b6a116f531648b9d58ffc982",
+      "projects": [
+        {
+          "key": "308-085405",
+          "title": "085405 软件工程",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：11. 新疆大学 308 软件学院 `085405`",
+            "复试、费用、导师、实践和毕业条件：新疆大学｜308软件工程"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-007",
+      "title": "西南交通大学",
+      "original_sha256": "d09571593a1778992a453b5381e53b0794d209d4d335bd6de0956b0c4a2deec5",
+      "projects": [
+        {
+          "key": "048-085410",
+          "title": "085410 人工智能",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：9. 西南交通大学 048 计算机与人工智能学院 `085410`",
+            "复试、费用、导师、实践和毕业条件：西南交通大学｜048人工智能"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-012",
+      "title": "北京交通大学",
+      "original_sha256": "630c3c0cfa66e93ae3007cb4a8d0e3976417eb15b2abc50be1578b1b2c0b058d",
+      "projects": [
+        {
+          "key": "010-085405",
+          "title": "085405 软件工程",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：7. 北京交通大学 010 软件学院 `085405`",
+            "复试、费用、导师、实践和毕业条件：北京交通大学｜010软件工程"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-013",
+      "title": "辽宁大学",
+      "original_sha256": "b2b66160ca70ab02714d27fc3f90c4b1e1d0a7185c7fcf856d8c1cba2122656b",
+      "projects": [
+        {
+          "key": "018-085405",
+          "title": "085405 软件工程",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：10. 辽宁大学 018 信息学部 `085405`",
+            "复试、费用、导师、实践和毕业条件：辽宁大学｜018软件工程"
+          ]
+        },
+        {
+          "key": "018-085410",
+          "title": "085410 人工智能",
+          "assigned_source_dossiers": [
+            "补回早期已查到的公开项目数据：辽宁大学：018—085410人工智能"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-014",
+      "title": "郑州大学",
+      "original_sha256": "89043e9eca0fc174e20d849692723f1edc241463a5212386cda73137e498a90d",
+      "projects": [
+        {
+          "key": "084-085410",
+          "title": "085410 人工智能",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：8. 郑州大学 084 计算机与人工智能学院、软件学院 `085410`",
+            "复试、费用、导师、实践和毕业条件：郑州大学｜084人工智能"
+          ]
+        },
+        {
+          "key": "084-085404",
+          "title": "085404 计算机技术",
+          "assigned_source_dossiers": [
+            "补回早期已查到的公开项目数据：郑州大学：084—085404计算机技术"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-019",
+      "title": "南昌大学",
+      "original_sha256": "801af6163c63ef5b5fdeb28a9f73148d4a2e633cfdf20e33262e8f56b25aa6e6",
+      "projects": [
+        {
+          "key": "006-085405",
+          "title": "085405 软件工程",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：15. 南昌大学 006 数学与计算机学院 `085405`"
+          ]
+        },
+        {
+          "key": "017-085405",
+          "title": "085405 软件工程（只含方向 01/02）",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：16. 南昌大学 017 软件学院 `085405`（只含方向 01/02）"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-030",
+      "title": "重庆大学",
+      "original_sha256": "3d01644f8eea30eb3d95538fdfa6aa4d62cc940014d02eddd94fcedbaad3411c",
+      "projects": [
+        {
+          "key": "014-085404",
+          "title": "085404 计算机技术",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：1. 重庆大学 014 计算机学院 `085404`"
+          ]
+        },
+        {
+          "key": "030-085400",
+          "title": "085400 电子信息",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：2. 重庆大学 030 国家（重庆）卓越工程师学院 `085400`"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-031",
+      "title": "厦门大学",
+      "original_sha256": "8acbd38391d974a42e426aa0e96e0b03818959e835b05ce665776ee6bc682515",
+      "projects": [
+        {
+          "key": "131-085404",
+          "title": "085404 计算机技术",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：3. 厦门大学 131 信息学院计算机科学与技术系 `085404`",
+            "复试、费用、导师、实践和毕业条件：厦门大学｜131计算机技术"
+          ]
+        },
+        {
+          "key": "software-085405",
+          "title": "085405 软件工程",
+          "assigned_source_dossiers": [
+            "复试、费用、导师、实践和毕业条件：厦门大学｜软件工程系085405",
+            "补回早期已查到的公开项目数据：厦门大学：软件工程系085405（不能并到131—085404）"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-032",
+      "title": "山东大学",
+      "original_sha256": "d9f4814a7ffd0045e82375bfd22d33c5197a75039ba9c01ab53c69f806dc9bc4",
+      "projects": [
+        {
+          "key": "047-085404",
+          "title": "085404 计算机技术",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：4. 山东大学 047 计算机科学与技术学院 `085404`",
+            "复试、费用、导师、实践和毕业条件：山东大学｜047计算机技术"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-033",
+      "title": "中国海洋大学",
+      "original_sha256": "48038a3de3bb830015831d2e674ed96aca27418b7bb361e6fa671af626a3f774",
+      "projects": [
+        {
+          "key": "002-085404-01",
+          "title": "085404 计算机技术 · 01方向（历史范围）（全日制）",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：6. 中国海洋大学 002 信息科学与工程学部 `085404-01`（全日制）",
+            "复试、费用、导师、实践和毕业条件：中国海洋大学｜002计算机技术01"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-034",
+      "title": "合肥工业大学",
+      "original_sha256": "b95ee748afc0e2207ec09ab3ee1c30de6677361f1a432e5abbca72719d5559f1",
+      "projects": [
+        {
+          "key": "005-085404",
+          "title": "085404 计算机技术",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：12. 合肥工业大学 005 计算机与信息学院 `085404`"
+          ]
+        },
+        {
+          "key": "005-085410",
+          "title": "085410 人工智能",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：13. 合肥工业大学 005 计算机与信息学院 `085410`"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    },
+    {
+      "school": "school-035",
+      "title": "苏州大学",
+      "original_sha256": "7ebf592fa186bd2c7a1610ad6a74d64d0fb1138df86113e749899dc09d6e0c12",
+      "projects": [
+        {
+          "key": "018-085405",
+          "title": "085405 软件工程",
+          "assigned_source_dossiers": [
+            "历年科目、录取人口与全部成绩分布：14. 苏州大学 018 计算机科学与技术学院 `085405`",
+            "复试、费用、导师、实践和毕业条件：苏州大学｜018软件工程"
+          ]
+        }
+      ],
+      "all_original_dossiers_retained_once": true
+    }
+  ],
+  "verification": {
+    "baseline_commit": "03debf7bd2bba206c413d471c743ca9e8638e545",
+    "school_count": 104,
+    "entity_schools": 15,
+    "entity_projects": 34,
+    "all_original_school_body_lines_retained": true,
+    "original_dossiers_retained_exactly": 239,
+    "all_original_tables_and_sources_retained": true,
+    "scope": "19 project entries added across 13 schools; other project and shared dossiers remain school-level, not a complete catalog audit",
+    "browser_checks": {
+      "source_sha256": "913d56206e7c40136af6c2166e64e1a73965c0c1bff7274d7648b67430098ffd",
+      "all_34_project_overviews_under_350_characters": true,
+      "all_34_project_overviews_without_long_tables": true,
+      "verified_project_flow": [
+        "Liaoning software/AI chooser",
+        "Hunan historical direction switch and annual subjects",
+        "BIT software notice and 885/408 comparison"
+      ],
+      "no_horizontal_overflow_at_widths": [
+        320,
+        390
+      ],
+      "no_horizontal_overflow_at_200_percent_text": true,
+      "user_foreground_tabs_untouched": true
+    }
+  }
+}
