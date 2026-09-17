@@ -55,6 +55,29 @@
           "project score outline reaches source",
           "visual record layout"
         ]
+      },
+      {
+        "school": "北京理工大学 207 085405",
+        "viewport_width": 1280,
+        "root_font_px": 32,
+        "layout_columns": "447px",
+        "horizontal_table_overflow": 0,
+        "checks": [
+          "200% text enlargement",
+          "school container switches nested admissions navigation to one column"
+        ]
+      },
+      {
+        "school": "华东师范大学",
+        "viewport_width": 320,
+        "tables": 10,
+        "horizontal_table_overflow": 0
+      },
+      {
+        "school": "湖南大学 原学院085400历史项目",
+        "viewport_width": 320,
+        "tables": 29,
+        "horizontal_table_overflow": 0
       }
     ],
     "browser_boundary": "own hidden in-app tab; user tabs untouched",

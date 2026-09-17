@@ -71,3 +71,8 @@ footer{max-width:1180px;margin:2rem auto;padding:0 1.5rem 2rem;font-size:.8rem;c
  .score-record-table tbody tr{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media print{.school-contents{display:none}.reader-panel[data-panel^="school-"],.table-scroll:has(>.readable-table){container-type:normal}}
+
+@container (max-width:48rem){
+ .admission-layout{grid-template-columns:minmax(0,1fr);gap:1rem}
+ .admission-navigation{position:static;max-height:20rem}
+}
