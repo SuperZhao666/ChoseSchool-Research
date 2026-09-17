@@ -583,5 +583,797 @@
         ]
       }
     }
-  ]
+  ],
+  "supervisor_followup_2026_09_17": {
+    "trace_id": "8d7d8fd7-26a9-4b74-8547-1907c763424f",
+    "checked_on": "2026-09-17",
+    "index_url": "https://xingong.muc.edu.cn/szdw/xyjs.htm",
+    "index_sha256": "488e9ac134ea6ed211e8abc8a6744f318b5613f6b5636710add77d00ffb3b0e6",
+    "scope": "017 Information Engineering / 085400 full-time Electronic Information; computing and AI interest",
+    "profile_entry_count": 79,
+    "profile_fetch_errors": 0,
+    "profiles_with_electronic_information_relationship": 20,
+    "relationship_is_not_annual_roster": true,
+    "all_profile_fetches": [
+      {
+        "name": "毕晓君",
+        "url": "https://xingong.muc.edu.cn/info/1051/1715.htm",
+        "sha256": "d423533403e9d61f66b6096434c4c9691add296f172052cf4921d21f64767f19",
+        "error": null
+      },
+      {
+        "name": "陈波",
+        "url": "https://xingong.muc.edu.cn/info/1051/2485.htm",
+        "sha256": "83bb5e12386fdddcbe567207edacd2110d44d695d981c49cd22a1f6a3be29982",
+        "error": null
+      },
+      {
+        "name": "陈玉博",
+        "url": "https://xingong.muc.edu.cn/info/1051/5905.htm",
+        "sha256": "0affe1ebecf2f11be2b1e2edcf043bebd236494c63105d516b401c03d4089d40",
+        "error": null
+      },
+      {
+        "name": "陈峥",
+        "url": "https://xingong.muc.edu.cn/info/1051/3815.htm",
+        "sha256": "f4dfa2684a241b4fea5c9eca8d9b23b0ba05d1c5336f59d856a373a26c4fbfa3",
+        "error": null
+      },
+      {
+        "name": "董玉双",
+        "url": "https://xingong.muc.edu.cn/info/1051/3825.htm",
+        "sha256": "1bd33c14c225d9309a01deb9c34f16b9c3e8fee8b7225ee46c608e51b36a349b",
+        "error": null
+      },
+      {
+        "name": "高宇童",
+        "url": "https://xingong.muc.edu.cn/info/1051/3945.htm",
+        "sha256": "46164036fd4fbc451ac18def447ed8e279ac31a60ca58fbdbecd28eeb420a919",
+        "error": null
+      },
+      {
+        "name": "黄思理",
+        "url": "https://xingong.muc.edu.cn/info/1051/5895.htm",
+        "sha256": "34240ae6c72e4b2273bfdf1e4b21745760bc65c5190f6e7852b30c9aa7abe02b",
+        "error": null
+      },
+      {
+        "name": "姜珊",
+        "url": "https://xingong.muc.edu.cn/info/1051/1136.htm",
+        "sha256": "28896a272f35bb9a01e699b65d667bbeda74ec254696e0aabe209f744117cfea",
+        "error": null
+      },
+      {
+        "name": "李景萌",
+        "url": "https://xingong.muc.edu.cn/info/1051/6095.htm",
+        "sha256": "6d9feeb24080aeb1b45101bab1ce30e021abc61cda99c2803b90cddad8a1aab8",
+        "error": null
+      },
+      {
+        "name": "李素敏",
+        "url": "https://xingong.muc.edu.cn/info/1051/1748.htm",
+        "sha256": "659e0277dde870b0fdadfb94a3016eeb7cf13ecb6c9e1770ba9988d706460f81",
+        "error": null
+      },
+      {
+        "name": "李霞丽",
+        "url": "https://xingong.muc.edu.cn/info/1051/3905.htm",
+        "sha256": "48fe5e75feed6171329928ababa905dffccf89d649903e9f333e5cc4729871b7",
+        "error": null
+      },
+      {
+        "name": "刘波",
+        "url": "https://xingong.muc.edu.cn/info/1051/2252.htm",
+        "sha256": "5ae395b2d7a2ffd7ee94e6e8c8c24b0ddc71f9d8deb6231305371d6654f25d1a",
+        "error": null
+      },
+      {
+        "name": "刘轩",
+        "url": "https://xingong.muc.edu.cn/info/1051/2415.htm",
+        "sha256": "4ef85174690863e6a60ce1c8ba8a2e9eef02dc4956968126e1a64a14b183fa73",
+        "error": null
+      },
+      {
+        "name": "潘秀琴",
+        "url": "https://xingong.muc.edu.cn/info/1051/1744.htm",
+        "sha256": "626780c81bc9d6ec636efbb192c8885d80a67944cb91fb9a9533582674608bfa",
+        "error": null
+      },
+      {
+        "name": "蒲秋梅",
+        "url": "https://xingong.muc.edu.cn/info/1051/3935.htm",
+        "sha256": "16601b351206d5c74ba0040ffe942e8b34941b1ccf698f3f405ee71472b420dc",
+        "error": null
+      },
+      {
+        "name": "乔伟征",
+        "url": "https://xingong.muc.edu.cn/info/1051/2435.htm",
+        "sha256": "b1c13ef1c8ed592a37723ddf0cced1dd1ab765ae669a9bd6232e9c4a2d61d0bc",
+        "error": null
+      },
+      {
+        "name": "孙京博",
+        "url": "https://xingong.muc.edu.cn/info/1051/5575.htm",
+        "sha256": "9a85815d50e1120d869a9aa7e73c1fdf9b78a3604c164ad7630de57477470b65",
+        "error": null
+      },
+      {
+        "name": "孙娜（副主任）",
+        "url": "https://xingong.muc.edu.cn/info/1051/1180.htm",
+        "sha256": "83178a46f96070ef7dcc03afac3375caf0b93c92868382a4335bffaefb3dd27f",
+        "error": null
+      },
+      {
+        "name": "孙媛",
+        "url": "https://xingong.muc.edu.cn/info/1051/1746.htm",
+        "sha256": "e2d1ab384d79adf994c91e6421001765c6de3a52ae045b19b3701dfa9318fd43",
+        "error": null
+      },
+      {
+        "name": "唐伟",
+        "url": "https://xingong.muc.edu.cn/info/1051/5945.htm",
+        "sha256": "7e9b330c7befa3a5bcb54ef0581e47fa7af6898d6570036b7b4a7e4badbd9c44",
+        "error": null
+      },
+      {
+        "name": "唐湘云",
+        "url": "https://xingong.muc.edu.cn/info/1051/2425.htm",
+        "sha256": "91393fb924f7ace0df1b619c26237f9dbbab130a8e1dd91e8e96debac39ccad9",
+        "error": null
+      },
+      {
+        "name": "翁彧",
+        "url": "https://xingong.muc.edu.cn/info/1051/1150.htm",
+        "sha256": "f37d556afe9f2948136792e32286a70000fb4ac86446bc690eb8846fe857a084",
+        "error": null
+      },
+      {
+        "name": "吴倩",
+        "url": "https://xingong.muc.edu.cn/info/1051/1138.htm",
+        "sha256": "368280d4ca22272eaf4474b290db3ad3e08ff4e06f91121618ba4f81d9f67d24",
+        "error": null
+      },
+      {
+        "name": "吴立成",
+        "url": "https://xingong.muc.edu.cn/info/1051/1743.htm",
+        "sha256": "56804e07f6cda97a6472993c09b97e0e1345eca667019ebf31c0d5f3142b2a08",
+        "error": null
+      },
+      {
+        "name": "徐东",
+        "url": "https://xingong.muc.edu.cn/info/1051/4005.htm",
+        "sha256": "75fa52d0bdd2a0d455db1787453ae907e0e7f0a3b4eb1fdaf92c359e0d1e8e43",
+        "error": null
+      },
+      {
+        "name": "徐晓娜",
+        "url": "https://xingong.muc.edu.cn/info/1051/1751.htm",
+        "sha256": "17b41869f49312c5ccf219f6f7347975fe9679823b00af88a9de0d37927e483c",
+        "error": null
+      },
+      {
+        "name": "胥桂仙",
+        "url": "https://xingong.muc.edu.cn/info/1051/1148.htm",
+        "sha256": "3ccc0964fc575d7dc7c8155cd8a9dcbf32ea87a35a1f99aeb4f3c148b1e887e3",
+        "error": null
+      },
+      {
+        "name": "于绍娜",
+        "url": "https://xingong.muc.edu.cn/info/1051/1133.htm",
+        "sha256": "e8cdcb5e3ed0170622b620b70b23b5532d800c5547ba7fd20a9d800641a3020c",
+        "error": null
+      },
+      {
+        "name": "于静",
+        "url": "https://xingong.muc.edu.cn/info/1051/4735.htm",
+        "sha256": "be2ec2b7a6832cf2a7003d5ba79cbfd4fc7594355bbb3254e8d60879ee94f996",
+        "error": null
+      },
+      {
+        "name": "张洪",
+        "url": "https://xingong.muc.edu.cn/info/1051/1747.htm",
+        "sha256": "f19b9b1832527d205756d2495b67bd20a4300fb0c5a70c0ab61ccb6e58b36336",
+        "error": null
+      },
+      {
+        "name": "张育霖",
+        "url": "https://xingong.muc.edu.cn/info/1051/2635.htm",
+        "sha256": "7f60c1c11cbb3b8a6cf6034805be984e23128829608bb7c6cb848eceb7c515a1",
+        "error": null
+      },
+      {
+        "name": "赵悦（主任）",
+        "url": "https://xingong.muc.edu.cn/info/1051/1745.htm",
+        "sha256": "2219f26311da73e1ae80f05debcde2ecbeffc8b6fe1b23c58b43147f94c290ea",
+        "error": null
+      },
+      {
+        "name": "赵小兵",
+        "url": "https://xingong.muc.edu.cn/info/1051/1132.htm",
+        "sha256": "02273b2595ef07ac5b994a9865892ffcd3cdf83973ab5dcf37bdc2fff5a05d0d",
+        "error": null
+      },
+      {
+        "name": "郑玉彤",
+        "url": "https://xingong.muc.edu.cn/info/1051/1149.htm",
+        "sha256": "9278bbc6d465aaddd67b51ac2b98e66854d20ea5d95b4aafdbab99aedafc82d4",
+        "error": null
+      },
+      {
+        "name": "周璇",
+        "url": "https://xingong.muc.edu.cn/info/1051/5565.htm",
+        "sha256": "159f841550aa8323fd4627fc176ecfafd5e41e655424faaee87fbd94b6fd1cda",
+        "error": null
+      },
+      {
+        "name": "岑翼",
+        "url": "https://xingong.muc.edu.cn/info/1053/1767.htm",
+        "sha256": "eea41b93273d2819b2c247dc0203f6317de0f14a4a10c499b2c8438515433708",
+        "error": null
+      },
+      {
+        "name": "陈志红",
+        "url": "https://xingong.muc.edu.cn/info/1053/1768.htm",
+        "sha256": "b1476aae85eb44892d3510ad527085beab845f27ee9baa1aef8f5e6dd4acb06f",
+        "error": null
+      },
+      {
+        "name": "程卫军",
+        "url": "https://xingong.muc.edu.cn/info/1053/3915.htm",
+        "sha256": "d4f46e0373a5e8a6e00e3c4876328d54b536c4952eabcc51226ac22ec0eb4e0a",
+        "error": null
+      },
+      {
+        "name": "范彧",
+        "url": "https://xingong.muc.edu.cn/info/1053/1163.htm",
+        "sha256": "00491e64d309efbd36ec0e5fdad42c65b465438af1b5c664228ecc6f698fb5b7",
+        "error": null
+      },
+      {
+        "name": "耿照新（主任）",
+        "url": "https://xingong.muc.edu.cn/info/1053/3835.htm",
+        "sha256": "eb11339f9558ced3bf209894a3b5a1f36819f50545e08b4e274e4c38bb525ab3",
+        "error": null
+      },
+      {
+        "name": "胡丙萌",
+        "url": "https://xingong.muc.edu.cn/info/1053/2565.htm",
+        "sha256": "5e9813275bc4b9bfbf5e875718a0029ec43e9d95db9e2ef186fa5d9350e34aa8",
+        "error": null
+      },
+      {
+        "name": "蒋惠萍",
+        "url": "https://xingong.muc.edu.cn/info/1053/1158.htm",
+        "sha256": "b8cb95050f95c12b70dd761f0eb56a8dea883dfc846efe631ebaa25017b25c90",
+        "error": null
+      },
+      {
+        "name": "李景聪",
+        "url": "https://xingong.muc.edu.cn/info/1053/1759.htm",
+        "sha256": "cb0a0adc32f8b77a66b875d4d2853716eaa36432ac4cd7b8c3ff9b86cd0dca3b",
+        "error": null
+      },
+      {
+        "name": "梁骁",
+        "url": "https://xingong.muc.edu.cn/info/1053/1763.htm",
+        "sha256": "6f3e81d59272d27860a6019151f98319c3cfe55b6499a801600fe09f2145a9c9",
+        "error": null
+      },
+      {
+        "name": "刘博文",
+        "url": "https://xingong.muc.edu.cn/info/1053/5935.htm",
+        "sha256": "1a20d0a55742d1b47c765546b13f169b2724c323a99d9f16c193255f9eac18af",
+        "error": null
+      },
+      {
+        "name": "任晨珊",
+        "url": "https://xingong.muc.edu.cn/info/1053/1733.htm",
+        "sha256": "82346499d4f5cb0106d9d9f20335db05de6e3ac025fdbea1b6f151453dadc74f",
+        "error": null
+      },
+      {
+        "name": "宋伟",
+        "url": "https://xingong.muc.edu.cn/info/1053/3925.htm",
+        "sha256": "b2d35965daaa6b7d12318bbace1973ddfb53e45a39097c7d3af0a98955d289e4",
+        "error": null
+      },
+      {
+        "name": "王继业",
+        "url": "https://xingong.muc.edu.cn/info/1053/1166.htm",
+        "sha256": "232d74f696a6f1c30ae787b699a9f4f1d40a89fdc83dc3f09e9519af203bc7b7",
+        "error": null
+      },
+      {
+        "name": "王利众",
+        "url": "https://xingong.muc.edu.cn/info/1053/1764.htm",
+        "sha256": "1705343f710306339844032085d2c41e13e994a79b3cd4fc0d58fec2d5cc3b72",
+        "error": null
+      },
+      {
+        "name": "王燕敏",
+        "url": "https://xingong.muc.edu.cn/info/1053/2392.htm",
+        "sha256": "7f800fdcdac283721c52672c4dfee92f8b86a6535b20e06475a723a97d709a5a",
+        "error": null
+      },
+      {
+        "name": "许清梅",
+        "url": "https://xingong.muc.edu.cn/info/1053/5995.htm",
+        "sha256": "892673b25e28c035fdb6649c1e416e78c76ffabb895970776769387b5001b121",
+        "error": null
+      },
+      {
+        "name": "闫晓东（副主任）",
+        "url": "https://xingong.muc.edu.cn/info/1053/1762.htm",
+        "sha256": "ecdcc7f8a2c9980ac982307c476a13f3fcaa5939d6b0da2d0acd75a820c87b1c",
+        "error": null
+      },
+      {
+        "name": "张宇识",
+        "url": "https://xingong.muc.edu.cn/info/1053/1731.htm",
+        "sha256": "41aca19348c2babf46feb60d0862b1a8e9f868189bccabed5550d91436c39559",
+        "error": null
+      },
+      {
+        "name": "赵莉芝",
+        "url": "https://xingong.muc.edu.cn/info/1053/4835.htm",
+        "sha256": "34ca4f4e4ddd07875f50488260fe27fc0e5424c3383302640dd4c778c9c87397",
+        "error": null
+      },
+      {
+        "name": "邹慧兰",
+        "url": "https://xingong.muc.edu.cn/info/1053/1765.htm",
+        "sha256": "a9663a501d591e6aaa0c4ff303c6e9dccd5c0fa4657004efbc4f70ba34a2f871",
+        "error": null
+      },
+      {
+        "name": "朱丽平",
+        "url": "https://xingong.muc.edu.cn/info/1053/1760.htm",
+        "sha256": "24447ef7d201c8e653b7b02673e014e9312d1b1ace8f15a3d7d058ff4b283c00",
+        "error": null
+      },
+      {
+        "name": "超木日力格",
+        "url": "https://xingong.muc.edu.cn/info/1055/2219.htm",
+        "sha256": "3fb98ab204d9b8e83bdfe13f11a58bd27e2bd34d58119bfdde1ce532a512fe81",
+        "error": null
+      },
+      {
+        "name": "陈梅",
+        "url": "https://xingong.muc.edu.cn/info/1055/3955.htm",
+        "sha256": "98b8d3b806884fae6139c9db69e528ed8d8ff60c7bc2efcf6a117abdf39aa2e5",
+        "error": null
+      },
+      {
+        "name": "韩旭（主任）",
+        "url": "https://xingong.muc.edu.cn/info/1055/1178.htm",
+        "sha256": "c509afa450fbd6d48bcf36e8752b4b5b86404c5efe0e4a4058cd5dc0794861c1",
+        "error": null
+      },
+      {
+        "name": "李潜",
+        "url": "https://xingong.muc.edu.cn/info/1055/4565.htm",
+        "sha256": "5b503743cffcd16826bb20d198218b4e909588b387e4683b528ef64a9c20e723",
+        "error": null
+      },
+      {
+        "name": "林旺",
+        "url": "https://xingong.muc.edu.cn/info/1055/1182.htm",
+        "sha256": "ab925f8cbbcbcc3442bb7a438aee03c100f46062affbbbcd8ada00ae220709e1",
+        "error": null
+      },
+      {
+        "name": "刘征",
+        "url": "https://xingong.muc.edu.cn/info/1055/1183.htm",
+        "sha256": "dd1606888953bcf08936bbcf7b586718e4995a4df42b0a6d95ba395b291b9e7e",
+        "error": null
+      },
+      {
+        "name": "索兴梅",
+        "url": "https://xingong.muc.edu.cn/info/1055/4725.htm",
+        "sha256": "2480e6900347f62352faa3bbca4ecebf3ef67520850d3b544ad891c0a03aa05f",
+        "error": null
+      },
+      {
+        "name": "王淑琴",
+        "url": "https://xingong.muc.edu.cn/info/1055/1179.htm",
+        "sha256": "9cee34b75e92ea5824a9294ea64e1a10b5e3c88d22945ef49ab89307343eb0f9",
+        "error": null
+      },
+      {
+        "name": "赵洪帅",
+        "url": "https://xingong.muc.edu.cn/info/1055/1185.htm",
+        "sha256": "606c10f347970fa76db4d5eccc14d2c42e8c27e15411299eec832c9fbbed3213",
+        "error": null
+      },
+      {
+        "name": "丁仁伟",
+        "url": "https://xingong.muc.edu.cn/info/1056/1197.htm",
+        "sha256": "fc4d5575b0a20b5bddc9738a0a124018edb7acc6857df862aaf2e9b495c28627",
+        "error": null
+      },
+      {
+        "name": "雷岳俊",
+        "url": "https://xingong.muc.edu.cn/info/1056/1190.htm",
+        "sha256": "80464523d2b48d5fd662ada680e72fd2c5c16dc8ac046b9756cbf23385c4350a",
+        "error": null
+      },
+      {
+        "name": "李瑞翔",
+        "url": "https://xingong.muc.edu.cn/info/1056/1188.htm",
+        "sha256": "cd0c21008b9b78335f33a2648f01ebc1460a21e4e0c9363dadbb199fe3fde1f1",
+        "error": null
+      },
+      {
+        "name": "刘向春",
+        "url": "https://xingong.muc.edu.cn/info/1056/1192.htm",
+        "sha256": "e3e093ec6ac36e717e6378689b6b3ad4785d31549ba94925655663a0b81f34dc",
+        "error": null
+      },
+      {
+        "name": "卢勇",
+        "url": "https://xingong.muc.edu.cn/info/1056/1194.htm",
+        "sha256": "e857544125645bf6dc9210c85d9526381d1b9e6adf83a427dd7845f5fb6ad009",
+        "error": null
+      },
+      {
+        "name": "罗文（副主任）",
+        "url": "https://xingong.muc.edu.cn/info/1056/1196.htm",
+        "sha256": "7ddf19e2849bdc94761485ac7be6caa0a139e1b16b5ee858667c57a7e4b730ed",
+        "error": null
+      },
+      {
+        "name": "苏骄阳",
+        "url": "https://xingong.muc.edu.cn/info/1056/1193.htm",
+        "sha256": "f28793fbeaf11fd1f7ac6d6dda291d9fe1ad2593363f6ab2ace70748012802dc",
+        "error": null
+      },
+      {
+        "name": "韦洁瑶",
+        "url": "https://xingong.muc.edu.cn/info/1056/1187.htm",
+        "sha256": "821bbfc7386e8cae6acf7e6da1788df27bd50946dad43a4da6f01faef49716f1",
+        "error": null
+      },
+      {
+        "name": "张廷",
+        "url": "https://xingong.muc.edu.cn/info/1056/1189.htm",
+        "sha256": "e121643aabd1ebd4f7cc423a9eddc4f1fac69a963bbc54002a6f001b47e66f83",
+        "error": null
+      },
+      {
+        "name": "郑睿（主任）",
+        "url": "https://xingong.muc.edu.cn/info/1056/1195.htm",
+        "sha256": "bca9b298910ac200d7b4383f8d75cb237937ec4cdb4bd374c51c56a48eef87a4",
+        "error": null
+      },
+      {
+        "name": "郭君红",
+        "url": "https://xingong.muc.edu.cn/info/1140/2605.htm",
+        "sha256": "34a9f3810e15b6cbe2a2c7cd735f2647058cca9bb6f306ac087282cbfbd50a8f",
+        "error": null
+      },
+      {
+        "name": "胡淑均",
+        "url": "https://xingong.muc.edu.cn/info/1140/2226.htm",
+        "sha256": "481220b641f5e25fb24d5ad4af6179dcfa85b9370c068e46f68bdaabf977ded4",
+        "error": null
+      },
+      {
+        "name": "罗贤丽",
+        "url": "https://xingong.muc.edu.cn/info/1140/4245.htm",
+        "sha256": "d1ba9966475bd71d24f562766a0e080db616e48f67f73d65b585435b03cc9b12",
+        "error": null
+      },
+      {
+        "name": "于晓雅",
+        "url": "https://xingong.muc.edu.cn/info/1140/4015.htm",
+        "sha256": "a03cedc3eed6d41a0e2087016b580a75508db9b0fc81b5a31135a69c8b5463e8",
+        "error": null
+      }
+    ],
+    "selected_evidence": [
+      {
+        "name": "毕晓君",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/1715.htm",
+        "sha256": "d423533403e9d61f66b6096434c4c9691add296f172052cf4921d21f64767f19",
+        "original_admission_text": [
+          "招生意向：学硕：计算机科学与技术；专硕：电子信息（计算机方向、人工智能方向）；博士：语言学及应用语言学、国家安全技术。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "陈峥",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/3815.htm",
+        "sha256": "f4dfa2684a241b4fea5c9eca8d9b23b0ba05d1c5336f59d856a373a26c4fbfa3",
+        "original_admission_text": [
+          "招生意向：学硕：计算机科学与技术、专硕：电子信息（计算机方向、人工智能方向）"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "姜珊",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/1136.htm",
+        "sha256": "28896a272f35bb9a01e699b65d667bbeda74ec254696e0aabe209f744117cfea",
+        "original_admission_text": [
+          "招生意向：电子信息计算机方向"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "蒲秋梅",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/3935.htm",
+        "sha256": "16601b351206d5c74ba0040ffe942e8b34941b1ccf698f3f405ee71472b420dc",
+        "original_admission_text": [
+          "招生意向：电子信息（计算机方向）专硕。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "乔伟征",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/2435.htm",
+        "sha256": "b1c13ef1c8ed592a37723ddf0cced1dd1ab765ae669a9bd6232e9c4a2d61d0bc",
+        "original_admission_text": [
+          "招生意向：电子信息（计算机方向）专硕"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "翁彧",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/1150.htm",
+        "sha256": "f37d556afe9f2948136792e32286a70000fb4ac86446bc690eb8846fe857a084",
+        "original_admission_text": [
+          "招生意向：每年招收“计算机科学与技术”学硕、“软件工程”学硕、“语言信息安全”学硕、“电子信息”专硕（计算机技术方向）；语言学及应用语言学（计算语言学方向）博士，希望对人工智能与深度学习领域感兴趣，同时具有较强内驱力、有一定学术基础的同学加入我们组，共同为民族事业发展作出贡献。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "吴立成",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/1743.htm",
+        "sha256": "56804e07f6cda97a6472993c09b97e0e1345eca667019ebf31c0d5f3142b2a08",
+        "original_admission_text": [
+          "招生意向：(1)学硕-计算机科学与技术；(2)专硕-电子信息（计算机技术方向）；(3)博士-语言学及应用语言学（计算语言学方向、在少数民族语言学院的中国语言文学博士点招生）。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "陈梅",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1055/3955.htm",
+        "sha256": "98b8d3b806884fae6139c9db69e528ed8d8ff60c7bc2efcf6a117abdf39aa2e5",
+        "original_admission_text": [
+          "招生意向：计算机或软件工程学硕、电子信息(计算机或人工智能)专硕。欢迎计算机、电子、生物、化学、环境、材料、医学类等各相关专业学生，希望同学对大语言模型有浓厚兴趣。研究生阶段小论文达到要求后可以自行联系实习。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "刘征",
+        "evidence_group": "direction_named",
+        "url": "https://xingong.muc.edu.cn/info/1055/1183.htm",
+        "sha256": "dd1606888953bcf08936bbcf7b586718e4995a4df42b0a6d95ba395b291b9e7e",
+        "original_admission_text": [
+          "招生意向：每年招收“计算机科学与技术”、学硕“电子信息”专硕（计算机技术方向或人工智能方向），希望热爱人工智能与深度学习领域的同学加入我们组，组内气氛欢乐，无论你是对科研充满热情，还是希望用科技改变生活，这里都是你实现梦想的起点！"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "周璇",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/5565.htm",
+        "sha256": "159f841550aa8323fd4627fc176ecfafd5e41e655424faaee87fbd94b6fd1cda",
+        "original_admission_text": [
+          "招生意向：可招收计算机应用技术学科学硕、电子信息学科专硕，欢迎对相关研究方向感兴趣，具有计算机网络、优化理论、机器学习等基础，编程能力强的同学加入。",
+          "招生意向：计算机应用技术（学硕）、电子信息（专硕）"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "任晨珊",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1053/1733.htm",
+        "sha256": "82346499d4f5cb0106d9d9f20335db05de6e3ac025fdbea1b6f151453dadc74f",
+        "original_admission_text": [
+          "招生意向：电子信息专硕"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "胥桂仙",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/1148.htm",
+        "sha256": "3ccc0964fc575d7dc7c8155cd8a9dcbf32ea87a35a1f99aeb4f3c148b1e887e3",
+        "original_admission_text": [
+          "招生意向：计算机科学与技术学硕、软件工程学硕、电子信息专硕。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "李素敏",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1051/1748.htm",
+        "sha256": "659e0277dde870b0fdadfb94a3016eeb7cf13ecb6c9e1770ba9988d706460f81",
+        "original_admission_text": [
+          "个人简历：分别于2000年和2003年在郑州大学获得学士和硕士学位。2006年7月在加拿大里贾纳大学访学，2007年至2008年在美国佐治亚理工学院电气与计算机工程学院进行公派访问学习，现为软件工程学术硕士导师，电子信息专业硕士导师。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "韩旭（主任）",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1055/1178.htm",
+        "sha256": "c509afa450fbd6d48bcf36e8752b4b5b86404c5efe0e4a4058cd5dc0794861c1",
+        "original_admission_text": [
+          "研究生招生：电子信息专业硕士"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "程卫军",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1053/3915.htm",
+        "sha256": "d4f46e0373a5e8a6e00e3c4876328d54b536c4952eabcc51226ac22ec0eb4e0a",
+        "original_admission_text": [
+          "招生意向：欢迎对无线通信、智能物联理论与应用研究，或嵌入式系统研究与软硬件开发等领域感兴趣的学生加入，其中具有电子信息与通信学习背景的同学优先。",
+          "硕士招生专业：电子信息（专硕）、计算机科学与技术（学硕）、软件工程（学硕）；博士招生专业：国家安全技术（学博）。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "王燕敏",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1053/2392.htm",
+        "sha256": "7f800fdcdac283721c52672c4dfee92f8b86a6535b20e06475a723a97d709a5a",
+        "original_admission_text": [
+          "招生意向：电子信息专硕，计算机科学与技术学硕。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "许清梅",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1053/5995.htm",
+        "sha256": "892673b25e28c035fdb6649c1e416e78c76ffabb895970776769387b5001b121",
+        "original_admission_text": [
+          "招生意向：招收电子信息专业硕士研究生。欢迎电子信息、微电子、集成电路、自动化、计算机、物理、材料、生物医学工程等相关专业学生报考。欢迎对微纳加工、MEMS器件、微流控芯片、生物传感、AI赋能电子信息感兴趣的同学加入。课题组将为学生提供微纳器件设计、洁净间微纳加工、微流控系统搭建、生物样本实验验证、论文写作与专利申请等方面的训练与指导。",
+          "招生要求：对科研有热情，做事认真踏实，具有良好的动手能力和学习能力；具备电子信息、微纳制造、编程、仿真、生物实验或图像/信号处理基础者优先。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "苏骄阳",
+        "evidence_group": "electronic_information_professional_degree_named",
+        "url": "https://xingong.muc.edu.cn/info/1056/1193.htm",
+        "sha256": "f28793fbeaf11fd1f7ac6d6dda291d9fe1ad2593363f6ab2ace70748012802dc",
+        "original_admission_text": [
+          "招生意向：电子信息专硕，研究侧重传统算法、AI算法设计与工程实现（FPGA\\DSP\\ARM）相结合。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "梁骁",
+        "evidence_group": "electronic_information_graduate_study_named_only",
+        "url": "https://xingong.muc.edu.cn/info/1053/1763.htm",
+        "sha256": "6f3e81d59272d27860a6019151f98319c3cfe55b6499a801600fe09f2145a9c9",
+        "original_admission_text": [
+          "招生意向：有意愿从事相关学科研究的同学。",
+          "硕士研究生：计算机科学与技术、软件工程、电子信息"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "王利众",
+        "evidence_group": "electronic_information_graduate_study_named_only",
+        "url": "https://xingong.muc.edu.cn/info/1053/1764.htm",
+        "sha256": "1705343f710306339844032085d2c41e13e994a79b3cd4fc0d58fec2d5cc3b72",
+        "original_admission_text": [
+          "招生意向：电子信息专业方向研究生"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "陈玉博",
+        "evidence_group": "relevant_research_program_binding_pending",
+        "url": "https://xingong.muc.edu.cn/info/1051/5905.htm",
+        "sha256": "0affe1ebecf2f11be2b1e2edcf043bebd236494c63105d516b401c03d4089d40",
+        "original_admission_text": [
+          "招生意向：希望对自然语言处理、知识工程和大模型方向感兴趣的同学加入我的课题组，同时希望你踏实认真，具有良好的自驱力和英文文献读写能力。优先代码基础好、对自己的未来有明确规划、有过竞赛获奖的同学。另：课题组常年招收实习生（本科、硕士、博士）。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "李霞丽",
+        "evidence_group": "relevant_research_program_binding_pending",
+        "url": "https://xingong.muc.edu.cn/info/1051/3905.htm",
+        "sha256": "48fe5e75feed6171329928ababa905dffccf89d649903e9f333e5cc4729871b7",
+        "original_admission_text": [
+          "招生意愿：认真负责、乐观积极的学生，学术硕士或者专业硕士。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "黄思理",
+        "evidence_group": "relevant_research_program_binding_pending",
+        "url": "https://xingong.muc.edu.cn/info/1051/5895.htm",
+        "sha256": "34240ae6c72e4b2273bfdf1e4b21745760bc65c5190f6e7852b30c9aa7abe02b",
+        "original_admission_text": [
+          "招生意向：诚招热爱钻研、自驱力强的学生，优先考虑具备扎实编程基础（如Python）、良好英文阅读与写作能力（能熟练查阅外文文献、参与学术写作）的申请者，欢迎对上述研究方向感兴趣的同学报考。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "李景萌",
+        "evidence_group": "relevant_research_program_binding_pending",
+        "url": "https://xingong.muc.edu.cn/info/1051/6095.htm",
+        "sha256": "6d9feeb24080aeb1b45101bab1ce30e021abc61cda99c2803b90cddad8a1aab8",
+        "original_admission_text": [
+          "招生意向：欢迎对计算机视觉，多模态大模型，AI4Science感兴趣的同学报考。本课题组将提供充分的算力资源、学术指导、发展支持。",
+          "招生要求：1）对学术有热情、有自驱力、做事严谨认真；2）扎实的编程能力（掌握Python或C++，熟悉Pytorch）；3）数学基础好、有多学科交叉背景是加分项。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "宋伟",
+        "evidence_group": "relevant_research_program_binding_pending",
+        "url": "https://xingong.muc.edu.cn/info/1053/3925.htm",
+        "sha256": "b2d35965daaa6b7d12318bbace1973ddfb53e45a39097c7d3af0a98955d289e4",
+        "original_admission_text": [
+          "招生意向：欢迎专业为电子信息工程、计算机科学与技术、软件工程、人工智能等相关、且动手能力强，具有责任心的学生报考。"
+        ],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      },
+      {
+        "name": "刘轩",
+        "evidence_group": "relevant_research_program_binding_pending",
+        "url": "https://xingong.muc.edu.cn/info/1051/2415.htm",
+        "sha256": "4ef85174690863e6a60ce1c8ba8a2e9eef02dc4956968126e1a64a14b183fa73",
+        "original_admission_text": [],
+        "target_year_qualification": "not_yet_checked",
+        "target_year_ordinary_quota": null
+      }
+    ],
+    "unresolved": [
+      "2027 annual program-specific supervisor eligibility",
+      "2027 ordinary places remaining after recommendation-exempt recruitment",
+      "formal computing/AI subdirection assignments",
+      "selection timing and fallback assignment",
+      "supervisor-specific graduation and internship requirements"
+    ],
+    "reading_location": "README.md / school-079 / information-085400 / training",
+    "evidence_limits": [
+      "Home-page recruitment statements often have no intake year.",
+      "Research grouping in the reader is editorial, not an official admissions-direction mapping.",
+      "Chen Yubo and Li Xiali have relevant recruitment preferences but no explicit target-program binding in inspected pages.",
+      "Do not transfer other-college or university-wide teacher selection rules."
+    ]
+  }
 }
