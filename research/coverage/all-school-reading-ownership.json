@@ -1,0 +1,945 @@
+{
+  "trace_id": "8d98f22a-7a30-4d09-b60c-59c407ea8b93",
+  "source": "README.md",
+  "source_preservation": "insertion-only; every original character retained in order",
+  "before_sha256": "913d56206e7c40136af6c2166e64e1a73965c0c1bff7274d7648b67430098ffd",
+  "after_sha256": "b684e778f8f0d33db08b90beead63c6e0184019c8a50efe0bd30182732b35978",
+  "schools": [
+    {
+      "school": "school-001",
+      "title": "西南大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "c06358daaae15cff74b318eb747e6bcd17a84da21847f1295e5fb55021259b0d",
+      "old_tables": 15
+    },
+    {
+      "school": "school-002",
+      "title": "华东师范大学",
+      "old_projects": 1,
+      "added_projects": 6,
+      "reading_state": "project_tree",
+      "old_source_sha256": "a77621fdfa371336456556e287971babcba32a642d4be4c2fbcae645438a7384",
+      "old_tables": 10
+    },
+    {
+      "school": "school-003",
+      "title": "贵州大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "5fca9dd65e866f8918ae8cd9c46c894eb2defd35a8790a8288fd1031595cecd7",
+      "old_tables": 1
+    },
+    {
+      "school": "school-004",
+      "title": "暨南大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "cb2f0202063f9cb352083be150a3ba1fc96aa64029c0f6839bfe1c5a6f61fdb4",
+      "old_tables": 8
+    },
+    {
+      "school": "school-005",
+      "title": "新疆大学",
+      "old_projects": 1,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "40652c14ed983fe9084b50ca6540abb9f81be21dcda9e8778a1e5449522f7012",
+      "old_tables": 11
+    },
+    {
+      "school": "school-006",
+      "title": "西北农林科技大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "2510e6c77069ca051bcedbfa80769e3954b0a2babce855b30361b904245c3df8",
+      "old_tables": 15
+    },
+    {
+      "school": "school-007",
+      "title": "西南交通大学",
+      "old_projects": 1,
+      "added_projects": 6,
+      "reading_state": "project_tree",
+      "old_source_sha256": "69d77c681575cfaa1d006888972cd5088c528753845e8c7b3460bd09a8a3bfbb",
+      "old_tables": 16
+    },
+    {
+      "school": "school-008",
+      "title": "东北农业大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "1a5cf693662098f237193e51f2105415a6ac9a0035c05a5ad7cf8c60a09ecd04",
+      "old_tables": 9
+    },
+    {
+      "school": "school-009",
+      "title": "华中师范大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "2652e399c0e67ca7fd95f1a42e156bdbd7e206734da2d4f8526e6e03924263f0",
+      "old_tables": 0
+    },
+    {
+      "school": "school-010",
+      "title": "上海大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "02a6460677eae9465e1d9b0da53d41467ae495de4d1a49ffe5db1d6211cbacfd",
+      "old_tables": 8
+    },
+    {
+      "school": "school-011",
+      "title": "中国科学技术大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "684829784429044a3bfbd5d898c20251481cd6a262c7823490c0b0242e9638e1",
+      "old_tables": 4
+    },
+    {
+      "school": "school-012",
+      "title": "北京交通大学",
+      "old_projects": 1,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "ca17c6bb03cb0dc2d9d2679cc51702e1271c101a37ee5ffc512c1dc238f5f70a",
+      "old_tables": 21
+    },
+    {
+      "school": "school-013",
+      "title": "辽宁大学",
+      "old_projects": 2,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "e760eed33f307e1ef9e73cca58a4af0b8d81df8f8d5ae070db4aad9011301c7a",
+      "old_tables": 14
+    },
+    {
+      "school": "school-014",
+      "title": "郑州大学",
+      "old_projects": 2,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "1b7c68f9cd6a6c60330a24c647b87fe55298bbaf257f511b246eb6b35f4c30e5",
+      "old_tables": 15
+    },
+    {
+      "school": "school-015",
+      "title": "内蒙古大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "005b396be627341936fdfe7b5fe2958ab1eb6ae6d9642def0ac3df29b8824d33",
+      "old_tables": 8
+    },
+    {
+      "school": "school-016",
+      "title": "云南大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "dbb67883e4e2e21abe708bbfbd1a72c4d0c3b8173141827cd63a5375a9d05f3a",
+      "old_tables": 3
+    },
+    {
+      "school": "school-017",
+      "title": "东北林业大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "9280f6e40c02c6a32be6f52e8b27ba195827ccd84ac5793c52b911d7a45cfbf5",
+      "old_tables": 9
+    },
+    {
+      "school": "school-018",
+      "title": "中国石油大学",
+      "old_projects": 0,
+      "added_projects": 7,
+      "reading_state": "project_tree",
+      "old_source_sha256": "8667e9d1aae1d94aeb0c8bae11df1e84ee63d812737cd705353ebe8762a4c13f",
+      "old_tables": 13
+    },
+    {
+      "school": "school-019",
+      "title": "南昌大学",
+      "old_projects": 2,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "f24af3525fe050c5e25b6b0736a86e94b7353f14f77a5614a4112a8e789e223a",
+      "old_tables": 7
+    },
+    {
+      "school": "school-020",
+      "title": "四川农业大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "ff73a9c9582ac8fee0838b198e5ffeed6220ebb070885f0f2993781862939eb6",
+      "old_tables": 5
+    },
+    {
+      "school": "school-021",
+      "title": "华中农业大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "59cafa9598085e868e98fae760219fe3cb2d252a681090c0847bfa52a337ac15",
+      "old_tables": 7
+    },
+    {
+      "school": "school-022",
+      "title": "长安大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "ed97e9cede1c6a82de83abea28fd9c9f065cf94b55d5ea973e2d448012d0d084",
+      "old_tables": 11
+    },
+    {
+      "school": "school-023",
+      "title": "武汉理工大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "411d98fc3fb5e69d6fa0171a4534a2792da9533448808742aaafde16242efc3c",
+      "old_tables": 6
+    },
+    {
+      "school": "school-024",
+      "title": "华南师范大学",
+      "old_projects": 0,
+      "added_projects": 10,
+      "reading_state": "project_tree",
+      "old_source_sha256": "e18e65ae8bbdbaeb098a431ebb44fd462bcbb4edd0cb7adf676d0225730afe18",
+      "old_tables": 22
+    },
+    {
+      "school": "school-025",
+      "title": "江南大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "4e9d1f994646ce85edbfd0d7beffe63b37ed0c074ca8dd509008e6f78b9c1bfa",
+      "old_tables": 9
+    },
+    {
+      "school": "school-026",
+      "title": "北京航空航天大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "2391fd930b04635e4c63ee4109d0e221abfbbc4133f32cf7523752291ee6e126",
+      "old_tables": 2
+    },
+    {
+      "school": "school-027",
+      "title": "东北师范大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "4c3940d214eda5240525d6a2ed38144f7eb0d4703b96a10b67442b93ae01660e",
+      "old_tables": 6
+    },
+    {
+      "school": "school-028",
+      "title": "中南财经政法大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "d52cb74fcfa802c9f492378a975a41901af8d2b6b2899a7b835e744fb9ee8fd4",
+      "old_tables": 6
+    },
+    {
+      "school": "school-029",
+      "title": "湖南大学",
+      "old_projects": 2,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "108dc4c631435ac514b95e94e91fa1b890e18c7cd12633fa6b638cf6f1fe8a2d",
+      "old_tables": 18
+    },
+    {
+      "school": "school-030",
+      "title": "重庆大学",
+      "old_projects": 2,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "a95b8944ab259f59a783893c1a766335b277282628aef8aeb42421dfb150d7e1",
+      "old_tables": 25
+    },
+    {
+      "school": "school-031",
+      "title": "厦门大学",
+      "old_projects": 2,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "b31f1f51f6317f5e83b968eb02b4bede1e8859d5fc6f9c67d82bc335622f0746",
+      "old_tables": 13
+    },
+    {
+      "school": "school-032",
+      "title": "山东大学",
+      "old_projects": 1,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "91e90322b65700ce72c0bdbae0a64a466685c382e8f20fa1eed453193191a836",
+      "old_tables": 17
+    },
+    {
+      "school": "school-033",
+      "title": "中国海洋大学",
+      "old_projects": 1,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "e1eac6e5dfb22c28d9bb9e3d1cc859b1db031112df4b468328f117d2f94e4466",
+      "old_tables": 17
+    },
+    {
+      "school": "school-034",
+      "title": "合肥工业大学",
+      "old_projects": 2,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "79b19269931852a1af916f68dcbc2d9e9c45bc0eaaf7747d3cb4139e7a418ab2",
+      "old_tables": 20
+    },
+    {
+      "school": "school-035",
+      "title": "苏州大学",
+      "old_projects": 1,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "5483edb191356103745eef37ab70bf19281ddfa4ae667c04d79a8822c81ac70e",
+      "old_tables": 16
+    },
+    {
+      "school": "school-036",
+      "title": "西安交通大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "3c129b4c93c22c8a81dfe97b9ae1a4ca4553b397c92618e0ec4014884f7c518d",
+      "old_tables": 0
+    },
+    {
+      "school": "school-037",
+      "title": "中国人民大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "203ef392f1d77632aa1c989e14669bda53ce076837b7a4c46b285f12be64fb89",
+      "old_tables": 0
+    },
+    {
+      "school": "school-038",
+      "title": "华东理工大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "e15576cb35ef76b973d8d16d3dd44891b10d1801d2a03283d247f6403d5b4861",
+      "old_tables": 3
+    },
+    {
+      "school": "school-039",
+      "title": "河海大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "40614d442a8acd81980bc779037eddaa05f8a3f04d63b6d3a3d435b0101d15e8",
+      "old_tables": 7
+    },
+    {
+      "school": "school-040",
+      "title": "南京理工大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "89950ed0610c797bb40cf25ec861858b94539b0eaf4d5a72121fb080c7178f33",
+      "old_tables": 3
+    },
+    {
+      "school": "school-041",
+      "title": "武汉大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "00d7206064ca451fb2d2dff5e20577350bd72593899013267d58ad36715b4d6a",
+      "old_tables": 4
+    },
+    {
+      "school": "school-042",
+      "title": "东北大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "51c51359031f258ab8eb8989c4a702720706eaee31924807b5f6702ca9a8099c",
+      "old_tables": 1
+    },
+    {
+      "school": "school-043",
+      "title": "大连理工大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "1a3b6479252628631d1315ee4c9aa9ff3c6dbfce2f3c18e25b819538cb16e137",
+      "old_tables": 3
+    },
+    {
+      "school": "school-044",
+      "title": "西北工业大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "ce748cc15af4ca8936356a0b32f887fb5f7c5cae68941bbec8049bdf24c83672",
+      "old_tables": 5
+    },
+    {
+      "school": "school-045",
+      "title": "北京工业大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "7ee79f18bab400a7c38e1f03ffef10dc59f8bd1efefa6995cb617f2168e41b3f",
+      "old_tables": 1
+    },
+    {
+      "school": "school-046",
+      "title": "中国农业大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "a01a7206813b9120f816072f8594a987933121dcf4d0194b354a44bb34bfd93a",
+      "old_tables": 1
+    },
+    {
+      "school": "school-047",
+      "title": "北京林业大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "b4342798f14a65c0712710ff357715f9ccc7751311496c30a7aad8ec4b7d3f95",
+      "old_tables": 1
+    },
+    {
+      "school": "school-048",
+      "title": "中国传媒大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "9814fad5f3103a3a3fc598206b095b1d55bfc2298de9f9a8cfb2af47383bcddd",
+      "old_tables": 2
+    },
+    {
+      "school": "school-049",
+      "title": "中央财经大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "d62274471a8e72b3d70fc3c1f41e6fca8d899a95b89a9606dac182ff27a50d59",
+      "old_tables": 1
+    },
+    {
+      "school": "school-050",
+      "title": "华北电力大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "2b93bfa9018f6101b8ba7b7eea13652e76fb1bde8b014511d4c104157ac9934b",
+      "old_tables": 2
+    },
+    {
+      "school": "school-051",
+      "title": "太原理工大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "4c9c07054b3634a82808f364b6f4ea576f527bc567701f6d0a1708b94a1dad4d",
+      "old_tables": 2
+    },
+    {
+      "school": "school-052",
+      "title": "复旦大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "7b020eba73b9831d02d6fa8469b9ca89a3aad47d65821dea087b84fdc128a595",
+      "old_tables": 0
+    },
+    {
+      "school": "school-053",
+      "title": "东华大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "ada1f0a85668bc854f0a599786894b991ce14a3cb75b22bea91a95d99f3b880c",
+      "old_tables": 3
+    },
+    {
+      "school": "school-054",
+      "title": "中国矿业大学",
+      "old_projects": 0,
+      "added_projects": 6,
+      "reading_state": "project_tree",
+      "old_source_sha256": "f799ea5ab4c6bddbc8cdc189e11849283e4b35323d09d463069eef9a0a5b305b",
+      "old_tables": 2
+    },
+    {
+      "school": "school-055",
+      "title": "南京农业大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "b5875d315fc4726fa3dfae07e3cb280dceb46ab7afca66e8c4304d63bc2847ef",
+      "old_tables": 1
+    },
+    {
+      "school": "school-056",
+      "title": "南京师范大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "7d46383510d1b2088d445856e865c90dab1d76681dcbf9fe571ead9e6a3b3d01",
+      "old_tables": 1
+    },
+    {
+      "school": "school-057",
+      "title": "福州大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "c80eef33378159e25f5a84a5f8b62c84e3ed3d0e2915561c69e29ba1a9d619d5",
+      "old_tables": 4
+    },
+    {
+      "school": "school-058",
+      "title": "中国地质大学",
+      "old_projects": 0,
+      "added_projects": 6,
+      "reading_state": "project_tree",
+      "old_source_sha256": "80c1154a01801f24e9209987a6303f049c4260d44e51f9db149f1de980a5fe4b",
+      "old_tables": 0
+    },
+    {
+      "school": "school-059",
+      "title": "中山大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "a617253739c358c9ce2483a0246435fe1bb2c461e4280656fa0d7fe381367caa",
+      "old_tables": 4
+    },
+    {
+      "school": "school-060",
+      "title": "广西大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "46c26763c93c5e4bab8606b030ba31257f24ee3b4a215daad2d7258ac3e1638c",
+      "old_tables": 1
+    },
+    {
+      "school": "school-061",
+      "title": "海南大学",
+      "old_projects": 0,
+      "added_projects": 5,
+      "reading_state": "project_tree",
+      "old_source_sha256": "876f1038c7f819f99d274d7171db22b9870511a2b863ff942deb839731596ac6",
+      "old_tables": 3
+    },
+    {
+      "school": "school-062",
+      "title": "四川大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "9a6ec4d58eb6293ca5b0ae526b4f38e5e20005ad6931ed0e8d71cea2bbd37b41",
+      "old_tables": 4
+    },
+    {
+      "school": "school-063",
+      "title": "西南财经大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "f2d01ea67965142c4a70b12223841ddab16647312a104ecbba6dcb1fdf0852af",
+      "old_tables": 0
+    },
+    {
+      "school": "school-064",
+      "title": "青海大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "f30be2e565010fed146db2095b26b883b49837b4341cc20fa21394c7fb43125e",
+      "old_tables": 0
+    },
+    {
+      "school": "school-065",
+      "title": "宁夏大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "cdb9ee9ce28643e8693f408291ade7de38272d4ab7f39d812670c618b4e39fbf",
+      "old_tables": 4
+    },
+    {
+      "school": "school-066",
+      "title": "石河子大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "f52a14f925b552b30a888386096c9813f11ab246611fec7149058c2f0cf3dcf5",
+      "old_tables": 3
+    },
+    {
+      "school": "school-095",
+      "title": "南京大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "bd304680b661261a2ab5f20633c85dc45dd5648e5346dc050b136169fc8ff44a",
+      "old_tables": 2
+    },
+    {
+      "school": "school-099",
+      "title": "浙江大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "c7403a0fb1b4223a43c824208299956ffde4b54d72efb4fb29cd1f23df43a20f",
+      "old_tables": 1
+    },
+    {
+      "school": "school-072",
+      "title": "北京邮电大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "0eab8aba30e1eb15288b1e5dd664520aa69c163090d962975ae397453275a1fe",
+      "old_tables": 1
+    },
+    {
+      "school": "school-093",
+      "title": "上海财经大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "89796e0fd3f3d10cae4a55f148fa5ee643af76570651c32f711acd97329a4fca",
+      "old_tables": 0
+    },
+    {
+      "school": "school-068",
+      "title": "清华大学",
+      "old_projects": 0,
+      "added_projects": 6,
+      "reading_state": "project_tree",
+      "old_source_sha256": "4265d45f90eeee893f8418c6f76125a064dd90beed7ff775142740e3806482df",
+      "old_tables": 8
+    },
+    {
+      "school": "school-069",
+      "title": "北京理工大学",
+      "old_projects": 13,
+      "added_projects": 0,
+      "reading_state": "project_tree",
+      "old_source_sha256": "a4cde6e35bbdb55e3fb22887264afd7458ab888aeffa31df1195ccaedbd5b6d8",
+      "old_tables": 72
+    },
+    {
+      "school": "school-112",
+      "title": "兰州大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "88d3168852b14361c8bdccb2a635ba1bbe4d1293c3d424464f4581cec13a6fa9",
+      "old_tables": 1
+    },
+    {
+      "school": "school-082",
+      "title": "天津大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "609b95cc0d9b923b519ae2494f6e4a3785fba15bdd60b08bf5ae8c6c126291a7",
+      "old_tables": 0
+    },
+    {
+      "school": "school-084",
+      "title": "河北工业大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "c9e955d37de6ff4800d3edbed5270ec1cd2089c9b54bbd06e3854eb05d21f22f",
+      "old_tables": 1
+    },
+    {
+      "school": "school-085",
+      "title": "大连海事大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "0f8a636cca729818e29f494efac8af49f3634da25394dd4e5e3610ec1934b69b",
+      "old_tables": 0
+    },
+    {
+      "school": "school-086",
+      "title": "吉林大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "6d8408b28568c0917183b3a8994ba5bb796e19422a61f87388b72838e3e380af",
+      "old_tables": 0
+    },
+    {
+      "school": "school-088",
+      "title": "哈尔滨工业大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "388d34221c84b09029a0f3b7218e90e4312eb9909db6796d97dce14e2e7b6a6e",
+      "old_tables": 0
+    },
+    {
+      "school": "school-089",
+      "title": "哈尔滨工程大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "5f8daa6dd50798f8d2352c146e33316b032d9fc9b8e340528a62dd0573c8687e",
+      "old_tables": 0
+    },
+    {
+      "school": "school-087",
+      "title": "延边大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "ea80c7944ce0fe6ef7d60304d840eb50fc09928da90e3266cc7dbd0261b29fa8",
+      "old_tables": 0
+    },
+    {
+      "school": "school-090",
+      "title": "同济大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "5714b34ef1ca620c981740d3c647af8e64eb7f025e8941f21bdcac49de246731",
+      "old_tables": 0
+    },
+    {
+      "school": "school-091",
+      "title": "上海交通大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "57f79491dca255339cbff443941bb8417356b5f7d29ef28dc7849971b7566737",
+      "old_tables": 0
+    },
+    {
+      "school": "school-092",
+      "title": "上海外国语大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "010d1577a13008bb50a39bf4e0f5d7a8a99ed5ecc8b052d7134a6dad110d17c1",
+      "old_tables": 0
+    },
+    {
+      "school": "school-096",
+      "title": "东南大学",
+      "old_projects": 0,
+      "added_projects": 10,
+      "reading_state": "project_tree",
+      "old_source_sha256": "7ad1b0626a71510e05c11f246233916b794c2edf3b5c1365346a87c1ba4d3e6c",
+      "old_tables": 0
+    },
+    {
+      "school": "school-097",
+      "title": "南京航空航天大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "a288674470ea98df92dc7ba2e580fdd6d6fad6545a4d7568093eb602cee9961b",
+      "old_tables": 1
+    },
+    {
+      "school": "school-098",
+      "title": "中国药科大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "632ccc462d2a0849028c83bbb77111b5ad2fe6fefa37ec9e45811a76981c06a0",
+      "old_tables": 0
+    },
+    {
+      "school": "school-100",
+      "title": "安徽大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "5b5c4d2b2342b3279245d9e935895644fd05b1ec9cb3e6e847a29f2bc07db83d",
+      "old_tables": 1
+    },
+    {
+      "school": "school-101",
+      "title": "华中科技大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "d67f2b5a7f5147aec1e6d3d6ce5325f6625fd3c0d476d52c7ba15ad125aa5806",
+      "old_tables": 0
+    },
+    {
+      "school": "school-108",
+      "title": "西北大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "1e8f550d0d20efc3945a89face798746d9f705358c4fcc4ea0e05b2c42381aae",
+      "old_tables": 0
+    },
+    {
+      "school": "school-107",
+      "title": "西藏大学",
+      "old_projects": 0,
+      "added_projects": 3,
+      "reading_state": "project_tree",
+      "old_source_sha256": "5604495e0015098fe83b834a30ac90f7a8a74d5860eeaf734fc23180a75bf531",
+      "old_tables": 0
+    },
+    {
+      "school": "school-110",
+      "title": "陕西师范大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "80c1498117fb81745619b11fed88c5d04ae6e2ed7bde74681db893343acbdc3c",
+      "old_tables": 1
+    },
+    {
+      "school": "school-105",
+      "title": "华南理工大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "dd241eb372f3c1bc79a8bfe79cbafc192d3eb53ef041c50345a80267f016495b",
+      "old_tables": 0
+    },
+    {
+      "school": "school-070",
+      "title": "北京科技大学",
+      "old_projects": 0,
+      "added_projects": 4,
+      "reading_state": "project_tree",
+      "old_source_sha256": "9c80119dc9b1922808c28a81022a45fb8448559860a12e2a9638805eb439ccfd",
+      "old_tables": 0
+    },
+    {
+      "school": "school-071",
+      "title": "北京化工大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "99e155a2ca0d986b2e3eb942f95b9c8f6ee9adeef35dc2590c28622ff2d8a5ac",
+      "old_tables": 0
+    },
+    {
+      "school": "school-067",
+      "title": "北京大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "1a8b840a0598508a6957bc97c5699429cd59d7b9d1ddb34b582699904cbb5026",
+      "old_tables": 0
+    },
+    {
+      "school": "school-074",
+      "title": "北京师范大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "26d7c544b86a0c2e178ec13c242e9d59b06af94d4878f06f599a6322414c1994",
+      "old_tables": 0
+    },
+    {
+      "school": "school-075",
+      "title": "北京外国语大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "ea0881c0dd14e4b8146dec473e4463e53861d7ce0d8d741ddd7c705bcdaf5956",
+      "old_tables": 0
+    },
+    {
+      "school": "school-076",
+      "title": "对外经济贸易大学",
+      "old_projects": 0,
+      "added_projects": 1,
+      "reading_state": "project_tree",
+      "old_source_sha256": "d4a5cb62d17d757a400cca22d333c3064102f2e19799c35aac10a4a1f0dca972",
+      "old_tables": 1
+    },
+    {
+      "school": "school-077",
+      "title": "北京体育大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "596bf285e2aaf55666d82767fb463f837855673b558c1fd77a516d10ed56fc19",
+      "old_tables": 1
+    },
+    {
+      "school": "school-073",
+      "title": "北京中医药大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "bc503aaf1175eb0b0f81f69e786ab2ec9851a78506e524cfbe9422e0db80bf57",
+      "old_tables": 0
+    },
+    {
+      "school": "school-078",
+      "title": "中央音乐学院",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "0d9098cdb18cc424ffb228406425b2d51112292f2b17f8c7501b06bc9b79da79",
+      "old_tables": 0
+    },
+    {
+      "school": "school-080",
+      "title": "中国政法大学",
+      "old_projects": 0,
+      "added_projects": 0,
+      "reading_state": "evidence_gap",
+      "old_source_sha256": "6f5e6be2b97ceaa946128928a14eaeb16d320195d628165bb22246489f9893de",
+      "old_tables": 0
+    },
+    {
+      "school": "school-109",
+      "title": "西安电子科技大学",
+      "old_projects": 0,
+      "added_projects": 5,
+      "reading_state": "project_tree",
+      "old_source_sha256": "1b6134b3d9cc0687355521110288e1b43e6d22f910a95252cff449a3fffd5fd0",
+      "old_tables": 0
+    },
+    {
+      "school": "school-079",
+      "title": "中央民族大学",
+      "old_projects": 0,
+      "added_projects": 2,
+      "reading_state": "project_tree",
+      "old_source_sha256": "4ff8cbadf62a3c4cf99c9662fb836128cc5188930659533d6f7f08fd545096b3",
+      "old_tables": 0
+    }
+  ]
+}

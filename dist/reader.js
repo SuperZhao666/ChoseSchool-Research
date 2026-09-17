@@ -12,6 +12,17 @@
   const previous = document.getElementById('previous-result');
   const next = document.getElementById('next-result');
   const toolbar = document.querySelector('.toolbar');
+  const schoolFilter=document.getElementById('school-filter');
+  schoolFilter?.addEventListener('input',()=>{
+    const query=schoolFilter.value.trim().toLocaleLowerCase();let count=0;
+    document.querySelectorAll('#school-navigation .school-link').forEach(link=>{
+      const name=link.querySelector('.school-name').textContent.toLocaleLowerCase();
+      const tier=link.querySelector('.school-meta').textContent;
+      const matchesTier=query==='985'?tier==='985':query==='211'?tier.startsWith('211'):query==='双非'?tier==='双非':false;
+      link.hidden=Boolean(query && !name.includes(query) && !matchesTier);if(!link.hidden)count++;
+    });
+    document.getElementById('school-filter-status').textContent=query?`${count} 所匹配` : '';
+  });
   // TraceId: 4fa2880a-e3d3-40b3-a2d9-8c69ad9fd505
   // Each program belongs to one college; directions retain their shared program.
   const entities = new Map(panels.map(panel => [panel, {
@@ -31,7 +42,7 @@
   // TraceId: 12977bfb-1cef-4a83-b35a-0c58141c1a37
   // Outline actual source headings/folds, without guessing admissions entities.
   function addSchoolContents(panel) {
-    if (!panel.dataset.panel.startsWith('school-') || entities.get(panel).colleges.length) return;
+    if (!panel.dataset.panel.startsWith('school-') || panel.querySelector('.admission-layout')) return;
     const targets = Array.from(panel.querySelectorAll('h4,h5,h6,summary'));
     if (!targets.length) return;
     const navigation = document.createElement('nav');
@@ -76,6 +87,7 @@
     const intro = []; let collecting = false;
     for (const node of Array.from(panel.childNodes)) {
       if (node === layout) break;
+      if (node.nodeType === 1 && node.matches('.school-reading-status,.school-reading-hint')) continue;
       if (node.nodeType === 1 && !node.matches('a[id],h3,.school-tier,.switch-flag,.switch-note') && !node.querySelector('a[id]')) collecting = true;
       if (collecting) intro.push(node);
     }
@@ -118,6 +130,159 @@
       if (link.dataset.readingView === topic) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
+    const seen=new Set();
+    scope.querySelectorAll('[data-material-id]').forEach(node=>{
+      node.hidden=topic==='all' && seen.has(node.dataset.materialId);seen.add(node.dataset.materialId);
+    });
+    if(topic==='all')scope.querySelectorAll('.additional-record').forEach(fold=>{fold.open=true;});
+  }
+  // TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93
+  // The README keeps each original once. Project views copy complete source
+  // rows on demand, retain their context, and never calculate admissions facts.
+  const sourceIndexes = new Map();
+  function materialIndex(panel) {
+    if (sourceIndexes.has(panel)) return sourceIndexes.get(panel);
+    const specs = entities.get(panel).projects.map(project => {
+      const college=project.closest('.school-college');
+      const selector=project.querySelector('.project-source-selector');
+      const title=project.dataset.projectTitle || '';
+      const terms=selector?JSON.parse(selector.dataset.projectTerms):[title];
+      const codes=(title.match(/\b(?:0\d{5}|1\d{5}|\d{4}[A-Za-z]\d)\b/g)||[]).map(s=>s.toLowerCase());
+      const collegeTitle=college.dataset.collegeTitle || '';
+      const collegeCode=collegeTitle.match(/(?:^|[ ·])([0-9]{3})(?:\s|—)/)?.[1];
+      const collegeNames=collegeTitle.split(/[·／（(]/).map(s=>s.replace(/^\s*\d{3}\s*/,'').trim()).filter(s=>s.length>=4 && !/待核|培养单位|招生单位|历史|由原/.test(s));
+      return {project, college, terms, codes, collegeCode, collegeNames};
+    });
+    const all=specs.map(s=>s.project.id);
+    function owners(text, inherited=all) {
+      text=text.toLowerCase().replace(/\s+/g,'');
+      const codeOwners=specs.filter(s=>s.codes.some(code=>text.includes(code)));
+      // A comparison row for an unlisted program must not inherit every
+      // project in its enclosing school-wide table. Explicit single-project
+      // historical sections may still contain a former program code.
+      if(!codeOwners.length && /(?:0\d{5}|1\d{5}|\d{4}[a-z]\d)/.test(text) && inherited.length>1)return [];
+      const collegeOwners=specs.filter(s=>s.collegeNames.some(name=>text.includes(name.toLowerCase().replace(/\s+/g,''))) ||
+        s.collegeCode && new RegExp(`(^|[^0-9])${s.collegeCode}(?=[—－/／·\\-\\u4e00-\\u9fff])`).test(text));
+      const named=specs.filter(s=>s.terms.some(term=>term.length>=2 && /[\u4e00-\u9fff]/.test(term) && text.includes(term.toLowerCase().replace(/\s+/g,''))));
+      let candidates=codeOwners.length?codeOwners:(named.length?named:collegeOwners);
+      if (!candidates.length) return inherited;
+      if(codeOwners.length && named.length) {
+        const narrowed=candidates.filter(s=>named.includes(s));
+        if(narrowed.length)candidates=narrowed;
+      }
+      if(collegeOwners.length) {
+        const narrowed=candidates.filter(s=>collegeOwners.includes(s));
+        if(narrowed.length) candidates=narrowed;
+      } else if (inherited.length<all.length) {
+        const narrowed=candidates.filter(s=>inherited.includes(s.project.id));
+        if(narrowed.length) candidates=narrowed;
+      }
+      return candidates.map(s=>s.project.id);
+    }
+    const groups=[];
+    function visit(container, trail=[], inherited=all) {
+      let nodes=[], path=trail.slice(), scope=inherited;
+      function flush(){if(nodes.some(n=>n.textContent.trim()))groups.push({nodes,path:path.slice(),owners:scope});nodes=[];}
+      for(const node of Array.from(container.children)) {
+        if(node.matches('[data-reader-ui],.admission-project,.school-college,summary,a[id]')) continue;
+        if(node.matches('details')) {
+          flush();const title=node.querySelector('summary')?.textContent || '';
+          visit(node,[...path,title],owners(title,scope));continue;
+        }
+        if(node.matches('h4,h5,h6')) {
+          flush();const title=node.textContent;
+          path=[...trail,title];scope=owners(title,inherited);continue;
+        }
+        nodes.push(node);
+      }
+      flush();
+    }
+    for(const root of [panel.querySelector('.school-background'),entities.get(panel).notes].filter(Boolean)) visit(root);
+    const result={groups,owners,all};sourceIndexes.set(panel,result);return result;
+  }
+  function cleanCopy(node) {
+    const copy=node.cloneNode(true);
+    if(copy.id)copy.removeAttribute('id');
+    copy.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));
+    copy.querySelectorAll('[hidden]').forEach(n=>n.removeAttribute('hidden'));
+    return copy;
+  }
+  function hydrateProject(project) {
+    const selector=project?.querySelector('.project-source-selector');
+    if(!selector || selector.dataset.ready) return;
+    selector.dataset.ready='true';
+    const panel=project.closest('.reader-panel'), index=materialIndex(panel);
+    const slots=new Map([...project.querySelectorAll('.project-excerpts')].map(s=>[s.dataset.excerptTopic,s]));
+    const counts=new Map();
+    function add(topic,node){const slot=slots.get(topic);if(!slot)return;slot.append(node);counts.set(topic,(counts.get(topic)||0)+1);}
+    function contextFold(group, title='口径、出处与相邻说明') {
+      const fold=document.createElement('details');fold.className='evidence-context';
+      const summary=document.createElement('summary');summary.textContent=title;fold.append(summary);
+      for(const node of group.nodes) if(!node.matches('.table-scroll,table'))fold.append(cleanCopy(node));
+      const link=document.createElement('a');link.href=`#${entities.get(panel).notes.id}`;link.textContent='查看本校完整原文';fold.append(link);
+      return fold;
+    }
+    for(const [groupIndex,group] of index.groups.entries()) {
+      const title=(group.path.at(-1) || '已查项目情况').replace(/^(?:补回早期已查到的公开项目数据|目录、招生历史与补充核验|报考需求、容量、改考与新增项目证据)[：:]\s*/, '');
+      const headingContext=group.path.join(' / ');
+      let hasTable=false;
+      for(const [tableIndex,node] of group.nodes.filter(n=>n.matches('.table-scroll,table')).entries()) {
+        const table=node.matches('table')?node:node.querySelector('table');if(!table)continue;
+        const rows=Array.from(table.querySelectorAll('tbody > tr'));
+        const rowOwners=rows.map(row=>index.owners(row.querySelector('td')?.textContent || '',group.owners));
+        const wanted=rows.filter((row,i)=>rowOwners[i].includes(project.id));
+        if(!wanted.length)continue;
+        const shared=rowOwners.some((ids,i)=>wanted.includes(rows[i]) && ids.length>1);
+        const copy=cleanCopy(node), copyTable=copy.matches('table')?copy:copy.querySelector('table');
+        Array.from(copyTable.querySelectorAll('tbody > tr')).forEach((row,i)=>{if(!wanted.includes(rows[i]))row.remove();});
+        const headers=Array.from(table.querySelectorAll('th')).map(th=>th.textContent).join(' ');
+        const topics=new Set();
+        if(/科目|初试|专业|计划|方向|招生|目录/.test(headers))topics.add('admissions');
+        if(/分数|分布|成绩|复试线|最低|中位|均值|均分|最高|分位|单科|拟录取|录取人数|实录/.test(headers+' '+headingContext))topics.add('scores');
+        if(/机考|机试|面试|复试规则|复试内容|复试安排|权重|复试科目/.test(headers+' '+title))topics.add('retest');
+        if(/学费|费用|学制|住宿|培养|导师|实践|毕业|课程|学分|地点/.test(headers+' '+title))topics.add('training');
+        if(!topics.size)topicFor(title,'sources').split(' ').forEach(t=>topics.add(t));
+        // Unscoped multi-project material stays explicitly shared, never an
+        // invented fact for the currently selected program.
+        if(shared && group.owners.length===index.all.length && wanted.length===rows.length && index.all.length>1 &&
+           rowOwners.every(ids=>ids.length===index.all.length)) {topics.clear();topics.add('sources');}
+        const card=document.createElement('article');card.className='project-record';
+        card.dataset.materialId=`table-${groupIndex}-${tableIndex}`;
+        const h=document.createElement('h6');h.textContent=title;card.append(h);
+        const label=document.createElement('p');label.className='evidence-scope';
+        label.textContent=shared?'共用／比较材料：以各行学院、项目和人口口径为准':'本项目原表记录 · 保留年度科目与人口口径';card.append(label,copy,contextFold(group));
+        for(const topic of topics)add(topic,card.cloneNode(true));
+        hasTable=true;
+      }
+      const prose=group.nodes.filter(n=>!n.matches('.table-scroll,table'));
+      const proseOwners=index.owners(prose.map(n=>n.textContent).join(' '),group.owners);
+      if(prose.length && proseOwners.includes(project.id)) {
+        const shared=proseOwners.length>1;
+        let topics=topicFor(title,hasTable?'sources':'admissions').split(' ');
+        if(shared && group.owners.length===index.all.length && index.all.length>1)topics=['sources'];
+        const fold=contextFold(group,(shared?'共同说明 · ':'')+title);
+        fold.dataset.materialId=`prose-${groupIndex}`;
+        for(const topic of topics)add(topic,fold.cloneNode(true));
+      }
+    }
+    for(const [topic,slot] of slots) {
+      if(!counts.get(topic)) {
+        const message=document.createElement('p');message.className='reading-gap';
+        message.textContent=`本项目的“${topicNames[topic]}”尚未单独形成可归属资料。现有线索和限制已保留在结论及来源中；不能借同校其他项目补齐。`;
+        slot.append(message);
+      }
+      const tab=project.querySelector(`[data-reading-view="${topic}"]`);
+      if(tab && counts.get(topic))tab.dataset.materialCount=String(counts.get(topic));
+      // One readable record first; further original tables remain one click away.
+      Array.from(slot.children).filter(n=>n.matches('article')).slice(1).forEach(card=>{
+        const fold=document.createElement('details');fold.className='additional-record';
+        fold.dataset.materialId=card.dataset.materialId;delete card.dataset.materialId;
+        const summary=document.createElement('summary');summary.textContent='更多记录 · '+card.querySelector('h6').textContent;
+        card.before(fold);fold.append(summary,card);
+      });
+      const firstFold=slot.querySelector('details');
+      if(!slot.querySelector('article') && firstFold && firstFold.textContent.length<1800)firstFold.open=true;
+    }
   }
   function createProjectFlow(project) {
     const chapters=[], containers=[]; let index=0;
@@ -149,7 +314,15 @@
       }
     }
     split(project,'overview',true);
-    const meaningful=chapters.filter(ch=>ch.textContent.trim());
+    if(project.querySelector('.project-source-selector')) {
+      for(const topic of Object.keys(topicNames).filter(t=>t!=='overview')) {
+        const chapter=document.createElement('div');chapter.className='reading-chapter project-excerpts';
+        chapter.dataset.readingTopic=topic;chapter.dataset.excerptTopic=topic;
+        chapter.setAttribute('data-reader-ui','true');chapter.id=`chapter-${project.id}-${++index}`;
+        project.append(chapter);chapters.push(chapter);
+      }
+    }
+    const meaningful=chapters.filter(ch=>ch.textContent.trim() || ch.matches('.project-excerpts'));
     const nav=document.createElement('nav');nav.className='reading-tabs';
     nav.setAttribute('data-reader-ui','true');nav.setAttribute('aria-label','本项目阅读栏目');
     for (const [key,label] of Object.entries({...topicNames,all:'完整资料'})) {
@@ -235,9 +408,10 @@
   }
   function showEntity(panel, selected = null) {
     const group = entities.get(panel);
-    if (!group?.colleges.length) return;
+    if (!group || !panel.querySelector('.admission-layout')) return;
     const direction = selected?.closest('.research-direction');
     const project = selected?.closest('.admission-project');
+    if(project) hydrateProject(project);
     const college = selected?.closest('.school-college');
     const notes = selected?.closest('.admission-notes');
     panel.dataset.activeEntity = (direction || project || college || notes)?.id || '';
@@ -276,7 +450,7 @@
     document.getElementById('expand-all').disabled = document.getElementById('collapse-all').disabled = !project && !notes;
   }
   function visibleScope() {
-    if (entities.get(active)?.colleges.length) {
+    if (active.querySelector('.admission-layout')) {
       return active.querySelector('.admission-project:not([hidden]),.admission-notes:not([hidden])');
     }
     return active;
@@ -441,6 +615,11 @@
     // Print only the selected project's complete dossier, restoring fold state afterward.
     visibleScope()?.querySelectorAll('details').forEach(detail => { detail.dataset.printOpen = String(detail.open); detail.open = true; });
     visibleScope()?.querySelectorAll('.reading-chapter,.research-direction,details').forEach(chapter => { chapter.dataset.printHidden=String(chapter.hidden); chapter.hidden=false; });
+    const seen=new Set();
+    visibleScope()?.querySelectorAll('[data-material-id]').forEach(node=>{
+      if(!node.hasAttribute('data-print-hidden'))node.dataset.printHidden=String(node.hidden);
+      node.hidden=seen.has(node.dataset.materialId);seen.add(node.dataset.materialId);
+    });
   });
   window.addEventListener('afterprint', () => {
     content.querySelectorAll('[data-print-hidden]').forEach(chapter=>{chapter.hidden=chapter.dataset.printHidden==='true';delete chapter.dataset.printHidden;});

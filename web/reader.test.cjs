@@ -179,17 +179,18 @@ test('every school gets readable column labels and real-source navigation withou
   const after = researchText(r.document.getElementById('research-content'));
   const mismatch = [...before].findIndex((char, index) => after[index] !== char);
   assert.ok(after === before, JSON.stringify({mismatch,before:before.slice(mismatch-80,mismatch+160),after:after.slice(mismatch-80,mismatch+160)}));
-  const nav = r.document.querySelector('#panel-school-001 .school-contents');
+  const fallback=reader(fixture);
+  const nav = fallback.document.querySelector('#panel-school-001 .school-contents');
   const button = nav.querySelector('button');
   assert.equal(button.getAttribute('aria-expanded'), 'false');
   assert.equal(nav.querySelector('.school-contents-list').hidden, true);
   button.dispatchEvent(new r.window.Event('click', {bubbles:true}));
   assert.equal(button.getAttribute('aria-expanded'), 'true');
   assert.equal(nav.querySelector('.school-contents-list').hidden, false);
-  const summaryLink = [...nav.querySelectorAll('a')].find(link => r.document.getElementById(link.dataset.sectionTarget).tagName === 'SUMMARY');
-  summaryLink.dispatchEvent(new r.window.Event('click', {bubbles:true,cancelable:true}));
-  assert.equal(r.document.getElementById(summaryLink.dataset.sectionTarget).parentElement.open, true);
-  assert.deepEqual(r.visible(), ['school-001']);
+  const summaryLink = [...nav.querySelectorAll('a')].find(link => fallback.document.getElementById(link.dataset.sectionTarget).tagName === 'SUMMARY');
+  summaryLink.dispatchEvent(new fallback.window.Event('click', {bubbles:true,cancelable:true}));
+  assert.equal(fallback.document.getElementById(summaryLink.dataset.sectionTarget).parentElement.open, true);
+  assert.deepEqual(fallback.visible(), ['school-001']);
   const ids = [...r.document.querySelectorAll('[id]')].map(e=>e.id);
   assert.equal(new Set(ids).size, ids.length);
 });
@@ -224,6 +225,83 @@ test('school landing → college → program → direction keeps shared project 
   r.click('home-link');
   assert.deepEqual(visibleProjects(r), []);
   assert.equal(r.document.querySelector('.admission-home').hidden, false);
+});
+
+// TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93
+test('all 104 schools have a project tree or an explicit evidence gap, and every project opens on a short conclusion', () => {
+  const html=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8');
+  const original=parseHTML(html).document;
+  const r=reader(html), schools=[...r.document.querySelectorAll('.reader-panel[data-panel^="school-"]')];
+  assert.equal(schools.length,104);
+  assert.equal(schools.filter(s=>s.querySelector('.school-college')).length,93);
+  assert.equal(schools.filter(s=>s.querySelector('.school-reading-status')).length,11);
+  const filter=r.document.getElementById('school-filter');
+  filter.value='湖南';filter.dispatchEvent(new r.window.Event('input'));
+  assert.deepEqual([...r.document.querySelectorAll('#school-navigation .school-link')].filter(l=>!l.hidden).map(l=>l.dataset.panelTarget),['school-029']);
+  filter.value='985';filter.dispatchEvent(new r.window.Event('input'));
+  assert.ok([...r.document.querySelectorAll('#school-navigation .school-link')].filter(l=>!l.hidden).every(l=>l.querySelector('.school-meta').textContent==='985'));
+  filter.value='';filter.dispatchEvent(new r.window.Event('input'));
+  const sourceRows=new Set([...original.querySelectorAll('tbody>tr')].map(row=>row.textContent));
+  const projects=[...r.document.querySelectorAll('.admission-project')];
+  assert.equal(projects.length,273);
+  for(const school of schools) {
+    r.go('#'+school.dataset.panel);
+    assert.deepEqual(r.visible(),[school.dataset.panel]);
+    assert.ok(school.querySelector('.admission-home'),school.dataset.panel);
+    if(!school.querySelector('.school-college')) {
+      assert.ok(isRevealed(school.querySelector('.school-reading-status')));
+      const notes=school.querySelector('.admission-notes');r.go('#'+notes.id);
+      assert.ok(isRevealed(notes));
+    }
+  }
+  for(const project of projects) {
+    r.go('#'+project.id);
+    assert.ok(isRevealed(project),project.id);
+    const visible=[...project.querySelectorAll('.reading-chapter')].filter(isRevealed);
+    assert.ok(visible.reduce((n,e)=>n+e.textContent.trim().length,0)<350,project.id);
+    assert.ok([...project.querySelectorAll('table')].every(t=>!isRevealed(t)),project.id);
+    if(project.querySelector('.project-source-selector')) {
+      for(const row of project.querySelectorAll('.project-excerpts tbody>tr'))assert.ok(sourceRows.has(row.textContent),project.id+' changed a row');
+      r.go('#view-'+project.id+'-scores');
+      assert.equal(project.dataset.readingTopic,'scores');
+      assert.ok([...project.querySelectorAll('.reading-chapter')].filter(isRevealed).every(c=>c.dataset.readingTopic==='scores'));
+    }
+  }
+  const ids=[...r.document.querySelectorAll('[id]')].map(n=>n.id);
+  assert.equal(new Set(ids).size,ids.length);
+  assert.equal(researchText(r.document.getElementById('research-content')),researchText(original.getElementById('research-content')));
+});
+
+test('new project views keep same-code colleges separate and retain the original annual subjects and population', () => {
+  const r=reader(fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8'));
+  r.go('#view-project-school-051-024-085410-scores');
+  const ai=r.document.getElementById('project-school-051-024-085410');
+  const rows=[...ai.querySelectorAll('[data-excerpt-topic="scores"] tbody>tr')];
+  assert.ok(rows.some(row=>/2026，024—085410/.test(row.textContent) && /302数学/.test(row.textContent) && /408/.test(row.textContent) && /326.5/.test(row.textContent)));
+  assert.ok(!rows.some(row=>/2026，024—085411/.test(row.firstElementChild.textContent)));
+  r.go('#view-project-school-002-172-085410-scores');
+  const space=r.document.getElementById('project-school-002-172-085410');
+  const spaceRows=[...space.querySelectorAll('[data-excerpt-topic="scores"] tbody>tr')];
+  assert.ok(spaceRows.some(row=>/^172/.test(row.firstElementChild.textContent)));
+  assert.ok(!spaceRows.some(row=>/^(?:173|174)/.test(row.firstElementChild.textContent)));
+  assert.ok(!spaceRows.some(row=>/^162/.test(row.firstElementChild.textContent)));
+  for(const record of space.querySelectorAll('.project-record'))assert.ok(record.querySelector('.evidence-context'));
+  r.go('#view-project-school-023-computer-085405-xiangyang-scores');
+  const campus=r.document.getElementById('project-school-023-computer-085405-xiangyang');
+  assert.ok([...campus.querySelectorAll('[data-excerpt-topic="scores"] tbody>tr')].some(row=>/襄阳/.test(row.textContent)));
+  r.go('#view-project-school-051-024-085410-all');
+  const allMaterials=[...ai.querySelectorAll('[data-material-id]')].filter(isRevealed).map(n=>n.dataset.materialId);
+  assert.equal(new Set(allMaterials).size,allMaterials.length);
+  r.go('#view-project-school-051-024-085410-scores');
+  r.window.dispatchEvent(new r.window.Event('beforeprint'));
+  const printMaterials=[...ai.querySelectorAll('[data-material-id]')].filter(isRevealed).map(n=>n.dataset.materialId);
+  assert.equal(new Set(printMaterials).size,printMaterials.length);
+  r.window.dispatchEvent(new r.window.Event('afterprint'));
+  assert.equal(ai.dataset.readingTopic,'scores');
+  assert.ok([...ai.querySelectorAll('.reading-chapter')].filter(isRevealed).every(n=>n.dataset.readingTopic==='scores'));
+  r.go('#project-school-061-802-085406');
+  assert.ok(r.document.querySelector('.admission-home a[href="#project-school-061-802-085406"]').classList.contains('late-project'));
+  assert.ok(!r.document.querySelector('.admission-home a[href="#project-school-061-812-085404"]').classList.contains('late-project'));
 });
 
 test('full-text search, old anchors and shared direction links open the owning college and program', () => {

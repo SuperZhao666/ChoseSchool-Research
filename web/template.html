@@ -16,6 +16,9 @@
     <a class="brand" href="#panel-overview">择校池 <span>2027</span></a>
     <p class="sidebar-intro">选择一所学校，查看完整资料</p>
     <p class="red-legend"><span aria-hidden="true">●</span> 红色：已核下半年改408公告<br><small>具体项目、年份与适配限制见校内说明</small></p>
+    <label class="sr-only" for="school-filter">筛选学校名称或层次</label>
+    <input id="school-filter" type="search" placeholder="找学校：名称、985、211…" autocomplete="off" maxlength="60">
+    <output id="school-filter-status" aria-live="polite"></output>
     <nav id="school-navigation" aria-label="学校列表">{{SCHOOL_NAVIGATION}}</nav>
     <details class="resource-navigation">
       <summary>比较依据与完整资料</summary>

@@ -17,7 +17,10 @@
 <!-- 项目优先与结论优先阅读 TraceId: 620a4022-cd30-48ab-992b-4a26e0cff841 -->
 **校内阅读：**先在左侧选学校，再从学院名下选具体招生项目。进入项目先看简明结论，需要时切换“招生与科目”“历年分数”“复试与面试”“培养与费用”等栏目；有独立历史方向的项目可再选方向。“完整资料”保留整份项目正文，全文搜索和旧链接会自动打开相关内容。学校概况默认收起，不挡在项目入口前面。
 
-**分层覆盖：**当前15所学校、34个已整理项目使用上述入口。本轮在湖南大学、北京理工大学之外，新增华东师范大学、新疆大学、西南交通大学、北京交通大学、辽宁大学、郑州大学、南昌大学、重庆大学、厦门大学、山东大学、中国海洋大学、合肥工业大学、苏州大学的19个项目入口。它们依据已有材料的明确学院和项目归属整理，不代表已覆盖各校全部招生项目；其他项目、共同规则和未完成归属的材料仍在同校保留，剩余学校继续提供默认收起的“本校内容导航”。各年份分数始终带当年科目及人口说明，2027待核状态不因改版升级。
+<!-- 全库阅读覆盖 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+**分层覆盖：全库104所学校均已整理。**其中93所按已有资料列出273个招生项目、培养路线或历史项目入口，11所尚缺可单列的精确项目，直接显示已查范围与证据缺口。这是库中资料的阅读整理，不代表273个项目都满足数学二408，也不是对各校全部招生目录的新一轮核验。项目名和结论区分历史、非全、自命题、数学一及待核线索，避免混作当年可报项目。
+
+**详细资料怎样读：**项目先显示短结论；原表按学院、项目线索展示完整记录行，年份、当年科目、单科线、总线、最低分、名单人口均随原行保留。跨项目比较或共用数据明确标注，不能当作本项目独立人数与分数。“口径、出处与相邻说明”保留解释，来源栏目保留未能单独归属的共同材料；每校完整原文仍在本文件同一校内，没有删除旧成果。页面按需显示摘读，不把阅读归类升级为正式招生确认。
 
 ## 阅读约定
 
@@ -66,6 +69,70 @@
 <p class="school-tier">院校层次：211（非985）</p>
 
 <p class="switch-note">日期区分：321计算机技术、334人工智能的2027改408公告均为2026年6月29日，不挂下半年红标；7月2日软件工程085405是新增非全日制定向项目。下方保留各项目完整区别。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="321" data-college-title="321 计算机与信息科学学院·软件学院">
+
+#### 321 计算机与信息科学学院·软件学院
+
+<section class="admission-project" data-project-key="321-085404" data-project-title="085404 计算机技术（含085400历史）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术（含085400历史）
+
+<div class="project-verdict">
+
+2027预告英语二、数学二、408；2026前身报考289、录取120、均分356，属于旧自命题。项目制和企业培养须分别核，正式目录及普通份额待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;321&quot;, &quot;计算机技术&quot;, &quot;计算机与软件&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="321-085405-parttime" data-project-title="085405 软件工程（新增非全日制定向）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（新增非全日制定向）
+
+<div class="project-verdict">
+
+2026年7月2日预告新增非全日制定向软件工程；与全日制计算机技术分开，不能借用120人和旧分数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;非全日制&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="334" data-college-title="334 人工智能学院">
+
+#### 334 人工智能学院
+
+<section class="admission-project" data-project-key="334-085410" data-project-title="085410 人工智能（含085400历史）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（含085400历史）
+
+<div class="project-verdict">
+
+2027预告改408；2026前身报考161、录取45、均分371。6月29日公告属于上半年，旧自命题分数不能直接换算。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;334&quot;, &quot;人工智能学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **321计算机与软件、334人工智能**
 
@@ -494,11 +561,19 @@
 
 </details>
 
+
+</section>
+
 <a id="school-002"></a>
 
 ### 华东师范大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **135计算机科学与技术学院—085404/01计算机技术**
 
@@ -669,6 +744,125 @@
 </section>
 
 
+
+<section class="school-college" data-college-key="160" data-college-title="160 软件工程学院">
+
+#### 160 软件工程学院
+
+<section class="admission-project" data-project-key="160-085405" data-project-title="085405 软件工程（01／02／03）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（01／02／03）
+
+<div class="project-verdict">
+
+2026全日制英语二、数学二、408；实考429、普通一志愿录87、线264，覆盖多个培养方向，不是独立AI人口。2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;160&quot;, &quot;160软件&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="172" data-college-title="172 空间人工智能学院">
+
+#### 172 空间人工智能学院
+
+<section class="admission-project" data-project-key="172-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026实考27、普通一志愿录17、复试线264；18人复试中位335不是录取中位。2026三年学费9万元，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;172&quot;, &quot;空间AI&quot;, &quot;空间人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="173" data-college-title="173 卓越工程师学院">
+
+#### 173 卓越工程师学院
+
+<section class="admission-project" data-project-key="173-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026实考48、普通一志愿录17、复试线321。普通路线三年学费9万元，不能套用推免专项3万元。2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;173&quot;, &quot;卓工AI&quot;, &quot;卓越工程师学院&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="173-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+与160软件工程学院分别招生。已查的卓工软件计划、复试和培养见本项目；不能借用160的录取87人或AI的数据。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;173&quot;, &quot;卓工软件&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="174" data-college-title="174 上海智能教育研究院">
+
+#### 174 上海智能教育研究院
+
+<section class="admission-project" data-project-key="174-085410" data-project-title="085410 人工智能（智能教育）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（智能教育）
+
+<div class="project-verdict">
+
+2026全日制22408，实考72、普通一志愿录26、线310；有较小实考人口，招生也小，不能称大容量保底。2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;174&quot;, &quot;智能教育&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="interaction" data-college-title="智能交互学院">
+
+#### 智能交互学院
+
+<section class="admission-project" data-project-key="interaction-085410" data-project-title="085410 人工智能（智能交互，推免线索）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（智能交互，推免线索）
+
+<div class="project-verdict">
+
+2027推免通知提及该专业，培养地点临港；普通统考入口、完整四科和名额仍未核。不能套用172、174的学费或报录统计。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;智能交互&quot;, &quot;临港&quot;]"></div>
+
+</section>
+
+</section>
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -808,6 +1002,56 @@
 
 <p class="school-tier">院校层次：211（非985）</p>
 
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="146" data-college-title="146 公共大数据国家重点实验室">
+
+#### 146 公共大数据国家重点实验室
+
+<section class="admission-project" data-project-key="146-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026全日制22408。规则推导60人、最低268、中位331，最终名单直证和报名数仍缺；不能把推导人口当正式最终名单。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;146&quot;, &quot;公共大数据&quot;, &quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="116" data-college-title="116 计算机科学与技术学院">
+
+#### 116 计算机科学与技术学院
+
+<section class="admission-project" data-project-key="116-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408；规则推导75人、中位331，证据性质与最终名单不同。独立核2027目录、普通容量及培养。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;116&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
+
 **146公共大数据实验室、116计算机**
 
 **2026全日制22408已核，2027正式条件待核。** 146公共大数据国家重点实验室085411的2026细则列招生总量60；既有审计按计划、排序与复试结果推导60人，最低268、中位331，14人低于315。它是值得比较的大数据规模项，但仍缺最终拟录取名单直证与报名数。初复试各50%，编程占复试30%，不能只看最低分。116计算机085404已有规则推导75人、中位331，证据性质相同；116的2025年改科公告不能借给146或117大数据学院。安全项目不纳入。
@@ -848,11 +1092,78 @@
 
 </details>
 
+
+</section>
+
 <a id="school-004"></a>
 
 ### 暨南大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="010" data-college-title="010 信息科学技术学院">
+
+#### 010 信息科学技术学院
+
+<section class="admission-project" data-project-key="010-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2027正式全日制22408已核。2026报名153、统考计划33；2027目录54为专业总计划，普通净名额另核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;010&quot;, &quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="010-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2027正式全日制22408已核。2026报名130、统考计划20；原表总计划、推免、录取字段不能硬相减。与044珠海分别看。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;010&quot;, &quot;085410&quot;, &quot;010 AI&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="044" data-college-title="044 智能科学与工程学院">
+
+#### 044 智能科学与工程学院
+
+<section class="admission-project" data-project-key="044-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2027正式全日制22408已核。2026报名126、统考计划27、线331；2027目录58含推免，不是普通58。珠海培养，C语言考查。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;044&quot;, &quot;珠海&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **010／044人工智能**
 
@@ -1041,11 +1352,19 @@
 
 </details>
 
+
+</section>
+
 <a id="school-005"></a>
 
 ### 新疆大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 2027正式目录及普通名额仍待核。
 
@@ -1363,6 +1682,7 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 </section>
 
 
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -1506,6 +1826,49 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 ### 西北农林科技大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息工程学院">
+
+#### 信息工程学院
+
+<section class="admission-project" data-project-key="information-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026首次由842改408；普通一志愿拟录取36人、最低288、中位339。未匹配名单不能直接算落榜，2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408，普通一志愿拟录取19人、最低276、中位323；小样本、项目制培养和未匹配复试人员须保留。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **计算机技术与人工智能**
 
@@ -2064,6 +2427,9 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-007"></a>
 
 ### 西南交通大学
@@ -2071,6 +2437,11 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 <p class="school-tier">院校层次：211（非985）</p>
 
 <p class="switch-note">历史首改：048人工智能085410的下半年公告是2025年7月16日，服务2026招生；它是已经发生的历史案例，不是2026下半年才公告的2027首改。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **048计算机与人工智能学院—085410人工智能**
 
@@ -2356,8 +2727,120 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 </section>
 
 
+
+<section class="admission-project" data-project-key="048-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026春季70、限定拟录取42另士兵2，中位378；线355。完整四科原行待重读，不能借本院AI的22408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;048&quot;, &quot;085404&quot;]"></div>
+
 </section>
 
+<section class="admission-project" data-project-key="048-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026春季20、限定拟录取14，中位374.5；线335不等于最低录取357。完整科目仍待重读。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;048&quot;, &quot;085405&quot;]"></div>
+
+</section>
+</section>
+
+
+
+<section class="school-college" data-college-key="004" data-college-title="004 信息科学与技术学院">
+
+#### 004 信息科学与技术学院
+
+<section class="admission-project" data-project-key="004-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026限定拟录取6人，最低300、中位326.5；样本很小，四科原行待核，不能借048人工智能科目。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;004&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="046" data-college-title="046 唐山研究院">
+
+#### 046 唐山研究院
+
+<section class="admission-project" data-project-key="046-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026限定拟录取50，中位368；唐山培养，完整四科原行待核，不能叫成都本部。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;046&quot;, &quot;唐山&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="051" data-college-title="051 宜宾研究院">
+
+#### 051 宜宾研究院
+
+<section class="admission-project" data-project-key="051-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026限定拟录取12，中位362.5；宜宾培养，完整四科原行待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;051&quot;, &quot;宜宾&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="077" data-college-title="077 联合培养专项">
+
+#### 077 联合培养专项
+
+<section class="admission-project" data-project-key="077-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式22408，目录17分四方向，限定拟录取15、中位333。结果无方向字段，不能拆到企业；培养专项不等于国家专项。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;077&quot;, &quot;联合培养&quot;]"></div>
+
+</section>
+
+</section>
 
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
@@ -2456,6 +2939,35 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 <p class="school-tier">院校层次：211（非985）</p>
 
 <p class="switch-note" data-status="date-unresolved">改408已预告，首发日期待核：014智能科学与工程学院085400电子信息，2026第四科822数字逻辑电路；2027调整页明确408。持续更新页标2026年7月3日，未给目标行首次加入日期，因此不与已核下半年发布事件使用同一红标。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="014" data-college-title="014 智能科学与工程学院">
+
+#### 014 智能科学与工程学院
+
+<section class="admission-project" data-project-key="014-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2027预告822改408，完整目录待核；2026全日制备注空白一志愿拟录取50人、中位362。滚动页底日不能证明目标行首发日。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;014&quot;, &quot;085400&quot;, &quot;电子信息&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **014电子信息**
 
@@ -2634,6 +3146,9 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-009"></a>
 
 ### 华中师范大学
@@ -2641,6 +3156,70 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 <p class="school-tier">院校层次：211（非985）</p>
 
 <p class="switch-note">下半年新增项目：信息管理学院085411／01卓越工程师于2026年7月1日预告，属于新增大数据项目；没有同项目自命题前身，不能归为旧项目下半年改408。人工智能教育学部另一份预告为6月30日。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="management" data-college-title="信息管理学院">
+
+#### 信息管理学院
+
+<section class="admission-project" data-project-key="management-085411" data-project-title="085411 大数据技术与工程 · 01卓越工程师" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程 · 01卓越工程师
+
+<div class="project-verdict">
+
+2027新增项目预告为全日制22408，3年、1万元/年；普通容量与工程专项合同待核，没有可直接移用的同项目旧分数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;信息管理&quot;, &quot;085411&quot;, &quot;卓越工程师&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="education-ai" data-college-title="人工智能教育学部">
+
+#### 人工智能教育学部
+
+<section class="admission-project" data-project-key="education-ai-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2027重组预告列全日制22408；与信息管理学院大数据分开，普通名额、正式目录及培养待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;人工智能教育学部&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="education-ai-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2027重组预告列全日制22408；6月30日属于上半年，不因重组认定首次改408。普通容量和成绩待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;人工智能教育学部&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **信息管理大数据、人工智能教育学部**
 
@@ -2704,11 +3283,78 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-010"></a>
 
 ### 上海大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="008" data-college-title="008 计算机工程与科学学院">
+
+#### 008 计算机工程与科学学院
+
+<section class="admission-project" data-project-key="008-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制非推免、未标专项拟录取57人，中位378；已考22408。机试与数据库考查及初复试原始分权重见本项目。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;008&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="008-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026限定拟录取7人，最低305、中位324；名额小且有联培条件，不借423未来学院规模。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;008&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="423" data-college-title="423 未来技术学院">
+
+#### 423 未来技术学院
+
+<section class="admission-project" data-project-key="423-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026限定拟录取86人、中位362.5；2024—2026中位334→347→362.5。名单未拆普通方向与企业班，不能称全为同条件名额。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;423&quot;, &quot;未来&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **008软件／AI、423未来技术AI**
 
@@ -3007,11 +3653,64 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-011"></a>
 
 ### 中国科学技术大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="217" data-college-title="217 环境科学与光电技术学院">
+
+#### 217 环境科学与光电技术学院
+
+<section class="admission-project" data-project-key="217-085400-02" data-project-title="085400 电子信息 · 02人工智能（新增预告）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 02人工智能（新增预告）
+
+<div class="project-verdict">
+
+2026年6月3日预告2027新增全日制22408；普通名额、复试、费用和正式目录仍缺，没有同项目旧线可借。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;217&quot;, &quot;环境科学&quot;, &quot;新增AI&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="225" data-college-title="225 软件学院">
+
+#### 225 软件学院
+
+<section class="admission-project" data-project-key="225-085405-01" data-project-title="085405 软件工程 · 01常规班" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 01常规班
+
+<div class="project-verdict">
+
+2026正式22408，拟接收统考480；含大数据、AI等内部方向，不能称普通AI480。三年学费6万元，后两年以企业实践为主。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;225&quot;, &quot;常规班&quot;, &quot;科软&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **217新AI、225软件常规班**
 
@@ -3134,11 +3833,19 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-012"></a>
 
 ### 北京交通大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **010软件学院—085405软件工程**
 
@@ -3558,6 +4265,27 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 </section>
 
 
+
+<section class="school-college" data-college-key="101" data-college-title="101 自动化与智能学院">
+
+#### 101 自动化与智能学院
+
+<section class="admission-project" data-project-key="101-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2027预告801改408，完整目录待核。2026普通拟录取21人、中位363；渤海11人、中位312，士兵1另列，培养人口不混用。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;101&quot;, &quot;自动化与智能&quot;, &quot;渤海&quot;]"></div>
+
+</section>
+
+</section>
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -3699,6 +4427,11 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 ### 辽宁大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 2027正式目录及普通名额仍待核。
 
@@ -4066,6 +4799,7 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 </section>
 
 
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -4155,6 +4889,11 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 ### 郑州大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 2027正式目录及普通名额仍待核。
 
@@ -4679,6 +5418,7 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 </section>
 
 
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -4763,6 +5503,49 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 ### 内蒙古大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="009" data-college-title="009 计算机学院">
+
+#### 009 计算机学院
+
+<section class="admission-project" data-project-key="009-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026目录普通招考60、拟推免20，两个独立字段不能再减；复试线329，正式最终分布待核。2024—2026为22408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="009-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026目录普通招考28、拟推免10；复试线284。最终分布与报名数仍缺，不把二手均分321当正式事实。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;, &quot;大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **009计算机与大数据**
 
@@ -4999,11 +5782,92 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-016"></a>
 
 ### 云南大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="015" data-college-title="015 信息学院">
+
+#### 015 信息学院
+
+<section class="admission-project" data-project-key="015-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026更新后统考拟招48，已扣推免并排除少骨、士兵。派生初试中位365由综合分反推，不是原表直列，也未分清一志愿。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;015&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="015-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026更新后统考拟招50；派生初试中位359，不能包装为原始普通一志愿成绩。2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;015&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="019" data-college-title="019 软件学院（人工智能学院）">
+
+#### 019 软件学院（人工智能学院）
+
+<section class="admission-project" data-project-key="019-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026更新后统考拟招63；派生初试中位352，公式与人口限制保留。2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;019&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="019-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026更新后统考拟招36；派生初试中位350.5，未核一志愿身份。与015信息学院AI分别看。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;019&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **015计算机／AI、019软件／AI**
 
@@ -5064,11 +5928,78 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-017"></a>
 
 ### 东北林业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="012" data-college-title="012 计算机与控制工程学院（入学后调整为计算机与人工智能学院）">
+
+#### 012 计算机与控制工程学院（入学后调整为计算机与人工智能学院）
+
+<section class="admission-project" data-project-key="012-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408；普通01春季计划71、线328，北方基因组02计划10、线273。两方向分别读，不能用273代表普通方向。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;012&quot;, &quot;085404&quot;, &quot;计算机技术&quot;, &quot;北方基因组&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="012-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408，春季计划10、复试线322；结构化面试。最终分布与报名数、2027条件仍缺。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;012&quot;, &quot;085405&quot;, &quot;软件&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="017" data-college-title="017 控制与信息工程学院">
+
+#### 017 控制与信息工程学院
+
+<section class="admission-project" data-project-key="017-085401" data-project-title="085401 新一代电子信息技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085401 新一代电子信息技术
+
+<div class="project-verdict">
+
+2027预告全日制22408，由829改408；5月8日是上半年公告。旧计划22、线317属于邻近电子信息路线，培养适配另核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;017&quot;, &quot;085401&quot;, &quot;新一代电子&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **计算机／软件及017新增邻近路线**
 
@@ -5429,11 +6360,141 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-018"></a>
 
 ### 中国石油大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="east-007" data-college-title="华东 · 007 青岛软件学院、计算机科学与技术学院">
+
+#### 华东 · 007 青岛软件学院、计算机科学与技术学院
+
+<section class="admission-project" data-project-key="east-007-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+华东007项目，2026正式全日制22408；不能借北京或克拉玛依的计划和分数。2027普通容量及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;007&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="east-007-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026线301，年度考试录取66含不同人口，不能称纯普通一志愿；石油工业软件专项有培养绑定。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;007&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="east-007-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026线297、年度考试录取12；21为上国家线人数，不是报名数。2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;007&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="east-007-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026线264、年度考试录取9；8为上国家线人数，不是报名数。理学院新大数据874不继承本项目408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;007&quot;, &quot;大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="beijing-ai" data-college-title="北京 · 人工智能学院">
+
+#### 北京 · 人工智能学院
+
+<section class="admission-project" data-project-key="beijing-ai-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408，复试阶段计划21、线360；含海南及中巴培养安排，普通净额另核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;北京&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="beijing-ai-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408，复试阶段计划13、线356；培养地点及普通份额独立核验。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;北京&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="karamay" data-college-title="北京 · 克拉玛依校区">
+
+#### 北京 · 克拉玛依校区
+
+<section class="admission-project" data-project-key="karamay-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026拟录取10人全部回连一志愿，最低314、中位348；备注空白不能升为已排尽专项的普通人口，也不是10个独立AI名额。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;克拉玛依&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **华东实体：007软件、计算机、AI、大数据**
 
@@ -5824,11 +6885,19 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-019"></a>
 
 ### 南昌大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **006数学与计算机学院—085405软件工程**
 
@@ -5962,6 +7031,7 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 
 </section>
+
 
 
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
@@ -6168,6 +7238,35 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 ### 四川农业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="419" data-college-title="419 信息工程学院">
+
+#### 419 信息工程学院
+
+<section class="admission-project" data-project-key="419-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026首次866改408，雅安培养；计算机、AI、大数据合并录取，不拆独立方向名额。复试线307，最终分布仍缺。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;419&quot;, &quot;085400&quot;, &quot;电子信息&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **419电子信息**
 
@@ -6427,11 +7526,43 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-021"></a>
 
 ### 华中农业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="317" data-college-title="317 信息学院">
+
+#### 317 信息学院
+
+<section class="admission-project" data-project-key="317-085404" data-project-title="085404 计算机技术（含085400历史）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术（含085400历史）
+
+<div class="project-verdict">
+
+2026全日制22408；公招20含卓工8、士兵3。首批非士兵拟录取18、中位349，仍未排除卓工；2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;317&quot;, &quot;085404&quot;, &quot;085400&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **317计算机技术**
 
@@ -6693,11 +7824,78 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-022"></a>
 
 ### 长安大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="006" data-college-title="006 信息工程学院">
+
+#### 006 信息工程学院
+
+<section class="admission-project" data-project-key="006-085404" data-project-title="085404 计算机技术（含旧085400方向）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术（含旧085400方向）
+
+<div class="project-verdict">
+
+2026首考408，数二、可选英语二；剔除明示士兵后拟录取30人，中位369。旧846分数另看。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;006&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="006-085405" data-project-title="085405 软件工程（含旧085400方向）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（含旧085400方向）
+
+<div class="project-verdict">
+
+2026首考408，备注空白拟录取26人，中位370。2027目录、普通容量待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;006&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="022" data-college-title="022 数据科学与人工智能研究院">
+
+#### 022 数据科学与人工智能研究院
+
+<section class="admission-project" data-project-key="022-085400" data-project-title="085400 电子信息（数据与AI）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息（数据与AI）
+
+<div class="project-verdict">
+
+2026数二408，拟录取10人，最低343、中位350.5；规模小且报名未知，不能据此叫冷门。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;022&quot;, &quot;数据科学&quot;, &quot;数据与AI&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **006计算机／软件、022数据与AI**
 
@@ -7028,11 +8226,78 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-023"></a>
 
 ### 武汉理工大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机与人工智能学院">
+
+#### 计算机与人工智能学院
+
+<section class="admission-project" data-project-key="computer-085405-main" data-project-title="085405 软件工程 · 本部" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 本部
+
+<div class="project-verdict">
+
+2026全日制22408，限定考试拟录取29人、中位368。目录20和春季29属于不同阶段；初试占总成绩70%。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;本部&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085405-xiangyang" data-project-title="085405 软件工程 · 襄阳" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 襄阳
+
+<div class="project-verdict">
+
+2026全日制22408，限定考试拟录取14人、中位352.5；春季计划17不能当最终实录。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;襄阳&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="hainan" data-college-title="海南专项培养单位">
+
+#### 海南专项培养单位
+
+<section class="admission-project" data-project-key="hainan-085405" data-project-title="085405 软件工程 · 海南" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 海南
+
+<div class="project-verdict">
+
+2026限定考试拟录取21人、中位357。按0.5＋2.5培养，首学期武汉、之后三亚；不能只用最低307判断竞争。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;海南&quot;, &quot;三亚&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **软件本部、襄阳、海南**
 
@@ -7412,11 +8677,197 @@ C 程序设计和数据库原理与技术列在需要加试的考生范围，不
 
 </details>
 
+
+</section>
+
 <a id="school-024"></a>
 
 ### 华南师范大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="041" data-college-title="041 人工智能学院">
+
+#### 041 人工智能学院
+
+<section class="admission-project" data-project-key="041-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026普通一志愿拟录取49人、中位367，含联培2人；全日制22408，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;041&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="041-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026普通一志愿拟录取70人、中位356，含东莞国创院2人。2024旧AI低线不能直接当当前基线。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;041&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="041-085411-history" data-project-title="085411 大数据技术与工程（历史项目）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程（历史项目）
+
+<div class="project-verdict">
+
+保留2024历史大数据人口与分数，学院重组后的当年身份另核；不能当作2027已确认独立入口。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;041&quot;, &quot;大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="historic-019" data-college-title="019 计算机学院（2024历史）">
+
+#### 019 计算机学院（2024历史）
+
+<section class="admission-project" data-project-key="historic-019-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2024正式22408，普通拟录取47、中位343；保留历史人口，不当作2027招生确认。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;019&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="historic-019-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2024正式22408，普通拟录取22、中位313.5，含不同联培人口。与旧028软件学院分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;019&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="historic-028" data-college-title="028 软件学院（2024及以前历史）">
+
+#### 028 软件学院（2024及以前历史）
+
+<section class="admission-project" data-project-key="historic-028-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2024正式22408，普通拟录取77、中位329，含融合联培；2024年7月合院后不能直接沿用。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;028&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="historic-028-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2023—2024均22408，普通录取中位326.5→307；并未改科，是描述参照，不是随机对照。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;028&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="historic-042" data-college-title="042 北斗研究院（2024历史）">
+
+#### 042 北斗研究院（2024历史）
+
+<section class="admission-project" data-project-key="historic-042-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2024正式22408，普通拟录取仅1人、300分；不能由单人低分推断大规模机会。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;042&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="historic-042-085411" data-project-title="085411 大数据技术与工程（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程（自命题对照）
+
+<div class="project-verdict">
+
+2024为英语二、数学二、823，不是408；不能混入同校同卷历史样本。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;042&quot;, &quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="historic-046" data-college-title="046 数据科学与工程学院（2024历史）">
+
+#### 046 数据科学与工程学院（2024历史）
+
+<section class="admission-project" data-project-key="historic-046-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2024正式22408，普通拟录取15、中位308；属于历史学院项目，2027入口待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;046&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **041软件与人工智能**
 
@@ -8021,11 +9472,85 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-025"></a>
 
 ### 江南大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="031" data-college-title="031 人工智能与计算机学院">
+
+#### 031 人工智能与计算机学院
+
+<section class="admission-project" data-project-key="031-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2027推免清单列本项目，但完整统考四科原行与普通名额仍待核，三个专硕合计约100推免不能分配为本项目容量。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="031-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026两批学院建议名单空白49人、中位368，线349；不是校级最终分布。完整四科目录仍缺。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="031-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026两批学院建议名单空白67人、中位357，另卓工12单列；线317。春季68含卓工15，阶段和人口不混用。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="031-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026阶段计划15、线264，属于小项目；完整目录、普通最终名单及报名数仍缺。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;, &quot;大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **031人工智能、软件与大数据**
 
@@ -8261,11 +9786,64 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-026"></a>
 
 ### 北京航空航天大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="057" data-college-title="057 杭州国际创新研究院">
+
+#### 057 杭州国际创新研究院
+
+<section class="admission-project" data-project-key="057-085405" data-project-title="085405 软件工程 · 中法航空双学位专项" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 中法航空双学位专项
+
+<div class="project-verdict">
+
+2026年7月30日预告2027新增22408；普通入口、学习方式、赴法时长和费用未齐，没有本项目旧分数可借。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;057&quot;, &quot;杭州&quot;, &quot;中法航空&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="021" data-college-title="021 软件学院">
+
+#### 021 软件学院
+
+<section class="admission-project" data-project-key="021-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026已有全日制22408，目录统考计划15含专项且仅供参考；2027普通条件及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;021&quot;, &quot;软件学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **057杭州新软件、021既有软件**
 
@@ -8334,11 +9912,57 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-027"></a>
 
 ### 东北师范大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="127" data-college-title="127 信息科学与技术学院">
+
+#### 127 信息科学与技术学院
+
+<section class="admission-project" data-project-key="127-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2027预告879改408；2026是全日制101/204/302/879，含软件与智能方向。2027正式四科和普通份额仍待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="127-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2027预告879改408，6月25日属于上半年。2026目录31不能当普通实际录取；最终分布仍缺。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **127计算机与人工智能**
 
@@ -8494,6 +10118,9 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-028"></a>
 
 ### 中南财经政法大学
@@ -8501,6 +10128,63 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 <p class="school-tier">院校层次：211（非985）</p>
 
 <p class="switch-flag" data-status="late-announcement" data-announced="2026-07-17" data-target-year="2027">下半年改408公告｜2026年7月17日 → 2027招生。覆盖信息工程学院085404计算机技术、085410人工智能（中外合作）、085411大数据技术与工程（中外合作）。旧科目代码及连续招生沿革未闭合，不能写成2026年837直接改408。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息工程学院">
+
+#### 信息工程学院
+
+<section class="admission-project" data-project-key="information-085404" data-project-title="085404 计算机技术" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026年7月17日公告2027第四科改408；前三科、方式和普通计划待核。2023/2024旧普通项目分数不能直接预测今年。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-085410-coop" data-project-title="085410 人工智能（中外合作）" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085410 人工智能（中外合作）
+
+<div class="project-verdict">
+
+7月17日2027改408公告涉及本项目；澳门城市大学2＋1合作合同、费用、学位及普通入口待核，不能借普通计算机旧线。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-085411-coop" data-project-title="085411 大数据技术与工程（中外合作）" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085411 大数据技术与工程（中外合作）
+
+<div class="project-verdict">
+
+7月17日2027改408公告涉及本项目；澳门2＋1培养与普通计算机分开，完整科目及费用、人数待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;, &quot;大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 红标依据是学院7月17日正式公告及校级7月24日引用。公告未列前三科、学习方式和普通人数，仍不能确认2027全日制22408。计算机技术与澳门“2＋1”合作AI／大数据的培养合同分开：后两项须补学费、分年地点、学位授予和毕业要求。既有2025／2026完整目录未列目标0854，不以旧年普通项目分数预测合作新路线。9月10日普通请求曾仅得网页外壳；2026年9月13日通过独立Codex侧边研究标签重新完整读到[7月17日学院原文](https://xagx.zuel.edu.cn/2026/0717/c3402a436272/page.htm)及[7月24日校级原文](https://yzb.zuel.edu.cn/2026/0724/c4639a436451/page.htm)，确认现有项目与408条文，不新增前三科、普通人数或费用结论。普通请求外壳与浏览器可读正文的取证方式分别保留。
 
@@ -8620,11 +10304,19 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-029"></a>
 
 ### 湖南大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **已整理 2023—2026 年的录取人数、复试线、最低分、中位数、平均分、最高分，以及当年科目、机试、面试和培养费用。** 计算机学院看合并后的 `085400 电子信息`；原信息科学与工程学院的计算机技术、软件工程看各自历史方向。
 
@@ -8982,6 +10674,7 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </section>
 
+
 <section class="admission-notes" data-notes-title="研究说明与其他历史线索">
 
 #### 本校研究说明与其他历史线索
@@ -9041,6 +10734,11 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 ### 重庆大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **014计算机学院—085404计算机技术**
 
@@ -9221,6 +10919,27 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </section>
 
+
+
+<section class="school-college" data-college-key="024" data-college-title="024 软件学院">
+
+#### 024 软件学院
+
+<section class="admission-project" data-project-key="024-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026考101/204/302/877；2027改408尚无官方原件。目录81为公招38＋推免43，不能叫普通81。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;024&quot;, &quot;软件学院&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
 
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
@@ -9729,6 +11448,11 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 <p class="school-tier">院校层次：985</p>
 
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+
 2027正式目录及普通名额仍待核。
 
 **131信息学院计算机科学与技术系—085404计算机技术**
@@ -10072,6 +11796,7 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 </section>
 
 
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -10104,6 +11829,11 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 ### 山东大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **047计算机科学与技术学院—085404计算机技术**
 
@@ -10415,6 +12145,27 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 </section>
 
 
+
+<section class="school-college" data-college-key="048" data-college-title="048 软件学院">
+
+#### 048 软件学院
+
+<section class="admission-project" data-project-key="048-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026正式全日制22408；调整后目录统考21不是春季普通实录。最早预告在2025年5月，软件院线及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;048&quot;, &quot;软件学院&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -10485,6 +12236,11 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 ### 中国海洋大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 2027正式目录及普通名额仍待核。
 
@@ -10826,6 +12582,27 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 </section>
 
 
+
+<section class="school-college" data-college-key="033" data-college-title="033 国家卓越工程师学院">
+
+#### 033 国家卓越工程师学院
+
+<section class="admission-project" data-project-key="033-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+与002信息学部01方向分开，项目制培养及阶段计划按本单位阅读；不能借用002的线364或二手中位378。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;033&quot;, &quot;卓工&quot;]"></div>
+
+</section>
+
+</section>
+
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
 #### 其他项目、学院共同规则与完整取证
@@ -10985,6 +12762,11 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 ### 合肥工业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **005计算机与信息学院—085404计算机技术**
 
@@ -11179,6 +12961,41 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </section>
 
+
+
+<section class="school-college" data-college-key="021" data-college-title="021 卓越工程师学院">
+
+#### 021 卓越工程师学院
+
+<section class="admission-project" data-project-key="021-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+卓工项目单列，名额、复试、企业实践与005计算机学院不同，不套005的41人或线358。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;021&quot;, &quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="021-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+卓工项目单列，不套005人工智能46人或线356；普通容量、企业及培养合同以本项目材料为准。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;021&quot;, &quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
 
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
@@ -11689,6 +13506,11 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 <p class="school-tier">院校层次：211（非985）</p>
 
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+
 **018计算机科学与技术学院—085405软件工程**
 
 **2026全日制22408。** 全国统考、全日制、非定向10人，中位**376.5**；2025同人口10人/365.5，但旧目录由完整镜像恢复。苏州天赐庄运行线索，3年学费3万元；初试62.5%，3小时普通机试折最终18.75%。小名额波动大，不作保底；至少一年实践，五类成果至少一项E等，2027适用、导师和三年地点待核。
@@ -11914,8 +13736,43 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 </section>
 
 
+
+<section class="admission-project" data-project-key="018-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2025报名47、春季拟公开招考5；2025/2026公示各5人，中位339/359。名单未拆普通与保密方向，不称纯非安全样本。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;018&quot;, &quot;085411&quot;, &quot;大数据&quot;]"></div>
+
+</section>
 </section>
 
+
+
+<section class="school-college" data-college-key="032" data-college-title="032 未来学院">
+
+#### 032 未来学院
+
+<section class="admission-project" data-project-key="032-085410-01" data-project-title="085410 人工智能 · 01应用技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能 · 01应用技术
+
+<div class="project-verdict">
+
+2026全日制22408，统考全日制非定向拟录取19人、中位368，仍缺专项和一志愿字段。2025报名258不支持冷门判断。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;032&quot;, &quot;未来学院&quot;]"></div>
+
+</section>
+
+</section>
 
 <section class="admission-notes" data-notes-title="其他项目、学院共同规则与完整取证">
 
@@ -12080,6 +13937,77 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 <p class="school-tier">院校层次：985</p>
 
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="058" data-college-title="058 软件学院">
+
+#### 058 软件学院
+
+<section class="admission-project" data-project-key="058-085405" data-project-title="085405 软件工程 · COT" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · COT
+
+<div class="project-verdict">
+
+2026全日制22408，线350；305为复试名单人数、中位381，不是最终录取。2025考875，基本计划180不能当普通净额。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;058&quot;, &quot;软件学院&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与技术学院">
+
+#### 计算机科学与技术学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术 · COT" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术 · COT
+
+<div class="project-verdict">
+
+2026全日制22408，线320；61条备注空白复试行中位384，不是录取分布。基本计划56含士兵，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机科学与技术学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能学院">
+
+#### 人工智能学院
+
+<section class="admission-project" data-project-key="ai-085410" data-project-title="085410 人工智能（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（自命题对照）
+
+<div class="project-verdict">
+
+现有2026记录考874，不能跟随软件或计算机自动认定408；保留作为科目对照，2027另核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;874&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
+
 **058软件工程**
 
 **2026正式全日制22408，2027待核。** 085405由2025的875改408，含软件、大数据分析、工业软件、金融科技四个COT方向；四方向不能拆成四个独立招生实验。两年基本计划175→180随推免、生源与学校规模调整，不能称普通扩招5人。原始调整公告日、相邻年完整官方普通复试与最终分布仍缺，不能借目录日制造“下半年首改”。2026复试范围为算法设计与分析、数据库系统原理。
@@ -12105,11 +14033,67 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-037"></a>
 
 ### 中国人民大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="159" data-college-title="159 信息学院">
+
+#### 159 信息学院
+
+<section class="admission-project" data-project-key="159-085400" data-project-title="085400 电子信息 · 软件／人工智能／大数据" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 软件／人工智能／大数据
+
+<div class="project-verdict">
+
+2026全日制22408，3年；01软件、03AI、05大数据属于同一专业下的方向。工程硕士推免21跨三个单位，不能当本项目普通计划。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;159&quot;, &quot;085400&quot;]"></div>
+
+<section class="research-direction" data-direction-key="01" data-direction-title="01 软件工程">
+
+###### 01 软件工程
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+<section class="research-direction" data-direction-key="03" data-direction-title="03 人工智能">
+
+###### 03 人工智能
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+<section class="research-direction" data-direction-key="05" data-direction-title="05 大数据技术与工程">
+
+###### 05 大数据技术与工程
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **159信息学院软件、AI、大数据**
 
@@ -12128,11 +14112,43 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-038"></a>
 
 ### 华东理工大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="006" data-college-title="006 信息科学与工程学院">
+
+#### 006 信息科学与工程学院
+
+<section class="admission-project" data-project-key="006-085404" data-project-title="085404 计算机技术 · 01" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术 · 01
+
+<div class="project-verdict">
+
+2025首次408，2024—2026线350→322→369。2026备注空白全日制非定向最终25人、中位384，士兵另列；首改低线没有持续。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;006&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **计算机085404**
 
@@ -12206,11 +14222,80 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-039"></a>
 
 ### 河海大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机与软件学院">
+
+#### 计算机与软件学院
+
+<section class="admission-project" data-project-key="computer-085400" data-project-title="085400 电子信息 · 00普通方向" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 00普通方向
+
+<div class="project-verdict">
+
+2026全日制22408；春季普通计划39，学校与学院空白备注匹配41人、中位391。推免35、士兵2另列，不能把总量混入普通。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机与软件&quot;, &quot;00普通&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能与自动化学院">
+
+#### 人工智能与自动化学院
+
+<section class="admission-project" data-project-key="ai-085400" data-project-title="085400 电子信息 · 智能科学／苏州专项" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 智能科学／苏州专项
+
+<div class="project-verdict">
+
+2026全日制22408；02智能科学线338，03苏州线306，两方向分别读。苏州一志愿8与调剂13不能混作同卷普通人口，培养地点和计划均不同。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;智能科学&quot;, &quot;苏州&quot;]"></div>
+
+<section class="research-direction" data-direction-key="02" data-direction-title="02 智能科学">
+
+###### 02 智能科学
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+<section class="research-direction" data-direction-key="03" data-direction-title="03 苏州高等研究院专项">
+
+###### 03 苏州高等研究院专项
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 <!-- 河海2027推免时点 TraceId: 85aa3217-1ff8-4e54-b3a7-1141e5b2d5d2 -->
 [2026年9月10日学院2027推免细则](https://cies.hhu.edu.cn/2026/0910/c4093a334307/page.htm)主PDF已读，时间表安排9月16日报到、9月17—18日考核计算机、软件、电子信息。文件未给2027统考四科、普通名额和专业推免接收数。9月13日尚在该考核流程之前，只更新容量核查阶段，不把推免办法套入统考复试，也不算新的改408公告。
@@ -12359,11 +14444,57 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-040"></a>
 
 ### 南京理工大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="106" data-college-title="106 计算机科学与工程学院">
+
+#### 106 计算机科学与工程学院
+
+<section class="admission-project" data-project-key="106-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408，与软件共同排序。2023—2025合并线355／349／340，不能当两个独立项目的竞争结果。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;106&quot;, &quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="106-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408，2023首次408。与计算机共用排名和历史线，2027普通份额及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;106&quot;, &quot;085405&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **106计算机／软件**
 
@@ -12431,11 +14562,92 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-041"></a>
 
 ### 武汉大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机学院">
+
+#### 计算机学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026与软件、AI共同排名，线350；剩余计划24含卓工10，不能当24个同条件普通席位。机试折最终16%。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机学院&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408，共同排名线350；剩余计划28含卓工10，与AI学院分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机学院&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408，与本院计软共同排名；剩余33含卓工1。三个专业85不能当独立AI容量。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机学院&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能学院">
+
+#### 人工智能学院
+
+<section class="admission-project" data-project-key="ai-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026正式全日制22408，是另一个招生学院；不能借计算机学院的33人、线350或排名规则，独立容量与分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;人工智能学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **计算机、软件、人工智能共同排名**
 
@@ -12529,11 +14741,92 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-042"></a>
 
 ### 东北大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="software" data-college-title="软件学院">
+
+#### 软件学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408；普通其他方向42、智能应用2、美方双学位34、佛山21分别保留，不能合称99个同条件普通名额。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件学院&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="software-083500" data-project-title="083500 软件工程（学硕）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 083500 软件工程（学硕）
+
+<div class="project-verdict">
+
+2026英语一、数学二、408。按当前“数二＋408”条件可以比较；旧稿因英语一排除的结论仅保留作历史记录。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;083500&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与工程学院">
+
+#### 计算机科学与工程学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式全日制22408；本项目普通容量、最终分布和2027目录待核，不借软件学院人数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026正式全日制22408；人工智能单列，普通名额与最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **软件学院085405多条培养路线**
 
@@ -12565,11 +14858,43 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-043"></a>
 
 ### 大连理工大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="170" data-college-title="170 软件学院">
+
+#### 170 软件学院
+
+<section class="admission-project" data-project-key="170-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026考101／204／302／887，线372。普通春季83，少骨2、士兵1另列；校方321报名、86录取未全拆普通。2027改408未获正式原件。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;170&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **170软件085405**
 
@@ -12646,11 +14971,43 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-044"></a>
 
 ### 西北工业大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="software" data-college-title="软件学院">
+
+#### 软件学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026考101／204／302／879；普通计划及拟录取102、中位403.5。2027改408尚无正式原件，不能用自命题高分换算408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **软件085405**
 
@@ -12735,11 +15092,57 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-045"></a>
 
 ### 北京工业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="catalog-unit" data-college-title="招生学院待核（原目录项目已记录）">
+
+#### 招生学院待核（原目录项目已记录）
+
+<section class="admission-project" data-project-key="catalog-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408，目录初始统考55、线365；不是最终55。3年每年8000元，2027容量及分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="catalog-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408，目录初始统考74，复试线尚待补核。3年合计学费4万元，不能仅凭规模当低分项目。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：085404计算机技术、085405软件工程；排安全方向。
 
@@ -12767,11 +15170,43 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-046"></a>
 
 ### 中国农业大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息与电气工程学院">
+
+#### 信息与电气工程学院
+
+<section class="admission-project" data-project-key="information-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026普通一志愿复试97、拟录取79，最低326、中位355。北京14与烟台65分开；初试70%，无统一机试，2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **补回的2026校区分组：**旧审计记录普通复试97、拟录取79，初试最低326／中位355／均值357.20；北京备注14、烟台备注65，北京组中位383。79不能全算北京名额，355也不能当北京组的录取中心。初试70%，2年制，无统一机试；2027名额与校区选择权另核。
 
@@ -12803,11 +15238,43 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-047"></a>
 
 ### 北京林业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="004" data-college-title="004 信息学院（人工智能学院）">
+
+#### 004 信息学院（人工智能学院）
+
+<section class="admission-project" data-project-key="004-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026全日制22408，软件、计算机、AI、大数据合并排名，线337。剩余93含专项1，不是已核纯普通93；初复试原始分各乘0.5不等于百分制各50%。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;004&quot;, &quot;085400&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：信息学院085400的软件、计算机、AI、数据方向。
 
@@ -12845,11 +15312,64 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-048"></a>
 
 ### 中国传媒大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="laboratory" data-college-title="媒体融合与传播国家重点实验室">
+
+#### 媒体融合与传播国家重点实验室
+
+<section class="admission-project" data-project-key="lab-085411-02" data-project-title="085411 大数据技术与工程 · 02数据智能技术与应用" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程 · 02数据智能技术与应用
+
+<div class="project-verdict">
+
+2026全日制22408，2年；总计划20、拟推免10、实推免6分别保留。初试264及材料综合54.9双门槛，最终名单未能按项目回连。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;实验室&quot;, &quot;02&quot;, &quot;数据智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="data" data-college-title="数据科学与智能媒体学院">
+
+#### 数据科学与智能媒体学院
+
+<section class="admission-project" data-project-key="data-085411-03" data-project-title="085411 大数据技术与工程 · 03大数据分析与智能计算" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程 · 03大数据分析与智能计算
+
+<div class="project-verdict">
+
+2026全日制22408；总计划9、拟推免4、实推免2。初试264及材料综合57.1；不能借实验室02的计划或门槛。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;智能媒体学院&quot;, &quot;03&quot;, &quot;大数据分析&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：085411/02数据智能技术与应用、03大数据分析与智能计算，非网安培养单位。
 
@@ -12892,11 +15412,57 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-049"></a>
 
 ### 中央财经大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息学院">
+
+#### 信息学院
+
+<section class="admission-project" data-project-key="information-085404" data-project-title="085404 计算机技术 · 软件技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术 · 软件技术
+
+<div class="project-verdict">
+
+2026全日制22408，目录总计划6不能当普通6。2027预告改非全日制，学习方式须按新年目录核验。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;软件技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-085410" data-project-title="085410 人工智能 · 智能应用" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能 · 智能应用
+
+<div class="project-verdict">
+
+2026全日制22408，含其他方向的14不等于纯AI普通14。2027完整目录、普通名额与培养待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;智能应用&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：085404计算机软件技术、085410智能应用。
 
@@ -12940,11 +15506,78 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-050"></a>
 
 ### 华北电力大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="beijing-004" data-college-title="北京 · 004 控制与计算机工程学院">
+
+#### 北京 · 004 控制与计算机工程学院
+
+<section class="admission-project" data-project-key="beijing-004-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+北京本部项目，2026全日制22408；与保定和卓工分别核，2027普通容量及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;004&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="beijing-004-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408；2025→2026普通一志愿20→19、中位346→349。首改年份线索仍缺2025正式目录闭环。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;004&quot;, &quot;085405&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="beijing-engineering" data-college-title="北京 · 卓越工程师学院">
+
+#### 北京 · 卓越工程师学院
+
+<section class="admission-project" data-project-key="beijing-engineering-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+培养及项目制安排独立核验，不能借004学院计算机、软件的名额与分数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;卓越工程师&quot;, &quot;卓工&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：北京控制与计算机学院085404/085405、卓工085404。
 
@@ -13013,11 +15646,99 @@ AI报名减少102人、66.23%，同期春季拟招减少7人、28%；大数据�
 
 </details>
 
+
+</section>
+
 <a id="school-051"></a>
 
 ### 太原理工大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="005" data-college-title="005 招生单位（学院全称待核）">
+
+#### 005 招生单位（学院全称待核）
+
+<section class="admission-project" data-project-key="005-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式全日制22408；2027普通容量及最终分布待核。不能套024人工智能学院的AI或大数据成绩。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;005&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="024" data-college-title="024 人工智能学院">
+
+#### 024 人工智能学院
+
+<section class="admission-project" data-project-key="024-085410" data-project-title="085410 人工智能 · 00不区分方向" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能 · 00不区分方向
+
+<div class="project-verdict">
+
+2026全日制22408，线295；一志愿复试19、匹配拟录取14，最低306、中位326.5。备注空白但未独立标普通类别，报名数未知。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;024&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="024-085411" data-project-title="085411 大数据技术与工程 · 00不区分方向" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程 · 00不区分方向
+
+<div class="project-verdict">
+
+2026全日制22408，线315；一志愿复试57、匹配拟录取42，最低324、中位345.5。人数更多不等于更低分。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;024&quot;, &quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="028" data-college-title="028 软件培养单位">
+
+#### 028 软件培养单位
+
+<section class="admission-project" data-project-key="028-085405" data-project-title="085405 软件工程（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（自命题对照）
+
+<div class="project-verdict">
+
+2026仍考895，不能继承计算机、AI或大数据的408；2027同项目四科待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;028&quot;, &quot;085405&quot;, &quot;895&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026同科目比较：AI低分历史更直接，大数据人数更多。** 024—085410人工智能，一志愿复试名单19、拟录取14，初试最低306／中位326.5；024—085411大数据为57、42，最低324／中位345.5。两者均为全日制101／204／302／408，56名拟录取均已与各自复试名单匹配，备注均空白，仍保留普通类别未独立标注的限制。报名人数未公布，不能说“报得少”；大数据多录三倍人，中位却高19分。
 
@@ -13065,11 +15786,43 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-052"></a>
 
 ### 复旦大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computing" data-college-title="计算与智能创新学院">
+
+#### 计算与智能创新学院
+
+<section class="admission-project" data-project-key="computing-085400" data-project-title="085400 电子信息 · 普通软件／计算机／AI／大数据" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 普通软件／计算机／AI／大数据
+
+<div class="project-verdict">
+
+2026普通01—20方向有全日制22408目录；91为推免专用，不能算普通入口。各方向容量、分数、培养与2027条件分别核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;计算与智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：计算与智能创新学院085400普通软件/计算机/AI/数据方向。
 
@@ -13087,11 +15840,71 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-053"></a>
 
 ### 东华大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="023" data-college-title="023 招生单位（由原009、015整合）">
+
+#### 023 招生单位（由原009、015整合）
+
+<section class="admission-project" data-project-key="023-085404" data-project-title="085404 计算机技术（含015历史）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术（含015历史）
+
+<div class="project-verdict">
+
+2026改408后与软件统筹，线353、合并计划120、空白备注拟录取121中位371。不能把合并人口全算计算机；2025考854线313。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="023-085405" data-project-title="085405 软件工程（含015历史）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（含015历史）
+
+<div class="project-verdict">
+
+2026全日制22408，与计算机合并排名。2025考854，旧313线不能直接预测408；121人是两专业合并人口。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="023-085410" data-project-title="085410 人工智能（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（自命题对照）
+
+<div class="project-verdict">
+
+2025考876线265；2026考878线376。合院也改变生源边界，20→38不能解释为同项目净扩招，未确认408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 <!-- 东华逐年科目与需求容量补证 TraceId: 5df15b54-e895-4aa6-b4d3-6fa03bc0e957 -->
 **2027判断：2026计软改408后的分数并未降低，不能沿用2025低线当作机会。** 2026计算机、软件普通复试线353；备注空白拟录取合并121人、初试中位371。AI在2025考876、2026最终考878数据结构，普通线265→376；它不属于已确认408候选。2026原009信息学院与015计算机学院合并为023，AI生源项目边界也改变，不能把旧AI20人和新AI38人解释为单一项目净扩招。2027完整四科、普通计划、报名与培养条件仍待核。
@@ -13171,11 +15984,120 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-054"></a>
 
 ### 中国矿业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="xuzhou-computer" data-college-title="徐州 · 计算机科学与技术学院／人工智能学院">
+
+#### 徐州 · 计算机科学与技术学院／人工智能学院
+
+<section class="admission-project" data-project-key="xz-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408，春季计划27、线353；769程序设计考查，普通最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="xz-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026全日制22408，春季计划23、线370；3年每年1万元，不能借AI低线。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="xz-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408，春季计划14、线338；复试511理论2小时，与769程序设计分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="xz-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026全日制22408，春季计划7、线350；项目规模小，报名及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;, &quot;大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="beijing-ai" data-college-title="北京 · 人工智能学院">
+
+#### 北京 · 人工智能学院
+
+<section class="admission-project" data-project-key="bj-085404" data-project-title="085404 计算机技术（数学一对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术（数学一对照）
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，属于北京办学实体。与徐州四项目的22408及人数分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;北京&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="bj-085410" data-project-title="085410 人工智能（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（自命题对照）
+
+<div class="project-verdict">
+
+2026英语一、数学一、812；不能因学院名为人工智能就认定数二408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;北京&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **补回徐州四项目的2026春季口径：**计算机／软件／AI／大数据复试阶段计划分别27／23／14／7，复试线353／370／338／350；目录考试计划为21／22／11／7。三年、每年1万元。实际最终普通分布仍未闭环；小规模AI和大数据不应被校级人数包装成大容量。
 
@@ -13233,11 +16155,57 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-055"></a>
 
 ### 南京农业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="019" data-college-title="019 招生单位（计算机与新AI培养）">
+
+#### 019 招生单位（计算机与新AI培养）
+
+<section class="admission-project" data-project-key="019-085404" data-project-title="085404 计算机技术（旧085400／02）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术（旧085400／02）
+
+<div class="project-verdict">
+
+2026旧02全日制22408；2027预告改码。旧41是计算机与电子自动化合计总计划，不是计算机普通41。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;019&quot;, &quot;计算机技术&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="019-085410" data-project-title="085410 人工智能（新增拆分预告）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（新增拆分预告）
+
+<div class="project-verdict">
+
+2027从原电子及自动化拆出，已列10位导师，四科、学习方式、普通名额及收费待核。10位导师不是10个名额，不能继承旧计算机408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;新AI&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：019—085400/02计算机技术。
 
@@ -13285,11 +16253,43 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-056"></a>
 
 ### 南京师范大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="022" data-college-title="022 计算机与电子信息学院">
+
+#### 022 计算机与电子信息学院
+
+<section class="admission-project" data-project-key="022-085404" data-project-title="085404 计算机技术 · 01" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术 · 01
+
+<div class="project-verdict">
+
+2024旧085400／01考873、线339，2025改408线326。2026正式22408；目录49与拟推免22不能直接写成净27，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;022&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：022—085404/01计算机技术。
 
@@ -13336,11 +16336,71 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-057"></a>
 
 ### 福州大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="010" data-college-title="010 计算机与大数据学院">
+
+#### 010 计算机与大数据学院
+
+<section class="admission-project" data-project-key="010-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408、3年；校级普通非定向最终87，中位389。未拆安全方向的人口不能标为已排除安全；2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="010-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026正式全日制22408，普通非定向最终28、中位376；2025报名264不能作2026报录比分母。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件工程&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="010-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026正式全日制22408，普通非定向最终36、中位379.5；2025报名384，不能称少人报名的低分项目。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **当前判断：已有正式 22408，也有一定招生规模，但 2026 年不属于低分样本。** 同年校级普通非定向拟录取的初试中位数：计算机 389、软件 376、AI 379.5。三项共 151 人，初试均不低于 350；“人工智能名字较新，所以报名少”没有获得本校数据支持。2025 年 AI 实际报考 384 人、软件 264 人，尚未取得 2026 年真实报考人数，不能把两个年份拼成报录比。
 
@@ -13421,11 +16481,141 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-058"></a>
 
 ### 中国地质大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="beijing-ai" data-college-title="北京 · 人工智能学院">
+
+#### 北京 · 人工智能学院
+
+<section class="admission-project" data-project-key="bj-ai-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式全日制22408，目录总计划与推免字段原样保留，普通净额与最终分布未核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;北京&quot;, &quot;人工智能学院&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="bj-ai-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026正式全日制22408，与数理学院、武汉实体分别招生，不能互借计划或成绩。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;北京&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="beijing-math" data-college-title="北京 · 数理学院">
+
+#### 北京 · 数理学院
+
+<section class="admission-project" data-project-key="bj-math-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式全日制22408；与北京人工智能学院同码但不是同一项目，独立名额及结果待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;数理学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="wuhan-computer" data-college-title="武汉 · 计算机学院">
+
+#### 武汉 · 计算机学院
+
+<section class="admission-project" data-project-key="wh-computer-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026普通计算、软件、AI方向按武汉目录阅读；独立普通名额和分布待核，不能套北京实体结果。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;武汉&quot;, &quot;计算机学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="wuhan-advanced" data-college-title="武汉 · 先进技术研究院">
+
+#### 武汉 · 先进技术研究院
+
+<section class="admission-project" data-project-key="wh-advanced-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+本培养单位独立看科目、方向和普通计划；不能把计算机学院或北京名额挪入。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;先进技术研究院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="wuhan-gis" data-college-title="武汉 · 国家地理信息系统工程技术研究中心">
+
+#### 武汉 · 国家地理信息系统工程技术研究中心
+
+<section class="admission-project" data-project-key="wh-gis-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+地理信息交叉培养单列，普通份额、培养地点及分布按本单位原记录核验。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;国家地理信息&quot;, &quot;工程技术研究中心&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：北京085404/085405；武汉多个085400普通方向。
 
@@ -13446,11 +16636,106 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-059"></a>
 
 ### 中山大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机学院">
+
+#### 计算机学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式全日制22408，普通净额、最终分布、2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机学院&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能学院">
+
+#### 人工智能学院
+
+<section class="admission-project" data-project-key="ai-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026正式全日制22408；与计算机、软件分别看，不能借其他学院容量。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;人工智能学院&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="software" data-college-title="软件工程学院">
+
+#### 软件工程学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026正式全日制22408；普通名额、学费及最终分布待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;软件工程学院&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="systems" data-college-title="系统科学与工程学院">
+
+#### 系统科学与工程学院
+
+<section class="admission-project" data-project-key="systems-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+交叉学院同码项目独立核；2026正式全日制22408，普通容量和结果待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;系统科学&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：计算机085404、AI学院085410、软件085405、系统科学学院085404。
 
@@ -13552,11 +16837,57 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-060"></a>
 
 ### 广西大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="013" data-college-title="013 计算机与电子信息学院">
+
+#### 013 计算机与电子信息学院
+
+<section class="admission-project" data-project-key="013-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408；一志愿复试162、春季计划84。规则推导前84中位320，不能当正式最终录取。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="013-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408；复试65中合格52，对照计划64确有一志愿合格生源不足，但52不是报名人数，也不是已核最终录取人数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **补回的2026规模证据：**013计算机有162名普通一志愿复试考生、春季普通名额84；按正式规则排序前84人的初试中位320只是规则推导，最终普通名单仍缺。013人工智能名单65人、复试合格52、阶段普通名额64，出现过合格一志愿不足的窗口；不能把52当最终录取人数，也没有报名数来证明冷门。两项目均已在2026考408，2027普通容量另核。
 
@@ -13591,6 +16922,9 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-061"></a>
 
 ### 海南大学
@@ -13598,6 +16932,112 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 <p class="school-tier">院校层次：211（非985）</p>
 
 <p class="switch-flag" data-status="late-announcement" data-announced="2026-07-02" data-target-year="2027">下半年改408公告｜2026年7月2日 → 2027招生。仅802机电工程学院085406控制工程、824海洋技术与装备学院085407仪器仪表工程，899自动控制原理改408；不是计算机学院软件工程首改。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="812" data-college-title="812 计算机学院">
+
+#### 812 计算机学院
+
+<section class="admission-project" data-project-key="812-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026已是全日制22408，普通春季计划27、复试34。不能因别的学院新改408就称本项目2027首改。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;812&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="812-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026已是全日制22408，普通春季计划45、复试57；最终分布及培养细节见本项目资料，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;812&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="802" data-college-title="802 机电工程学院">
+
+#### 802 机电工程学院
+
+<section class="admission-project" data-project-key="802-085406" data-project-title="085406 控制工程" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085406 控制工程
+
+<div class="project-verdict">
+
+2026考101／204／302／899；2026年7月2日预告2027由899改408。2027前三科、方式和普通计划仍待正式目录。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;802&quot;, &quot;085406&quot;, &quot;控制工程&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="824" data-college-title="824 海洋技术与装备学院">
+
+#### 824 海洋技术与装备学院
+
+<section class="admission-project" data-project-key="824-085407" data-project-title="085407 仪器仪表工程" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085407 仪器仪表工程
+
+<div class="project-verdict">
+
+2026考101／204／302／899；7月2日预告2027改408。属于交叉工程项目，2027完整科目、普通容量及培养适配待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;824&quot;, &quot;085407&quot;, &quot;仪器仪表&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="810" data-college-title="810 人工智能培养单位">
+
+#### 810 人工智能培养单位
+
+<section class="admission-project" data-project-key="810-085410" data-project-title="085410 人工智能（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（自命题对照）
+
+<div class="project-verdict">
+
+现有2026记录考838信号类专业课，不能跟随机电、海洋两院继承408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;810&quot;, &quot;085410&quot;, &quot;838&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **对你的适用边界：红标两项仍在软件主选池之外。** 两项2026均为全日制、101政治／204英语二／302数学二／899；2027公告只改第四科，不能自动复制其余条件。旧复试分别为电子技术基础、仪器仪表工程基础，培养涉及控制、海洋仪器设计测试和自动化，尚不能按AI或软件项目理解。2027完整目录、普通容量、最终成绩分布、培养成本与导师适配仍待核，没有报名人数就不能推断“少人报、招得多”。812计算机学院085405在2026已考408，应按其自己的数据库和软件工程复试研究。
 
@@ -13653,11 +17093,64 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 
 
+
+</section>
+
 <a id="school-062"></a>
 
 ### 四川大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="304" data-college-title="304 计算机学院（软件学院）">
+
+#### 304 计算机学院（软件学院）
+
+<section class="admission-project" data-project-key="304-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026正式全日制22408；普通软件、计算与AI方向按本院目录阅读。非全日制软件另列，不混入全日制人口。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;304&quot;, &quot;计算机学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="604" data-college-title="604 视觉合成图形图像技术国防重点学科实验室">
+
+#### 604 视觉合成图形图像技术国防重点学科实验室
+
+<section class="admission-project" data-project-key="604-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026正式全日制22408；实验室单独招生，不能借304学院计划和分数，普通容量待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;604&quot;, &quot;视觉合成&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：计算机（软件）学院及视觉合成图形图像实验室085400普通方向。
 
@@ -13793,11 +17286,43 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-063"></a>
 
 ### 西南财经大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer-ai" data-college-title="计算机与人工智能学院">
+
+#### 计算机与人工智能学院
+
+<section class="admission-project" data-project-key="computer-ai-085400" data-project-title="085400 电子信息 · AI／计算机／大数据" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · AI／计算机／大数据
+
+<div class="project-verdict">
+
+2026全日制22408，春季普通39；47人复试中位374不是最终录取。目录26、推免6与春季处于不同阶段；C语言笔试120分钟，复试30%。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;计算机与人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：计算机与AI学院085400的AI/计算机/数据方向。
 
@@ -13817,11 +17342,57 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-064"></a>
 
 ### 青海大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="007" data-college-title="007 计算机技术与应用学院">
+
+#### 007 计算机技术与应用学院
+
+<section class="admission-project" data-project-key="007-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408，计划43；复试59、中位316，不能当录取分布。2027改考或扩招未获证实。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="007-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408，计划32；复试44、中位301，最终拟录取与报名数仍缺，不能据此定保底。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026相容项目**：007计算机技术与应用学院085404/085410。
 
@@ -13844,11 +17415,57 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-065"></a>
 
 ### 宁夏大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="016" data-college-title="016 信息工程学院">
+
+#### 016 信息工程学院
+
+<section class="admission-project" data-project-key="016-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制22408；首批69、次批2，共71匹配一志愿，中位320。2025报名512不是2026分母。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;, &quot;计算机技术&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="016-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026全日制22408；首批5名匹配一志愿，最低259、中位278。次批7人未匹配且原科目未恢复，不能混为12名同卷普通人口。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 <!-- 宁夏2026两批公示与一志愿回连 TraceId: ce3a9edc-34c1-446a-a3b7-b6a9b43ba10c -->
 **原件已于2026年9月13日补回，AI与计算机分别判断。** 计算机2026第一批69人、最低294／中位321／均值323.26、26人低于315，已由校级原件重新核实；另补第二批2人，两个批次去重71人均回连同年一志愿，中位320。旧69不是全年最终人数。AI第一批5名一志愿拟录取中位278，另有官方5名调剂需求，属于“小规模低分样本＋补充生源需求”，没有报名少或2027必低的证据。2025计算机报名512不能作为2026计算机或AI的分母。
@@ -13947,11 +17564,43 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-066"></a>
 
 ### 石河子大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息科学与技术学院">
+
+#### 信息科学与技术学院
+
+<section class="admission-project" data-project-key="information-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026全日制22408；3月30日首批普通61人最低268、中位304，其中27人低于300。4月17日新增269分一人不能直接推成最终净62。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;电子信息&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026 年确有一批低分拟录取，原件现已恢复：首榜普通全日制 61 人，初试中位 304，低于 300 分有 27 人。** 这是同年 22408 的历史结果，可以继续作为低分候选的观察依据；实际报考人数、2027 科目及最终净录取人数仍未知，不能直接当今年安全线。尤其需要纠正旧稿：“递补后仍 61 人”不是现有公告已经证明的事实。
 
@@ -13989,6 +17638,9 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 ## 其余学校的目录、排除与待核记录
 
 以下保留筛查发现和历史参照；是否符合当前报考条件，以各校具体四科、学习方式和年度说明为准。出现在这里不等于列为个人推荐。
@@ -13998,6 +17650,35 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 ### 南京大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="072" data-college-title="072 智能软件与工程学院">
+
+#### 072 智能软件与工程学院
+
+<section class="admission-project" data-project-key="072-085405-01" data-project-title="085405 软件工程 · 01苏州" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 01苏州
+
+<div class="project-verdict">
+
+2024为英语二、数学二、842；2025改为22408，2026又改为英语一、数学一、408。逐年看科目，不能拿2025数二条件代表2026或2027。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;072&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -14053,11 +17734,78 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-099"></a>
 
 ### 浙江大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="engineer" data-college-title="工程师学院">
+
+#### 工程师学院
+
+<section class="admission-project" data-project-key="engineer-085410" data-project-title="085410 人工智能（2027新设线索）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（2027新设线索）
+
+<div class="project-verdict">
+
+推免材料含台州新药、具身、工业AI、AI设计四培养项目；普通先报专业领域再选项目。推免1／1／7／4不是普通名额，不能编四条独立复试线。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="engineer-085400-computing" data-project-title="085400 电子信息 · 计算机与大数据历史方向" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 计算机与大数据历史方向
+
+<div class="project-verdict">
+
+2026现有记录为英语一、数学一、408；2027新AI不继承旧领域的名额、四科或培养承诺。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;计算机技术与大数据&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="international" data-college-title="国际联合学院">
+
+#### 国际联合学院
+
+<section class="admission-project" data-project-key="international-085400" data-project-title="085400 电子信息 · 数字健康／数据科学与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 数字健康／数据科学与工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；交叉培养方向单列，合作费用和名额不借工程师学院。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;国际联合学院&quot;, &quot;数字健康&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -14126,11 +17874,99 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-072"></a>
 
 ### 北京邮电大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能学院">
+
+#### 人工智能学院
+
+<section class="admission-project" data-project-key="ai-085410" data-project-title="085410 人工智能（改考线索）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（改考线索）
+
+<div class="project-verdict">
+
+809改408线索仍缺正式原件和完整项目行；转载日期不能证明下半年首发，旧目录也含801及数学一，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;人工智能学院&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="ai-140500" data-project-title="140500 智能科学与技术（改考线索）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 140500 智能科学与技术（改考线索）
+
+<div class="project-verdict">
+
+与085410分开；现有转载不能补足2027正式四科、模式和普通名额，也不能直接标红。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;140500&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="digital" data-college-title="数字媒体与设计艺术学院">
+
+#### 数字媒体与设计艺术学院
+
+<section class="admission-project" data-project-key="digital-0810z1" data-project-title="0810Z1 数字媒体技术（改考线索）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 0810Z1 数字媒体技术（改考线索）
+
+<div class="project-verdict">
+
+809改408为待核线索，原文日期与转载日期分开。2027同项目完整目录及数学科目待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;0810Z1&quot;, &quot;数字媒体&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="software" data-college-title="软件学院">
+
+#### 软件学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+已见2026专业课807改408通知；只证明第四科，其他三科及普通培养入口须按正式目录核，不能自动写成数二408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;807&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -14166,11 +18002,57 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-093"></a>
 
 ### 上海财经大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer-ai" data-college-title="计算机与人工智能学院">
+
+#### 计算机与人工智能学院
+
+<section class="admission-project" data-project-key="computer-ai-083500" data-project-title="083500 软件工程（学硕）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 083500 软件工程（学硕）
+
+<div class="project-verdict">
+
+2026正式英语一、数学一、408，当前数学二不符。2027新电子信息为线索，不能从博士或图片宣传推断统考四科。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;083500&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-ai-new-professional" data-project-title="电子信息专硕（2027新设线索，代码待核）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 电子信息专硕（2027新设线索，代码待核）
+
+<div class="project-verdict">
+
+目前缺精确代码、普通统考入口、正式四科与计划；与既有软件学硕分开，不把推免或博士信息当普通统考确认。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;电子信息&quot;, &quot;新设&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -14201,6 +18083,9 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-068"></a>
 
 ### 清华大学
@@ -14208,6 +18093,142 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 <p class="school-tier">院校层次：985</p>
 
 <p class="switch-flag" data-status="late-announcement" data-announced="2026-07-01" data-target-year="2027">下半年改408公告｜深圳国际研究生院2026年7月1日、全球创新学院7月3日 → 2027招生。红标覆盖下表项目；软件学院6月30日、计算机系6月23日的通知不算下半年。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="software" data-college-title="软件学院">
+
+#### 软件学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程（含085400历史）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（含085400历史）
+
+<div class="project-verdict">
+
+2026数学一、自命题824；2027年考408的公告在6月30日，属于上半年。保留历年科目与成绩，不因改408就认定数学二。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;软件学院&quot;, &quot;085405&quot;, &quot;824&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="599" data-college-title="599 深圳国际研究生院">
+
+#### 599 深圳国际研究生院
+
+<section class="admission-project" data-project-key="599-085400" data-project-title="085400 电子信息 · 人工智能／大模型" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085400 电子信息 · 人工智能／大模型
+
+<div class="project-verdict">
+
+7月1日预告2027改408；2026英语一、数学一。人工智能与大模型是电子信息下不同方向，普通名额及2027完整四科待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;599&quot;, &quot;085400&quot;, &quot;人工智能&quot;, &quot;大模型&quot;]"></div>
+
+<section class="research-direction" data-direction-key="ai" data-direction-title="人工智能">
+
+###### 人工智能
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+<section class="research-direction" data-direction-key="llm" data-direction-title="大模型">
+
+###### 大模型
+
+本项目下的研究或培养方向；是否分组排名、名额与科目，以同年原资料中该方向为准。
+
+</section>
+
+</section>
+
+<section class="admission-project" data-project-key="599-085404" data-project-title="085404 计算机技术" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+7月1日预告2027改408；2026英语一、数学一，2027完整目录与普通容量待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;599&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="599-085411" data-project-title="085411 大数据技术与工程" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+7月1日预告2027改408；2026数学一，2027完整四科和普通名额待核，不套软件学院历史线。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;599&quot;, &quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="global" data-college-title="全球创新学院">
+
+#### 全球创新学院
+
+<section class="admission-project" data-project-key="global-0812j3" data-project-title="0812J3 数据科学和信息技术（学硕）" data-project-status="下半年改考408公告 · 完整条件见正文">
+
+##### 0812J3 数据科学和信息技术（学硕）
+
+<div class="project-verdict">
+
+7月3日预告826改408，为学硕路线；不能借深圳专硕培养、分数或普通人数，完整2027目录待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;全球创新&quot;, &quot;0812J3&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与技术系">
+
+#### 计算机科学与技术系
+
+<section class="admission-project" data-project-key="computer-085400" data-project-title="085400 电子信息（改考预告）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息（改考预告）
+
+<div class="project-verdict">
+
+现有改408公告为6月23日，不标下半年；项目四科、方式与普通净额须看对应年度正式目录。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机系&quot;, &quot;6月23&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **先看红标对应哪条路线。** 深圳院URL含“0630”，但公告正文与落款为7月1日；按正文日期判断。以下各项仅确认第四科变更，2027前三科、学习方式、统考普通人数与费用仍按正式目录核对，不能由改408推出英二数二或低分机会。
 
@@ -14355,6 +18376,9 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 
 </details>
 
+
+</section>
+
 <a id="school-069"></a>
 
 ### 北京理工大学
@@ -14362,6 +18386,11 @@ AI拟录取300—319分5人、320—339分7人；大数据相应0人、15人。�
 <p class="school-tier">院校层次：985</p>
 
 <p class="switch-flag" data-status="late-announcement" data-announced="2026-07-06" data-target-year="2027">下半年改408公告｜2026年7月6日 → 2027招生。085405软件工程、00不区分研究方向：885软件工程专业基础综合改408。公告完整四科为101／201／302／408，是英语一、数学二。</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
 
 **先选学院，再选具体统考招生项目，最后展开研究方向。** 每个项目独立展示自己的科目、名额、逐年分数、复试、培养和竞争判断。同名专业在不同学院分别招生；历史项目与数学一对照项目已单独标明。当前候选范围为数学二＋408，允许英语一；2027软件改考已公告，其余项目暂以2026目录为核验基线。
 
@@ -15601,6 +19630,7 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </section>
 
+
 <section class="admission-notes" data-notes-title="共同口径与来源核验">
 
 #### 共同口径与来源核验
@@ -15726,6 +19756,63 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 <p class="school-tier">院校层次：985</p>
 
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息科学与工程学院">
+
+#### 信息科学与工程学院
+
+<section class="admission-project" data-project-key="information-085405" data-project-title="085405 软件工程（个人已排除）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（个人已排除）
+
+<div class="project-verdict">
+
+用户此前明确不报，保留研究记录。2026为英语二、数学二、806；2027预告改408，完整目录和普通计划待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-081200" data-project-title="081200 计算机科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081200 计算机科学与技术
+
+<div class="project-verdict">
+
+同批改408公告涉及本专业，但不能继承软件的前三科和培养方式；完整2027目录待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081200&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+同批第四科改408公告涉及，其他科目与普通容量须单独核验；不复用软件工程条件。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
+
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
 <details>
@@ -15760,11 +19847,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-082"></a>
 
 ### 天津大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+原20页目录审计针对旧“英语二＋数学二＋408”条件，未逐项记录精确项目。英语一现在也可接受，因此不能沿用旧排除结论；须按数学二408重新核目录。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15779,11 +19884,57 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-084"></a>
 
 ### 河北工业大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="028" data-college-title="028 人工智能与数据科学学院">
+
+#### 028 人工智能与数据科学学院
+
+<section class="admission-project" data-project-key="028-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；计划48来自总55与推免7的既有记录，非已核最终普通实录，当前数学二不符。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="028-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408，计划63含士兵2及国际联合1；不能解释成63个同条件普通席位。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15812,11 +19963,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-085"></a>
 
 ### 大连海事大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+官方目录附件受验证码限制，同项目四科与培养单位未闭环。保留原线索，不编项目、名额或分数。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15830,11 +19999,78 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-086"></a>
 
 ### 吉林大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="504" data-college-title="504 软件学院">
+
+#### 504 软件学院
+
+<section class="admission-project" data-project-key="504-083500" data-project-title="083500 软件工程（学硕）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 083500 软件工程（学硕）
+
+<div class="project-verdict">
+
+2026正式101／201／302／408，英语一但数学二，满足当前科目条件。与专硕分别核普通名额、成绩及培养。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;083500&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="504-085405" data-project-title="085405 软件工程（专硕）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程（专硕）
+
+<div class="project-verdict">
+
+2026正式英语一、数学二、408，满足当前范围；普通容量和最终分布待核，旧“非严格英语二”标签不等于不相容。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="math" data-college-title="数学学院">
+
+#### 数学学院
+
+<section class="admission-project" data-project-key="math-085411" data-project-title="085411 大数据技术与工程（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程（自命题对照）
+
+<div class="project-verdict">
+
+2026考101／201／302／866；虽为数学二，但专业课不是408，不能借软件学院条件。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;, &quot;866&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15849,11 +20085,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-088"></a>
 
 ### 哈尔滨工业大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+现有记录涉及计算学部、未来工学院计算机、软件与AI，主要为英语一（或可选外语）、数学一、408；精确项目代码未逐项整理，不虚构招生实体。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15868,11 +20122,85 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-089"></a>
 
 ### 哈尔滨工程大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与技术学院">
+
+#### 计算机科学与技术学院
+
+<section class="admission-project" data-project-key="computer-081200" data-project-title="081200 计算机科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081200 计算机科学与技术
+
+<div class="project-verdict">
+
+2026数学一408，外语可按目录选择；当前数学二不符，普通容量与培养独立看。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081200&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-083500" data-project-title="083500 软件工程（学硕）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 083500 软件工程（学硕）
+
+<div class="project-verdict">
+
+2026数学一408；与电子信息专硕分开，复试软件能力测试按本项目规则读。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;083500&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085400-fulltime" data-project-title="085400 电子信息 · 全日制" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 全日制
+
+<div class="project-verdict">
+
+2026数学一408，外语201／202／203按目录选择；全日制与非全名额不混用。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;全日制&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085400-parttime" data-project-title="085400 电子信息 · 非全日制" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 非全日制
+
+<div class="project-verdict">
+
+2026数学一408；非全培养、定向与费用独立核验，不能借全日制人数或住宿条件。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;非全日制&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15887,11 +20215,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-087"></a>
 
 ### 延边大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+工程学院2026附件受验证限制，当前未恢复精确专业行；不能用同段其他学校的科目或结论补齐延边。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15907,11 +20253,71 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-090"></a>
 
 ### 同济大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与技术学院">
+
+#### 计算机科学与技术学院
+
+<section class="admission-project" data-project-key="computer-081200" data-project-title="081200 计算机科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081200 计算机科学与技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，当前数学二条件不符。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081200&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式英语一、数学一、408，普通容量及2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026正式英语一、数学一、408；不套计算机项目名额与成绩。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15925,11 +20331,57 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-091"></a>
 
 ### 上海交通大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机学院">
+
+#### 计算机学院
+
+<section class="admission-project" data-project-key="computer-081200" data-project-title="081200 计算机科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081200 计算机科学与技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，当前数学二不符。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081200&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085400" data-project-title="085400 电子信息 · 计算机／软件／AI／数据" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 计算机／软件／AI／数据
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；不同培养方向保留原目录口径，不拆造独立名额。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15943,11 +20395,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-092"></a>
 
 ### 上海外国语大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+已查86页2026目录未找到0812／0835／0854；语言数据等交叉项目是否满足数学二408仍须精确行证据，不能一概从名称推断。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15961,11 +20431,197 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-096"></a>
 
 ### 东南大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与工程学院">
+
+#### 计算机科学与工程学院
+
+<section class="admission-project" data-project-key="computer-081200" data-project-title="081200 计算机科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081200 计算机科学与技术
+
+<div class="project-verdict">
+
+2026正式英语一、数学一、408，当前数学二不相容。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081200&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-083500" data-project-title="083500 软件工程（学硕）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 083500 软件工程（学硕）
+
+<div class="project-verdict">
+
+2026正式英语一、数学一、408，学硕与软件专硕分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;083500&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，目录总33／推免28不能当普通实录5。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机科学&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，目录总32／推免28分别保留。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机科学&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="computer-140500" data-project-title="140500 智能科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 140500 智能科学与技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，普通容量及培养另核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;140500&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="software" data-college-title="软件学院">
+
+#### 软件学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026数学一408；总130／推免87不能改写为最终普通43。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="suzhou" data-college-title="苏州联合研究生院">
+
+#### 苏州联合研究生院
+
+<section class="admission-project" data-project-key="suzhou-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408；总40／推免18，联合培养费用与普通入口独立核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;苏州&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="suzhou-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026数学一408；总35／推免7，与本部同码项目分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;苏州&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="rennes" data-college-title="雷恩联合研究生培养单位">
+
+#### 雷恩联合研究生培养单位
+
+<section class="admission-project" data-project-key="rennes-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408；总20／推免5，联合培养合同及收费单列。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;雷恩&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="engineering" data-college-title="卓越工程师培养单位">
+
+#### 卓越工程师培养单位
+
+<section class="admission-project" data-project-key="engineering-085410-parttime" data-project-title="085410 人工智能 · 非全日制" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能 · 非全日制
+
+<div class="project-verdict">
+
+2026数学一408、非全日制；不混入全日制普通容量。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;卓工&quot;, &quot;非全日制&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -15981,11 +20637,99 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-097"></a>
 
 ### 南京航空航天大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer-software" data-college-title="计算机科学与技术学院／软件学院">
+
+#### 计算机科学与技术学院／软件学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026英语一、数学二、408，符合当前条件；总计划52不是普通净52，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026英语一、数学二、408；总计划32按原口径保留，不能借中法培养条件。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;, &quot;软件学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="024" data-college-title="024 人工智能学院">
+
+#### 024 人工智能学院
+
+<section class="admission-project" data-project-key="024-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026英语一、数学二、408；总33、春季普通12，复试线361。笔试100＋面试200，百分制初复试各50%，不是低线候选。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;024&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="sino-french" data-college-title="中法培养单位">
+
+#### 中法培养单位
+
+<section class="admission-project" data-project-key="sino-french-085405" data-project-title="085405 软件工程 · 中法合作" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程 · 中法合作
+
+<div class="project-verdict">
+
+2026英语一、数学二、408，总计划20；合作费用、培养地点、普通份额单列。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;中法&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **当前判断：人工智能专硕已有 408，但使用英语一；2026 年春季普通统考计划为 12 人、复试线 361 分。** 秋季目录写的 33 人不能直接当作普通统考席位。2026 年 7 月发布的 2027 招生公告调整的是航天学院其他科目，不构成“下半年改考 408”。
 
@@ -16011,11 +20755,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-098"></a>
 
 ### 中国药科大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+医药大数据AI1007Z7考711，生物与医药086000及药学105500的AI方向也不能凭名称继承408。当前未找到数学二408同项目正式证据。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16030,11 +20792,85 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-100"></a>
 
 ### 安徽大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="024" data-college-title="024 物质科学与信息技术研究院">
+
+#### 024 物质科学与信息技术研究院
+
+<section class="admission-project" data-project-key="024-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，3年；公开招考43包含工程联培等人口，不能当全为普通本部。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;024&quot;, &quot;物质科学&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="025" data-college-title="025 互联网学院">
+
+#### 025 互联网学院
+
+<section class="admission-project" data-project-key="025-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，公开招考123未拆同条件培养人口；无报名数，不能因规模大说冷门。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;025&quot;, &quot;互联网&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="031" data-college-title="031 大数据与统计学院">
+
+#### 031 大数据与统计学院
+
+<section class="admission-project" data-project-key="031-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，公开招考36含培养安排边界；当前数学二不相容。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;031&quot;, &quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **当前判断：有值得继续查结果的大容量 AI 项目，但考试组合是英语一、数学一、408。** 2026 年 4 月调整后，互联网学院 AI 的“公开招考”计划为 123、物质科学与信息技术研究院 AI 为 43、大数据与统计学院大数据为 36。没有取得这三项真实报名数和完整拟录取分布，现阶段只能说名额有一定规模，不能说报得少、容易捡漏或确定低分。
 
@@ -16067,11 +20903,85 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-101"></a>
 
 ### 华中科技大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机科学与技术学院">
+
+#### 计算机科学与技术学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，当前数学二不相容。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="software" data-college-title="软件学院">
+
+#### 软件学院
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；容量和培养按本项目，不能借计算机学院。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能与自动化学院">
+
+#### 人工智能与自动化学院
+
+<section class="admission-project" data-project-key="ai-085410" data-project-title="085410 人工智能（自命题对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能（自命题对照）
+
+<div class="project-verdict">
+
+2026英语一、数学一、832，不是408，不能随计算机和软件一并认定。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;, &quot;832&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16086,11 +20996,64 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-108"></a>
 
 ### 西北大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="041" data-college-title="041 电子信息学院">
+
+#### 041 电子信息学院
+
+<section class="admission-project" data-project-key="041-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；75是学院专业学位统考汇总，不是此专业普通人数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;041&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="042" data-college-title="042 计算机学院">
+
+#### 042 计算机学院
+
+<section class="admission-project" data-project-key="042-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；86是学院专业学位统考汇总，不当独立软件人数。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;042&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2026 下半年发布的 2027 招生新公告已查，不新增 408 红标。** [学校 2026-09-05 初试科目及参考书目变更公告](https://yjs.nwu.edu.cn/info/1104/5630.htm)的正式 XLS 附表现已读到：除两行表头外共 10 条变更，涉及经济管理、艺术、文、外国语、科学史等单位，没有 041 电子信息学院或 042 计算机学院目标项目，也没有 408 条目。因此它不能充当本校软件工程“2026 下半年预告、2027 首次改 408”的依据；这也不证明未列入公告的项目在最终目录中必然不变。2026 年两个学院的软件工程仍只按已核的英一、数一、408 条件参照。
 
@@ -16113,11 +21076,71 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-107"></a>
 
 ### 西藏大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息科学技术学院">
+
+#### 信息科学技术学院
+
+<section class="admission-project" data-project-key="information-081201" data-project-title="081201 计算机系统结构" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081201 计算机系统结构
+
+<div class="project-verdict">
+
+2026英语一、数学一、408、学硕；当前数学二条件不符。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081201&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-081202" data-project-title="081202 计算机软件与理论" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081202 计算机软件与理论
+
+<div class="project-verdict">
+
+2026英语一、数学一、408、学硕；不能因旧稿无专业硕士推断未来所有相关项目都没有。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081202&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-081203" data-project-title="081203 计算机应用技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 081203 计算机应用技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；普通容量和培养单列。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;081203&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16131,11 +21154,85 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-110"></a>
 
 ### 陕西师范大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="020" data-college-title="020 人工智能与计算机学院">
+
+#### 020 人工智能与计算机学院
+
+<section class="admission-project" data-project-key="020-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026全日制项目、普通线264、计划18；完整同年四科仍缺，不能由低线认定数二408或易录取。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="020-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026普通线264、计划8；同年完整科目和最终成绩分布仍待核，小名额不等于保底。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="020-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026普通线264、计划6；缺完整四科与最终分布，不能把国家线当录取保证。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="020-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026普通线264、计划11；普通最终分布、报名数与2027条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **补到普通考生计划和复试线，但四科资格仍待核。** [学校 2026-03-17 普通考生分数线及计划发布页](https://yz.snnu.edu.cn/info/1008/7951.htm)所附[020 人工智能与计算机学院 PDF](https://yz.snnu.edu.cn/ss26-020.pdf)明确给出以下全日制项目：
 
@@ -16165,11 +21262,64 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-105"></a>
 
 ### 华南理工大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="computer-route" data-college-title="计算机招生单位（学院名称按原目录核）">
+
+#### 计算机招生单位（学院名称按原目录核）
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；总65含推免，普通方向基本计划4，阶段和人口分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="software-route" data-college-title="软件招生单位（学院名称按原目录核）">
+
+#### 软件招生单位（学院名称按原目录核）
+
+<section class="admission-project" data-project-key="software-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408；总48含推免，普通方向基本计划10，不能把总计划当普通容量。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16184,11 +21334,106 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-070"></a>
 
 ### 北京科技大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="intelligence" data-college-title="智能科学与技术学院">
+
+#### 智能科学与技术学院
+
+<section class="admission-project" data-project-key="intelligence-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式101／201／301／408，数学一，不满足当前数学二条件。保留学院独立资料，2027待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;智能科学与技术学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="computer" data-college-title="计算机与通信工程学院">
+
+#### 计算机与通信工程学院
+
+<section class="admission-project" data-project-key="computer-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408。不能借顺德调剂线代表北京普通一志愿。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;计算机与通信&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="materials" data-college-title="国家材料服役安全科学中心">
+
+#### 国家材料服役安全科学中心
+
+<section class="admission-project" data-project-key="materials-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408；交叉单位同码项目单列，普通容量与培养条件待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;材料服役&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="shunde" data-college-title="顺德创新学院">
+
+#### 顺德创新学院
+
+<section class="admission-project" data-project-key="shunde-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408；4月3日调剂6、线330为调剂要求，不是普通一志愿复试线或最终实录。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;顺德&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16210,11 +21455,43 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-071"></a>
 
 ### 北京化工大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息科学与技术学院">
+
+#### 信息科学与技术学院
+
+<section class="admission-project" data-project-key="information-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026正式101／201／302／408：英语一、数学二、408，符合当前科目范围。旧英语二限定导致的排除不再作为现行判断。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085404&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16233,11 +21510,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-067"></a>
 
 ### 北京大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+现有资料涉及计算机、智能、软件与微电子及深圳培养单位，2026相关项目记录为英语一、数学一、408。尚未逐条保留精确项目代码，先按已知范围与缺口阅读，不虚构独立招生入口。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16254,11 +21549,43 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-074"></a>
 
 ### 北京师范大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="ai" data-college-title="人工智能学院">
+
+#### 人工智能学院
+
+<section class="admission-project" data-project-key="ai-085400" data-project-title="085400 电子信息 · 计算机／AI／数据／教育AI" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息 · 计算机／AI／数据／教育AI
+
+<div class="project-verdict">
+
+2026正式英语一、数学一、408，当前数学二条件不相容。交叉方向保留，但不能因教育AI名称自动纳入数二。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;人工智能学院&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16275,11 +21602,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-075"></a>
 
 ### 北京外国语大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+现有“大数据管理与应用”记录为101／201／303／842，不是数学二408；尚未找到相容项目的正式目录，不能只凭专业名称入选。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16294,11 +21639,43 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-076"></a>
 
 ### 对外经济贸易大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="004" data-college-title="004 人工智能与数据科学学院">
+
+#### 004 人工智能与数据科学学院
+
+<section class="admission-project" data-project-key="004-140500" data-project-title="140500 智能科学与技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 140500 智能科学与技术
+
+<div class="project-verdict">
+
+2027正式101／201／302／408，全日制2年，满足当前数学二408。总计划28、拟推免14不等于已核普通14；2026已经408，非首改。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;004&quot;, &quot;140500&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 **2027人工智能学硕已有正式目录，但考英语一、数学二、408。** 004人工智能与数据科学学院140500智能科学与技术，全日制2年，拟招28、其中拟推免14；四方向为智能决策、计算经济学、智能应用、智能计算。属于12408条件池，不能当成英语二路线。2026同项目已经408，8月28日发布新年度目录不构成下半年首改。2025是首届招生，但实际报名、普通录取人数与分数尚未取得，不能仅凭“新学院、新AI学科”认定冷门低分。
 
@@ -16349,11 +21726,57 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-077"></a>
 
 ### 北京体育大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="sports-engineering" data-college-title="体育工程学院">
+
+#### 体育工程学院
+
+<section class="admission-project" data-project-key="sports-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026正式101／204／301／408：英语二、数学一。计划10、拟推免5不能写成最终普通5，当前数学二条件不符。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085410&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="sports-085411" data-project-title="085411 大数据技术与工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085411 大数据技术与工程
+
+<div class="project-verdict">
+
+2026英语二、数学一、408；总计划10、拟推免5，不能与人工智能合并当同一普通招生项目。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085411&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16375,11 +21798,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-073"></a>
 
 ### 北京中医药大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+现有2026目录未找到0854软件、AI或大数据项目；不能据此推断未来所有交叉项目都不存在。原资料保留，当前尚无同项目数学二408正式目录证据。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16393,11 +21834,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-078"></a>
 
 ### 中央音乐学院
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+人工智能相关院系名称不等于工程类招生入口。现有目录为艺术等培养范围，尚未查到数学二408同项目证据，保留已查结果与缺口。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16411,11 +21870,29 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-080"></a>
 
 ### 中国政法大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<div class="school-reading-status">
+
+**当前查到哪里**
+
+正式目录受访问验证阻断，尚未查到可核验的具体数学二408招生项目。此处是待核状态，不是判定学校没有相关专业。
+
+</div>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16428,11 +21905,113 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-109"></a>
 
 ### 西安电子科技大学
 
 <p class="school-tier">院校层次：211（非985）</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="003" data-college-title="003 计算机科学与技术学院">
+
+#### 003 计算机科学与技术学院
+
+<section class="admission-project" data-project-key="003-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，当前数学二不相容；与AI学院、卓工学院分开。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;003&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="003-085405" data-project-title="085405 软件工程" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085405 软件工程
+
+<div class="project-verdict">
+
+2026英语一、数学一、408，普通名额和培养单列。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;003&quot;, &quot;085405&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="017" data-college-title="017 人工智能学院">
+
+#### 017 人工智能学院
+
+<section class="admission-project" data-project-key="017-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408；同码不同学院，不能借003的成绩与计划。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;017&quot;, &quot;085404&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="017-085410" data-project-title="085410 人工智能" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085410 人工智能
+
+<div class="project-verdict">
+
+2026数学一408；当前数学二条件不符。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;017&quot;, &quot;085410&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="school-college" data-college-key="023" data-college-title="023 卓越工程师学院">
+
+#### 023 卓越工程师学院
+
+<section class="admission-project" data-project-key="023-085404" data-project-title="085404 计算机技术" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085404 计算机技术
+
+<div class="project-verdict">
+
+2026数学一408，项目制培养单列，不能挪用其他学院人口。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;023&quot;, &quot;卓工&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16449,11 +22028,57 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 
 </details>
 
+
+</section>
+
 <a id="school-079"></a>
 
 ### 中央民族大学
 
 <p class="school-tier">院校层次：985</p>
+
+<!-- 全库项目阅读 TraceId: 8d98f22a-7a30-4d09-b60c-59c407ea8b93 -->
+
+<p class="school-reading-hint">先选学院下的具体项目，再分别看科目、历年分数、复试和培养。历史项目与待核线索已在名称和结论中注明。</p>
+
+<section class="school-college" data-college-key="information" data-college-title="信息工程学院">
+
+#### 信息工程学院
+
+<section class="admission-project" data-project-key="information-085400" data-project-title="085400 电子信息" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 085400 电子信息
+
+<div class="project-verdict">
+
+2026英语二、数学二、852，尚非408。总计划200、拟推免18不能直接当普通182；2027同项目四科待核。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;085400&quot;, &quot;852&quot;]"></div>
+
+</section>
+
+<section class="admission-project" data-project-key="information-083500" data-project-title="083500 软件工程（学硕对照）" data-project-status="已有资料整理 · 年度条件见结论">
+
+##### 083500 软件工程（学硕对照）
+
+<div class="project-verdict">
+
+现有记录为英语一、数学一、408，和085400的数学二852分开，不能拼接成数学二408。
+
+</div>
+
+<div class="project-source-selector" data-reader-ui="true" data-project-terms="[&quot;083500&quot;]"></div>
+
+</section>
+
+</section>
+
+
+<section class="admission-notes" data-notes-title="本校完整原文与共同说明">
+
+
 
 本校目前只保留以下已查事实及条件限制；2026历史资格不代表2027已确认可报。
 
@@ -16467,6 +22092,9 @@ RISC-V班1名的资格、实际培养和驻地安排仍待班级依据。未取�
 来源：[2026正式目录](https://grs.muc.edu.cn/yjsyzsw/info/1062/5159.htm)、[2026学院细则](https://xingong.muc.edu.cn/info/1037/6125.htm)、[2027调整公告](https://grs.muc.edu.cn/yjsyzsw/info/1062/5779.htm)、[2027自命题大纲页](https://grs.muc.edu.cn/yjsyzsw/info/1062/5939.htm)。本次未重开调整附件，8月“尚未取到附件”只是当时取证状态，不能复制为当前状态；以README最新2027补证为准。
 
 </details>
+
+
+</section>
 
 ## 暂不按相容项目投入备考的线索
 

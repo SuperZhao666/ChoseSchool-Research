@@ -74,7 +74,7 @@ def prepare_admissions(source: str, panel_key: str) -> str:
         elif kind == 'college': colleges.append(node)
         else: notes = node
         nodes.append(node); stack.append(node)
-    if stack or not colleges or any(not college['children'] for college in colleges):
+    if stack or (not colleges and not notes) or any(not college['children'] for college in colleges):
         raise ValueError(f'招生实体未闭合或学院没有招生项目：{panel_key}')
 
     def link(node, css=''):
@@ -101,7 +101,8 @@ def prepare_admissions(source: str, panel_key: str) -> str:
                   + (link(notes, 'admissions-notes-link') if notes else '') + '</nav>\n\n'
                   '<div class="admission-detail">\n\n'
                   '<nav class="admission-breadcrumb" data-reader-ui="true" aria-label="当前招生项目位置">本校招生结构</nav>\n\n'
-                  '<nav class="admission-home" data-reader-ui="true" aria-label="选择招生学院与项目"><h4>选择招生项目</h4>'
+                  '<nav class="admission-home" data-reader-ui="true" aria-label="选择招生学院与项目">'
+                  + ('<h4>选择招生项目</h4>' if colleges else '<h4>待核学校资料</h4><p>尚未恢复可单独列出的招生项目。下方保留已经查到的原文与证据缺口。</p>')
                   + ''.join('<div class="college-choice"><h5>' + link(college, 'college-choice-title')
                             + '</h5><div class="entity-cards">' + ''.join(link(project, 'entity-card') for project in college['children'])
                             + '</div></div>' for college in colleges)
@@ -206,6 +207,8 @@ def render(source: str) -> tuple[str, dict]:
                 tokens[table_start].attrJoin('class', 'readable-table')
                 if len(headers) >= 5:
                     tokens[table_start].attrJoin('class', 'record-table')
+                if sum(bool(re.search(r'最低|中位|均值|均分|平均|最高|P25|P75|复试.*线|总分线', h)) for h in headers) >= 3:
+                    tokens[table_start].attrJoin('class', 'score-summary-table')
                 if headers == ['招生年度', '当年初试科目与证据', '当年学院与统计方向',
                                '普通录取人数', '复试总分线', '录取最低分', '录取中位数',
                                '录取平均分', '录取最高分']:
@@ -221,8 +224,10 @@ def render(source: str) -> tuple[str, dict]:
             cell = tokens[i + 1]
             text = ''.join(child.content for child in (cell.children or [])
                            if child.type in ('text', 'code_inline'))
-            if len(text) > 80:
+            if len(text) > 80 or re.search(r'初试科目|当年.*科目', headers[column]):
                 token.attrJoin('class', 'long-field')
+            if len(text) <= 40 and re.search(r'最低|中位|均值|均分|平均|最高|P25|P75|复试.*线|总分线|人数|名单|拟录取', headers[column]):
+                token.attrJoin('class', 'metric-field')
             if len(text) > 140 and 'record-table' not in (tokens[table_start].attrGet('class') or '').split():
                 tokens[table_start].attrJoin('class', 'record-table')
             column += 1
