@@ -174,7 +174,7 @@ test('every school gets readable column labels and real-source navigation withou
       assert.equal(link.textContent, target.textContent);
     }
   }
-  assert.equal(tables, 568); // TraceId: 6ad3a0e8-7ef9-4098-bcc0-85a19e3f7294
+  assert.equal(tables, 570); // TraceId: 078f7b5a-b8bf-4679-ae2e-c4832666cc5a
   assert.equal(r.document.querySelectorAll('.school-contents').length, schools.filter(school => !school.querySelector('.admission-layout')).length);
   const after = researchText(r.document.getElementById('research-content'));
   const mismatch = [...before].findIndex((char, index) => after[index] !== char);

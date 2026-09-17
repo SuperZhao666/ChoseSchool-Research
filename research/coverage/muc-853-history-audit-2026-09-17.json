@@ -782,6 +782,132 @@
         "Old 085400 combined outcome must not be assigned to new 085404 or 085410 separately",
         "Public common subjects still require same-year ordinary catalog"
       ]
+    },
+    {
+      "trace_id": "078f7b5a-b8bf-4679-ae2e-c4832666cc5a",
+      "checked_on": "2026-09-17",
+      "kind": "recommended_plan_history_and_conditional_2027_quota_inference",
+      "sources": [
+        {
+          "name": "2026-recommended-scores.pdf",
+          "url": "https://xingong.muc.edu.cn/__local/E/ED/3A/717FF7D63B61B49E33B222D70EC_F29D41FD_4203E.pdf",
+          "sha256": "2299c84a56182d730c3a384c0f56dc247242da37995d90f460607f11d6205dcd"
+        },
+        {
+          "name": "2027-second-round.pdf",
+          "url": "https://xingong.muc.edu.cn/__local/6/B8/73/7A67AF2FD059F94769C4F99DF62_251268F4_7A4D1.pdf",
+          "sha256": "05047444ecc60030dbf10ff9e2454e419c73d49fbc91725b4586b07e7f2d4b09"
+        },
+        {
+          "name": "2027-first-scores.html",
+          "url": "https://xingong.muc.edu.cn/info/1037/6455.htm",
+          "sha256": "08b0ab004e317f158e60dde288742dc880e253ec1c0bb12b660dcb027ef35adb"
+        }
+      ],
+      "historical_plans": [
+        {
+          "year": 2025,
+          "recommended_plan": 47,
+          "spring_recommended": 14,
+          "autumn_total": 95,
+          "spring_total": 131,
+          "recommended_plan_url": "https://xingong.muc.edu.cn/__local/5/17/24/F0D139696CFA88839CA81E4EDB8_E50198CC_60342.pdf"
+        },
+        {
+          "year": 2026,
+          "recommended_plan": 50,
+          "spring_recommended": 18,
+          "autumn_total": 120,
+          "spring_total": 200,
+          "application_stage_ordinary_plan": 102,
+          "recommended_plan_url": "https://grs.muc.edu.cn/info/1178/7504.htm"
+        }
+      ],
+      "first_batch_score_aggregates": {
+        "2026": {
+          "program": "085400 all tracks",
+          "rows": 214,
+          "source_serial_range": [
+            1,
+            214
+          ],
+          "nonzero_rows": 80,
+          "zero_rows": 134,
+          "at_least_60": 80,
+          "zero_score_reason_not_inferred": true
+        },
+        "2027": {
+          "computer_and_ai": {
+            "rows": 203,
+            "source_serial_range": [
+              1,
+              203
+            ],
+            "score_min": 76,
+            "score_max": 94
+          },
+          "electronics": {
+            "rows": 41,
+            "source_serial_range": [
+              204,
+              244
+            ],
+            "score_min": 84.2,
+            "score_max": 94.6
+          },
+          "source_note": "未参加复试考生成绩不作公布"
+        }
+      },
+      "second_batch_2027": {
+        "published_on": "2026-09-11",
+        "accepted_tracks": [
+          "计算机技术",
+          "新一代电子信息技术"
+        ],
+        "ai_accepting_applications": false,
+        "quota_text": "第一批次同一专业拟录取后剩余名额",
+        "inference_limits": [
+          "No numeric remainder disclosed",
+          "AI not accepting this batch does not prove final full enrollment or no ordinary places"
+        ]
+      },
+      "conditional_scenarios": {
+        "status": "analyst_assumptions_not_official_facts_not_probability_intervals",
+        "population": "085404 and 085410 combined, ordinary plus recommendation-exempt, excludes 085401",
+        "timing": "autumn application-stage plan, not next spring final capacity",
+        "assumption_planned_recommended_share": [
+          0.49473684210526314,
+          0.4166666666666667
+        ],
+        "implied_total_before_rounding": [
+          111.17021276595744,
+          132.0
+        ],
+        "subjective_actual_recommended_range": [
+          35,
+          55
+        ],
+        "scenarios": [
+          {
+            "total": 110,
+            "actual_recommended": 55,
+            "ordinary": 55
+          },
+          {
+            "total": 120,
+            "actual_recommended": 45,
+            "ordinary": 75
+          },
+          {
+            "total": 130,
+            "actual_recommended": 35,
+            "ordinary": 95
+          }
+        ],
+        "confidence": "low; two historical plan years and changed program boundary",
+        "spring_expansion_not_included": true,
+        "program_specific_split_not_estimated": true
+      }
     }
   ],
   "supervisor_followup_2026_09_17": {
