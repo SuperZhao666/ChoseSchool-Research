@@ -712,6 +712,76 @@
         "Ratios are not computing/AI-specific or personal admission probabilities"
       ],
       "reading_location": "README.md / school-079 / information-085400 / scores"
+    },
+    {
+      "trace_id": "2dbba440-335b-4148-91cb-e01fe68a18af",
+      "checked_on": "2026-09-17",
+      "kind": "2027_recommended_catalog_and_local_adjustment_pdf",
+      "catalog_url": "https://grs.muc.edu.cn/yjsyzsw/info/1063/6109.htm",
+      "published_on": "2026-09-14",
+      "catalog_html_sha256": "f30197b5ee91d3e17b25dab1a518b26e2860c358a4aff9eaf85368cafaf21e32",
+      "college": "017 Information Engineering College",
+      "recommendation_exempt_plan": [
+        {
+          "programs": [
+            "085404",
+            "085410"
+          ],
+          "names": [
+            "计算机技术",
+            "人工智能"
+          ],
+          "combined_planned_places": 55,
+          "html_quota_rowspan": 2,
+          "original_note": "计算机技术、人工智能预计共招收推免生55人"
+        },
+        {
+          "programs": [
+            "085401"
+          ],
+          "names": [
+            "新一代电子信息技术（含量子技术等）"
+          ],
+          "planned_places": 20
+        }
+      ],
+      "local_pdf": {
+        "basename": "信息工程学院2027年全国硕士研究生招生考试初试科目调整方案 (1).pdf",
+        "sha256": "18d7a4a10dd072b71d44bfeb2a4d4f7bd2a31ef47e6bde0e2dc740049df90bf8",
+        "pages": 1,
+        "visually_reviewed_all_pages": true,
+        "source_level": "user_downloaded_copy_official_parent_and_attachment_name_verified",
+        "official_download": "captcha_required",
+        "official_byte_match": false,
+        "changes": [
+          {
+            "old_program": "085400",
+            "tracks": [
+              "计算机技术",
+              "人工智能"
+            ],
+            "old_subject": "852电子信息综合",
+            "new_subject": "853数据结构"
+          },
+          {
+            "old_program": "085400",
+            "tracks": [
+              "新一代电子信息技术"
+            ],
+            "old_subject": "852电子信息综合",
+            "new_subject": "855电磁场与电磁波"
+          }
+        ]
+      },
+      "ordinary_2027_full_catalog": "pending_exact_catalog",
+      "ordinary_2027_quota": null,
+      "no_408_switch_notice_found": true,
+      "limitations": [
+        "Recommended plan is not ordinary examination quota or actual recommended enrollment",
+        "Do not subtract planned recommended 55 from prior-year total 200",
+        "Old 085400 combined outcome must not be assigned to new 085404 or 085410 separately",
+        "Public common subjects still require same-year ordinary catalog"
+      ]
     }
   ],
   "supervisor_followup_2026_09_17": {
