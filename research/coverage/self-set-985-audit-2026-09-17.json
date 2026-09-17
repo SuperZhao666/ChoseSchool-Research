@@ -1,0 +1,174 @@
+{
+  "trace_id": "6cb4aa8d-3c3c-415f-a2c8-9d4c2dd9525f",
+  "checked_on": "2026-09-17",
+  "selection": {
+    "math": "302 required",
+    "english": "204 preferred;201 accepted",
+    "professional": "self-set data structures and algorithms preferred",
+    "tier": "985 focus"
+  },
+  "public_source_of_truth": "README.md",
+  "reading_routes": 278,
+  "new_routes": [
+    "school-032/074-085412",
+    "school-032/077-085412",
+    "school-032/077-145200",
+    "school-029/cyber-085400",
+    "school-002/162-085411"
+  ],
+  "evidence_files": [
+    {
+      "name": "muc-2026-retest.pdf",
+      "sha256": "794f793b4c943c58972f1e7dbcfbe5557eaea2cc7addfd9122c04143c06cbc6b",
+      "bytes": 166587
+    },
+    {
+      "name": "muc-853-mirror-1.png",
+      "sha256": "646d4fd8a4eb13b632c637408416f9439f593a1b332fad955cc8a41ebcd09297",
+      "bytes": 113187
+    },
+    {
+      "name": "muc-853-mirror-2.png",
+      "sha256": "ecbfdee0593bcaa799c6ac480443a4b628dac5ad639f7826e47998d07f046811",
+      "bytes": 100064
+    },
+    {
+      "name": "muc-853-mirror-3.png",
+      "sha256": "02dcceeb8c22c6266a221c203b75db88b51b34d4a669fe4d56728f59cff673a9",
+      "bytes": 94282
+    },
+    {
+      "name": "muc-853-mirror-4.png",
+      "sha256": "aa6b5b0fbef2e3c5f8d136390229fb62e5754874b62343bea513f9c33f347845",
+      "bytes": 83037
+    },
+    {
+      "name": "muc-853-mirror-5.png",
+      "sha256": "f8e07a011c369a152e140d55c1684b5dd798b6cd58c7e5edfcefa053b4c9cc75",
+      "bytes": 57372
+    },
+    {
+      "name": "muc-retest-p1.png",
+      "sha256": "c8be1b6fa0171d00f43db343b5f62d6ff9dec4c7601ad22da4b686823bdbd45f",
+      "bytes": 222340
+    },
+    {
+      "name": "sdu-2026-catalog.pdf",
+      "sha256": "481207c5ee221b3b2ea86f774d5257852dcab0f850600858ee65a27c070205a5",
+      "bytes": 743448
+    },
+    {
+      "name": "sdu-804.docx",
+      "sha256": "080828d7080b3f805ba6c9a7dca6909ab62b5caba1fa96df07de80ac3199c6c1",
+      "bytes": 15471
+    },
+    {
+      "name": "sdu-catalog-65.png",
+      "sha256": "22ec39a99df2bacd03b6782eee4c24fdbb257b6f99a64988f8872632a69e4596",
+      "bytes": 477831
+    },
+    {
+      "name": "sdu-catalog-66.png",
+      "sha256": "5d9ebf6fd25be55a23f8408d9ca977a7b9310226d019c2c8dfe466817a62ad2e",
+      "bytes": 314951
+    },
+    {
+      "name": "buaa057-2027.jpg",
+      "sha256": "cb820951982e8cbafea4b25c5bd28c0aece663f2f9de02fd6a973a5e9419a237",
+      "bytes": 477856
+    },
+    {
+      "name": "ecnu-2026-report.pdf",
+      "sha256": "9befe41998119af6cd247b4e37a99e9df4b4688278e74a7df4b5014f9b75f8f8",
+      "bytes": 2789440
+    },
+    {
+      "name": "ecnu-2025-report.pdf",
+      "sha256": "638d590ab6ba650b4a17e20ee2fcc19096e5c71f9095287645452e279607b243",
+      "bytes": 263047
+    },
+    {
+      "name": "ecnu-2026-change.pdf",
+      "sha256": "1e1f4a3b2591a6da12f3324af67a9ad10e3b7e2edfe5ca7bdfb7177a5f6c908d",
+      "bytes": 60462
+    },
+    {
+      "name": "ecnu2025.html",
+      "sha256": "11b652d2c7029051e630190e7befb6628a1b7dcc234e0edc89f8964860a84e29",
+      "bytes": 20614
+    },
+    {
+      "name": "ecnu-2026-catalog.html",
+      "sha256": "84095bc98e93081081556fbbbb1f774c0b8c159c964e8803534cad2b1e256e9b",
+      "bytes": 22410
+    },
+    {
+      "name": "dut-2026-catalog.html",
+      "sha256": "aa99ca1158821ca0fbefaddff85a6f7c09009c9d1aa359119a5b0a5e4529443c",
+      "bytes": 5636
+    },
+    {
+      "name": "dut2027.html",
+      "sha256": "674961d73b2cbdb8c3bb95607ebc668740f96a50e58ac13ffd3c255d3011830e",
+      "bytes": 842
+    }
+  ],
+  "limits": [
+    "2027 full four-subject catalogs not closed for shortlisted self-set projects",
+    "MUC853 official attachments captcha; five-page commercial mirror visually read, not official byte match",
+    "MUC852 formal title is electronic information comprehensive; guide coverage not substituted for official title",
+    "MUC2025/2026 official retest lines264/313; no final population inferred",
+    "SDU077145200 first-choice plan2 and transfer-stage plan4 not summed",
+    "NWPU879 2026 guide scope DS+networks; official outline attachment unread in this pass",
+    "No private original screenshots or award certificates published",
+    "No DB official_confirmed status changes"
+  ],
+  "hnu_image_check": {
+    "guide_estimates": [
+      76,
+      21
+    ],
+    "official_2026_cs_ordinary_retest_plan": 103,
+    "official_2026_cyber_retest_plan": 26,
+    "official_2026_cyber_line": 344,
+    "both_2027_switch_notice_date": "2026-05-19",
+    "2027_ordinary_capacity": null,
+    "cyber_final_list": "captcha; not read",
+    "2026_cyber_public_subjects": "guide only in this pass; no same-year official row recovered"
+  },
+  "ecnu": {
+    "catalogs": [
+      2025,
+      2026
+    ],
+    "ordinary_first_choice_counts": {
+      "2025": {
+        "actual_exam": 209,
+        "admitted": 49,
+        "line": 260
+      },
+      "2026": {
+        "actual_exam": 160,
+        "admitted": 71,
+        "line": 264
+      }
+    },
+    "scope_changed_same_code": true,
+    "retest_official": "410; secondary transcription only",
+    "catalog_2027": "not recovered",
+    "evidence": "official PDFs visually checked"
+  },
+  "exclusions_refreshed": [
+    "HNU 2027 408 announced; deprioritized at user request",
+    "BUAA057 2027 target table 408 read visually",
+    "Wuhan1453S1 guide math III, not math II",
+    "ECNU160145200 2026 formal408"
+  ],
+  "validation": {
+    "unittest": "167 passed",
+    "reader_tests": "16 passed",
+    "doctor": "ok",
+    "visible_check": "ECNU162 overview and score tabs verified in own hidden local browser",
+    "source_sha256": "8fbf2ec3c828e0e48007d27d30f72abcab54187be69a02ab3cbde9fbb47d37c7"
+  }
+}

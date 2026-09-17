@@ -174,7 +174,7 @@ test('every school gets readable column labels and real-source navigation withou
       assert.equal(link.textContent, target.textContent);
     }
   }
-  assert.equal(tables, 544);
+  assert.equal(tables, 552); // TraceId: 6cb4aa8d-3c3c-415f-a2c8-9d4c2dd9525f
   assert.equal(r.document.querySelectorAll('.school-contents').length, schools.filter(school => !school.querySelector('.admission-layout')).length);
   const after = researchText(r.document.getElementById('research-content'));
   const mismatch = [...before].findIndex((char, index) => after[index] !== char);
@@ -243,7 +243,7 @@ test('all 104 schools have a project tree or an explicit evidence gap, and every
   filter.value='';filter.dispatchEvent(new r.window.Event('input'));
   const sourceRows=new Set([...original.querySelectorAll('tbody>tr')].map(row=>row.textContent));
   const projects=[...r.document.querySelectorAll('.admission-project')];
-  assert.equal(projects.length,273);
+  assert.equal(projects.length,278); // TraceId: 6cb4aa8d-3c3c-415f-a2c8-9d4c2dd9525f
   for(const school of schools) {
     r.go('#'+school.dataset.panel);
     assert.deepEqual(r.visible(),[school.dataset.panel]);
